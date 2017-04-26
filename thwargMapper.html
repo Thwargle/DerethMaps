@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <link rel="stylesheet" href="thwargMapper.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+	   <script type="text/javascript" src="thwargMapper.js"></script>
+    </head>
+    <body onmousedown="return false;">
+        <div id="wrapper" style="margin-left:auto; margin-right:auto;">
+            <canvas id="myCanvas" width="820" height="820" style="background-color:#242F40">
+            </canvas>
+            <div id="buttonWrapper">
+                <input type="button" id="reset" value="Reset Zoom" style="width:85px; float:right;">
+                <input type="button" id="plus" value="+">
+                <input type="button" id="minus" value="-">
+                <input type="button" id="log" value="log">
+            </div>
+            <h2 id="status">
+            0, 0
+            </h2>
+            <div id="wrapper">
+                <p id="coordinates"></p>
+            </div>
+        </div>
+    </body>
+</html>
