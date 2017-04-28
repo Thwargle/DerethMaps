@@ -101,19 +101,15 @@ function getPoints() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            console.log("in the 200");
-            myArr = JSON.parse(this.responseText);
-            console.log("parsing json");
-            document.getElementById("coordinates").innerHTML = myArr[0];
-            console.log("got data here");
-            for (var coordinatePair in myArr) {
-                console.log(coordinatePair);
-                console.log(coordinatePair[0].x[0]);
-                console.log(myArr[coordinatePair][0], myArr[coordinatePair][1]);
+            var json = JSON.parse(this.responseText);
+            var totalItems = Object.keys(json).length;
+            for (var i = 0; i < totalItems; i++)
+            {
+                document.getElementById("coordinates").innerHTML = document.getElementById("coordinates").innerHTML + "Location: " + json[i].LocationName + " x: " + json[i].x + " y: " + json[i].y + '<br />' ;
             }
         }
     };
-    xmlhttp.open("GET", "http://localhost:56022/coords.json", true);
+    xmlhttp.open("GET", "coords.json", true);
     xmlhttp.send();
 }
 

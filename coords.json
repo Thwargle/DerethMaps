@@ -1,20 +1,17 @@
 [
   {
-    "Yaraq": {
-      "x": -1.8,
-      "y": 21.5
-    }
+    "LocationName": "Yaraq",
+    "x": -1.8,
+    "y": 21.5
   },
   {
-    "Caulcano": {
-      "x": -94.6,
-      "y": 94.4
-    }
+    "LocationName": "Caulcano",
+    "x": -94.6,
+    "y": 94.4
   },
   {
-    "Qalaba'r": {
-      "x": 19.6,
-      "y": 74.6
-    }
+    "LocationName": "Qalaba'r",
+    "x": 19.6,
+    "y": 74.6
   }
 ]
