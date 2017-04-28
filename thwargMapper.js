@@ -1,4 +1,4 @@
-function draw(scale, translatePos){
+function draw(scale, translatePos) {
     var canvas = document.getElementById("myCanvas");
     var context = canvas.getContext("2d");
 
@@ -10,7 +10,6 @@ function draw(scale, translatePos){
     var b = height - 101.9 * a;
     var d = width / 203.9;
     var e = width - 102 * d;
-
 
     base_image = new Image();
     base_image.src = 'highres.png';
@@ -24,56 +23,9 @@ function draw(scale, translatePos){
     context.imageSmoothingEnabled = false;
     context.drawImage(base_image, 0, 0);
 
-
-    //[
-    //    { "Yaraq": "1.8s, 21.5w" },
-    //    { "Caulcano": "94.4S, 94.6W" },
-    //    { "Qalaba'r": "74.6S, 19.6E" }
-    //]
-
-    //Map Bounds:
-    //Top Left: 102n, 101.9w
-    //Bottom Right: 101.9s, 102e
-    //Dereth is divided into a grid of 65,536 landblocks comprising a grid 256 blocks wide by 256 blocks high (values 0 to 255).
-
     context.fillStyle = "#0000ff";
-    //top left
-    drawPoints(context, -101.9, -102, a, b, d, e, 5);
-    //bottom left
-    drawPoints(context, 102, -101.9, a, b, d, e, 5);
-    //top right
-    drawPoints(context, -101.9, 102, a, b, d, e, 5);
-    //bottom right
-    drawPoints(context, 102, 101.9, a, b, d, e, 5);
-
-    //Center
-    drawPoints(context, 0, 0, a, b, d, e, 5);
-
-    //Yaraq
-    drawPoints(context, 21.5, -1.8, a, b, d, e, 5);
-
-    //Caulcano
-    drawPoints(context, 94.4, -94.6, a, b, d, e, 5);
-
-    //Qalaba'r
-    drawPoints(context, 74.6, 19.6, a, b, d, e, 5);
-
+    getPoints(context, a, b, d, e);
     context.restore();
-}
-function drawPoints(context, y, x, a, b, d, e, width) {
-    var my = a * y + b;
-    var mx = d * x + e;
-    width = width * 100;
-    //console.log("x: " + x + " y: " + y + " mx: " + mx + " my: " + my);
-    context.beginPath();
-    context.arc(mx, my, 3, 0, 2 * Math.PI);
-    context.fillStyle = '#FF0000';
-    context.fill();
-    context.lineWidth = 1;
-    context.strokeStyle = '#FF0000'
-    context.stroke();
-    context.closePath();
-    
 }
 
 function logLocation(canvas, scale, translatePos) {
@@ -96,7 +48,7 @@ function getMousePos(canvas, evt) {
     };
 }
 
-function getPoints() {
+function getPoints(context, a, b, d, e) {
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -105,7 +57,40 @@ function getPoints() {
             var totalItems = Object.keys(json).length;
             for (var i = 0; i < totalItems; i++)
             {
-                document.getElementById("coordinates").innerHTML = document.getElementById("coordinates").innerHTML + "Location: " + json[i].LocationName + " x: " + json[i].x + " y: " + json[i].y + '<br />' ;
+                var x = json[i].x;
+                var y = json[i].y;
+
+                if (x.includes('E'))
+                {
+                    x = x.substring(0, x.length - 1);
+                    x = x * 1;
+                }
+                else
+                {
+                    xInt = x.substring(0, x.length - 1);
+                    x = xInt * -1;
+                }
+
+                
+                if(y.includes('S'))
+                {
+                    y = y.substring(0, y.length - 1);
+                    y = y * 1;
+                }
+                else
+                {
+                    yInt = y.substring(0, y.length - 1);
+                    y = yInt * -1;
+                }
+
+                if (json[i].Type == "Town")
+                {
+                    document.getElementById("coordinates").innerHTML = document.getElementById("coordinates").innerHTML + " TOWNS " + "Location: " + json[i].LocationName + ": " + x + ", " + y + '<br />';
+                    drawPoints(context, y, x, a, b, d, e, 5);
+                    console.log(context, y, x, a, b, d, e, 5);
+                }
+
+                
             }
         }
     };
@@ -113,10 +98,23 @@ function getPoints() {
     xmlhttp.send();
 }
 
+function drawPoints(context, y, x, a, b, d, e, width) {
+    var my = a * y + b;
+    var mx = d * x + e;
+    width = width * 100;
+    context.beginPath();
+    context.arc(mx, my, 3, 0, 2 * Math.PI);
+    context.fillStyle = '#FF0000';
+    context.fill();
+    context.lineWidth = 1;
+    context.strokeStyle = '#FF0000'
+    context.stroke();
+    context.closePath();
+
+}
+
 window.onload = function(){
     var canvas = document.getElementById("myCanvas");
-
-    var array = getPoints();
 
     var translatePos = {
         x: canvas.width / 2,
@@ -185,7 +183,6 @@ window.onload = function(){
         mouseDown = false;
         absoluteOffset.x = (evt.clientX - 400)/scale;
         absoluteOffset.y = (evt.clientY - 300)/scale;
-        $('#status').html(absoluteOffset.x +', '+ absoluteOffset.y);
     });
 
     canvas.addEventListener("mouseover", function(evt){
@@ -219,6 +216,37 @@ window.onload = function(){
         mouseDown = false;
     });
 
-
-    setInterval(function() { draw(scale, translatePos); }, 100);
+    setTimeout(function() { draw(scale, translatePos); }, 100);
 };
+
+
+
+
+
+//
+                //Map Bounds:
+                //Top Left: 102n, 101.9w
+                //Bottom Right: 101.9s, 102e
+                //Dereth is divided into a grid of 65,536 landblocks comprising a grid 256 blocks wide by 256 blocks high (values 0 to 255).
+
+                ////top left
+                //drawPoints(context, -101.9, -102, a, b, d, e, 5);
+                ////bottom left
+                //drawPoints(context, 102, -101.9, a, b, d, e, 5);
+                ////top right
+                //drawPoints(context, -101.9, 102, a, b, d, e, 5);
+                ////bottom right
+                //drawPoints(context, 102, 101.9, a, b, d, e, 5);
+
+                ////Center
+                //drawPoints(context, 0, 0, a, b, d, e, 5);
+
+                ////Yaraq
+                ////drawPoints(context, 21.5, -1.8, a, b, d, e, 5);
+
+                ////Caulcano
+                //drawPoints(context, 94.4, -94.6, a, b, d, e, 5);
+
+                ////Qalaba'r
+                //drawPoints(context, 74.6, 19.6, a, b, d, e, 5);
+//
