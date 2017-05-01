@@ -24,7 +24,33 @@ function draw(scale, translatePos) {
     context.drawImage(base_image, 0, 0);
 
     context.fillStyle = "#0000ff";
-    getPoints(context, a, b, d, e);
+
+    //Map Bounds:
+    //Top Left: 102n, 101.9w
+    //Bottom Right: 101.9s, 102e
+    //Dereth is divided into a grid of 65,536 landblocks comprising a grid 256 blocks wide by 256 blocks high (values 0 to 255).
+
+    ////top left
+    drawPoints(context, -101.9, -102, a, b, d, e, 5);
+    ////bottom left
+    drawPoints(context, 102, -101.9, a, b, d, e, 5);
+    ////top right
+    drawPoints(context, -101.9, 102, a, b, d, e, 5);
+    ////bottom right
+    drawPoints(context, 102, 101.9, a, b, d, e, 5);
+
+    ////Center
+    drawPoints(context, 0, 0, a, b, d, e, 5);
+
+    ////Yaraq
+    drawPoints(context, 21.5, -1.8, a, b, d, e, 5);
+
+    ////Caulcano
+    drawPoints(context, 94.4, -94.6, a, b, d, e, 5);
+
+    ////Qalaba'r
+    drawPoints(context, 74.6, 19.6, a, b, d, e, 5);
+
     context.restore();
 }
 
@@ -48,7 +74,7 @@ function getMousePos(canvas, evt) {
     };
 }
 
-function getPoints(context, a, b, d, e) {
+function getPoints() {
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -85,11 +111,14 @@ function getPoints(context, a, b, d, e) {
 
                 if (json[i].Type == "Town")
                 {
-                    document.getElementById("coordinates").innerHTML = document.getElementById("coordinates").innerHTML + " TOWNS " + "Location: " + json[i].LocationName + ": " + x + ", " + y + '<br />';
-                    drawPoints(context, y, x, a, b, d, e, 5);
-                    console.log(context, y, x, a, b, d, e, 5);
+                    document.getElementById("coordinates").innerHTML = document.getElementById("coordinates").innerHTML + " Town " + "Location: " + json[i].LocationName + ": " + x + ", " + y + '<br />';
+                    //drawPoints(context, y, x, a, b, d, e, 5);
+                    //console.log(context, y, x, a, b, d, e, 5);
                 }
-
+                if (json[i].Type == "Hunting")
+                {
+                    document.getElementById("coordinates").innerHTML = document.getElementById("coordinates").innerHTML + " Hunting " + "Location: " + json[i].LocationName + ": " + x + ", " + y + '<br />';
+                }
                 
             }
         }
@@ -216,7 +245,8 @@ window.onload = function(){
         mouseDown = false;
     });
 
-    setTimeout(function() { draw(scale, translatePos); }, 100);
+    setInterval(function () { draw(scale, translatePos); }, 100);
+    getPoints();
 };
 
 
