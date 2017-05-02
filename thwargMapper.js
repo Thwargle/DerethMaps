@@ -1,16 +1,19 @@
-function draw(scale, translatePos) {
-    var canvas = document.getElementById("myCanvas");
-    var context = canvas.getContext("2d");
+var content;
+var context;
+var points = new Array();
+var height = 2041;
+var width = 2041;
 
-    var height = 2041;
-    var width = 2041;
+var scale = 0.4;
+var scaleMultiplier = 0.8;
+var translatePos;
 
+var a = height / 203.9;
+var b = height - 101.9 * a;
+var d = width / 203.9;
+var e = width - 102 * d;
 
-    var a = height / 203.9;
-    var b = height - 101.9 * a;
-    var d = width / 203.9;
-    var e = width - 102 * d;
-
+function draw() {
     base_image = new Image();
     base_image.src = 'highres.png';
 
@@ -23,33 +26,13 @@ function draw(scale, translatePos) {
     context.imageSmoothingEnabled = false;
     context.drawImage(base_image, 0, 0);
 
+    var pointsArrayLength = points.length;
+    for (i = 0; i < pointsArrayLength; i++)
+    {
+        drawPoint(context, points[i].y, points[i].x, 5, points[i].type);
+    }
+
     context.fillStyle = "#0000ff";
-
-    //Map Bounds:
-    //Top Left: 102n, 101.9w
-    //Bottom Right: 101.9s, 102e
-    //Dereth is divided into a grid of 65,536 landblocks comprising a grid 256 blocks wide by 256 blocks high (values 0 to 255).
-
-    ////top left
-    drawPoints(context, -101.9, -102, a, b, d, e, 5);
-    ////bottom left
-    drawPoints(context, 102, -101.9, a, b, d, e, 5);
-    ////top right
-    drawPoints(context, -101.9, 102, a, b, d, e, 5);
-    ////bottom right
-    drawPoints(context, 102, 101.9, a, b, d, e, 5);
-
-    ////Center
-    drawPoints(context, 0, 0, a, b, d, e, 5);
-
-    ////Yaraq
-    drawPoints(context, 21.5, -1.8, a, b, d, e, 5);
-
-    ////Caulcano
-    drawPoints(context, 94.4, -94.6, a, b, d, e, 5);
-
-    ////Qalaba'r
-    drawPoints(context, 74.6, 19.6, a, b, d, e, 5);
 
     context.restore();
 }
@@ -75,7 +58,7 @@ function getMousePos(canvas, evt) {
 }
 
 function getPoints() {
-
+    points = new Array();
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -109,43 +92,51 @@ function getPoints() {
                     y = yInt * -1;
                 }
 
-                if (json[i].Type == "Town")
-                {
-                    document.getElementById("coordinates").innerHTML = document.getElementById("coordinates").innerHTML + " Town " + "Location: " + json[i].LocationName + ": " + x + ", " + y + '<br />';
-                    //drawPoints(context, y, x, a, b, d, e, 5);
-                    //console.log(context, y, x, a, b, d, e, 5);
-                }
-                if (json[i].Type == "Hunting")
-                {
-                    document.getElementById("coordinates").innerHTML = document.getElementById("coordinates").innerHTML + " Hunting " + "Location: " + json[i].LocationName + ": " + x + ", " + y + '<br />';
-                }
-                
+                var point = { type: json[i].Type, location: json[i].LocationName, x: x, y: y };
+                points.push(point);
             }
+            draw();
         }
     };
     xmlhttp.open("GET", "coords.json", true);
     xmlhttp.send();
 }
 
-function drawPoints(context, y, x, a, b, d, e, width) {
+function drawPoint(context, y, x, width, type) {
     var my = a * y + b;
     var mx = d * x + e;
-    width = width * 100;
-    context.beginPath();
-    context.arc(mx, my, 3, 0, 2 * Math.PI);
-    context.fillStyle = '#FF0000';
-    context.fill();
-    context.lineWidth = 1;
-    context.strokeStyle = '#FF0000'
-    context.stroke();
-    context.closePath();
+    circleRadius = 8 / Math.sqrt(scale);
+    rectWidth = 12 / Math.sqrt(scale);
 
+    if (type == "Town")
+    {
+        context.beginPath();
+        context.rect(mx, my, rectWidth, rectWidth);
+        context.fillStyle = '#FF0000';
+        context.fill();
+        context.lineWidth = 1;
+        context.strokeStyle = '#FF0000'
+        context.stroke();
+        context.closePath();
+    }
+    else if (type == "Hunting")
+    {
+        context.beginPath();
+        context.arc(mx, my, circleRadius, 0, 2 * Math.PI);
+        context.fillStyle = '#00FF00';
+        context.fill();
+        context.lineWidth = 1;
+        context.strokeStyle = '#00FF00'
+        context.stroke();
+        context.closePath();
+    }
 }
 
-window.onload = function(){
-    var canvas = document.getElementById("myCanvas");
+window.onload = function () {
+    canvas = document.getElementById("myCanvas");
+    context = canvas.getContext("2d");
 
-    var translatePos = {
+    translatePos = {
         x: canvas.width / 2,
         y: canvas.height / 2
     };
@@ -158,8 +149,7 @@ window.onload = function(){
     absoluteOffset.x = 0;
     absoluteOffset.y = 0;
 
-    var scale = 0.4;
-    var scaleMultiplier = 0.8;
+    
     var startDragOffset = {};
     var mouseDown = false;
 
@@ -175,7 +165,7 @@ window.onload = function(){
         
         logLocation(canvas, scale, translatePos);
         
-        draw(scale, translatePos);
+        draw();
     }, false);
 
     document.getElementById("minus").addEventListener("click", function(){
@@ -187,14 +177,14 @@ window.onload = function(){
         translatePos.x = (scale * absoluteOffset.x) + 400;
         translatePos.y = (scale * absoluteOffset.y) + 300;
 
-        draw(scale, translatePos);
+        draw();
     }, false);
 
     document.getElementById("log").addEventListener("click", function(){
                                                                     
         logLocation(canvas, scale, translatePos);
         
-        draw(scale, translatePos);
+        draw();
     }, false);
 
     document.getElementById("reset").addEventListener("click", function () {
@@ -226,7 +216,7 @@ window.onload = function(){
         if (mouseDown) {
             translatePos.x = evt.clientX - startDragOffset.x;
             translatePos.y = evt.clientY - startDragOffset.y;
-            draw(scale, translatePos);
+            draw();
         }
     });
 
@@ -241,12 +231,12 @@ window.onload = function(){
         
         logLocation(canvas, scale, translatePos);
         
-        draw(scale, translatePos);
+        draw();
         mouseDown = false;
     });
 
-    setInterval(function () { draw(scale, translatePos); }, 100);
-    getPoints();
+    setInterval(function () { draw(); }, 5000);
+    setInterval(function () { getPoints(); }, 100);
 };
 
 
