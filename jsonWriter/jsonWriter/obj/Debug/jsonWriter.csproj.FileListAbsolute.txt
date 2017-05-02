@@ -1,0 +1,7 @@
+c:\users\jdnewberry\documents\visual studio 2015\Projects\jsonWriter\jsonWriter\bin\Debug\jsonWriter.exe.config
+C:\dev\github\ThwargMapper\jsonWriter\jsonWriter\bin\Debug\jsonWriter.exe.config
+C:\dev\github\ThwargMapper\jsonWriter\jsonWriter\bin\Debug\jsonWriter.exe
+C:\dev\github\ThwargMapper\jsonWriter\jsonWriter\bin\Debug\jsonWriter.pdb
+C:\dev\github\ThwargMapper\jsonWriter\jsonWriter\obj\Debug\jsonWriter.csprojResolveAssemblyReference.cache
+C:\dev\github\ThwargMapper\jsonWriter\jsonWriter\obj\Debug\jsonWriter.exe
+C:\dev\github\ThwargMapper\jsonWriter\jsonWriter\obj\Debug\jsonWriter.pdb

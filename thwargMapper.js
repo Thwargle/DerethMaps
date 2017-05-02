@@ -1,6 +1,7 @@
 var content;
 var context;
 var points = new Array();
+var dPoints = new Array();
 var height = 2041;
 var width = 2041;
 
@@ -27,9 +28,15 @@ function draw() {
     context.drawImage(base_image, 0, 0);
 
     var pointsArrayLength = points.length;
+    var dPointsArrayLength = dPoints.length;
+
     for (i = 0; i < pointsArrayLength; i++)
     {
         drawPoint(context, points[i].y, points[i].x, 5, points[i].type);
+    }
+    for (i = 0; i < dPointsArrayLength; i++) {
+        drawPoint(context, dPoints[i].y, dPoints[i].x, 5, dPoints[i].type);
+        console.log("Inside dynamice Points: " + dPoints[i].type);
     }
 
     context.fillStyle = "#0000ff";
@@ -102,20 +109,62 @@ function getPoints() {
     xmlhttp.send();
 }
 
+function getDynamicPoints() {
+    dPoints = new Array();
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var json = JSON.parse(this.responseText);
+            var totalItems = Object.keys(json).length;
+            for (var i = 0; i < totalItems; i++) {
+                var x = json[i].x;
+                var y = json[i].y;
+
+                if (x.includes('E')) {
+                    x = x.substring(0, x.length - 1);
+                    x = x * 1;
+                }
+                else {
+                    xInt = x.substring(0, x.length - 1);
+                    x = xInt * -1;
+                }
+
+
+                if (y.includes('S')) {
+                    y = y.substring(0, y.length - 1);
+                    y = y * 1;
+                }
+                else {
+                    yInt = y.substring(0, y.length - 1);
+                    y = yInt * -1;
+                }
+
+                var point = { type: json[i].Type, location: json[i].LocationName, x: x, y: y };
+                dPoints.push(point);
+                console.log(dPoints);
+            }
+            draw();
+        }
+    };
+    xmlhttp.open("GET", "dynamicCoords.json", true);
+    xmlhttp.send();
+}
+
 function drawPoint(context, y, x, width, type) {
     var my = a * y + b;
     var mx = d * x + e;
     circleRadius = 8 / Math.sqrt(scale);
     rectWidth = 12 / Math.sqrt(scale);
+    console.log("Type: " + type);
 
     if (type == "Town")
     {
         context.beginPath();
         context.rect(mx, my, rectWidth, rectWidth);
-        context.fillStyle = '#FF0000';
+        context.fillStyle = '#FFFF00';
         context.fill();
         context.lineWidth = 1;
-        context.strokeStyle = '#FF0000'
+        context.strokeStyle = '#FFFF00'
         context.stroke();
         context.closePath();
     }
@@ -127,6 +176,17 @@ function drawPoint(context, y, x, width, type) {
         context.fill();
         context.lineWidth = 1;
         context.strokeStyle = '#00FF00'
+        context.stroke();
+        context.closePath();
+    }
+    else if (type == "Player")
+    {
+        context.beginPath();
+        context.rect(mx, my, rectWidth, rectWidth+2);
+        context.fillStyle = '#FF0000';
+        context.fill();
+        context.lineWidth = 1;
+        context.strokeStyle = '#FF0000'
         context.stroke();
         context.closePath();
     }
@@ -235,8 +295,10 @@ window.onload = function () {
         mouseDown = false;
     });
 
-    setInterval(function () { draw(); }, 5000);
-    setInterval(function () { getPoints(); }, 100);
+    getPoints();
+    getDynamicPoints();
+    setInterval(function () { draw(); }, 100);
+    setInterval(function () { getDynamicPoints(); }, 500);
 };
 
 
