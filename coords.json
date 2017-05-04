@@ -49,6 +49,14 @@
   },
   {
     "Type": "Town",
+    "LocationName": "Glendon Wood",
+    "Race": "Aluvian",
+    "Special": "",
+    "x": "71.2W",
+    "y": "1.7N"
+  },
+  {
+    "Type": "Town",
     "LocationName": "Lytelthorpe",
     "Race": "Aluvian",
     "Special": "",
@@ -65,11 +73,27 @@
   },
   {
     "Type": "Town",
-    "LocationName": "Glendon Wood",
+    "LocationName": "Rithwic",
     "Race": "Aluvian",
     "Special": "",
-    "x": "71.2W",
-    "y": "1.7N"
+    "x": "59.3E",
+    "y": "10.8N"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Stonehold",
+    "Race": "Aluvian",
+    "Special": "",
+    "x": "21.8W",
+    "y": "68.7N"
+  },
+    {
+    "Type": "Town",
+    "LocationName": "Underground City",
+    "Race": "Aluvian",
+    "Special": "",
+    "x": "53.9E",
+    "y": "21.3N"
   },
   {
     "Type": "Town",
