@@ -36,10 +36,7 @@ function draw() {
     }
     for (i = 0; i < dPointsArrayLength; i++) {
         drawPoint(context, dPoints[i].y, dPoints[i].x, 5, dPoints[i].type);
-        console.log("Inside dynamice Points: " + dPoints[i].type);
     }
-
-    context.fillStyle = "#0000ff";
 
     context.restore();
 }
@@ -141,7 +138,6 @@ function getDynamicPoints() {
 
                 var point = { type: json[i].Type, location: json[i].LocationName, x: x, y: y };
                 dPoints.push(point);
-                console.log(dPoints);
             }
             draw();
         }
@@ -155,40 +151,35 @@ function drawPoint(context, y, x, width, type) {
     var mx = d * x + e;
     circleRadius = 8 / Math.sqrt(scale);
     rectWidth = 12 / Math.sqrt(scale);
-    console.log("Type: " + type);
 
     if (type == "Town")
     {
-        context.beginPath();
-        context.rect(mx, my, rectWidth, rectWidth);
-        context.fillStyle = '#FFFF00';
-        context.fill();
-        context.lineWidth = 1;
-        context.strokeStyle = '#FFFF00'
-        context.stroke();
-        context.closePath();
+        if (document.getElementById("Town").checked) {
+            town_image = new Image();
+            town_image.src = 'images/townHouse.png';
+            context.drawImage(town_image, mx - 10, my - 10);
+        }
     }
     else if (type == "Hunting")
     {
-        context.beginPath();
-        context.arc(mx, my, circleRadius, 0, 2 * Math.PI);
-        context.fillStyle = '#00FF00';
-        context.fill();
-        context.lineWidth = 1;
-        context.strokeStyle = '#00FF00'
-        context.stroke();
-        context.closePath();
+        if (document.getElementById("Hunting").checked) {
+            context.beginPath();
+            context.arc(mx, my, circleRadius, 0, 2 * Math.PI);
+            context.fillStyle = '#00FF00';
+            context.fill();
+            context.lineWidth = 1;
+            context.strokeStyle = '#00FF00'
+            context.stroke();
+            context.closePath();
+        }
     }
     else if (type == "Player")
     {
-        context.beginPath();
-        context.rect(mx, my, rectWidth, rectWidth+2);
-        context.fillStyle = '#FF0000';
-        context.fill();
-        context.lineWidth = 1;
-        context.strokeStyle = '#FF0000'
-        context.stroke();
-        context.closePath();
+        if (document.getElementById("Player").checked) {
+            player_image = new Image();
+            player_image.src = 'images/playerHead.png';
+            context.drawImage(player_image, mx - 10, my - 10);
+        }
     }
 }
 

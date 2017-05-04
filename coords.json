@@ -1,20 +1,95 @@
 [
   {
-    "Type":  "Town",
+    "Type": "Town",
+    "LocationName": "Holtburg",
+    "Race": "Aluvian",
+    "Special": "Starter",
+    "x": "33.6E",
+    "y": "42.1N"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Cragstone",
+    "Race": "Aluvian",
+    "Special": "Capital",
+    "x": "48.4E",
+    "y": "26.0N"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Arwic",
+    "Race": "Aluvian",
+    "Special": "",
+    "x": "56.6E",
+    "y": "33.3N"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Dryreach",
+    "Race": "Aluvian",
+    "Special": "",
+    "x": "73.0E",
+    "y": "8.1S"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Eastham",
+    "Race": "Aluvian",
+    "Special": "",
+    "x": "63.5E",
+    "y": "16.9N"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Fort Tethana",
+    "Race": "Aluvian",
+    "Special": "",
+    "x": "26.5E",
+    "y": "29.7N"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Lytelthorpe",
+    "Race": "Aluvian",
+    "Special": "",
+    "x": "51.7E",
+    "y": "1.1N"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Plateau Village",
+    "Race": "Aluvian",
+    "Special": "",
+    "x": "51.7E",
+    "y": "44.5N"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Glendon Wood",
+    "Race": "Aluvian",
+    "Special": "",
+    "x": "71.2W",
+    "y": "1.7N"
+  },
+  {
+    "Type": "Town",
     "LocationName": "Yaraq",
+    "Race": "Gharu'ndim",
+    "Special": "",
     "x": "1.8W",
     "y": "21.5S"
   },
   {
-    "Type":  "Hunting",
+    "Type": "Town",
+    "LocationName": "Qalaba'r",
+    "Race": "Gharu'ndim",
+    "x": "19.6E",
+    "y": "74.6S"
+  },
+  {
+    "Type": "Hunting",
     "LocationName": "Caulcano",
     "x": "94.6W",
     "y": "94.4S"
-  },
-  {
-    "Type":  "Town",
-    "LocationName": "Qalaba'r",
-    "x": "19.6E",
-    "y": "74.6S"
   }
 ]
