@@ -157,7 +157,7 @@ function drawPoint(context, y, x, width, type) {
         if (document.getElementById("Town").checked) {
             town_image = new Image();
             town_image.src = 'images/townHouse.png';
-            context.drawImage(town_image, mx - 10, my - 10);
+            context.drawImage(town_image, mx - 10, my - 10, rectWidth, rectWidth);
         }
     }
     else if (type == "Hunting")
@@ -178,7 +178,7 @@ function drawPoint(context, y, x, width, type) {
         if (document.getElementById("Player").checked) {
             player_image = new Image();
             player_image.src = 'images/playerHead.png';
-            context.drawImage(player_image, mx - 10, my - 10);
+            context.drawImage(player_image, mx - 10, my - 10, rectWidth, rectWidth);
         }
     }
 }
@@ -253,7 +253,16 @@ window.onload = function () {
         mouseDown = false;
         absoluteOffset.x = (evt.clientX - 400)/scale;
         absoluteOffset.y = (evt.clientY - 300)/scale;
+
+        displayCoord(absoluteOffset.x, absoluteOffset.y);
+
+
     });
+
+    function displayCoord(x, y) {
+        document.getElementById("debug").innerHTML = "cx=" + Math.round(x).toString() + ", cy=" + Math.round(y).toString();
+
+    }
 
     canvas.addEventListener("mouseover", function(evt){
         mouseDown = false;
