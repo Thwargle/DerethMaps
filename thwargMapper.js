@@ -14,8 +14,8 @@ var b = height - 101.9 * a;
 var d = width / 203.9;
 var e = width - 102 * d;
 
-var xcenter = 400;
-var ycenter = 300;
+var xcenter = 410;
+var ycenter = 410;
 
 function draw() {
     base_image = new Image();
@@ -196,6 +196,7 @@ window.onload = function () {
     canvas = document.getElementById("myCanvas");
     context = canvas.getContext("2d");
 
+    console.log("a,b=" + scoords(a, b) + ", d,e=" + scoords(d, e));
     translatePos = {
         x: canvas.width / 2,
         y: canvas.height / 2
