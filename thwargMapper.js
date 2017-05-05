@@ -44,24 +44,32 @@ function draw() {
     context.restore();
 }
 
+function getMousePos(canvas, evt) {
+    var rect = canvas.getBoundingClientRect();
+    return {
+        x: evt.clientX - rect.left,
+        y: evt.clientY - rect.top
+    };
+}
+
 function zoomIn() {
-    absoluteOffset.x = (translatePos.x - xcenter) / scale;
-    absoluteOffset.y = (translatePos.y - ycenter) / scale;
+    var absx = (translatePos.x - xcenter) / scale;
+    var absy = (translatePos.y - ycenter) / scale;
 
     scale /= scaleMultiplier;
 
-    translatePos.x = (scale * absoluteOffset.x) + xcenter;
-    translatePos.y = (scale * absoluteOffset.y) + ycenter;
+    translatePos.x = (scale * absx) + xcenter;
+    translatePos.y = (scale * absy) + ycenter;
 }
 
 function zoomOut() {
-    absoluteOffset.x = (translatePos.x - xcenter) / scale;
-    absoluteOffset.y = (translatePos.y - ycenter) / scale;
+    var absx = (translatePos.x - xcenter) / scale;
+    var absy = (translatePos.y - ycenter) / scale;
 
     scale *= scaleMultiplier;
 
-    translatePos.x = (scale * absoluteOffset.x) + xcenter;
-    translatePos.y = (scale * absoluteOffset.y) + ycenter;
+    translatePos.x = (scale * absx) + xcenter;
+    translatePos.y = (scale * absy) + ycenter;
 }
 
 function logLocation(canvas, scale, translatePos) {
@@ -227,18 +235,9 @@ $(document).ready(function () {
         x: canvas.width / 2,
         y: canvas.height / 2
     };
-    var absoluteOffset = {
-        x: canvas.width / 2,
-        y: canvas.height / 2
-    };
     // Viewport offset in relative (screen) numbers
     translatePos.x = 0;
     translatePos.y = 0;
-
-    // Viewport offset in absolute (canvas) numbers
-    absoluteOffset.x = 0;
-    absoluteOffset.y = 0;
-
 
     var startDragOffset = {};
     var mouseDown = false;
@@ -281,13 +280,19 @@ $(document).ready(function () {
     canvas.addEventListener("mouseup", function (evt) {
         mouseDown = false;
 
-        absoluteOffset.x = (translatePos.x - xcenter) / scale;
-        absoluteOffset.y = (translatePos.y - ycenter) / scale;
+        var evtx = evt.clientX;
+        var evty = evt.clientY;
+        var mpos = getMousePos(canvas, evt);
 
-        var x = (evt.clientX - xcenter) / scale - absoluteOffset.x;
-        var y = (evt.clientY - ycenter) / scale - absoluteOffset.y;
+        var absx = (translatePos.x - xcenter) / scale;
+        var absy = (translatePos.y - ycenter) / scale;
 
-        console.log("mouseUp: " + scoords(evt.clientX, evt.clientY) + ", mouseUp scaled: " + scoords(x, y) + ", scale: " + sdisp2(scale));
+        var x = (evtx - xcenter) / scale - absx;
+        var y = (evty - ycenter) / scale - absy;
+
+        console.log("mouseUp: " + scoords(evtx, evty)
+            + ", mpos: " + scoords(mpos.x, mpos.y)
+            + ", mouseUp scaled: " + scoords(x, y) + ", scale: " + sdisp2(scale));
 
         displayCoord(startDragOffset.x, startDragOffset.y);
 
@@ -326,13 +331,13 @@ $(document).ready(function () {
     });
 
     myCanvas.addEventListener('dblclick', function (evt) {
-        absoluteOffset.x = (translatePos.x - xcenter) / scale;
-        absoluteOffset.y = (translatePos.y - ycenter) / scale;
+        var absx = (translatePos.x - xcenter) / scale;
+        var absy = (translatePos.y - ycenter) / scale;
 
         scale /= scaleMultiplier;
 
-        translatePos.x = (scale * absoluteOffset.x) + xcenter;
-        translatePos.y = (scale * absoluteOffset.y) + ycenter;
+        translatePos.x = (scale * absx) + xcenter;
+        translatePos.y = (scale * absy) + ycenter;
 
         logLocation(canvas, scale, translatePos);
 
