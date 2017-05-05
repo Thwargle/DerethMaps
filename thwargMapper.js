@@ -14,8 +14,9 @@ var b = height - 101.9 * a;
 var d = width / 203.9;
 var e = width - 102 * d;
 
-var xcenter = 410;
-var ycenter = 410;
+// set dynamically in ready()
+var xcenter = 0;
+var ycenter = 0;
 
 function draw() {
     base_image = new Image();
@@ -149,7 +150,7 @@ function getDynamicPoints() {
 }
 
 function scoords(x, y) {
-    return Math.round(x).toString() + ", " + Math.round(y).toString();
+    return Math.round(x).toString() + "," + Math.round(y).toString();
 }
 function sdisp2(val) {
     return Math.round(val * 100) / 100;
@@ -192,11 +193,17 @@ function drawPoint(context, y, x, width, type) {
     }
 }
 
-window.onload = function () {
+$(document).ready(function () {
     canvas = document.getElementById("myCanvas");
     context = canvas.getContext("2d");
 
+    xcenter = canvas.width / 2;
+    ycenter = canvas.height / 2;
+
     console.log("a,b=" + scoords(a, b) + ", d,e=" + scoords(d, e));
+    console.log("xctr,yctr=" + scoords(xcenter, ycenter));
+
+
     translatePos = {
         x: canvas.width / 2,
         y: canvas.height / 2
@@ -213,29 +220,29 @@ window.onload = function () {
     absoluteOffset.x = 0;
     absoluteOffset.y = 0;
 
-    
+
     var startDragOffset = {};
     var mouseDown = false;
 
     // add button event listeners
-    document.getElementById("plus").addEventListener("click", function(){
-        absoluteOffset.x = (translatePos.x - xcenter)/scale;
-        absoluteOffset.y = (translatePos.y - ycenter)/scale;
-        
+    document.getElementById("plus").addEventListener("click", function () {
+        absoluteOffset.x = (translatePos.x - xcenter) / scale;
+        absoluteOffset.y = (translatePos.y - ycenter) / scale;
+
         scale /= scaleMultiplier;
-        
+
         translatePos.x = (scale * absoluteOffset.x) + xcenter;
         translatePos.y = (scale * absoluteOffset.y) + ycenter;
-        
+
         logLocation(canvas, scale, translatePos);
-        
+
         draw();
     }, false);
 
-    document.getElementById("minus").addEventListener("click", function(){
+    document.getElementById("minus").addEventListener("click", function () {
         absoluteOffset.x = (translatePos.x - xcenter) / scale;
         absoluteOffset.y = (translatePos.y - ycenter) / scale;
-                                                                        
+
         scale *= scaleMultiplier;
 
         translatePos.x = (scale * absoluteOffset.x) + xcenter;
@@ -244,25 +251,25 @@ window.onload = function () {
         draw();
     }, false);
 
-    document.getElementById("log").addEventListener("click", function(){
-                                                                    
+    document.getElementById("log").addEventListener("click", function () {
+
         logLocation(canvas, scale, translatePos);
-        
+
         draw();
     }, false);
 
     document.getElementById("reset").addEventListener("click", function () {
-        
+
     });
 
     // add event listeners to handle screen drag
-    canvas.addEventListener("mousedown", function(evt){
+    canvas.addEventListener("mousedown", function (evt) {
         mouseDown = true;
         startDragOffset.x = evt.clientX - translatePos.x;
         startDragOffset.y = evt.clientY - translatePos.y;
     });
 
-    canvas.addEventListener("mouseup", function(evt){
+    canvas.addEventListener("mouseup", function (evt) {
         mouseDown = false;
 
         absoluteOffset.x = (translatePos.x - xcenter) / scale;
@@ -284,8 +291,7 @@ window.onload = function () {
     }
     canvas.addEventListener("mousewheel", function (evt) {
         console.log(evt.wheelDelta);
-        if (Math.sign(evt.wheelDelta) >= 0)
-        {
+        if (Math.sign(evt.wheelDelta) >= 0) {
             absoluteOffset.x = (translatePos.x - xcenter) / scale;
             absoluteOffset.y = (translatePos.y - ycenter) / scale;
 
@@ -296,8 +302,7 @@ window.onload = function () {
 
             draw();
         }
-        else
-        {
+        else {
             absoluteOffset.x = (translatePos.x - xcenter) / scale;
             absoluteOffset.y = (translatePos.y - ycenter) / scale;
 
@@ -310,15 +315,15 @@ window.onload = function () {
         }
     });
 
-    canvas.addEventListener("mouseover", function(evt){
+    canvas.addEventListener("mouseover", function (evt) {
         mouseDown = false;
     });
 
-    canvas.addEventListener("mouseout", function(evt){
+    canvas.addEventListener("mouseout", function (evt) {
         mouseDown = false;
     });
 
-    canvas.addEventListener("mousemove", function(evt){
+    canvas.addEventListener("mousemove", function (evt) {
         if (mouseDown) {
             translatePos.x = evt.clientX - startDragOffset.x;
             translatePos.y = evt.clientY - startDragOffset.y;
@@ -326,17 +331,17 @@ window.onload = function () {
         }
     });
 
-    myCanvas.addEventListener('dblclick', function(evt){ 
+    myCanvas.addEventListener('dblclick', function (evt) {
         absoluteOffset.x = (translatePos.x - xcenter) / scale;
         absoluteOffset.y = (translatePos.y - ycenter) / scale;
-        
+
         scale /= scaleMultiplier;
-        
+
         translatePos.x = (scale * absoluteOffset.x) + xcenter;
         translatePos.y = (scale * absoluteOffset.y) + ycenter;
-        
+
         logLocation(canvas, scale, translatePos);
-        
+
         draw();
         mouseDown = false;
     });
@@ -345,7 +350,7 @@ window.onload = function () {
     getDynamicPoints();
     setInterval(function () { draw(); }, 500);
     setInterval(function () { getDynamicPoints(); }, 800);
-};
+});
 
 
 
