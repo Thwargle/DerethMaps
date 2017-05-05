@@ -272,6 +272,191 @@
     "y": "41.9S"
   },
   {
+    "Type": "Town",
+    "LocationName": "Sanamar",
+    "Race": "Viamontian",
+    "Special": "Starter, Capital",
+    "x": "60.9W",
+    "y": "72.1N"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Bluespire",
+    "Race": "Viamontian",
+    "Special": "",
+    "x": "75.3W",
+    "y": "39.5N"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Eastwatch",
+    "Race": "Viamontian",
+    "Special": "",
+    "x": "43.1W",
+    "y": "90.3N"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Greenspire",
+    "Race": "Viamontian",
+    "Special": "",
+    "x": "66.8W",
+    "y": "43.2N"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Redspire",
+    "Race": "Viamontian",
+    "Special": "",
+    "x": "83.0W",
+    "y": "40.6N"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Silyun",
+    "Race": "Viamontian",
+    "Special": "",
+    "x": "70.8W",
+    "y": "87.3N"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Westwatch",
+    "Race": "Viamontian",
+    "Special": "",
+    "x": "73.4W",
+    "y": "72.8N"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Ahurenga",
+    "Race": "Independent",
+    "Special": "",
+    "x": "89.8W",
+    "y": "46.1N"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Bandit Castle",
+    "Race": "Independent",
+    "Special": "",
+    "x": "49.3E",
+    "y": "65.0N"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Beach Fort",
+    "Race": "Independent",
+    "Special": "",
+    "x": "49.1W",
+    "y": "76.0N"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Candeth Keep",
+    "Race": "Independent",
+    "Special": "",
+    "x": "67.1W",
+    "y": "87.5S"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Crater Lake Village",
+    "Race": "Independent",
+    "Special": "",
+    "x": "13.5E",
+    "y": "64.9N"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Danby's Outpost",
+    "Race": "Independent",
+    "Special": "",
+    "x": "28.7W",
+    "y": "23.4N"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Fiun Outpost",
+    "Race": "Independent",
+    "Special": "",
+    "x": "56.8W",
+    "y": "95.9N"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Kor-Gursha",
+    "Race": "Independent",
+    "Special": "",
+    "x": "30.5E",
+    "y": "67.4N"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Linvak Tukal",
+    "Race": "Independent",
+    "Special": "",
+    "x": "28.0E",
+    "y": "77.8S"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "MacNiall's Freehold",
+    "Race": "Independent",
+    "Special": "",
+    "x": "92.2E",
+    "y": "74.4S"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Mar'uun",
+    "Race": "Independent",
+    "Special": "",
+    "x": "17.1E",
+    "y": "10.6S"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Merwart Village",
+    "Race": "Independent",
+    "Special": "",
+    "x": "59.0E",
+    "y": "79.9N"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Neydisa Castle",
+    "Race": "Independent",
+    "Special": "",
+    "x": "17.9E",
+    "y": "69.5N"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Oolutanga's Refuge",
+    "Race": "Independent",
+    "Special": "",
+    "x": "95.4E",
+    "y": "2.3N"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Timaru",
+    "Race": "Independent",
+    "Special": "",
+    "x": "78.0W",
+    "y": "44.2N"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Tou-Tou",
+    "Race": "Sho",
+    "Special": "Destroyed",
+    "x": "94.8E",
+    "y": "30.3S"
+  },
+
+  {
     "Type": "Hunting",
     "LocationName": "Caulcano",
     "x": "94.6W",
