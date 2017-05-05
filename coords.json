@@ -215,15 +215,61 @@
     "x": "5.0E",
     "y": "7.2N"
   },
-
-
-
+  {
+    "Type": "Town",
+    "LocationName": "Ayan Baqur",
+    "Race": "Gharu'ndim",
+    "Special": "",
+    "x": "88.0W",
+    "y": "60.0S"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Khayyaban",
+    "Race": "Gharu'ndim",
+    "Special": "",
+    "x": "25.5E",
+    "y": "47.4S"
+  },
   {
     "Type": "Town",
     "LocationName": "Qalaba'r",
     "Race": "Gharu'ndim",
+    "Special": "",
     "x": "19.6E",
     "y": "74.6S"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Samsur",
+    "Race": "Gharu'ndim",
+    "Special": "",
+    "x": "19.0E",
+    "y": "3.2S"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Tufa",
+    "Race": "Gharu'ndim",
+    "Special": "",
+    "x": "6.1E",
+    "y": "14.8S"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Uziz",
+    "Race": "Gharu'ndim",
+    "Special": "",
+    "x": "28.4E",
+    "y": "24.8S"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Xarabydun",
+    "Race": "Gharu'ndim",
+    "Special": "",
+    "x": "16.1E",
+    "y": "41.9S"
   },
   {
     "Type": "Hunting",
