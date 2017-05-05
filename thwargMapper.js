@@ -44,6 +44,26 @@ function draw() {
     context.restore();
 }
 
+function zoomIn() {
+    absoluteOffset.x = (translatePos.x - xcenter) / scale;
+    absoluteOffset.y = (translatePos.y - ycenter) / scale;
+
+    scale /= scaleMultiplier;
+
+    translatePos.x = (scale * absoluteOffset.x) + xcenter;
+    translatePos.y = (scale * absoluteOffset.y) + ycenter;
+}
+
+function zoomOut() {
+    absoluteOffset.x = (translatePos.x - xcenter) / scale;
+    absoluteOffset.y = (translatePos.y - ycenter) / scale;
+
+    scale *= scaleMultiplier;
+
+    translatePos.x = (scale * absoluteOffset.x) + xcenter;
+    translatePos.y = (scale * absoluteOffset.y) + ycenter;
+}
+
 function logLocation(canvas, scale, translatePos) {
         var ax = (translatePos.x - xcenter)/scale;
         var ay = (translatePos.y - ycenter)/scale;
@@ -225,13 +245,8 @@ $(document).ready(function () {
 
     // add button event listeners
     document.getElementById("plus").addEventListener("click", function () {
-        absoluteOffset.x = (translatePos.x - xcenter) / scale;
-        absoluteOffset.y = (translatePos.y - ycenter) / scale;
 
-        scale /= scaleMultiplier;
-
-        translatePos.x = (scale * absoluteOffset.x) + xcenter;
-        translatePos.y = (scale * absoluteOffset.y) + ycenter;
+        zoomIn();
 
         logLocation(canvas, scale, translatePos);
 
@@ -239,13 +254,8 @@ $(document).ready(function () {
     }, false);
 
     document.getElementById("minus").addEventListener("click", function () {
-        absoluteOffset.x = (translatePos.x - xcenter) / scale;
-        absoluteOffset.y = (translatePos.y - ycenter) / scale;
 
-        scale *= scaleMultiplier;
-
-        translatePos.x = (scale * absoluteOffset.x) + xcenter;
-        translatePos.y = (scale * absoluteOffset.y) + ycenter;
+        zoomOut();
 
         draw();
     }, false);
@@ -291,27 +301,12 @@ $(document).ready(function () {
     canvas.addEventListener("mousewheel", function (evt) {
         console.log(evt.wheelDelta);
         if (Math.sign(evt.wheelDelta) >= 0) {
-            absoluteOffset.x = (translatePos.x - xcenter) / scale;
-            absoluteOffset.y = (translatePos.y - ycenter) / scale;
-
-            scale /= scaleMultiplier;
-
-            translatePos.x = (scale * absoluteOffset.x) + xcenter;
-            translatePos.y = (scale * absoluteOffset.y) + ycenter;
-
-            draw();
+            zoomIn();
         }
         else {
-            absoluteOffset.x = (translatePos.x - xcenter) / scale;
-            absoluteOffset.y = (translatePos.y - ycenter) / scale;
-
-            scale *= scaleMultiplier;
-
-            translatePos.x = (scale * absoluteOffset.x) + xcenter;
-            translatePos.y = (scale * absoluteOffset.y) + ycenter;
-
-            draw();
+            zoomOut();
         }
+        draw();
     });
 
     canvas.addEventListener("mouseover", function (evt) {
