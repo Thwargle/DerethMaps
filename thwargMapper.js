@@ -2,17 +2,17 @@ var content;
 var context;
 var points = new Array();
 var dPoints = new Array();
-var height = 2041;
-var width = 2041;
+var mapheight = 2041;
+var mapwidth = 2041;
 
 var scale = 0.4;
 var scaleMultiplier = 0.8;
 var translatePos;
 
-var a = height / 203.9;
-var b = height - 101.9 * a;
-var d = width / 203.9;
-var e = width - 102 * d;
+var a = mapheight / 203.9;
+var b = mapheight - 101.9 * a;
+var d = mapwidth / 203.9;
+var e = mapwidth - 102 * d;
 
 // set dynamically in ready()
 var xcenter = 0;
