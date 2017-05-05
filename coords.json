@@ -87,7 +87,7 @@
     "x": "21.8W",
     "y": "68.7N"
   },
-    {
+  {
     "Type": "Town",
     "LocationName": "Underground City",
     "Race": "Aluvian",
@@ -97,18 +97,179 @@
   },
   {
     "Type": "Town",
+    "LocationName": "Shoushi",
+    "Race": "Sho",
+    "Special": "Starter",
+    "x": "72.8E",
+    "y": "33.5S"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Hebian-To",
+    "Race": "Sho",
+    "Special": "Capital",
+    "x": "82.6E",
+    "y": "38.9S"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Baishi",
+    "Race": "Sho",
+    "Special": "",
+    "x": "62.9E",
+    "y": "49.3S"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Kara",
+    "Race": "Sho",
+    "Special": "",
+    "x": "47.6E",
+    "y": "83.5S"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Kryst",
+    "Race": "Sho",
+    "Special": "",
+    "x": "84.2E",
+    "y": "74.6S"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Lin",
+    "Race": "Sho",
+    "Special": "",
+    "x": "74.3E",
+    "y": "53.9S"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Mayoi",
+    "Race": "Sho",
+    "Special": "",
+    "x": "82.5E",
+    "y": "61.9S"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Nanto",
+    "Race": "Sho",
+    "Special": "",
+    "x": "48.4E",
+    "y": "26.0N"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Sawato",
+    "Race": "Sho",
+    "Special": "",
+    "x": "58.9E",
+    "y": "29.1S"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Wai Jhou",
+    "Race": "Sho",
+    "Special": "",
+    "x": "51.4W",
+    "y": "62.0S"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Yanshi",
+    "Race": "Sho",
+    "Special": "",
+    "x": "42.2E",
+    "y": "12.6S"
+  },
+  {
+    "Type": "Town",
     "LocationName": "Yaraq",
     "Race": "Gharu'ndim",
-    "Special": "",
+    "Special": "Starter",
     "x": "1.8W",
     "y": "21.5S"
   },
   {
     "Type": "Town",
+    "LocationName": "Zaikhal",
+    "Race": "Gharu'ndim",
+    "Special": "Capital",
+    "x": "0.7E",
+    "y": "13.5N"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Al-Arqas",
+    "Race": "Gharu'ndim",
+    "Special": "",
+    "x": "13.2E",
+    "y": "31.3S"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Al-Jalima",
+    "Race": "Gharu'ndim",
+    "Special": "",
+    "x": "5.0E",
+    "y": "7.2N"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Ayan Baqur",
+    "Race": "Gharu'ndim",
+    "Special": "",
+    "x": "88.0W",
+    "y": "60.0S"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Khayyaban",
+    "Race": "Gharu'ndim",
+    "Special": "",
+    "x": "25.5E",
+    "y": "47.4S"
+  },
+  {
+    "Type": "Town",
     "LocationName": "Qalaba'r",
     "Race": "Gharu'ndim",
+    "Special": "",
     "x": "19.6E",
     "y": "74.6S"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Samsur",
+    "Race": "Gharu'ndim",
+    "Special": "",
+    "x": "19.0E",
+    "y": "3.2S"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Tufa",
+    "Race": "Gharu'ndim",
+    "Special": "",
+    "x": "6.1E",
+    "y": "14.8S"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Uziz",
+    "Race": "Gharu'ndim",
+    "Special": "",
+    "x": "28.4E",
+    "y": "24.8S"
+  },
+  {
+    "Type": "Town",
+    "LocationName": "Xarabydun",
+    "Race": "Gharu'ndim",
+    "Special": "",
+    "x": "16.1E",
+    "y": "41.9S"
   },
   {
     "Type": "Hunting",
