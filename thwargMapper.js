@@ -46,12 +46,11 @@ function logLocation(canvas, scale, translatePos) {
         var ay = (translatePos.y - 300)/scale;
         var w1 = canvas.width / scale;
         var h1 = canvas.height / scale;
-        console.log("w1=" + Math.round(w1).toString() + ", h1=" + Math.round(h1).toString());
-        console.log("ax=" + Math.round(ax).toString() + ", ay=" + Math.round(ay).toString());
-        console.log("canvas.offsetWidth=" + Math.round(canvas.offsetWidth).toString() + ", canvas.offsetHeight=" + Math.round(canvas.offsetHeight).toString());
-        console.log("tx1=" + Math.round(translatePos.x).toString() + ", ty1=" + Math.round(translatePos.y).toString());
-        console.log("scale=" + scale.toString());
-        console.log("canvas height: " + canvas.clientHeight + " canvas width: " + canvas.clientWidth);
+        console.log("canvas: " + scoords(w1, h1) + ", offset: " + scoords(canvas.offsetWidth, canvas.offsetHeight));
+        console.log("canvasClient: " + scoords(canvas.clientWidth, canvas.clientHeight));
+        console.log("ax/y=" + scoords(ax, ay));
+        console.log("tx/y=" + scoords(translatePos.x, translatePos.y));
+        console.log("scale=" + sdisp2(scale));
 }
 function getMousePos(canvas, evt) {
     var rect = canvas.getBoundingClientRect();
@@ -146,7 +145,14 @@ function getDynamicPoints() {
     xmlhttp.send();
 }
 
+function scoords(x, y) {
+    return Math.round(x).toString() + ", " + Math.round(y).toString();
+}
+function sdisp2(val) {
+    return Math.round(val * 100) / 100;
+}
 function drawPoint(context, y, x, width, type) {
+    // Convert map coordinates to canvas coordinates
     var my = a * y + b;
     var mx = d * x + e;
     circleRadius = 8 / Math.sqrt(scale);
@@ -195,8 +201,11 @@ window.onload = function () {
         x: canvas.width / 2,
         y: canvas.height / 2
     };
+    // Viewport offset in relative (screen) numbers
     translatePos.x = 0;
     translatePos.y = 0;
+
+    // Viewport offset in absolute (canvas) numbers
     absoluteOffset.x = 0;
     absoluteOffset.y = 0;
 
@@ -251,8 +260,14 @@ window.onload = function () {
 
     canvas.addEventListener("mouseup", function(evt){
         mouseDown = false;
-        absoluteOffset.x = (evt.clientX - 400)/scale;
-        absoluteOffset.y = (evt.clientY - 300)/scale;
+
+        absoluteOffset.x = (translatePos.x - 400) / scale;
+        absoluteOffset.y = (translatePos.y - 300) / scale;
+
+        var x = (evt.clientX - 400) / scale - absoluteOffset.x;
+        var y = (evt.clientY - 300) / scale - absoluteOffset.y;
+
+        console.log("mouseUp: " + scoords(evt.clientX, evt.clientY) + ", mouseUp scaled: " + scoords(x, y) + ", scale: " + sdisp2(scale));
 
         displayCoord(startDragOffset.x, startDragOffset.y);
 
@@ -324,8 +339,8 @@ window.onload = function () {
 
     getPoints();
     getDynamicPoints();
-    setInterval(function () { draw(); }, 100);
-    setInterval(function () { getDynamicPoints(); }, 500);
+    setInterval(function () { draw(); }, 500);
+    setInterval(function () { getDynamicPoints(); }, 800);
 };
 
 
