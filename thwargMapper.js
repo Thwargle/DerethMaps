@@ -254,7 +254,7 @@ window.onload = function () {
         absoluteOffset.x = (evt.clientX - 400)/scale;
         absoluteOffset.y = (evt.clientY - 300)/scale;
 
-        displayCoord(absoluteOffset.x, absoluteOffset.y);
+        displayCoord(startDragOffset.x, startDragOffset.y);
 
 
     });
@@ -263,6 +263,33 @@ window.onload = function () {
         document.getElementById("debug").innerHTML = "cx=" + Math.round(x).toString() + ", cy=" + Math.round(y).toString();
 
     }
+    canvas.addEventListener("mousewheel", function (evt) {
+        console.log(evt.wheelDelta);
+        if (Math.sign(evt.wheelDelta) >= 0)
+        {
+            absoluteOffset.x = (translatePos.x - 400) / scale;
+            absoluteOffset.y = (translatePos.y - 300) / scale;
+
+            scale /= scaleMultiplier;
+
+            translatePos.x = (scale * absoluteOffset.x) + 400;
+            translatePos.y = (scale * absoluteOffset.y) + 300;
+
+            draw();
+        }
+        else
+        {
+            absoluteOffset.x = (translatePos.x - 400) / scale;
+            absoluteOffset.y = (translatePos.y - 300) / scale;
+
+            scale *= scaleMultiplier;
+
+            translatePos.x = (scale * absoluteOffset.x) + 400;
+            translatePos.y = (scale * absoluteOffset.y) + 300;
+
+            draw();
+        }
+    });
 
     canvas.addEventListener("mouseover", function(evt){
         mouseDown = false;
