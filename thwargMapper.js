@@ -1,9 +1,8 @@
-var content;
 var context;
 var points = new Array();
 var dPoints = new Array();
-var mapheight = 2041;
 var mapwidth = 2041;
+var mapheight = 2041;
 
 var scale = 0.4;
 var scaleMultiplier = 0.8;
