@@ -289,7 +289,10 @@ window.onload = function () {
     });
 
     function displayCoord(x, y) {
-        document.getElementById("debug").innerHTML = "cx=" + Math.round(x).toString() + ", cy=" + Math.round(y).toString();
+        var multiplier = Math.pow(10, 1 || 0);
+        var roundedX = Math.round(x * multiplier) / multiplier;
+        var roundedY = Math.round(y * multiplier) / multiplier;
+        document.getElementById("debug").innerHTML = "cx=" + roundedX.toString() + ", cy=" + roundedY.toString();
 
     }
     canvas.addEventListener("mousewheel", function (evt) {
