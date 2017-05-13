@@ -58,8 +58,8 @@ function logLocation(canvas, scale, translatePos) {
 function getMousePos(canvas, evt) {
     var rect = canvas.getBoundingClientRect();
     return {
-        x: evt.clientX,
-        y: evt.clientY
+        x: evt.clientX - rect.left,
+        y: evt.clientY - rect.top
     };
 }
 
@@ -197,6 +197,8 @@ window.onload = function () {
     context = canvas.getContext("2d");
 
     console.log("a,b=" + scoords(a, b) + ", d,e=" + scoords(d, e));
+    console.log("canvas: " + scoords(canvas.clientWidth, canvas.clientHeight));
+
     translatePos = {
         x: canvas.width / 2,
         y: canvas.height / 2
@@ -265,16 +267,24 @@ window.onload = function () {
     canvas.addEventListener("mouseup", function(evt){
         mouseDown = false;
 
-        absoluteOffset.x = (translatePos.x - xcenter) / scale;
-        absoluteOffset.y = (translatePos.y - ycenter) / scale;
+        // Get mouse position inside canvas screen (removes client side offsets)
+        var mpos = getMousePos(canvas, evt)
 
-        var x = (evt.clientX - xcenter) / scale - absoluteOffset.x;
-        var y = (evt.clientY - ycenter) / scale - absoluteOffset.y;
+        // Convert to canvas coordinates
+        var canco = {
+            x: (mpos.x - translatePos.x) / scale,
+            y: (mpos.y - translatePos.y) / scale
+        };
 
-        console.log("mouseUp: " + scoords(evt.clientX, evt.clientY) + ", mouseUp scaled: " + scoords(x, y) + ", scale: " + sdisp2(scale));
+        // Convert to map coordinates (invert the ax+b, dx+e formula)
+        var mapco = {
+            x: (canco.x - b) / a,
+            y: (canco.y - e) / d
+        };
 
-        displayCoord(startDragOffset.x, startDragOffset.y);
+        console.log("mapxy: " + scoords(mapco.x, mapco.y));
 
+        displayCoord(mapco.x, mapco.y);
 
     });
 
@@ -343,8 +353,8 @@ window.onload = function () {
 
     getPoints();
     getDynamicPoints();
-    setInterval(function () { draw(); }, 500);
-    setInterval(function () { getDynamicPoints(); }, 800);
+    setInterval(function () { draw(); }, 1500);
+    setInterval(function () { getDynamicPoints(); }, 1800);
 };
 
 
