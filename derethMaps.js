@@ -35,10 +35,10 @@ function draw() {
 
     for (i = 0; i < pointsArrayLength; i++)
     {
-        drawPoint(context, points[i].y, points[i].x, 5, points[i].type);
+        drawPoint(context, points[i].y, points[i].x, 5, points[i].type, points[i].race, points[i].special);
     }
     for (i = 0; i < dPointsArrayLength; i++) {
-        drawPoint(context, dPoints[i].y, dPoints[i].x, 5, dPoints[i].type);
+        drawPoint(context, dPoints[i].y, dPoints[i].x, 5, dPoints[i].type, dPoints[i].race, dPoints[i].special);
     }
 
     context.restore();
@@ -98,7 +98,7 @@ function getPoints() {
                     y = yInt * -1;
                 }
 
-                var point = { type: json[i].Type, location: json[i].LocationName, x: x, y: y };
+                var point = { type: json[i].Type, race: json[i].Race, special: json[i].Special, location: json[i].LocationName, x: x, y: y };
                 points.push(point);
             }
             draw();
@@ -154,7 +154,7 @@ function scoords(x, y) {
 function sdisp2(val) {
     return Math.round(val * 100) / 100;
 }
-function drawPoint(context, y, x, width, type) {
+function drawPoint(context, y, x, width, type, race, special) {
     // Convert map coordinates to canvas coordinates
     var my = a * y + b;
     var mx = d * x + e;
@@ -165,7 +165,21 @@ function drawPoint(context, y, x, width, type) {
     {
         if (document.getElementById("Town").checked) {
             town_image = new Image();
-            town_image.src = 'images/townHouse.png';
+            if (race == "Aluvian") {
+                town_image.src = 'images/Map_Point_Aluv_Town.png';
+            }
+            else if (race == "Sho") {
+                town_image.src = 'images/Map_Point_Sho_Town.png';
+            }
+            else if (race == "Gharu'ndim") {
+                town_image.src = 'images/Map_Point_Gharu_Town.png';
+            }
+            else if (race == "Viamontian") {
+                town_image.src = 'images/Map_Point_Via_Town.png';
+            }
+            else {
+                town_image.src = 'images/Map_Point_Town.png';
+            }
             context.drawImage(town_image, mx - 10, my - 10, rectWidth, rectWidth);
         }
     }
@@ -188,6 +202,21 @@ function drawPoint(context, y, x, width, type) {
             player_image = new Image();
             player_image.src = 'images/playerHead.png';
             context.drawImage(player_image, mx - 10, my - 10, rectWidth, rectWidth);
+        }
+    }
+}
+
+function collides(points, x, y) {
+    var isCollision = false;
+    for (var i = 0, len = points.length; i < len; i++) {
+        var left = points[i].x, right = points[i].x + rects[i].w;
+        var top = points[i].y, bottom = points[i].y + rects[i].h;
+        if (right >= x
+            && left <= x
+            && bottom >= y
+            && top <= y) {
+            isCollision = points[i];
+            console.log("Clicked: " + points[i].LocationName);
         }
     }
 }
@@ -285,6 +314,7 @@ window.onload = function () {
         console.log("mapxy: " + scoords(mapco.x, mapco.y));
 
         displayCoord(mapco.x, mapco.y);
+        collides(points, mapco.x, mapco.y);
 
     });
 
@@ -381,7 +411,8 @@ window.onload = function () {
 
 
 
-
+// http://acpedia.org/wiki/Template:Map_Point_Plus
+// Look here for a list of map icons
 //
                 //Map Bounds:
                 //Top Left: 102n, 101.9w
