@@ -292,7 +292,25 @@ window.onload = function () {
         var multiplier = Math.pow(10, 1 || 0);
         var roundedX = Math.round(x * multiplier) / multiplier;
         var roundedY = Math.round(y * multiplier) / multiplier;
-        document.getElementById("debug").innerHTML = "cx=" + roundedX.toString() + ", cy=" + roundedY.toString();
+        var xWithCompass;
+        var yWithCompass;
+        if (roundedX > 0)
+        {
+            xWithCompass = Math.abs(roundedX).toString() + "E";
+        }
+        else if (roundedX < 0)
+        {
+            xWithCompass = Math.abs(roundedX).toString() + "W";
+        }
+        if (roundedY > 0) {
+            yWithCompass = Math.abs(roundedY).toString() + "N";
+        }
+        else if (roundedY < 0) {
+            yWithCompass = Math.abs(roundedY).toString() + "S";
+        }
+
+
+        document.getElementById("debug").innerHTML = "cx=" + xWithCompass + ", cy=" + yWithCompass;
 
     }
     canvas.addEventListener("mousewheel", function (evt) {
