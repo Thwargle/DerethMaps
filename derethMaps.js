@@ -208,15 +208,17 @@ function drawPoint(context, y, x, width, type, race, special) {
 
 function collides(points, x, y) {
     var isCollision = false;
-    for (var i = 0, len = points.length; i < len; i++) {
-        var left = points[i].x, right = points[i].x + rects[i].w;
-        var top = points[i].y, bottom = points[i].y + rects[i].h;
+    for (var i = 0; i < points.length; i++) {
+        var left = points[i].x - 2, right = points[i].x;
+        var top = points[i].y - 2, bottom = points[i].y;
+        var type = points[i].Type;
+        var race = points[i].Race;
         if (right >= x
             && left <= x
             && bottom >= y
             && top <= y) {
-            isCollision = points[i];
-            console.log("Clicked: " + points[i].LocationName);
+            isCollision = true;
+            console.log("Clicked: " + type + " " + race);
         }
     }
 }
