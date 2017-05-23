@@ -149,7 +149,7 @@ function getDynamicPoints() {
 }
 
 function scoords(x, y) {
-    return Math.round(x).toString() + ", " + Math.round(y).toString();
+    return sdisp2(x).toString() + ", " + sdisp2(y).toString();
 }
 function sdisp2(val) {
     return Math.round(val * 100) / 100;
@@ -159,7 +159,7 @@ function drawPoint(context, y, x, width, type, race, special) {
     var my = a * y + b;
     var mx = d * x + e;
     circleRadius = 8 / Math.sqrt(scale);
-    rectWidth = 12 / Math.sqrt(scale);
+    rectWidth = 10 / Math.sqrt(scale);
 
     if (type == "Town")
     {
@@ -175,12 +175,12 @@ function drawPoint(context, y, x, width, type, race, special) {
                 town_image.src = 'images/Map_Point_Gharu_Town.png';
             }
             else if (race == "Viamontian") {
-                town_image.src = 'images/Map_Point_Via_Town.png';
+                town_image.src = 'images/castleTower.png';
             }
             else {
                 town_image.src = 'images/Map_Point_Town.png';
             }
-            context.drawImage(town_image, mx - 10, my - 10, rectWidth, rectWidth);
+            context.drawImage(town_image, mx, my-rectWidth/2, rectWidth, rectWidth);
         }
     }
     else if (type == "Hunting")
@@ -209,8 +209,8 @@ function drawPoint(context, y, x, width, type, race, special) {
 function collides(points, x, y) {
     var isCollision = false;
     for (var i = 0; i < points.length; i++) {
-        var left = points[i].x - 2, right = points[i].x;
-        var top = points[i].y - 2, bottom = points[i].y;
+        var left = points[i].x - (1 / Math.sqrt(scale)), right = points[i].x + (1 / Math.sqrt(scale));
+        var top = points[i].y - (1 / Math.sqrt(scale)), bottom = points[i].y + (1 / Math.sqrt(scale));
         var type = points[i].Type;
         var race = points[i].Race;
         if (right >= x
@@ -218,6 +218,7 @@ function collides(points, x, y) {
             && bottom >= y
             && top <= y) {
             isCollision = true;
+            console.log(points[i].x, points[i].y);
             console.log("Clicked: " + type + " " + race);
         }
     }
