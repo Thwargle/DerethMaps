@@ -35,10 +35,15 @@ function draw() {
 
     for (i = 0; i < pointsArrayLength; i++)
     {
-        drawPoint(context, points[i].y, points[i].x, 5, points[i].type, points[i].race, points[i].special);
+        drawPoint(context, points[i].y, points[i].x, 5, points[i].Type, points[i].Race, points[i].Special);
     }
     for (i = 0; i < dPointsArrayLength; i++) {
-        drawPoint(context, dPoints[i].y, dPoints[i].x, 5, dPoints[i].type, dPoints[i].race, dPoints[i].special);
+        drawPoint(context, dPoints[i].y, dPoints[i].x, 5, dPoints[i].Type, dPoints[i].Race, dPoints[i].Special);
+    }
+
+    if (document.getElementById("LandblockGrid").checked)
+    {
+        drawGrid();
     }
 
     context.restore();
@@ -98,7 +103,7 @@ function getPoints() {
                     y = yInt * -1;
                 }
 
-                var point = { type: json[i].Type, race: json[i].Race, special: json[i].Special, location: json[i].LocationName, x: x, y: y };
+                var point = { Type: json[i].Type, Race: json[i].Race, Special: json[i].Special, LocationName: json[i].LocationName, x: x, y: y };
                 points.push(point);
             }
             draw();
@@ -138,7 +143,8 @@ function getDynamicPoints() {
                     y = yInt * -1;
                 }
 
-                var point = { type: json[i].Type, location: json[i].LocationName, x: x, y: y };
+                //console.log("Location: " + json[i].LocationName + " Race: " + json[i].Race + " X: " + json[i].x);
+                var point = { Type: json[i].Type, Location: json[i].LocationName, Race: json[i].Race, x: x, y: y };
                 dPoints.push(point);
             }
             draw();
@@ -154,27 +160,27 @@ function scoords(x, y) {
 function sdisp2(val) {
     return Math.round(val * 100) / 100;
 }
-function drawPoint(context, y, x, width, type, race, special) {
+function drawPoint(context, y, x, width, Type, Race, Special) {
     // Convert map coordinates to canvas coordinates
     var my = a * y + b;
     var mx = d * x + e;
     circleRadius = 8 / Math.sqrt(scale);
     rectWidth = 10 / Math.sqrt(scale);
 
-    if (type == "Town")
+    if (Type == "Town")
     {
         if (document.getElementById("Town").checked) {
             town_image = new Image();
-            if (race == "Aluvian") {
+            if (Race == "Aluvian") {
                 town_image.src = 'images/Map_Point_Aluv_Town.png';
             }
-            else if (race == "Sho") {
+            else if (Race == "Sho") {
                 town_image.src = 'images/Map_Point_Sho_Town.png';
             }
-            else if (race == "Gharu'ndim") {
+            else if (Race == "Gharu'ndim") {
                 town_image.src = 'images/Map_Point_Gharu_Town.png';
             }
-            else if (race == "Viamontian") {
+            else if (Race == "Viamontian") {
                 town_image.src = 'images/castleTower.png';
             }
             else {
@@ -183,7 +189,7 @@ function drawPoint(context, y, x, width, type, race, special) {
             context.drawImage(town_image, mx, my-rectWidth/2, rectWidth, rectWidth);
         }
     }
-    else if (type == "Hunting")
+    else if (Type == "Hunting")
     {
         if (document.getElementById("Hunting").checked) {
             context.beginPath();
@@ -196,7 +202,7 @@ function drawPoint(context, y, x, width, type, race, special) {
             context.closePath();
         }
     }
-    else if (type == "Player")
+    else if (Type == "Player")
     {
         if (document.getElementById("Player").checked) {
             player_image = new Image();
@@ -211,7 +217,7 @@ function collides(points, x, y) {
     for (var i = 0; i < points.length; i++) {
         var left = points[i].x - (1 / Math.sqrt(scale)), right = points[i].x + (1 / Math.sqrt(scale));
         var top = points[i].y - (1 / Math.sqrt(scale)), bottom = points[i].y + (1 / Math.sqrt(scale));
-        var type = points[i].Type;
+        var locationName = points[i].LocationName;
         var race = points[i].Race;
         if (right >= x
             && left <= x
@@ -219,9 +225,28 @@ function collides(points, x, y) {
             && top <= y) {
             isCollision = true;
             console.log(points[i].x, points[i].y);
-            console.log("Clicked: " + type + " " + race);
+            console.log("Clicked: " + locationName + " " + race);
         }
     }
+}
+
+function drawGrid()
+{
+    var bh = 203.9 * (height / 203.9);
+    var bw = 203.9 * (width / 203.9);
+    
+    for (var x = 0; x <= bw; x += bw / 256) {
+        context.moveTo(0.5 + x, 0);
+        context.lineTo(0.5 + x, bh);
+    }
+
+    for (var y = 0; y <= bh; y += bh / 256) {
+        context.moveTo(0, 0.5 + y);
+        context.lineTo(bw, 0.5 + y);
+    }
+
+    context.strokeStyle = "black";
+    context.stroke();
 }
 
 window.onload = function () {
@@ -318,8 +343,21 @@ window.onload = function () {
 
         displayCoord(mapco.x, mapco.y);
         collides(points, mapco.x, mapco.y);
+        getLandblock(mapco.x, mapco.y);
 
     });
+
+    function getLandblock(mx, my)
+    {
+        var xfract = (mx - (-101.9)) / (102 - (-101.9));
+        var yfract = 1 - (my - (-102)) / (101.9 - (-102));
+        console.log(scoords(xfract, yfract));
+        var block = {
+            x: Math.round(xfract * 255),
+            y: Math.round(yfract * 255)
+        }
+        console.log(scoords(block.x, block.y));
+    }
 
     function displayCoord(x, y) {
         var multiplier = Math.pow(10, 1 || 0);
