@@ -7,6 +7,19 @@
 	   <script type="text/javascript" src="derethMaps.js"></script>
     </head>
     <body onmousedown="return false;">
+        <div style="float:left;">
+            <div>
+                <input type="checkbox" id="Town" value="Town" checked="checked" /> Show Towns<br />
+                <input type="checkbox" id="Player" value="Player" />Show Players<br />
+                <input type="checkbox" id="Hunting" value="Hunting" checked="checked" />Show Hunting<br />
+                <input type="checkbox" id="LandblockGrid" value="Landblock" checked="checked" />Show Landblock Grid<br />
+            </div>
+            <div style="float:left;">
+                <p id="debug"></p>
+                <p id="CollisionInfo"></p>
+                <p id="LandblockInfo"></p>
+            </div>
+        </div>
         <div id="wrapper" style="margin-left:auto; margin-right:auto;">
             <canvas id="myCanvas" width="820" height="820" style="background-color:#242F40">
             </canvas>
@@ -16,13 +29,6 @@
                 <input type="image" src="images/zoomOut.png" id="minus" value="-">
                 <input type="image" src="images/log.png" id="log" value="log">
             </div>
-            <div>
-                <input type="checkbox" id="Town" value="Town" checked="checked" /> Show Towns<br />
-                <input type="checkbox" id="Player" value="Player" />Show Players<br />
-                <input type="checkbox" id="Hunting" value="Hunting" checked="checked" />Show Hunting<br />
-                <input type="checkbox" id="LandblockGrid" value="Landblock" checked="checked" />Show Landblock Grid<br />
-            </div>
         </div>
-        <div><p id="debug"></p></div>
     </body>
 </html>

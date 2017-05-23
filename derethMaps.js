@@ -219,11 +219,13 @@ function collides(points, x, y) {
         var top = points[i].y - (1 / Math.sqrt(scale)), bottom = points[i].y + (1 / Math.sqrt(scale));
         var locationName = points[i].LocationName;
         var race = points[i].Race;
+        var special = points[i].Special;
         if (right >= x
             && left <= x
             && bottom >= y
             && top <= y) {
             isCollision = true;
+            document.getElementById("CollisionInfo").innerHTML = "LocationName: " + locationName + "<br />" + "Location Race: " + race + "<br />" + "Special: " + special;
             console.log(points[i].x, points[i].y);
             console.log("Clicked: " + locationName + " " + race);
         }
@@ -339,7 +341,7 @@ window.onload = function () {
             y: (canco.y - e) / d
         };
 
-        console.log("mapxy: " + scoords(mapco.x, mapco.y));
+        //console.log("mapxy: " + scoords(mapco.x, mapco.y));
 
         displayCoord(mapco.x, mapco.y);
         collides(points, mapco.x, mapco.y);
@@ -357,6 +359,7 @@ window.onload = function () {
             y: Math.round(yfract * 255)
         }
         console.log(scoords(block.x, block.y));
+        document.getElementById("LandblockInfo").innerHTML = "Landblock: " + block.x + " (0x" + block.x.toString(16) + ") " + block.y + " (0x" + block.y.toString(16) + ")";
     }
 
     function displayCoord(x, y) {
@@ -381,7 +384,7 @@ window.onload = function () {
         }
 
 
-        document.getElementById("debug").innerHTML = "cx=" + xWithCompass + ", cy=" + yWithCompass;
+        document.getElementById("debug").innerHTML = "Coordinates: " + xWithCompass + ", " + yWithCompass;
 
     }
     canvas.addEventListener("mousewheel", function (evt) {
