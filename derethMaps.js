@@ -225,14 +225,14 @@ function collides(points, x, y) {
     for (var i = 0; i < points.length; i++) {
         var left = points[i].x - (1 / Math.sqrt(scale)), right = points[i].x + (1 / Math.sqrt(scale));
         var top = points[i].y - (1 / Math.sqrt(scale)), bottom = points[i].y + (1 / Math.sqrt(scale));
-        var locationName = points[i].LocationName;
-        var race = points[i].Race;
-        var special = points[i].Special;
         if (right >= x
             && left <= x
             && bottom >= y
             && top <= y) {
             isCollision = true;
+            var locationName = points[i].LocationName;
+            var race = points[i].Race;
+            var special = points[i].Special;
             collisionElement.innerHTML = "LocationName: " + locationName + "<br />" + "Location Race: " + race + "<br />" + "Special: " + special;
             console.log(points[i].x, points[i].y);
             console.log("Clicked: " + locationName + " " + race);
