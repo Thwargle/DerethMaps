@@ -221,9 +221,11 @@ function drawPoint(context, y, x, width, Type, Race, Special, isHighlighted) {
         }
     }
     if (isHighlighted) {
+        var oldAlpha = context.globalAlpha;
         context.globalAlpha = 0.5;
         context.fillStyle = "red";
-        context.fillRect(mx, my, rectWidth, rectWidth);
+        context.fillRect(mx, my - rectWidth / 2, rectWidth, rectWidth);
+        context.globalAlpha = oldAlpha;
     }
 }
 function clearSelection() {
