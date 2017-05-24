@@ -220,6 +220,8 @@ function drawPoint(context, y, x, width, Type, Race, Special) {
 
 function collides(points, x, y) {
     var isCollision = false;
+    var collisionElement = document.getElementById("CollisionInfo");
+    collisionElement.innerHTML = "";
     for (var i = 0; i < points.length; i++) {
         var left = points[i].x - (1 / Math.sqrt(scale)), right = points[i].x + (1 / Math.sqrt(scale));
         var top = points[i].y - (1 / Math.sqrt(scale)), bottom = points[i].y + (1 / Math.sqrt(scale));
@@ -231,7 +233,7 @@ function collides(points, x, y) {
             && bottom >= y
             && top <= y) {
             isCollision = true;
-            document.getElementById("CollisionInfo").innerHTML = "LocationName: " + locationName + "<br />" + "Location Race: " + race + "<br />" + "Special: " + special;
+            collisionElement.innerHTML = "LocationName: " + locationName + "<br />" + "Location Race: " + race + "<br />" + "Special: " + special;
             console.log(points[i].x, points[i].y);
             console.log("Clicked: " + locationName + " " + race);
         }
