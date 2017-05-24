@@ -2,6 +2,8 @@ var content;
 var context;
 var points = new Array();
 var dPoints = new Array();
+var highlightedPoint = -1;
+var highlightedDynPoint = -1;
 
 // dimensions of the map image we have
 var imgHeight = 2041;
@@ -41,10 +43,12 @@ function draw() {
 
     for (i = 0; i < pointsArrayLength; i++)
     {
-        drawPoint(context, points[i].y, points[i].x, 5, points[i].Type, points[i].Race, points[i].Special);
+        var isHightlighted = (highlightedPoint == i);
+        drawPoint(context, points[i].y, points[i].x, 5, points[i].Type, points[i].Race, points[i].Special, isHightlighted);
     }
     for (i = 0; i < dPointsArrayLength; i++) {
-        drawPoint(context, dPoints[i].y, dPoints[i].x, 5, dPoints[i].Type, dPoints[i].Race, dPoints[i].Special);
+        var isHightlighted = (highlightedDynPoint == i);
+        drawPoint(context, dPoints[i].y, dPoints[i].x, 5, dPoints[i].Type, dPoints[i].Race, dPoints[i].Special, isHightlighted);
     }
 
     if (document.getElementById("LandblockGrid").checked)
@@ -166,7 +170,7 @@ function scoords(x, y) {
 function sdisp2(val) {
     return Math.round(val * 100) / 100;
 }
-function drawPoint(context, y, x, width, Type, Race, Special) {
+function drawPoint(context, y, x, width, Type, Race, Special, isHighlighted) {
     // Convert map coordinates to canvas coordinates
     var my = a * y + b;
     var mx = d * x + e;
@@ -216,12 +220,21 @@ function drawPoint(context, y, x, width, Type, Race, Special) {
             context.drawImage(player_image, mx - 10, my - 10, rectWidth, rectWidth);
         }
     }
+    if (isHighlighted) {
+        context.globalAlpha = 0.5;
+        context.fillStyle = "red";
+        context.fillRect(mx, my, rectWidth, rectWidth);
+    }
 }
-
+function clearSelection() {
+    highlightedDynPoint = -1;
+    highlightedPoint = -1;
+    var collisionElement = document.getElementById("CollisionInfo");
+    collisionElement.innerHTML = "";
+}
 function collides(points, x, y) {
     var isCollision = false;
     var collisionElement = document.getElementById("CollisionInfo");
-    collisionElement.innerHTML = "";
     for (var i = 0; i < points.length; i++) {
         var left = points[i].x - (1 / Math.sqrt(scale)), right = points[i].x + (1 / Math.sqrt(scale));
         var top = points[i].y - (1 / Math.sqrt(scale)), bottom = points[i].y + (1 / Math.sqrt(scale));
@@ -229,6 +242,7 @@ function collides(points, x, y) {
             && left <= x
             && bottom >= y
             && top <= y) {
+            highlightedPoint = i;
             isCollision = true;
             var locationName = points[i].LocationName;
             var race = points[i].Race;
