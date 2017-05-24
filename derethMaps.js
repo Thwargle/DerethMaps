@@ -2,17 +2,23 @@ var content;
 var context;
 var points = new Array();
 var dPoints = new Array();
-var height = 2041;
-var width = 2041;
+
+// dimensions of the map image we have
+var imgHeight = 2041;
+var imgWidth = 2041;
+
+// dimensions of the world map in the game
+var mapHeight = 203.9;
+var mapWidth = 203.9
 
 var scale = 0.4;
 var scaleMultiplier = 0.8;
 var translatePos;
 
-var a = height / 203.9;
-var b = height - 101.9 * a;
-var d = width / 203.9;
-var e = width - 102 * d;
+var a = imgHeight / mapHeight;
+var b = imgHeight - 101.9 * a;
+var d = imgWidth / mapWidth;
+var e = imgWidth - 102 * d;
 
 var xcenter = 410;
 var ycenter = 410;
@@ -234,8 +240,8 @@ function collides(points, x, y) {
 
 function drawGrid()
 {
-    var bh = 203.9 * (height / 203.9);
-    var bw = 203.9 * (width / 203.9);
+    var bh = mapHeight * (imgHeight / mapHeight);
+    var bw = mapWidth * (imgWidth / mapWidth);
     
     for (var x = 0; x <= bw; x += bw / 256) {
         context.moveTo(0.5 + x, 0);
