@@ -119,7 +119,9 @@ function getPoints() {
             draw();
         }
     };
-    xmlhttp.open("GET", "coords.json", true);
+
+
+    xmlhttp.open("GET", "coords.json?_=" + new Date().getTime().toString(), true);
     xmlhttp.send();
 }
 
@@ -160,7 +162,7 @@ function getDynamicPoints() {
             draw();
         }
     };
-    xmlhttp.open("GET", "dynamicCoords.json", true);
+    xmlhttp.open("GET", "dynamicCoords.json?_=" + new Date().getTime().toString(), true);
     xmlhttp.send();
 }
 
