@@ -44,16 +44,16 @@
     "LocationName": "Fort Tethana",
     "Race": "Aluvian",
     "Special": "",
-    "x": "26.5E",
-    "y": "29.7N"
+    "x": "71.2W",
+    "y": "1.7N"
   },
   {
     "Type": "Town",
-    "LocationName": "Glendon Wood",
+    "LocationName": "Glenden Wood",
     "Race": "Aluvian",
     "Special": "",
-    "x": "71.2W",
-    "y": "1.7N"
+    "x": "26.5E",
+    "y": "29.7N"
   },
   {
     "Type": "Town",
@@ -157,15 +157,15 @@
     "Race": "Sho",
     "Special": "",
     "x": "48.4E",
-    "y": "26.0N"
+    "y": "26.0S"
   },
   {
     "Type": "Town",
     "LocationName": "Sawato",
     "Race": "Sho",
     "Special": "",
-    "x": "58.9E",
-    "y": "29.1S"
+    "x": "82.1E",
+    "y": "52.5S"
   },
   {
     "Type": "Town",

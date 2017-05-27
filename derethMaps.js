@@ -239,6 +239,7 @@ function clearSelection() {
 function collides(points, x, y) {
     var isCollision = false;
     var collisionElement = document.getElementById("CollisionInfo");
+    var threeSixtyView = document.getElementById("360");
     for (var i = 0; i < points.length; i++) {
         var left = points[i].x - (1 / Math.sqrt(scale)), right = points[i].x + (1 / Math.sqrt(scale));
         var top = points[i].y - (1 / Math.sqrt(scale)), bottom = points[i].y + (1 / Math.sqrt(scale));
@@ -252,6 +253,14 @@ function collides(points, x, y) {
             var race = points[i].Race;
             var special = points[i].Special;
             collisionElement.innerHTML = "LocationName: " + locationName + "<br />" + "Location Race: " + race + "<br />" + "Special: " + special;
+            if (locationName == "Glenden Wood")
+            {
+                threeSixtyView.src = "GlendenWood.html";
+            }
+            else
+            {
+                threeSixtyView.src = "";
+            }
             console.log(points[i].x, points[i].y);
             console.log("Clicked: " + locationName + " " + race);
         }
@@ -403,14 +412,14 @@ window.onload = function () {
             xWithCompass = Math.abs(roundedX).toString() + "W";
         }
         if (roundedY > 0) {
-            yWithCompass = Math.abs(roundedY).toString() + "N";
-        }
-        else if (roundedY < 0) {
             yWithCompass = Math.abs(roundedY).toString() + "S";
         }
+        else if (roundedY < 0) {
+            yWithCompass = Math.abs(roundedY).toString() + "N";
+        }
 
 
-        document.getElementById("debug").innerHTML = "Coordinates: " + xWithCompass + ", " + yWithCompass;
+        document.getElementById("debug").innerHTML = "Coordinates: " + yWithCompass + ", " + xWithCompass;
 
     }
     canvas.addEventListener("mousewheel", function (evt) {
