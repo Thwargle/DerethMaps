@@ -17,20 +17,22 @@
                 <input type="image" src="images/log.png" id="log" value="log">
             </div>
         </div>
-        <div style="float:left; z-index:1; padding-left: 15px;">
-            <div>
-                <input type="checkbox" id="Town" value="Town" checked="checked" /> Show Towns<br />
-                <input type="checkbox" id="Player" value="Player" />Show Players<br />
-                <input type="checkbox" id="Hunting" value="Hunting" checked="checked" />Show Hunting<br />
-                <input type="checkbox" id="LandblockGrid" value="Landblock" checked="checked" />Show Landblock Grid<br />
-                <button onclick="clearSelection();">Clear Selection</button>
+        <div style="float:left">
+            <div style="float:left; z-index:1; padding-left: 15px;">
+                <div>
+                    <input type="checkbox" id="Town" value="Town" checked="checked" /> Show Towns<br />
+                    <input type="checkbox" id="Player" value="Player" />Show Players<br />
+                    <input type="checkbox" id="Hunting" value="Hunting" checked="checked" />Show Hunting<br />
+                    <input type="checkbox" id="LandblockGrid" value="Landblock" checked="checked" />Show Landblock Grid<br />
+                    <button onclick="clearSelection();">Clear Selection</button>
+                </div>
+                <div>
+                    <p id="debug"></p>
+                    <p id="CollisionInfo"></p>
+                    <p id="LandblockInfo"></p>
+                </div>
             </div>
-            <div style="float:left;">
-                <p id="debug"></p>
-                <p id="CollisionInfo"></p>
-                <p id="LandblockInfo"></p>
-            </div>
-            <div id="iframeHolder">
+            <div style="float:left;" id="iframeHolder">
                 <iframe id="360" src="" width="330" height="240" frameborder="0"></iframe>
             </div>
         </div>

@@ -370,7 +370,9 @@ window.onload = function () {
     }, false);
 
     document.getElementById("reset").addEventListener("click", function () {
-        
+        canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext('2d');
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
     });
 
     // add event listeners to handle screen drag
