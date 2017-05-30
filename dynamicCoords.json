@@ -1,1 +1,26 @@
-[{"Type":"Player", "LocationName":"Zorgle", "x":"42.5720955802003E", "y":"57.0448191079986N"}, {"Type":"Player", "LocationName":"Thwargle", "x":"92.3805477555742W", "y":"55.9543740788732N"}, {"Type":"Player", "LocationName":"Kristoff", "x":"46.6659709062254W", "y":"4.77191100631221N"}]
+[
+  {
+    "Type": "Player",
+    "LocationName": "Zorgle",
+    "x": "42.5720955802003E",
+    "y": "57.0448191079986N"
+  },
+  {
+    "Type": "Player",
+    "LocationName": "Thwargle",
+    "x": "92.3805477555742W",
+    "y": "55.9543740788732N"
+  },
+  {
+    "Type": "Player",
+    "LocationName": "Kristoff",
+    "x": "46.6659709062254W",
+    "y": "4.77191100631221N"
+  },
+  {
+    "Type": "Landblock",
+    "LocationName": "Landblock",
+    "x": "0.0W",
+    "y": "0.0N"
+  }
+]

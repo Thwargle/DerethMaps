@@ -7,7 +7,17 @@
 	   <script type="text/javascript" src="derethMaps.js"></script>
     </head>
     <body onmousedown="return false;">
-        <div style="float:left; position:absolute;">
+        <div id="wrapper" style="float:left">
+            <canvas id="myCanvas" width="820" height="820" style="background-color:#242F40">
+            </canvas>
+            <div id="buttonWrapper" style="background-color: lightgray; text-align:center;">
+                <input type="image" src="images/reset.png" id="reset" value="reset">
+                <input type="image" src="images/zoomIn.png" id="plus" value="+">
+                <input type="image" src="images/zoomOut.png" id="minus" value="-">
+                <input type="image" src="images/log.png" id="log" value="log">
+            </div>
+        </div>
+        <div style="float:left; z-index:1; padding-left: 15px;">
             <div>
                 <input type="checkbox" id="Town" value="Town" checked="checked" /> Show Towns<br />
                 <input type="checkbox" id="Player" value="Player" />Show Players<br />
@@ -22,16 +32,6 @@
             </div>
             <div id="iframeHolder">
                 <iframe id="360" src="" width="330" height="240" frameborder="0"></iframe>
-            </div>
-        </div>
-        <div id="wrapper" style="margin-left:auto; margin-right:auto;">
-            <canvas id="myCanvas" width="820" height="820" style="background-color:#242F40">
-            </canvas>
-            <div id="buttonWrapper" style="background-color: lightgray; text-align:center;">
-                <input type="image" src="images/reset.png" id="reset" value="reset">
-                <input type="image" src="images/zoomIn.png" id="plus" value="+">
-                <input type="image" src="images/zoomOut.png" id="minus" value="-">
-                <input type="image" src="images/log.png" id="log" value="log">
             </div>
         </div>
     </body>

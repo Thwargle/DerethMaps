@@ -3,7 +3,9 @@ var context;
 var points = new Array();
 var dPoints = new Array();
 var highlightedPoint = -1;
+var landblockPoint = -1;
 var highlightedDynPoint = -1;
+var landblockDynPoint = -1;
 
 // dimensions of the map image we have
 var imgHeight = 2041;
@@ -44,11 +46,14 @@ function draw() {
     for (i = 0; i < pointsArrayLength; i++)
     {
         var isHightlighted = (highlightedPoint == i);
-        drawPoint(context, points[i].y, points[i].x, 5, points[i].Type, points[i].Race, points[i].Special, isHightlighted);
+        var isLandblock = -1;
+        drawPoint(context, points[i].y, points[i].x, 5, points[i].Type, points[i].Race, points[i].Special, isHightlighted, isLandblock);
     }
     for (i = 0; i < dPointsArrayLength; i++) {
         var isHightlighted = (highlightedDynPoint == i);
-        drawPoint(context, dPoints[i].y, dPoints[i].x, 5, dPoints[i].Type, dPoints[i].Race, dPoints[i].Special, isHightlighted);
+        var isLandblock = (landblockDynPoint == i);
+        //console.log("We got ourselves a landblock: " + isLandblock);
+        drawPoint(context, dPoints[i].y, dPoints[i].x, 5, dPoints[i].Type, dPoints[i].Race, dPoints[i].Special, isHightlighted, isLandblock);
     }
 
     if (document.getElementById("LandblockGrid").checked)
@@ -172,7 +177,7 @@ function scoords(x, y) {
 function sdisp2(val) {
     return Math.round(val * 100) / 100;
 }
-function drawPoint(context, y, x, width, Type, Race, Special, isHighlighted) {
+function drawPoint(context, y, x, width, Type, Race, Special, isHighlighted, isLandblock) {
     // Convert map coordinates to canvas coordinates
     var my = a * y + b;
     var mx = d * x + e;
@@ -229,6 +234,13 @@ function drawPoint(context, y, x, width, Type, Race, Special, isHighlighted) {
         context.fillRect(mx, my - rectWidth / 2, rectWidth, rectWidth);
         context.globalAlpha = oldAlpha;
     }
+    //else (isLandblock)
+    //{
+    //    context.globalAlpha = 0.5;
+    //    context.fillStyle = "green";
+    //    context.fillRect(mx, my - rectWidth / 2, rectWidth, rectWidth);
+    //    context.globalAlpha = oldAlpha;
+    //}
 }
 function clearSelection() {
     highlightedDynPoint = -1;
@@ -238,6 +250,7 @@ function clearSelection() {
 }
 function collides(points, x, y) {
     var isCollision = false;
+    var isLandblock = false;
     var collisionElement = document.getElementById("CollisionInfo");
     var threeSixtyView = document.getElementById("360");
     for (var i = 0; i < points.length; i++) {
@@ -248,21 +261,30 @@ function collides(points, x, y) {
             && bottom >= y
             && top <= y) {
             highlightedPoint = i;
+            landblockDynPoint = i;
             isCollision = true;
+            isLandblock = true;
+            var type = points[i].Type;
             var locationName = points[i].LocationName;
             var race = points[i].Race;
             var special = points[i].Special;
-            collisionElement.innerHTML = "LocationName: " + locationName + "<br />" + "Location Race: " + race + "<br />" + "Special: " + special;
-            if (locationName == "Glenden Wood")
+
+            if (type == "Landblock")
             {
-                threeSixtyView.src = "GlendenWood.html";
+                landblockDynPoint = true;
             }
             else
             {
-                threeSixtyView.src = "";
+                collisionElement.innerHTML = "LocationName: " + locationName + "<br />" + "Location Race: " + race + "<br />" + "Special: " + special;
+                if (locationName == "Glenden Wood") {
+                    threeSixtyView.src = "GlendenWood.html";
+                }
+                else {
+                    threeSixtyView.src = "";
+                }
+                console.log(points[i].x, points[i].y);
+                console.log("Clicked: " + locationName + " " + race);
             }
-            console.log(points[i].x, points[i].y);
-            console.log("Clicked: " + locationName + " " + race);
         }
     }
 }
