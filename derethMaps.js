@@ -259,13 +259,6 @@ function drawPoint(context, x, y, width, Type, Race, Special, isHighlighted, isL
         context.fillRect(mx, my - rectWidth / 2, rectWidth, rectWidth);
         context.globalAlpha = oldAlpha;
     }
-    //else (isLandblock)
-    //{
-    //    context.globalAlpha = 0.5;
-    //    context.fillStyle = "green";
-    //    context.fillRect(mx, my - rectWidth / 2, rectWidth, rectWidth);
-    //    context.globalAlpha = oldAlpha;
-    //}
 }
 function clearSelection() {
     highlightedDynPoint = -1;
@@ -337,7 +330,7 @@ function colorLandblocks(context) {
             var oldAlpha = context.globalAlpha;
             context.globalAlpha = 0.5;
             context.fillStyle = color;
-            context.fillRect(canx, cany, canvasBlockWidth, canvasBlockHeight);
+            context.fillRect(canx + 1, cany, canvasBlockWidth, canvasBlockHeight);
             context.globalAlpha = oldAlpha;
             console.log("Coloring landblock: " + scoords(canx, cany));
         }
