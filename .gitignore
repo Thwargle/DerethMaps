@@ -1,3 +1,6 @@
 /.vs/DerethMaps/v14/.suo
 /.vs/config/applicationhost.config
 /.vs/DerethMaps/v15/.suo
+/jsonWriter/.vs
+/jsonWriter/jsonWriter/bin
+/jsonWriter/jsonWriter/obj
