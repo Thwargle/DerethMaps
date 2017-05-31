@@ -314,6 +314,8 @@ function collides(points, x, y) {
     }
 }
 function colorLandblocks(context) {
+    var canvasBlockWidth = landblockWidth * d;
+    var canvasBlockHeight = landblockHeight * a;
     for (bx in locationArray) {
         for (by in locationArray[bx]) {
             var block = locationArray[bx][by];
@@ -335,7 +337,7 @@ function colorLandblocks(context) {
             var oldAlpha = context.globalAlpha;
             context.globalAlpha = 0.5;
             context.fillStyle = color;
-            context.fillRect(canx, cany, landblockWidth, landblockHeight);
+            context.fillRect(canx, cany, canvasBlockWidth, canvasBlockHeight);
             context.globalAlpha = oldAlpha;
             console.log("Coloring landblock: " + scoords(canx, cany));
         }
