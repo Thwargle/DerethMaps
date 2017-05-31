@@ -138,7 +138,7 @@ function getPoints() {
     xmlhttp.send();
 }
 
-function getDynamicPoints() {
+function getDynamicPlayers() {
     dPoints = new Array();
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -548,9 +548,9 @@ function drawGrid() {
         });
 
         getPoints();
-        getDynamicPoints();
+        getDynamicPlayers();
         setInterval(function () { draw(); }, 1500);
-        setInterval(function () { getDynamicPoints(); }, 1800);
+        setInterval(function () { getDynamicPlayers(); }, 1800);
     };
 
 
