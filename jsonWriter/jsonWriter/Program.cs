@@ -75,14 +75,17 @@ namespace jsonWriter
         }
         private string StoreLoc(double val, string pos, string neg)
         {
+            string posneg;
             if (val >= 0.0)
             {
-                return string.Format("{0}{1}", val, pos);
+                posneg = pos;
             }
             else
             {
-                return string.Format("{0}{1}", -val, neg);
+                posneg = neg;
+                val = -val;
             }
+            return string.Format(System.Globalization.CultureInfo.InstalledUICulture, "{0}{1}", val, posneg);
         }
         private double Wobble(double val, int scale, int max, int min)
         {
