@@ -8,12 +8,16 @@ var highlightedDynPoint = -1;
 var landblockDynPoint = -1;
 
 // dimensions of the map image we have
-var imgHeight = 2041;
 var imgWidth = 2041;
+var imgHeight = 2041;
 
 // dimensions of the world map in the game
-var mapHeight = 203.9;
 var mapWidth = 203.9
+var mapHeight = 203.9;
+
+// landblock size in game dimensions
+var landblockWidth = mapWidth / 256;
+var landblockHeight = mapHeight / 256;
 
 var scale = 0.4;
 var scaleMultiplier = 0.8;
@@ -62,7 +66,7 @@ function draw() {
         drawGrid();
     }
     if (document.getElementById("HighlightLandblocks").checked) {
-        colorLandblocks();
+        colorLandblocks(context);
     }
 
     context.restore();
@@ -202,13 +206,12 @@ function sdisp2(val) {
 }
 function drawPoint(context, x, y, width, Type, Race, Special, isHighlighted, isLandblock) {
     // Convert map coordinates to canvas coordinates
-    var my = a * y + b;
-    var mx = d * x + e;
+    var canx = d * x + e;
+    var cany = a * y + b;
     circleRadius = 8 / Math.sqrt(scale);
     rectWidth = 10 / Math.sqrt(scale);
 
-    if (Type == "Town")
-    {
+    if (Type == "Town") {
         if (document.getElementById("Town").checked) {
             town_image = new Image();
             if (Race == "Aluvian") {
@@ -226,14 +229,13 @@ function drawPoint(context, x, y, width, Type, Race, Special, isHighlighted, isL
             else {
                 town_image.src = 'images/Map_Point_Town.png';
             }
-            context.drawImage(town_image, mx, my-rectWidth/2, rectWidth, rectWidth);
+            context.drawImage(town_image, canx, cany-rectWidth/2, rectWidth, rectWidth);
         }
     }
-    else if (Type == "Hunting")
-    {
+    else if (Type == "Hunting") {
         if (document.getElementById("Hunting").checked) {
             context.beginPath();
-            context.arc(mx, my, circleRadius, 0, 2 * Math.PI);
+            context.arc(canx, cany, circleRadius, 0, 2 * Math.PI);
             context.fillStyle = '#00FF00';
             context.fill();
             context.lineWidth = 1;
@@ -242,14 +244,14 @@ function drawPoint(context, x, y, width, Type, Race, Special, isHighlighted, isL
             context.closePath();
         }
     }
-    else if (Type == "Player")
-    {
+    else if (Type == "Player") {
         if (document.getElementById("Player").checked) {
             player_image = new Image();
             player_image.src = 'images/playerHead.png';
-            context.drawImage(player_image, mx - 10, my - 10, rectWidth, rectWidth);
+            context.drawImage(player_image, canx - 10, cany - 10, rectWidth, rectWidth);
         }
     }
+
     if (isHighlighted) {
         var oldAlpha = context.globalAlpha;
         context.globalAlpha = 0.5;
@@ -311,17 +313,31 @@ function collides(points, x, y) {
         }
     }
 }
-function colorLandblocks() {
-    for (x in locationArray) {
-        for (y in locationArray[x]) {
-            var block = locationArray[x][y];
-            // TODO alpha color this landblock
+function colorLandblocks(context) {
+    for (bx in locationArray) {
+        for (by in locationArray[bx]) {
+            var block = locationArray[bx][by];
+            console.log("block: " + scoords(bx, by));
+            var x = (bx - 128) * landblockWidth;
+            var y = (by - 128) * landblockHeight;
+            console.log("mapblock: " + scoords(x, y));
+            // Convert map coordinates to canvas coordinates
+            var canx = d * x + e;
+            var cany = a * y + b;
+
+            var color = "red";
             if (block.Players > 0) {
-                // TODO
+                color = "green";
             }
             if (block.Activated) {
-                // TODO
+                color = "blue";
             }
+            var oldAlpha = context.globalAlpha;
+            context.globalAlpha = 0.5;
+            context.fillStyle = color;
+            context.fillRect(canx, cany, landblockWidth, landblockHeight);
+            context.globalAlpha = oldAlpha;
+            console.log("Coloring landblock: " + scoords(canx, cany));
         }
     }
 }
