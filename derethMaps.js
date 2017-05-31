@@ -27,6 +27,8 @@ var e = imgWidth - 102 * d;
 var xcenter = 410;
 var ycenter = 410;
 
+var locationArray = {};
+
 function draw() {
     base_image = new Image();
     base_image.src = 'highres.png';
@@ -47,18 +49,20 @@ function draw() {
     {
         var isHightlighted = (highlightedPoint == i);
         var isLandblock = -1;
-        drawPoint(context, points[i].y, points[i].x, 5, points[i].Type, points[i].Race, points[i].Special, isHightlighted, isLandblock);
+        drawPoint(context, points[i].x, points[i].y, 5, points[i].Type, points[i].Race, points[i].Special, isHightlighted, isLandblock);
     }
     for (i = 0; i < dPointsArrayLength; i++) {
         var isHightlighted = (highlightedDynPoint == i);
         var isLandblock = (landblockDynPoint == i);
         //console.log("We got ourselves a landblock: " + isLandblock);
-        drawPoint(context, dPoints[i].y, dPoints[i].x, 5, dPoints[i].Type, dPoints[i].Race, dPoints[i].Special, isHightlighted, isLandblock);
+        drawPoint(context, dPoints[i].x, dPoints[i].y, 5, dPoints[i].Type, dPoints[i].Race, dPoints[i].Special, isHightlighted, isLandblock);
     }
 
-    if (document.getElementById("LandblockGrid").checked)
-    {
+    if (document.getElementById("LandblockGrid").checked) {
         drawGrid();
+    }
+    if (document.getElementById("HighlightLandblocks").checked) {
+        colorLandblocks();
     }
 
     context.restore();
@@ -164,20 +168,39 @@ function getDynamicPoints() {
                 var point = { Type: json[i].Type, Location: json[i].LocationName, Race: json[i].Race, x: x, y: y };
                 dPoints.push(point);
             }
+            reloadLocationArray(dPoints);
             draw();
         }
     };
     xmlhttp.open("GET", "dynamicCoords.json?_=" + new Date().getTime().toString(), true);
     xmlhttp.send();
 }
-
+function reloadLocationArray(dPoints) {
+    locationArray = {};
+    var dPointsArrayLength = dPoints.length;
+    for (i = 0; i < dPointsArrayLength; i++) {
+        var dpt = dPoints[i];
+        var block = getLandblock(dpt.x, dpt.y);
+        if (block.x in locationArray == false) {
+            locationArray[block.x] = {};
+        }
+        if (block.y in locationArray[block.x] == false) {
+            locationArray[block.x][block.y] = {};
+        }
+        if (dpt.Type == "Player") {
+            locationArray[block.x][block.y].Players = 1;
+        } else if (dpt.Type == "Landblock") {
+            locationArray[block.x][block.y].Activated = 1;
+        }
+    }
+}
 function scoords(x, y) {
     return sdisp2(x).toString() + ", " + sdisp2(y).toString();
 }
 function sdisp2(val) {
     return Math.round(val * 100) / 100;
 }
-function drawPoint(context, y, x, width, Type, Race, Special, isHighlighted, isLandblock) {
+function drawPoint(context, x, y, width, Type, Race, Special, isHighlighted, isLandblock) {
     // Convert map coordinates to canvas coordinates
     var my = a * y + b;
     var mx = d * x + e;
@@ -288,9 +311,21 @@ function collides(points, x, y) {
         }
     }
 }
-
-function drawGrid()
-{
+function colorLandblocks() {
+    for (x in locationArray) {
+        for (y in locationArray[x]) {
+            var block = locationArray[x][y];
+            // TODO alpha color this landblock
+            if (block.Players > 0) {
+                // TODO
+            }
+            if (block.Activated) {
+                // TODO
+            }
+        }
+    }
+}
+function drawGrid() {
     var bh = mapHeight * (imgHeight / mapHeight);
     var bw = mapWidth * (imgWidth / mapWidth);
     
@@ -307,239 +342,239 @@ function drawGrid()
     context.strokeStyle = "black";
     context.stroke();
 }
-
-window.onload = function () {
-    canvas = document.getElementById("myCanvas");
-    context = canvas.getContext("2d");
-
-    console.log("a,b=" + scoords(a, b) + ", d,e=" + scoords(d, e));
-    console.log("canvas: " + scoords(canvas.clientWidth, canvas.clientHeight));
-
-    translatePos = {
-        x: canvas.width / 2,
-        y: canvas.height / 2
-    };
-    var absoluteOffset = {
-        x: canvas.width / 2,
-        y: canvas.height / 2
-    };
-    // Viewport offset in relative (screen) numbers
-    translatePos.x = 0;
-    translatePos.y = 0;
-
-    // Viewport offset in absolute (canvas) numbers
-    absoluteOffset.x = 0;
-    absoluteOffset.y = 0;
-
-    
-    var startDragOffset = {};
-    var mouseDown = false;
-
-    // add button event listeners
-    document.getElementById("plus").addEventListener("click", function(){
-        absoluteOffset.x = (translatePos.x - xcenter)/scale;
-        absoluteOffset.y = (translatePos.y - ycenter)/scale;
-        
-        scale /= scaleMultiplier;
-        
-        translatePos.x = (scale * absoluteOffset.x) + xcenter;
-        translatePos.y = (scale * absoluteOffset.y) + ycenter;
-        
-        logLocation(canvas, scale, translatePos);
-        
-        draw();
-    }, false);
-
-    document.getElementById("minus").addEventListener("click", function(){
-        absoluteOffset.x = (translatePos.x - xcenter) / scale;
-        absoluteOffset.y = (translatePos.y - ycenter) / scale;
-                                                                        
-        scale *= scaleMultiplier;
-
-        translatePos.x = (scale * absoluteOffset.x) + xcenter;
-        translatePos.y = (scale * absoluteOffset.y) + ycenter;
-
-        draw();
-    }, false);
-
-    document.getElementById("log").addEventListener("click", function(){
-                                                                    
-        logLocation(canvas, scale, translatePos);
-        
-        draw();
-    }, false);
-
-    document.getElementById("reset").addEventListener("click", function () {
-        canvas = document.getElementById("myCanvas");
-        var ctx = canvas.getContext('2d');
-        ctx.setTransform(1, 0, 0, 1, 0, 0);
-    });
-
-    // add event listeners to handle screen drag
-    canvas.addEventListener("mousedown", function(evt){
-        mouseDown = true;
-        startDragOffset.x = evt.clientX - translatePos.x;
-        startDragOffset.y = evt.clientY - translatePos.y;
-    });
-
-    canvas.addEventListener("mouseup", function(evt){
-        mouseDown = false;
-
-        // Get mouse position inside canvas screen (removes client side offsets)
-        var mpos = getMousePos(canvas, evt)
-
-        // Convert to canvas coordinates
-        var canco = {
-            x: (mpos.x - translatePos.x) / scale,
-            y: (mpos.y - translatePos.y) / scale
-        };
-
-        // Convert to map coordinates (invert the ax+b, dx+e formula)
-        var mapco = {
-            x: (canco.x - b) / a,
-            y: (canco.y - e) / d
-        };
-
-        //console.log("mapxy: " + scoords(mapco.x, mapco.y));
-
-        displayCoord(mapco.x, mapco.y);
-        collides(points, mapco.x, mapco.y);
-        getLandblock(mapco.x, mapco.y);
-
-    });
-
-    function getLandblock(mx, my)
-    {
+    function getLandblock(mx, my) {
         var xfract = (mx - (-101.9)) / (102 - (-101.9));
         var yfract = 1 - (my - (-102)) / (101.9 - (-102));
-        console.log(scoords(xfract, yfract));
         var block = {
             x: Math.round(xfract * 255),
             y: Math.round(yfract * 255)
         }
-        console.log(scoords(block.x, block.y));
-        document.getElementById("LandblockInfo").innerHTML = "Landblock: " + block.x + " (0x" + block.x.toString(16) + ") " + block.y + " (0x" + block.y.toString(16) + ")";
+        return block;
     }
 
-    function displayCoord(x, y) {
-        var multiplier = Math.pow(10, 1 || 0);
-        var roundedX = Math.round(x * multiplier) / multiplier;
-        var roundedY = Math.round(y * multiplier) / multiplier;
-        var xWithCompass;
-        var yWithCompass;
-        if (roundedX > 0)
-        {
-            xWithCompass = Math.abs(roundedX).toString() + "E";
-        }
-        else if (roundedX < 0)
-        {
-            xWithCompass = Math.abs(roundedX).toString() + "W";
-        }
-        if (roundedY > 0) {
-            yWithCompass = Math.abs(roundedY).toString() + "S";
-        }
-        else if (roundedY < 0) {
-            yWithCompass = Math.abs(roundedY).toString() + "N";
-        }
+    window.onload = function () {
+        canvas = document.getElementById("myCanvas");
+        context = canvas.getContext("2d");
 
+        console.log("a,b=" + scoords(a, b) + ", d,e=" + scoords(d, e));
+        console.log("canvas: " + scoords(canvas.clientWidth, canvas.clientHeight));
 
-        document.getElementById("debug").innerHTML = "Coordinates: " + yWithCompass + ", " + xWithCompass;
+        translatePos = {
+            x: canvas.width / 2,
+            y: canvas.height / 2
+        };
+        var absoluteOffset = {
+            x: canvas.width / 2,
+            y: canvas.height / 2
+        };
+        // Viewport offset in relative (screen) numbers
+        translatePos.x = 0;
+        translatePos.y = 0;
 
-    }
-    canvas.addEventListener("mousewheel", function (evt) {
-        console.log(evt.wheelDelta);
-        if (Math.sign(evt.wheelDelta) >= 0)
-        {
-            absoluteOffset.x = (translatePos.x - xcenter) / scale;
-            absoluteOffset.y = (translatePos.y - ycenter) / scale;
+        // Viewport offset in absolute (canvas) numbers
+        absoluteOffset.x = 0;
+        absoluteOffset.y = 0;
 
+    
+        var startDragOffset = {};
+        var mouseDown = false;
+
+        // add button event listeners
+        document.getElementById("plus").addEventListener("click", function(){
+            absoluteOffset.x = (translatePos.x - xcenter)/scale;
+            absoluteOffset.y = (translatePos.y - ycenter)/scale;
+        
             scale /= scaleMultiplier;
-
+        
             translatePos.x = (scale * absoluteOffset.x) + xcenter;
             translatePos.y = (scale * absoluteOffset.y) + ycenter;
-
+        
+            logLocation(canvas, scale, translatePos);
+        
             draw();
-        }
-        else
-        {
+        }, false);
+
+        document.getElementById("minus").addEventListener("click", function(){
             absoluteOffset.x = (translatePos.x - xcenter) / scale;
             absoluteOffset.y = (translatePos.y - ycenter) / scale;
-
+                                                                        
             scale *= scaleMultiplier;
 
             translatePos.x = (scale * absoluteOffset.x) + xcenter;
             translatePos.y = (scale * absoluteOffset.y) + ycenter;
 
             draw();
-        }
-    });
+        }, false);
 
-    canvas.addEventListener("mouseover", function(evt){
-        mouseDown = false;
-    });
-
-    canvas.addEventListener("mouseout", function(evt){
-        mouseDown = false;
-    });
-
-    canvas.addEventListener("mousemove", function(evt){
-        if (mouseDown) {
-            translatePos.x = evt.clientX - startDragOffset.x;
-            translatePos.y = evt.clientY - startDragOffset.y;
+        document.getElementById("log").addEventListener("click", function(){
+                                                                    
+            logLocation(canvas, scale, translatePos);
+        
             draw();
+        }, false);
+
+        document.getElementById("reset").addEventListener("click", function () {
+            canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext('2d');
+            ctx.setTransform(1, 0, 0, 1, 0, 0);
+        });
+
+        // add event listeners to handle screen drag
+        canvas.addEventListener("mousedown", function(evt){
+            mouseDown = true;
+            startDragOffset.x = evt.clientX - translatePos.x;
+            startDragOffset.y = evt.clientY - translatePos.y;
+        });
+
+        canvas.addEventListener("mouseup", function(evt){
+            mouseDown = false;
+
+            // Get mouse position inside canvas screen (removes client side offsets)
+            var mpos = getMousePos(canvas, evt)
+
+            // Convert to canvas coordinates
+            var canco = {
+                x: (mpos.x - translatePos.x) / scale,
+                y: (mpos.y - translatePos.y) / scale
+            };
+
+            // Convert to map coordinates (invert the ax+b, dx+e formula)
+            var mapco = {
+                x: (canco.x - b) / a,
+                y: (canco.y - e) / d
+            };
+
+            //console.log("mapxy: " + scoords(mapco.x, mapco.y));
+
+            displayCoord(mapco.x, mapco.y);
+            collides(points, mapco.x, mapco.y);
+            displayLandblock(mapco.x, mapco.y);
+
+        });
+        function displayLandblock(mx, my)  {
+            block = getLandblock(mx, my);
+            console.log(scoords(block.x, block.y));
+            document.getElementById("LandblockInfo").innerHTML = "Landblock: " + block.x + " (0x" + block.x.toString(16) + ") " + block.y + " (0x" + block.y.toString(16) + ")";
         }
-    });
+        function displayCoord(x, y) {
+            var multiplier = Math.pow(10, 1 || 0);
+            var roundedX = Math.round(x * multiplier) / multiplier;
+            var roundedY = Math.round(y * multiplier) / multiplier;
+            var xWithCompass;
+            var yWithCompass;
+            if (roundedX > 0)
+            {
+                xWithCompass = Math.abs(roundedX).toString() + "E";
+            }
+            else if (roundedX < 0)
+            {
+                xWithCompass = Math.abs(roundedX).toString() + "W";
+            }
+            if (roundedY > 0) {
+                yWithCompass = Math.abs(roundedY).toString() + "S";
+            }
+            else if (roundedY < 0) {
+                yWithCompass = Math.abs(roundedY).toString() + "N";
+            }
 
-    myCanvas.addEventListener('dblclick', function(evt){ 
-        absoluteOffset.x = (translatePos.x - xcenter) / scale;
-        absoluteOffset.y = (translatePos.y - ycenter) / scale;
+
+            document.getElementById("debug").innerHTML = "Coordinates: " + yWithCompass + ", " + xWithCompass;
+
+        }
+        canvas.addEventListener("mousewheel", function (evt) {
+            console.log(evt.wheelDelta);
+            if (Math.sign(evt.wheelDelta) >= 0)
+            {
+                absoluteOffset.x = (translatePos.x - xcenter) / scale;
+                absoluteOffset.y = (translatePos.y - ycenter) / scale;
+
+                scale /= scaleMultiplier;
+
+                translatePos.x = (scale * absoluteOffset.x) + xcenter;
+                translatePos.y = (scale * absoluteOffset.y) + ycenter;
+
+                draw();
+            }
+            else
+            {
+                absoluteOffset.x = (translatePos.x - xcenter) / scale;
+                absoluteOffset.y = (translatePos.y - ycenter) / scale;
+
+                scale *= scaleMultiplier;
+
+                translatePos.x = (scale * absoluteOffset.x) + xcenter;
+                translatePos.y = (scale * absoluteOffset.y) + ycenter;
+
+                draw();
+            }
+        });
+
+        canvas.addEventListener("mouseover", function(evt){
+            mouseDown = false;
+        });
+
+        canvas.addEventListener("mouseout", function(evt){
+            mouseDown = false;
+        });
+
+        canvas.addEventListener("mousemove", function(evt){
+            if (mouseDown) {
+                translatePos.x = evt.clientX - startDragOffset.x;
+                translatePos.y = evt.clientY - startDragOffset.y;
+                draw();
+            }
+        });
+
+        myCanvas.addEventListener('dblclick', function(evt){ 
+            absoluteOffset.x = (translatePos.x - xcenter) / scale;
+            absoluteOffset.y = (translatePos.y - ycenter) / scale;
         
-        scale /= scaleMultiplier;
+            scale /= scaleMultiplier;
         
-        translatePos.x = (scale * absoluteOffset.x) + xcenter;
-        translatePos.y = (scale * absoluteOffset.y) + ycenter;
+            translatePos.x = (scale * absoluteOffset.x) + xcenter;
+            translatePos.y = (scale * absoluteOffset.y) + ycenter;
         
-        logLocation(canvas, scale, translatePos);
+            logLocation(canvas, scale, translatePos);
         
-        draw();
-        mouseDown = false;
-    });
+            draw();
+            mouseDown = false;
+        });
 
-    getPoints();
-    getDynamicPoints();
-    setInterval(function () { draw(); }, 1500);
-    setInterval(function () { getDynamicPoints(); }, 1800);
-};
-
-
+        getPoints();
+        getDynamicPoints();
+        setInterval(function () { draw(); }, 1500);
+        setInterval(function () { getDynamicPoints(); }, 1800);
+    };
 
 
-// http://acpedia.org/wiki/Template:Map_Point_Plus
-// Look here for a list of map icons
-//
-                //Map Bounds:
-                //Top Left: 102n, 101.9w
-                //Bottom Right: 101.9s, 102e
-                //Dereth is divided into a grid of 65,536 landblocks comprising a grid 256 blocks wide by 256 blocks high (values 0 to 255).
 
-                ////top left
-                //drawPoints(context, -101.9, -102, a, b, d, e, 5);
-                ////bottom left
-                //drawPoints(context, 102, -101.9, a, b, d, e, 5);
-                ////top right
-                //drawPoints(context, -101.9, 102, a, b, d, e, 5);
-                ////bottom right
-                //drawPoints(context, 102, 101.9, a, b, d, e, 5);
 
-                ////Center
-                //drawPoints(context, 0, 0, a, b, d, e, 5);
+    // http://acpedia.org/wiki/Template:Map_Point_Plus
+    // Look here for a list of map icons
+    //
+    //Map Bounds:
+    //Top Left: 102n, 101.9w
+    //Bottom Right: 101.9s, 102e
+    //Dereth is divided into a grid of 65,536 landblocks comprising a grid 256 blocks wide by 256 blocks high (values 0 to 255).
 
-                ////Yaraq
-                ////drawPoints(context, 21.5, -1.8, a, b, d, e, 5);
+    ////top left
+    //drawPoints(context, -101.9, -102, a, b, d, e, 5);
+    ////bottom left
+    //drawPoints(context, 102, -101.9, a, b, d, e, 5);
+    ////top right
+    //drawPoints(context, -101.9, 102, a, b, d, e, 5);
+    ////bottom right
+    //drawPoints(context, 102, 101.9, a, b, d, e, 5);
 
-                ////Caulcano
-                //drawPoints(context, 94.4, -94.6, a, b, d, e, 5);
+    ////Center
+    //drawPoints(context, 0, 0, a, b, d, e, 5);
 
-                ////Qalaba'r
-                //drawPoints(context, 74.6, 19.6, a, b, d, e, 5);
-//
+    ////Yaraq
+    ////drawPoints(context, 21.5, -1.8, a, b, d, e, 5);
+
+    ////Caulcano
+    //drawPoints(context, 94.4, -94.6, a, b, d, e, 5);
+
+    ////Qalaba'r
+    //drawPoints(context, 74.6, 19.6, a, b, d, e, 5);
+    //
