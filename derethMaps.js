@@ -314,7 +314,7 @@ function colorLandblocks(context) {
             var block = locationArray[bx][by];
             console.log("block: " + scoords(bx, by));
             var x = (bx - 128) * landblockWidth;
-            var y = (by - 128) * landblockHeight;
+            var y = (126 - by) * landblockHeight;
             console.log("mapblock: " + scoords(x, y));
             // Convert map coordinates to canvas coordinates
             var canx = d * x + e;
@@ -328,7 +328,7 @@ function colorLandblocks(context) {
                 color = "blue";
             }
             var oldAlpha = context.globalAlpha;
-            context.globalAlpha = 0.5;
+            context.globalAlpha = 0.8;
             context.fillStyle = color;
             context.fillRect(canx + 1, cany, canvasBlockWidth, canvasBlockHeight);
             context.globalAlpha = oldAlpha;
