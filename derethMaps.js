@@ -146,27 +146,11 @@ function getDynamicPoints() {
             var json = JSON.parse(this.responseText);
             var totalItems = Object.keys(json).length;
             for (var i = 0; i < totalItems; i++) {
-                var x = json[i].x;
-                var y = json[i].y;
+                var sx = json[i].x;
+                var sy = json[i].y;
 
-                if (x.includes('E')) {
-                    x = x.substring(0, x.length - 1);
-                    x = x * 1;
-                }
-                else {
-                    xInt = x.substring(0, x.length - 1);
-                    x = xInt * -1;
-                }
-
-
-                if (y.includes('S')) {
-                    y = y.substring(0, y.length - 1);
-                    y = y * 1;
-                }
-                else {
-                    yInt = y.substring(0, y.length - 1);
-                    y = yInt * -1;
-                }
+                var x = decodeMapString(sx);
+                var y = decodeMapString(sy);
 
                 //console.log("Location: " + json[i].LocationName + " Race: " + json[i].Race + " X: " + json[i].x);
                 var point = { Type: json[i].Type, Location: json[i].LocationName, Race: json[i].Race, x: x, y: y };
@@ -176,8 +160,20 @@ function getDynamicPoints() {
             draw();
         }
     };
-    xmlhttp.open("GET", "dynamicCoords.json?_=" + new Date().getTime().toString(), true);
+    xmlhttp.open("GET", "dynamicPlayers.json?_=" + new Date().getTime().toString(), true);
     xmlhttp.send();
+}
+// Convert strings to numbers, eg, 10.0W => -10.0
+function decodeMapString(mstr) {
+    if (mstr.includes('E') || mstr.includes('S')) {
+        val = mstr.substring(0, mstr.length - 1);
+        val = val * 1;
+    }
+    else {
+        val = mstr.substring(0, mstr.length - 1);
+        val = val * -1;
+    }
+    return val;
 }
 function reloadLocationArray(dPoints) {
     locationArray = {};

@@ -1,0 +1,20 @@
+﻿[
+  {
+    "Type": "Player",
+    "LocationName": "Zorgle",
+    "x": "0.0W",
+    "y": "0.0S"
+  },
+  {
+    "Type": "Player",
+    "LocationName": "Thwargle",
+    "x": "10.0W",
+    "y": "10.0S"
+  },
+  {
+    "Type": "Player",
+    "LocationName": "Kristoff",
+    "x": "20.0W",
+    "y": "20.0N"
+  }
+]

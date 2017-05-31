@@ -1,0 +1,14 @@
+﻿[
+  {
+    "Type": "Landblock",
+    "Status": "Active",
+    "x": "7e",
+    "y": "64"
+  },
+  {
+    "Type": "Landblock",
+    "Status": "Dormant",
+    "x": "7e",
+    "y": "64"
+  }
+]
