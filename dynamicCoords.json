@@ -1,1 +1,26 @@
-[{"Type":"Player", "LocationName":"Zorgle", "x":"101.007307181371E", "y":"101.261337996349S"}, {"Type":"Player", "LocationName":"Thwargle", "x":"101.44381359962E", "y":"101.005366205007S"}, {"Type":"Player", "LocationName":"Kristoff", "x":"100.914697999328W", "y":"100.940539512988S"}, {"Type":"Landblock", "LocationName":"Landblock", "x":"101.35787410655W", "y":"101.079805353926N"}]
+[
+	{
+	"Type":"Player", 
+		"LocationName":"Zorgle", 
+		"x":"101.132902733811W", 
+		"y":"101.449884126405S"
+		}, 
+	{
+	"Type":"Player", 
+		"LocationName":"Thwargle", 
+		"x":"101.377688627633W", 
+		"y":"101.434702551428N"
+		}, 
+	{
+	"Type":"Player", 
+		"LocationName":"Kristoff", 
+		"x":"100.856204582544W", 
+		"y":"101.276991230797N"
+		}, 
+	{
+	"Type":"Landblock", 
+		"LocationName":"Landblock", 
+		"x":"101.050489032897E", 
+		"y":"100.838715908741S"
+		}
+	]

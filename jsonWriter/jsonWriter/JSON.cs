@@ -30,6 +30,9 @@ namespace Procurios.Public
 
         private const int BUILDER_CAPACITY = 2000;
 
+        private EncodeOptions _options;
+        private int _stack = 0;
+
         /// <summary>
         /// Parses the string json into a value
         /// </summary>
@@ -64,12 +67,27 @@ namespace Procurios.Public
             }
         }
 
+        public class EncodeOptions
+        {
+            public bool SeparateObjects { get; set; }
+            public bool SeparateFields { get; set; }
+        }
         /// <summary>
         /// Converts a Dictionary / ArrayList object into a JSON string
         /// </summary>
         /// <param name="json">A Dictionary / ArrayList</param>
         /// <returns>A JSON encoded string, or null if object 'json' is not serializable</returns>
-        public static string JsonEncode(object json)
+        public static string JsonEncode(object json, EncodeOptions options = null)
+        {
+            if (options == null) { options = new EncodeOptions(); }
+            var obj = new JSON(options);
+            return obj.Encode(json);
+        }
+        protected JSON(EncodeOptions options)
+        {
+            _options = options;
+        }
+        public string Encode(object json)
         {
             StringBuilder builder = new StringBuilder(BUILDER_CAPACITY);
             bool success = SerializeValue(json, builder);
@@ -441,7 +459,7 @@ namespace Procurios.Public
             return JSON.TOKEN_NONE;
         }
 
-        protected static bool SerializeValue(object value, StringBuilder builder)
+        protected bool SerializeValue(object value, StringBuilder builder)
         {
             bool success = true;
 
@@ -481,9 +499,20 @@ namespace Procurios.Public
             return success;
         }
 
-        protected static bool SerializeObject(Dictionary<string, object> anObject, StringBuilder builder)
+        protected void EndLine(StringBuilder builder)
+        {
+            builder.AppendLine();
+            for (int i=0; i<_stack; ++i)
+            {
+                builder.Append("\t");
+            }
+
+        }
+        protected bool SerializeObject(Dictionary<string, object> anObject, StringBuilder builder)
         {
             builder.Append("{");
+            if (_options.SeparateFields) { EndLine(builder); }
+            ++_stack;
 
             var e = anObject.GetEnumerator();
             bool first = true;
@@ -495,6 +524,7 @@ namespace Procurios.Public
                 if (!first)
                 {
                     builder.Append(", ");
+                    if (_options.SeparateFields) { EndLine(builder); }
                 }
 
                 SerializeString(key, builder);
@@ -507,13 +537,17 @@ namespace Procurios.Public
                 first = false;
             }
 
+            if (_options.SeparateFields) { EndLine(builder); }
+            --_stack;
             builder.Append("}");
             return true;
         }
 
-        protected static bool SerializeArray(ArrayList anArray, StringBuilder builder)
+        protected bool SerializeArray(ArrayList anArray, StringBuilder builder)
         {
             builder.Append("[");
+            ++_stack;
+            EndLine(builder);
 
             bool first = true;
             for (int i = 0; i < anArray.Count; i++)
@@ -523,6 +557,10 @@ namespace Procurios.Public
                 if (!first)
                 {
                     builder.Append(", ");
+                    if (_options.SeparateObjects)
+                    {
+                        EndLine(builder);
+                    }
                 }
 
                 if (!SerializeValue(value, builder))
@@ -533,6 +571,11 @@ namespace Procurios.Public
                 first = false;
             }
 
+            if (_options.SeparateObjects)
+            {
+                EndLine(builder);
+            }
+            --_stack;
             builder.Append("]");
             return true;
         }

@@ -36,7 +36,8 @@ namespace jsonWriter
             {
                 ProcessPlayer(player);
             }
-            string output = Procurios.Public.JSON.JsonEncode(arr);
+            var options = new Procurios.Public.JSON.EncodeOptions() { SeparateObjects = true, SeparateFields = true };
+            string output = Procurios.Public.JSON.JsonEncode(arr, options);
             File.WriteAllText(objectsFilepath, output);
             ++_iteration;
         }
