@@ -244,7 +244,7 @@ function drawPoint(context, x, y, width, Type, Race, Special, isHighlighted, isL
         if (document.getElementById("Player").checked) {
             player_image = new Image();
             player_image.src = 'images/playerHead.png';
-            context.drawImage(player_image, canx - 10, cany - 10, rectWidth, rectWidth);
+            context.drawImage(player_image, canx, cany-10, 3, 3);
         }
     }
 
