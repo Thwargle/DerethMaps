@@ -15,6 +15,7 @@ namespace jsonWriter
         private Random _rand = new Random();
         private Dictionary<string, PlayerInfo> _playerInfos = new Dictionary<string, PlayerInfo>();
         private int _iteration = 0;
+        private System.Globalization.CultureInfo _culture = System.Globalization.CultureInfo.InvariantCulture;
         static void Main(string[] args)
         {
             Program program = new Program();
@@ -71,7 +72,8 @@ namespace jsonWriter
             {
                 scale = -1;
             }
-            double val = double.Parse(text.Substring(0, text.Length - 1));
+            string valstr = text.Substring(0, text.Length - 1);
+            double val = double.Parse(valstr, _culture);
             return val * scale;
         }
         private string StoreLoc(double val, string pos, string neg)
@@ -86,7 +88,7 @@ namespace jsonWriter
                 posneg = neg;
                 val = -val;
             }
-            return string.Format(System.Globalization.CultureInfo.InstalledUICulture, "{0}{1}", val, posneg);
+            return string.Format(_culture, "{0}{1}", val, posneg);
         }
         private double Wobble(double val, int scale, int max, int min)
         {
