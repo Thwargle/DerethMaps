@@ -26,7 +26,7 @@ namespace jsonWriter
         }
         private void ProcessAll()
         {
-            string objectsFilepath = "..\\..\\..\\..\\dynamicCoords.json";
+            string objectsFilepath = "..\\..\\..\\..\\dynamicPlayers.json";
             if (!File.Exists(objectsFilepath)) { throw new Exception("File not found: " + objectsFilepath); }
             string text = File.ReadAllText(objectsFilepath);
             object obj = Procurios.Public.JSON.JsonDecode(text);

@@ -252,7 +252,7 @@ function drawPoint(context, x, y, width, Type, Race, Special, isHighlighted, isL
         var oldAlpha = context.globalAlpha;
         context.globalAlpha = 0.5;
         context.fillStyle = "red";
-        context.fillRect(mx, my - rectWidth / 2, rectWidth, rectWidth);
+        context.fillRect(canx, cany - rectWidth / 2, rectWidth, rectWidth);
         context.globalAlpha = oldAlpha;
     }
 }
