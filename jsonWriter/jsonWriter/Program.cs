@@ -88,7 +88,7 @@ namespace jsonWriter
                 posneg = neg;
                 val = -val;
             }
-            return string.Format(_culture, "{0}{1}", val, posneg);
+            return string.Format(_culture, "{0:0.000}{1}", val, posneg);
         }
         private double Wobble(double val, int scale, int max, int min)
         {
