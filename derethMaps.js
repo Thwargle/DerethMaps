@@ -138,6 +138,7 @@ function getPoints() {
                     var tokens = locationString.split(' ');
                     var lcx = tokens[2];
                     var lcy = tokens[1];
+                    console.error(lcy);
 
                     // Convert landcell coordinates to map offsets
                     var offsetX = landblockWidth * ((lcx - 1) / 192);
@@ -146,7 +147,6 @@ function getPoints() {
                     // Combine to get final map coordinates
                     var cx = coords.x + offsetX;
                     var cy = coords.y + offsetY;
-                    console.log(scoords(cx, cy));
 
                     x = cx;
                     y = cy;
@@ -362,8 +362,6 @@ function drawGrid() {
         mx = -102 + (xf * 203.9);
         var cantop = mapToCanvas(mx, -101.9);
         var canbtm = mapToCanvas(mx, +102);
-        console.log(scoords(cantop.x, cantop.y));
-        console.log(scoords(canbtm.x, canbtm.y));
         // Convert map coordinates to canvas coordinates
         context.moveTo(linewidth + cantop.x, cantop.y);
         context.lineTo(linewidth + canbtm.x, canbtm.y);
@@ -393,7 +391,7 @@ function drawGrid2() {
     var uw = bw / gridCount;
     var offsetw = 0;
 
-    var uh = bh / 255;
+    var uh = bh / gridCount;
     var offseth = 0;
 
     for (var x = -offsetw; x <= bw + offsetw; x += uw) {
@@ -422,7 +420,7 @@ function drawGrid2() {
     function coordsFromLandblock(lbX, lbY)
     {
         var xfract = lbX / gridCount;
-        var yfract = lbY / gridCount;
+        var yfract = (lbY + 1) / gridCount;
         var mx = -101.9 + (102 - (-101.9)) * xfract;
         var my = -102 + (101.9 - (-102)) * (1 - yfract);
         var coord = { x: mx, y: my };
@@ -437,9 +435,6 @@ function drawGrid2() {
         console.log("canvas: " + scoords(canvas.clientWidth, canvas.clientHeight));
 
         var coordinates = coordsFromLandblock(00, 00);
-        console.log(coordinates.x + " " + coordinates.y);
-
-        console.error((a * (-101.9) + b) + " " + (d * 102 + e));
 
         translatePos = {
             x: canvas.width / 2,
@@ -535,7 +530,6 @@ function drawGrid2() {
         });
         function displayLandblock(mx, my)  {
             block = getLandblock(mx, my);
-            console.log(scoords(block.x, block.y));
             document.getElementById("LandblockInfo").innerHTML = "Landblock: " + block.x + " (0x" + block.x.toString(16) + ") " + block.y + " (0x" + block.y.toString(16) + ")";
         }
         function displayCoord(x, y) {
