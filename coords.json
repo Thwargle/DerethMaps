@@ -5,7 +5,8 @@
     "Race": "Aluvian",
     "Special": "Starter",
     "x": "33.6E",
-    "y": "42.1N"
+    "y": "42.1N",
+    "locationString": "0000000 00 00 00 0 0 0 0"
   },
   {
     "Type": "Town",
@@ -13,7 +14,8 @@
     "Race": "Aluvian",
     "Special": "Capital",
     "x": "48.4E",
-    "y": "26.0N"
+    "y": "26.0N",
+    "locationString": "01010000 00 00 00 0 0 0 0"
   },
   {
     "Type": "Town",
@@ -21,7 +23,8 @@
     "Race": "Aluvian",
     "Special": "",
     "x": "56.6E",
-    "y": "33.3N"
+    "y": "33.3N",
+    "locationString": "02020000 00 00 00 0 0 0 0"
   },
   {
     "Type": "Town",
@@ -29,7 +32,8 @@
     "Race": "Aluvian",
     "Special": "",
     "x": "73.0E",
-    "y": "8.1S"
+    "y": "8.1S",
+    "locationString": "03030000 00 00 00 0 0 0 0"
   },
   {
     "Type": "Town",
@@ -37,7 +41,8 @@
     "Race": "Aluvian",
     "Special": "",
     "x": "63.5E",
-    "y": "16.9N"
+    "y": "16.9N",
+    "locationString": "04040000 00 00 00 0 0 0 0"
   },
   {
     "Type": "Town",
@@ -45,7 +50,8 @@
     "Race": "Aluvian",
     "Special": "",
     "x": "71.2W",
-    "y": "1.7N"
+    "y": "1.7N",
+    "locationString": "05050000 00 00 00 0 0 0 0"
   },
   {
     "Type": "Town",
@@ -53,7 +59,8 @@
     "Race": "Aluvian",
     "Special": "",
     "x": "26.5E",
-    "y": "29.7N"
+    "y": "29.7N",
+    "locationString": "FFFF0000 00 00 00 0 0 0 0"
   },
   {
     "Type": "Town",
@@ -189,7 +196,8 @@
     "Race": "Gharu'ndim",
     "Special": "Starter",
     "x": "1.8W",
-    "y": "21.5S"
+    "y": "21.5S",
+    "locationString": "7D64000D 31.90 105.93 11.84 0.58 0.00 0.00 -0.82"
   },
   {
     "Type": "Town",
@@ -237,7 +245,8 @@
     "Race": "Gharu'ndim",
     "Special": "",
     "x": "19.6E",
-    "y": "74.6S"
+    "y": "74.6S",
+    "locationString": "9722003A 168.35 24.62 102.01 -0.92 0.00 0.00 -0.39"
   },
   {
     "Type": "Town",

@@ -1,26 +1,26 @@
 [
-	{
-	"Type":"Player", 
-		"LocationName":"Zorgle", 
-		"x":"0.0W",
-		"y":"0.0S"
-		}, 
-	{
-	"Type":"Player", 
-		"LocationName":"Thwargle", 
-		"x":"10.0W",
-		"y":"10.0N"
-		}, 
-	{
-	"Type":"Landblock", 
-		"LocationName":"Kristoff", 
-		"x":"20.0W", 
-		"y":"20.0N"
-		}, 
-	{
-	"Type":"Landblock", 
-		"LocationName":"Landblock", 
-		"x":"30.0E", 
-		"y":"30.0S"
-		}
-	]
+  {
+    "Type": "Player",
+    "LocationName": "Zorgle",
+    "x": "18.0074419158082E",
+    "y": "19.3825709367556S"
+  },
+  {
+    "Type": "Player",
+    "LocationName": "Thwargle",
+    "x": "3.42546448573725E",
+    "y": "6.24576713645166N"
+  },
+  {
+    "Type": "Landblock",
+    "LocationName": "Kristoff",
+    "x": "4.84960401493568W",
+    "y": "7.56459230560092S"
+  },
+  {
+    "Type": "Landblock",
+    "LocationName": "Landblock",
+    "x": "7.17747370650878W",
+    "y": "15.9771145235175S"
+  }
+]

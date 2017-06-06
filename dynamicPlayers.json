@@ -1,20 +1,20 @@
-﻿[
-  {
-    "Type": "Player",
-    "LocationName": "Zorgle",
-    "x": "0.0W",
-    "y": "0.0S"
-  },
-  {
-    "Type": "Player",
-    "LocationName": "Thwargle",
-    "x": "10.0W",
-    "y": "10.0S"
-  },
-  {
-    "Type": "Player",
-    "LocationName": "Kristoff",
-    "x": "20.0W",
-    "y": "20.0N"
-  }
-]
+[
+	{
+	"Type":"Player", 
+		"LocationName":"Zorgle", 
+		"x":"16.8957764859759E", 
+		"y":"22.8692143484341S"
+		}, 
+	{
+	"Type":"Player", 
+		"LocationName":"Thwargle", 
+		"x":"10.0362087097184548E", 
+		"y":"10.7353584490416S"
+		}, 
+	{
+	"Type":"Player", 
+		"LocationName":"Kristoff", 
+		"x":"13.6720040537287E", 
+		"y":"4.42966078847168N"
+		}
+	]

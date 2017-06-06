@@ -6,6 +6,7 @@ var highlightedPoint = -1;
 var landblockPoint = -1;
 var highlightedDynPoint = -1;
 var landblockDynPoint = -1;
+var gridCount = 256;
 
 // dimensions of the map image we have
 var imgWidth = 2041;
@@ -16,15 +17,15 @@ var mapWidth = 203.9
 var mapHeight = 203.9;
 
 // landblock size in game dimensions
-var landblockWidth = mapWidth / 256;
-var landblockHeight = mapHeight / 256;
+var landblockWidth = mapWidth / gridCount;
+var landblockHeight = mapHeight / gridCount;
 
 var scale = 0.4;
 var scaleMultiplier = 0.8;
 var translatePos;
 
 var a = imgHeight / mapHeight;
-var b = imgHeight - 101.9 * a;
+var b = (imgHeight - 101.9 * a) - 1;
 var d = imgWidth / mapWidth;
 var e = imgWidth - 102 * d;
 
@@ -77,11 +78,11 @@ function logLocation(canvas, scale, translatePos) {
         var ay = (translatePos.y - ycenter)/scale;
         var w1 = canvas.width / scale;
         var h1 = canvas.height / scale;
-        console.log("canvas: " + scoords(w1, h1) + ", offset: " + scoords(canvas.offsetWidth, canvas.offsetHeight));
-        console.log("canvasClient: " + scoords(canvas.clientWidth, canvas.clientHeight));
-        console.log("ax/y=" + scoords(ax, ay));
-        console.log("tx/y=" + scoords(translatePos.x, translatePos.y));
-        console.log("scale=" + sdisp2(scale));
+        //console.log("canvas: " + scoords(w1, h1) + ", offset: " + scoords(canvas.offsetWidth, canvas.offsetHeight));
+        //console.log("canvasClient: " + scoords(canvas.clientWidth, canvas.clientHeight));
+        //console.log("ax/y=" + scoords(ax, ay));
+        //console.log("tx/y=" + scoords(translatePos.x, translatePos.y));
+        //console.log("scale=" + sdisp2(scale));
 }
 function getMousePos(canvas, evt) {
     var rect = canvas.getBoundingClientRect();
@@ -102,28 +103,58 @@ function getPoints() {
             {
                 var x = json[i].x;
                 var y = json[i].y;
+                var landblock = json[i].locationString;
 
-                if (x.includes('E'))
+                if ("undefined" === typeof json[i].locationString)
                 {
-                    x = x.substring(0, x.length - 1);
-                    x = x * 1;
+                    if (x.includes('E')) {
+                        x = x.substring(0, x.length - 1);
+                        x = x * 1;
+                    }
+                    else {
+                        xInt = x.substring(0, x.length - 1);
+                        x = xInt * -1;
+                    }
+
+
+                    if (y.includes('S')) {
+                        y = y.substring(0, y.length - 1);
+                        y = y * 1;
+                    }
+                    else {
+                        yInt = y.substring(0, y.length - 1);
+                        y = yInt * -1;
+                    }
                 }
                 else
                 {
-                    xInt = x.substring(0, x.length - 1);
-                    x = xInt * -1;
-                }
+                    var locationString = json[i].locationString;
 
-                
-                if(y.includes('S'))
-                {
-                    y = y.substring(0, y.length - 1);
-                    y = y * 1;
-                }
-                else
-                {
-                    yInt = y.substring(0, y.length - 1);
-                    y = yInt * -1;
+                    // Figure out landblock coordinates
+                    var lbX = locationString.substring(0, 2);
+                    var lbY = locationString.substring(2, 4);
+
+                    var lbCoordX = parseInt(lbX, 16);
+                    var lbCoordY = parseInt(lbY, 16);
+                    // Convert landblock coordinates into map coordinates
+                    var coords = coordsFromLandblock(lbCoordX, lbCoordY);
+
+                    // Figure out the landcell coordinates
+                    var tokens = locationString.split(' ');
+                    var lcx = tokens[2];
+                    var lcy = tokens[1];
+
+                    // Convert landcell coordinates to map offsets
+                    var offsetX = landblockWidth * ((lcx - 1) / 192);
+                    var offsetY = landblockHeight * ((lcy - 1) / 192);
+
+                    // Combine to get final map coordinates
+                    var cx = coords.x + offsetX;
+                    var cy = coords.y + offsetY;
+                    console.log(scoords(cx, cy));
+
+                    x = cx;
+                    y = cy;
                 }
 
                 var point = { Type: json[i].Type, Race: json[i].Race, Special: json[i].Special, LocationName: json[i].LocationName, x: x, y: y };
@@ -225,7 +256,7 @@ function drawPoint(context, x, y, width, Type, Race, Special, isHighlighted, isL
             else {
                 town_image.src = 'images/Map_Point_Town.png';
             }
-            context.drawImage(town_image, canx, cany-rectWidth/2, rectWidth, rectWidth);
+            context.drawImage(town_image, canx-rectWidth/2, cany-rectWidth/2, rectWidth, rectWidth);
         }
     }
     else if (Type == "Hunting") {
@@ -252,7 +283,7 @@ function drawPoint(context, x, y, width, Type, Race, Special, isHighlighted, isL
         var oldAlpha = context.globalAlpha;
         context.globalAlpha = 0.5;
         context.fillStyle = "red";
-        context.fillRect(canx, cany - rectWidth / 2, rectWidth, rectWidth);
+        context.fillRect(canx - rectWidth / 2, cany - rectWidth / 2, rectWidth, rectWidth);
         context.globalAlpha = oldAlpha;
     }
 }
@@ -296,8 +327,6 @@ function collides(points, x, y) {
                 else {
                     threeSixtyView.src = "";
                 }
-                console.log(points[i].x, points[i].y);
-                console.log("Clicked: " + locationName + " " + race);
             }
         }
     }
@@ -308,10 +337,10 @@ function colorLandblocks(context) {
     for (bx in locationArray) {
         for (by in locationArray[bx]) {
             var block = locationArray[bx][by];
-            console.log("block: " + scoords(bx, by));
+            //console.log("block: " + scoords(bx, by));
             var x = (bx - 128) * landblockWidth;
             var y = (126 - by) * landblockHeight;
-            console.log("mapblock: " + scoords(x, y));
+            //console.log("mapblock: " + scoords(x, y));
             // Convert map coordinates to canvas coordinates
             var canx = d * x + e;
             var cany = a * y + b;
@@ -328,22 +357,28 @@ function colorLandblocks(context) {
             context.fillStyle = color;
             context.fillRect(canx + 1, cany, canvasBlockWidth, canvasBlockHeight);
             context.globalAlpha = oldAlpha;
-            console.log("Coloring landblock: " + scoords(canx, cany));
         }
     }
 }
 function drawGrid() {
+    var linewidth = .5;
     var bh = mapHeight * (imgHeight / mapHeight);
     var bw = mapWidth * (imgWidth / mapWidth);
     
-    for (var x = 0; x <= bw; x += bw / 256) {
-        context.moveTo(0.5 + x, 0);
-        context.lineTo(0.5 + x, bh);
+    var uw = bw / gridCount;
+    var offsetw = 0;
+
+    var uh = bh / gridCount;
+    var offseth = 0;
+
+    for (var x = -offsetw; x <= bw + offsetw; x += uw) {
+        context.moveTo(linewidth + x, -offseth);
+        context.lineTo(linewidth + x, bh + offseth);
     }
 
-    for (var y = 0; y <= bh; y += bh / 256) {
-        context.moveTo(0, 0.5 + y);
-        context.lineTo(bw, 0.5 + y);
+    for (var y = -offseth; y <= bh + offseth; y += uh) {
+        context.moveTo(-offsetw, linewidth + y);
+        context.lineTo(bw + offsetw, linewidth + y);
     }
 
     context.strokeStyle = "black";
@@ -353,10 +388,20 @@ function drawGrid() {
         var xfract = (mx - (-101.9)) / (102 - (-101.9));
         var yfract = 1 - (my - (-102)) / (101.9 - (-102));
         var block = {
-            x: Math.round(xfract * 255),
-            y: Math.round(yfract * 255)
-        }
+            x: Math.trunc(xfract * gridCount),
+            y: Math.trunc(yfract * gridCount)
+        };
         return block;
+    }
+
+    function coordsFromLandblock(lbX, lbY)
+    {
+        var xfract = lbX / gridCount;
+        var yfract = lbY / gridCount;
+        var mx = -101.9 + (102 - (-101.9)) * xfract;
+        var my = -102 + (101.9 - (-102)) * (1 - yfract);
+        var coord = { x: mx, y: my };
+        return coord;
     }
 
     window.onload = function () {
@@ -365,6 +410,11 @@ function drawGrid() {
 
         console.log("a,b=" + scoords(a, b) + ", d,e=" + scoords(d, e));
         console.log("canvas: " + scoords(canvas.clientWidth, canvas.clientHeight));
+
+        var coordinates = coordsFromLandblock(00, 00);
+        console.log(coordinates.x + " " + coordinates.y);
+
+        console.error((a * (-101.9) + b) + " " + (d * 102 + e));
 
         translatePos = {
             x: canvas.width / 2,
@@ -585,3 +635,7 @@ function drawGrid() {
     ////Qalaba'r
     //drawPoints(context, 74.6, 19.6, a, b, d, e, 5);
     //
+
+    ///Yaraq
+    /// 21.5s, 1.8w
+    /// 7D64000D 31.90 105.93 11.84 0.58 0.00 0.00 -0.82
