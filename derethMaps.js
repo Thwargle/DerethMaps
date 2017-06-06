@@ -350,19 +350,50 @@ function colorLandblocks(context) {
             var oldAlpha = context.globalAlpha;
             context.globalAlpha = 0.8;
             context.fillStyle = color;
-            context.fillRect(canx + 1, cany, canvasBlockWidth, canvasBlockHeight);
+            context.fillRect(canx, cany, canvasBlockWidth, canvasBlockHeight);
             context.globalAlpha = oldAlpha;
         }
     }
 }
 function drawGrid() {
+    var linewidth = 0.5;
+
+    for (var xf = 0; xf <= 1.0; xf += 1 / 256.0) {
+        mx = -102 + (xf * 203.9);
+        var cantop = mapToCanvas(mx, -101.9);
+        var canbtm = mapToCanvas(mx, +102);
+        console.log(scoords(cantop.x, cantop.y));
+        console.log(scoords(canbtm.x, canbtm.y));
+        // Convert map coordinates to canvas coordinates
+        context.moveTo(linewidth + cantop.x, cantop.y);
+        context.lineTo(linewidth + canbtm.x, canbtm.y);
+    }
+
+    for (var yf = 0; yf <= 1.0; yf += 1 / 256.0) {
+        my = -101.9 + (yf * 203.9);
+        var canleft = mapToCanvas(-102, my);
+        var canrt = mapToCanvas(+101.9, my);
+        // Convert map coordinates to canvas coordinates
+        context.moveTo(canleft.x, canrt.y - linewidth);
+        context.lineTo(canrt.x, canrt.y - linewidth);
+    }
+
+    context.strokeStyle = "black";
+    context.stroke();
+}
+function mapToCanvas(mx, my) {
+    var canx = d * mx + e;
+    var cany = a * my + b;
+    return { x: canx, y: cany };
+}
+function drawGrid2() {
     var linewidth = .5;
     bh = imgHeight;
     bw = imgWidth;
     var uw = bw / gridCount;
     var offsetw = 0;
 
-    var uh = bh / gridCount;
+    var uh = bh / 255;
     var offseth = 0;
 
     for (var x = -offsetw; x <= bw + offsetw; x += uw) {
