@@ -78,11 +78,6 @@ function logLocation(canvas, scale, translatePos) {
         var ay = (translatePos.y - ycenter)/scale;
         var w1 = canvas.width / scale;
         var h1 = canvas.height / scale;
-        //console.log("canvas: " + scoords(w1, h1) + ", offset: " + scoords(canvas.offsetWidth, canvas.offsetHeight));
-        //console.log("canvasClient: " + scoords(canvas.clientWidth, canvas.clientHeight));
-        //console.log("ax/y=" + scoords(ax, ay));
-        //console.log("tx/y=" + scoords(translatePos.x, translatePos.y));
-        //console.log("scale=" + sdisp2(scale));
 }
 function getMousePos(canvas, evt) {
     var rect = canvas.getBoundingClientRect();
@@ -362,9 +357,8 @@ function colorLandblocks(context) {
 }
 function drawGrid() {
     var linewidth = .5;
-    var bh = mapHeight * (imgHeight / mapHeight);
-    var bw = mapWidth * (imgWidth / mapWidth);
-    
+    bh = imgHeight;
+    bw = imgWidth;
     var uw = bw / gridCount;
     var offsetw = 0;
 
