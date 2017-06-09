@@ -50,8 +50,7 @@ function draw() {
     var pointsArrayLength = points.length;
     var dPointsArrayLength = dPoints.length;
 
-    for (i = 0; i < pointsArrayLength; i++)
-    {
+    for (i = 0; i < pointsArrayLength; i++) {
         var isHightlighted = (highlightedPoint == i);
         var isLandblock = -1;
         drawPoint(context, points[i].x, points[i].y, 5, points[i].Type, points[i].Race, points[i].Special, isHightlighted, isLandblock);
@@ -74,10 +73,10 @@ function draw() {
 }
 
 function logLocation(canvas, scale, translatePos) {
-        var ax = (translatePos.x - xcenter)/scale;
-        var ay = (translatePos.y - ycenter)/scale;
-        var w1 = canvas.width / scale;
-        var h1 = canvas.height / scale;
+    var ax = (translatePos.x - xcenter) / scale;
+    var ay = (translatePos.y - ycenter) / scale;
+    var w1 = canvas.width / scale;
+    var h1 = canvas.height / scale;
 }
 function getMousePos(canvas, evt) {
     var rect = canvas.getBoundingClientRect();
@@ -94,14 +93,12 @@ function getPoints() {
         if (this.readyState == 4 && this.status == 200) {
             var json = JSON.parse(this.responseText);
             var totalItems = Object.keys(json).length;
-            for (var i = 0; i < totalItems; i++)
-            {
+            for (var i = 0; i < totalItems; i++) {
                 var x = json[i].x;
                 var y = json[i].y;
                 var landblock = json[i].locationString;
 
-                if ("undefined" === typeof json[i].locationString)
-                {
+                if ("undefined" === typeof json[i].locationString) {
                     if (x.includes('E')) {
                         x = x.substring(0, x.length - 1);
                         x = x * 1;
@@ -121,8 +118,7 @@ function getPoints() {
                         y = yInt * -1;
                     }
                 }
-                else
-                {
+                else {
                     var locationString = json[i].locationString;
 
                     // Figure out landblock coordinates
@@ -251,7 +247,7 @@ function drawPoint(context, x, y, width, Type, Race, Special, isHighlighted, isL
             else {
                 town_image.src = 'images/Map_Point_Town.png';
             }
-            context.drawImage(town_image, canx-rectWidth/2, cany-rectWidth/2, rectWidth, rectWidth);
+            context.drawImage(town_image, canx - rectWidth / 2, cany - rectWidth / 2, rectWidth, rectWidth);
         }
     }
     else if (Type == "Hunting") {
@@ -270,7 +266,7 @@ function drawPoint(context, x, y, width, Type, Race, Special, isHighlighted, isL
         if (document.getElementById("Player").checked) {
             player_image = new Image();
             player_image.src = 'images/playerHead.png';
-            context.drawImage(player_image, canx, cany-10, 3, 3);
+            context.drawImage(player_image, canx, cany - 10, 3, 3);
         }
     }
 
@@ -309,12 +305,10 @@ function collides(points, x, y) {
             var race = points[i].Race;
             var special = points[i].Special;
 
-            if (type == "Landblock")
-            {
+            if (type == "Landblock") {
                 landblockDynPoint = true;
             }
-            else
-            {
+            else {
                 collisionElement.innerHTML = "LocationName: " + locationName + "<br />" + "Location Race: " + race + "<br />" + "Special: " + special;
                 if (locationName == "Glenden Wood") {
                     threeSixtyView.src = "GlendenWood.html";
@@ -407,254 +401,249 @@ function drawGrid2() {
     context.strokeStyle = "black";
     context.stroke();
 }
-    function getLandblock(mx, my) {
-        var xfract = (mx - (-101.9)) / (102 - (-101.9));
-        var yfract = 1 - (my - (-102)) / (101.9 - (-102));
-        var block = {
-            x: Math.trunc(xfract * gridCount),
-            y: Math.trunc(yfract * gridCount)
-        };
-        return block;
-    }
+function getLandblock(mx, my) {
+    var xfract = (mx - (-101.9)) / (102 - (-101.9));
+    var yfract = 1 - (my - (-102)) / (101.9 - (-102));
+    var block = {
+        x: Math.trunc(xfract * gridCount),
+        y: Math.trunc(yfract * gridCount)
+    };
+    return block;
+}
 
-    function coordsFromLandblock(lbX, lbY)
-    {
-        var xfract = lbX / gridCount;
-        var yfract = (lbY + 1) / gridCount;
-        var mx = -101.9 + (102 - (-101.9)) * xfract;
-        var my = -102 + (101.9 - (-102)) * (1 - yfract);
-        var coord = { x: mx, y: my };
-        return coord;
-    }
+function coordsFromLandblock(lbX, lbY) {
+    var xfract = lbX / gridCount;
+    var yfract = (lbY + 1) / gridCount;
+    var mx = -101.9 + (102 - (-101.9)) * xfract;
+    var my = -102 + (101.9 - (-102)) * (1 - yfract);
+    var coord = { x: mx, y: my };
+    return coord;
+}
 
-    window.onload = function () {
+window.onload = function () {
+    canvas = document.getElementById("myCanvas");
+    context = canvas.getContext("2d");
+
+    console.log("a,b=" + scoords(a, b) + ", d,e=" + scoords(d, e));
+    console.log("canvas: " + scoords(canvas.clientWidth, canvas.clientHeight));
+
+    var coordinates = coordsFromLandblock(00, 00);
+
+    translatePos = {
+        x: canvas.width / 2,
+        y: canvas.height / 2
+    };
+    var absoluteOffset = {
+        x: canvas.width / 2,
+        y: canvas.height / 2
+    };
+    // Viewport offset in relative (screen) numbers
+    translatePos.x = 0;
+    translatePos.y = 0;
+
+    // Viewport offset in absolute (canvas) numbers
+    absoluteOffset.x = 0;
+    absoluteOffset.y = 0;
+
+
+    var startDragOffset = {};
+    var mouseDown = false;
+
+    // add button event listeners
+    document.getElementById("plus").addEventListener("click", function () {
+        absoluteOffset.x = (translatePos.x - xcenter) / scale;
+        absoluteOffset.y = (translatePos.y - ycenter) / scale;
+
+        scale /= scaleMultiplier;
+
+        translatePos.x = (scale * absoluteOffset.x) + xcenter;
+        translatePos.y = (scale * absoluteOffset.y) + ycenter;
+
+        logLocation(canvas, scale, translatePos);
+
+        draw();
+    }, false);
+
+    document.getElementById("minus").addEventListener("click", function () {
+        absoluteOffset.x = (translatePos.x - xcenter) / scale;
+        absoluteOffset.y = (translatePos.y - ycenter) / scale;
+
+        scale *= scaleMultiplier;
+
+        translatePos.x = (scale * absoluteOffset.x) + xcenter;
+        translatePos.y = (scale * absoluteOffset.y) + ycenter;
+
+        draw();
+    }, false);
+
+    document.getElementById("log").addEventListener("click", function () {
+
+        logLocation(canvas, scale, translatePos);
+
+        draw();
+    }, false);
+
+    document.getElementById("reset").addEventListener("click", function () {
         canvas = document.getElementById("myCanvas");
-        context = canvas.getContext("2d");
+        var ctx = canvas.getContext('2d');
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+    });
 
-        console.log("a,b=" + scoords(a, b) + ", d,e=" + scoords(d, e));
-        console.log("canvas: " + scoords(canvas.clientWidth, canvas.clientHeight));
+    // add event listeners to handle screen drag
+    canvas.addEventListener("mousedown", function (evt) {
+        mouseDown = true;
+        startDragOffset.x = evt.clientX - translatePos.x;
+        startDragOffset.y = evt.clientY - translatePos.y;
+    });
 
-        var coordinates = coordsFromLandblock(00, 00);
+    canvas.addEventListener("mouseup", function (evt) {
+        mouseDown = false;
 
-        translatePos = {
-            x: canvas.width / 2,
-            y: canvas.height / 2
+        // Get mouse position inside canvas screen (removes client side offsets)
+        var mpos = getMousePos(canvas, evt)
+
+        // Convert to canvas coordinates
+        var canco = {
+            x: (mpos.x - translatePos.x) / scale,
+            y: (mpos.y - translatePos.y) / scale
         };
-        var absoluteOffset = {
-            x: canvas.width / 2,
-            y: canvas.height / 2
+
+        // Convert to map coordinates (invert the ax+b, dx+e formula)
+        var mapco = {
+            x: (canco.x - b) / a,
+            y: (canco.y - e) / d
         };
-        // Viewport offset in relative (screen) numbers
-        translatePos.x = 0;
-        translatePos.y = 0;
 
-        // Viewport offset in absolute (canvas) numbers
-        absoluteOffset.x = 0;
-        absoluteOffset.y = 0;
+        //console.log("mapxy: " + scoords(mapco.x, mapco.y));
 
-    
-        var startDragOffset = {};
-        var mouseDown = false;
+        displayCoord(mapco.x, mapco.y);
+        collides(points, mapco.x, mapco.y);
+        displayLandblock(mapco.x, mapco.y);
 
-        // add button event listeners
-        document.getElementById("plus").addEventListener("click", function(){
-            absoluteOffset.x = (translatePos.x - xcenter)/scale;
-            absoluteOffset.y = (translatePos.y - ycenter)/scale;
-        
-            scale /= scaleMultiplier;
-        
-            translatePos.x = (scale * absoluteOffset.x) + xcenter;
-            translatePos.y = (scale * absoluteOffset.y) + ycenter;
-        
-            logLocation(canvas, scale, translatePos);
-        
-            draw();
-        }, false);
+    });
+    function displayLandblock(mx, my) {
+        block = getLandblock(mx, my);
+        document.getElementById("LandblockInfo").innerHTML = "Landblock: " + block.x + " (0x" + block.x.toString(16) + ") " + block.y + " (0x" + block.y.toString(16) + ")";
+    }
+    function displayCoord(x, y) {
+        var multiplier = Math.pow(10, 1 || 0);
+        var roundedX = Math.round(x * multiplier) / multiplier;
+        var roundedY = Math.round(y * multiplier) / multiplier;
+        var xWithCompass;
+        var yWithCompass;
+        if (roundedX > 0) {
+            xWithCompass = Math.abs(roundedX).toString() + "E";
+        }
+        else if (roundedX < 0) {
+            xWithCompass = Math.abs(roundedX).toString() + "W";
+        }
+        if (roundedY > 0) {
+            yWithCompass = Math.abs(roundedY).toString() + "S";
+        }
+        else if (roundedY < 0) {
+            yWithCompass = Math.abs(roundedY).toString() + "N";
+        }
 
-        document.getElementById("minus").addEventListener("click", function(){
+
+        document.getElementById("debug").innerHTML = "Coordinates: " + yWithCompass + ", " + xWithCompass;
+
+    }
+    canvas.addEventListener("mousewheel", function (evt) {
+        console.log(evt.wheelDelta);
+        if (Math.sign(evt.wheelDelta) >= 0) {
             absoluteOffset.x = (translatePos.x - xcenter) / scale;
             absoluteOffset.y = (translatePos.y - ycenter) / scale;
-                                                                        
+
+            scale /= scaleMultiplier;
+
+            translatePos.x = (scale * absoluteOffset.x) + xcenter;
+            translatePos.y = (scale * absoluteOffset.y) + ycenter;
+
+            draw();
+        }
+        else {
+            absoluteOffset.x = (translatePos.x - xcenter) / scale;
+            absoluteOffset.y = (translatePos.y - ycenter) / scale;
+
             scale *= scaleMultiplier;
 
             translatePos.x = (scale * absoluteOffset.x) + xcenter;
             translatePos.y = (scale * absoluteOffset.y) + ycenter;
 
             draw();
-        }, false);
-
-        document.getElementById("log").addEventListener("click", function(){
-                                                                    
-            logLocation(canvas, scale, translatePos);
-        
-            draw();
-        }, false);
-
-        document.getElementById("reset").addEventListener("click", function () {
-            canvas = document.getElementById("myCanvas");
-            var ctx = canvas.getContext('2d');
-            ctx.setTransform(1, 0, 0, 1, 0, 0);
-        });
-
-        // add event listeners to handle screen drag
-        canvas.addEventListener("mousedown", function(evt){
-            mouseDown = true;
-            startDragOffset.x = evt.clientX - translatePos.x;
-            startDragOffset.y = evt.clientY - translatePos.y;
-        });
-
-        canvas.addEventListener("mouseup", function(evt){
-            mouseDown = false;
-
-            // Get mouse position inside canvas screen (removes client side offsets)
-            var mpos = getMousePos(canvas, evt)
-
-            // Convert to canvas coordinates
-            var canco = {
-                x: (mpos.x - translatePos.x) / scale,
-                y: (mpos.y - translatePos.y) / scale
-            };
-
-            // Convert to map coordinates (invert the ax+b, dx+e formula)
-            var mapco = {
-                x: (canco.x - b) / a,
-                y: (canco.y - e) / d
-            };
-
-            //console.log("mapxy: " + scoords(mapco.x, mapco.y));
-
-            displayCoord(mapco.x, mapco.y);
-            collides(points, mapco.x, mapco.y);
-            displayLandblock(mapco.x, mapco.y);
-
-        });
-        function displayLandblock(mx, my)  {
-            block = getLandblock(mx, my);
-            document.getElementById("LandblockInfo").innerHTML = "Landblock: " + block.x + " (0x" + block.x.toString(16) + ") " + block.y + " (0x" + block.y.toString(16) + ")";
         }
-        function displayCoord(x, y) {
-            var multiplier = Math.pow(10, 1 || 0);
-            var roundedX = Math.round(x * multiplier) / multiplier;
-            var roundedY = Math.round(y * multiplier) / multiplier;
-            var xWithCompass;
-            var yWithCompass;
-            if (roundedX > 0)
-            {
-                xWithCompass = Math.abs(roundedX).toString() + "E";
-            }
-            else if (roundedX < 0)
-            {
-                xWithCompass = Math.abs(roundedX).toString() + "W";
-            }
-            if (roundedY > 0) {
-                yWithCompass = Math.abs(roundedY).toString() + "S";
-            }
-            else if (roundedY < 0) {
-                yWithCompass = Math.abs(roundedY).toString() + "N";
-            }
+    });
 
+    canvas.addEventListener("mouseover", function (evt) {
+        mouseDown = false;
+    });
 
-            document.getElementById("debug").innerHTML = "Coordinates: " + yWithCompass + ", " + xWithCompass;
+    canvas.addEventListener("mouseout", function (evt) {
+        mouseDown = false;
+    });
 
-        }
-        canvas.addEventListener("mousewheel", function (evt) {
-            console.log(evt.wheelDelta);
-            if (Math.sign(evt.wheelDelta) >= 0)
-            {
-                absoluteOffset.x = (translatePos.x - xcenter) / scale;
-                absoluteOffset.y = (translatePos.y - ycenter) / scale;
-
-                scale /= scaleMultiplier;
-
-                translatePos.x = (scale * absoluteOffset.x) + xcenter;
-                translatePos.y = (scale * absoluteOffset.y) + ycenter;
-
-                draw();
-            }
-            else
-            {
-                absoluteOffset.x = (translatePos.x - xcenter) / scale;
-                absoluteOffset.y = (translatePos.y - ycenter) / scale;
-
-                scale *= scaleMultiplier;
-
-                translatePos.x = (scale * absoluteOffset.x) + xcenter;
-                translatePos.y = (scale * absoluteOffset.y) + ycenter;
-
-                draw();
-            }
-        });
-
-        canvas.addEventListener("mouseover", function(evt){
-            mouseDown = false;
-        });
-
-        canvas.addEventListener("mouseout", function(evt){
-            mouseDown = false;
-        });
-
-        canvas.addEventListener("mousemove", function(evt){
-            if (mouseDown) {
-                translatePos.x = evt.clientX - startDragOffset.x;
-                translatePos.y = evt.clientY - startDragOffset.y;
-                draw();
-            }
-        });
-
-        myCanvas.addEventListener('dblclick', function(evt){ 
-            absoluteOffset.x = (translatePos.x - xcenter) / scale;
-            absoluteOffset.y = (translatePos.y - ycenter) / scale;
-        
-            scale /= scaleMultiplier;
-        
-            translatePos.x = (scale * absoluteOffset.x) + xcenter;
-            translatePos.y = (scale * absoluteOffset.y) + ycenter;
-        
-            logLocation(canvas, scale, translatePos);
-        
+    canvas.addEventListener("mousemove", function (evt) {
+        if (mouseDown) {
+            translatePos.x = evt.clientX - startDragOffset.x;
+            translatePos.y = evt.clientY - startDragOffset.y;
             draw();
-            mouseDown = false;
-        });
+        }
+    });
 
-        getPoints();
-        getDynamicPlayers();
-        setInterval(function () { draw(); }, 1500);
-        setInterval(function () { getDynamicPlayers(); }, 1800);
-    };
+    myCanvas.addEventListener('dblclick', function (evt) {
+        absoluteOffset.x = (translatePos.x - xcenter) / scale;
+        absoluteOffset.y = (translatePos.y - ycenter) / scale;
+
+        scale /= scaleMultiplier;
+
+        translatePos.x = (scale * absoluteOffset.x) + xcenter;
+        translatePos.y = (scale * absoluteOffset.y) + ycenter;
+
+        logLocation(canvas, scale, translatePos);
+
+        draw();
+        mouseDown = false;
+    });
+
+    getPoints();
+    getDynamicPlayers();
+    setInterval(function () { draw(); }, 1500);
+    setInterval(function () { getDynamicPlayers(); }, 1800);
+};
 
 
 
 
-    // http://acpedia.org/wiki/Template:Map_Point_Plus
-    // Look here for a list of map icons
-    //
-    //Map Bounds:
-    //Top Left: 102n, 101.9w
-    //Bottom Right: 101.9s, 102e
-    //Dereth is divided into a grid of 65,536 landblocks comprising a grid 256 blocks wide by 256 blocks high (values 0 to 255).
+// http://acpedia.org/wiki/Template:Map_Point_Plus
+// Look here for a list of map icons
+//
+//Map Bounds:
+//Top Left: 102n, 101.9w
+//Bottom Right: 101.9s, 102e
+//Dereth is divided into a grid of 65,536 landblocks comprising a grid 256 blocks wide by 256 blocks high (values 0 to 255).
 
-    ////top left
-    //drawPoints(context, -101.9, -102, a, b, d, e, 5);
-    ////bottom left
-    //drawPoints(context, 102, -101.9, a, b, d, e, 5);
-    ////top right
-    //drawPoints(context, -101.9, 102, a, b, d, e, 5);
-    ////bottom right
-    //drawPoints(context, 102, 101.9, a, b, d, e, 5);
+////top left
+//drawPoints(context, -101.9, -102, a, b, d, e, 5);
+////bottom left
+//drawPoints(context, 102, -101.9, a, b, d, e, 5);
+////top right
+//drawPoints(context, -101.9, 102, a, b, d, e, 5);
+////bottom right
+//drawPoints(context, 102, 101.9, a, b, d, e, 5);
 
-    ////Center
-    //drawPoints(context, 0, 0, a, b, d, e, 5);
+////Center
+//drawPoints(context, 0, 0, a, b, d, e, 5);
 
-    ////Yaraq
-    ////drawPoints(context, 21.5, -1.8, a, b, d, e, 5);
+////Yaraq
+////drawPoints(context, 21.5, -1.8, a, b, d, e, 5);
 
-    ////Caulcano
-    //drawPoints(context, 94.4, -94.6, a, b, d, e, 5);
+////Caulcano
+//drawPoints(context, 94.4, -94.6, a, b, d, e, 5);
 
-    ////Qalaba'r
-    //drawPoints(context, 74.6, 19.6, a, b, d, e, 5);
-    //
+////Qalaba'r
+//drawPoints(context, 74.6, 19.6, a, b, d, e, 5);
+//
 
-    ///Yaraq
-    /// 21.5s, 1.8w
-    /// 7D64000D 31.90 105.93 11.84 0.58 0.00 0.00 -0.82
+///Yaraq
+/// 21.5s, 1.8w
+/// 7D64000D 31.90 105.93 11.84 0.58 0.00 0.00 -0.82
