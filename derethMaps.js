@@ -86,6 +86,9 @@ function getMousePos(canvas, evt) {
     };
 }
 
+function includesSubstring(x, sub) {
+    return x.indexOf(sub) >= 0;
+}
 function getPoints() {
     points = new Array();
     var xmlhttp = new XMLHttpRequest();
@@ -99,7 +102,7 @@ function getPoints() {
                 var landblock = json[i].locationString;
 
                 if ("undefined" === typeof json[i].locationString) {
-                    if (x.includes('E')) {
+                    if (includesSubstring(x, 'E')) {
                         x = x.substring(0, x.length - 1);
                         x = x * 1;
                     }
@@ -109,7 +112,7 @@ function getPoints() {
                     }
 
 
-                    if (y.includes('S')) {
+                    if (includesSubstring(y, 'S')) {
                         y = y.substring(0, y.length - 1);
                         y = y * 1;
                     }
@@ -187,7 +190,7 @@ function getDynamicPlayers() {
 }
 // Convert strings to numbers, eg, 10.0W => -10.0
 function decodeMapString(mstr) {
-    if (mstr.includes('E') || mstr.includes('S')) {
+    if (includesSubstring(mstr, 'E') || includesSubstring(mstr, 'S')) {
         val = mstr.substring(0, mstr.length - 1);
         val = val * 1;
     }
@@ -352,13 +355,17 @@ function colorLandblocks(context) {
 function drawGrid() {
     var linewidth = 0.5;
 
+    context.strokeStyle = "black";
+
     for (var xf = 0; xf <= 1.0; xf += 1 / 256.0) {
         mx = -102 + (xf * 203.9);
         var cantop = mapToCanvas(mx, -101.9);
         var canbtm = mapToCanvas(mx, +102);
         // Convert map coordinates to canvas coordinates
+        context.beginPath();
         context.moveTo(linewidth + cantop.x, cantop.y);
         context.lineTo(linewidth + canbtm.x, canbtm.y);
+        context.stroke();
     }
 
     for (var yf = 0; yf <= 1.0; yf += 1 / 256.0) {
@@ -366,12 +373,14 @@ function drawGrid() {
         var canleft = mapToCanvas(-102, my);
         var canrt = mapToCanvas(+101.9, my);
         // Convert map coordinates to canvas coordinates
+        context.beginPath();
         context.moveTo(canleft.x, canrt.y - linewidth);
         context.lineTo(canrt.x, canrt.y - linewidth);
+        context.stroke();
     }
 
-    context.strokeStyle = "black";
-    context.stroke();
+//    context.strokeStyle = "black";
+//    context.stroke();
 }
 function mapToCanvas(mx, my) {
     var canx = d * mx + e;
