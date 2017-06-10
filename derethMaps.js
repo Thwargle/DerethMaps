@@ -414,8 +414,8 @@ function getLandblock(mx, my) {
     var xfract = (mx - (-101.9)) / (102 - (-101.9));
     var yfract = 1 - (my - (-102)) / (101.9 - (-102));
     var block = {
-        x: Math.trunc(xfract * gridCount),
-        y: Math.trunc(yfract * gridCount)
+        x: Math.floor(xfract * gridCount),
+        y: Math.floor(yfract * gridCount)
     };
     return block;
 }
@@ -559,7 +559,7 @@ window.onload = function () {
     }
     canvas.addEventListener("mousewheel", function (evt) {
         console.log(evt.wheelDelta);
-        if (Math.sign(evt.wheelDelta) >= 0) {
+        if ((evt.wheelDelta /  Math.abs(evt.wheelDelta)) >= 0) {
             absoluteOffset.x = (translatePos.x - xcenter) / scale;
             absoluteOffset.y = (translatePos.y - ycenter) / scale;
 
