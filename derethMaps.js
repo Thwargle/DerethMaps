@@ -235,7 +235,7 @@ function drawPoint(context, x, y, width, Type, Race, Special, isHighlighted, isL
     // Convert map coordinates to canvas coordinates
     var canx = d * x + e;
     var cany = a * y + b;
-    circleRadius = 8 / Math.sqrt(scale);
+    circleRadius = 3 / Math.sqrt(scale);
     rectWidth = 10 / Math.sqrt(scale);
 
     if (Type == "Town") {
