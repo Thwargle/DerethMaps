@@ -319,10 +319,10 @@ function collides(points, x, y) {
             }
             else {
                 if (race == undefined) {
-                    collisionElement.innerHTML = "LocationName: " + locationName + "<br />" + "Special: " + special;
+                    collisionElement.innerHTML = "LocationName: " + locationName + "<br />" + "Type: " + special;
                 }
                 else {
-                    collisionElement.innerHTML = "LocationName: " + locationName + "<br />" + "Location Race: " + race + "<br />" + "Special: " + special;
+                    collisionElement.innerHTML = "LocationName: " + locationName + "<br />" + "Location Race: " + race + "<br />" + "Type: " + special;
                 }
                 if (locationName == "Glenden Wood") {
                     threeSixtyView.src = "GlendenWood.html";
