@@ -11,30 +11,37 @@ body {
 }
 
 #buttonWrapper {
-    position:absolute;
-    float:right;
+    position: absolute;
+    float: right;
     width: 30px;
     top: 2px;
     right: 2px;
 }
 
-input[type =
-"button"] {
+input[type = "button"] {
     padding: 5px;
     width: 30px;
     margin: 0px 0px 2px 0px;
 }
-canvas { 
-    image-rendering: optimizeSpeed; 
-    /*Older versions of FF*/ 
-    image-rendering: -moz-crisp-edges; 
+
+canvas {
+    image-rendering: optimizeSpeed;
+    /*Older versions of FF*/
+    image-rendering: -moz-crisp-edges;
     /*FF 6.0+*/
-    image-rendering: -webkit-optimize-contrast; 
+    image-rendering: -webkit-optimize-contrast;
     /*Webkit (Safari now, Chrome soon)*/
-    image-rendering: -o-crisp-edges; 
+    image-rendering: -o-crisp-edges;
     /*OS X & Windows Opera (12.02+)*/
-    image-rendering: optimize-contrast; 
+    image-rendering: optimize-contrast;
     /*Possible future browsers.*/
-    -ms-interpolation-mode: nearest-neighbor; 
+    -ms-interpolation-mode: nearest-neighbor;
     /*IE*/
+}
+
+#footer {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
