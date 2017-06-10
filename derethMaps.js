@@ -29,10 +29,17 @@ var b = (imgHeight - 101.9 * a) - 1;
 var d = imgWidth / mapWidth;
 var e = imgWidth - 102 * d;
 
-var xcenter = 410;
-var ycenter = 410;
+var xcenter = 0;
+var ycenter = 0;
 
 var locationArray = {};
+
+function fitToContainer(canvas) {
+    canvas.style.width = '100%';
+    canvas.style.height = '100%';
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+}
 
 function draw() {
     base_image = new Image();
@@ -137,7 +144,6 @@ function getPoints() {
                     var tokens = locationString.split(' ');
                     var lcx = tokens[2];
                     var lcy = tokens[1];
-                    console.error(lcy);
 
                     // Convert landcell coordinates to map offsets
                     var offsetX = landblockWidth * ((lcx - 1) / 192);
@@ -253,8 +259,8 @@ function drawPoint(context, x, y, width, Type, Race, Special, isHighlighted, isL
             context.drawImage(town_image, canx - rectWidth / 2, cany - rectWidth / 2, rectWidth, rectWidth);
         }
     }
-    else if (Type == "Hunting") {
-        if (document.getElementById("Hunting").checked) {
+    else if (Type == "Cottages") {
+        if (document.getElementById("Cottages").checked) {
             context.beginPath();
             context.arc(canx, cany, circleRadius, 0, 2 * Math.PI);
             context.fillStyle = '#00FF00';
@@ -430,8 +436,11 @@ function coordsFromLandblock(lbX, lbY) {
 }
 
 window.onload = function () {
+    xcenter = document.getElementById("myCanvas").offsetWidth;
+    ycenter = document.getElementById("myCanvas").offsetHeight;
     canvas = document.getElementById("myCanvas");
     context = canvas.getContext("2d");
+    fitToContainer(canvas);
 
     console.log("a,b=" + scoords(a, b) + ", d,e=" + scoords(d, e));
     console.log("canvas: " + scoords(canvas.clientWidth, canvas.clientHeight));

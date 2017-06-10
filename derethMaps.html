@@ -6,9 +6,9 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js?v=1.0"></script>
 	   <script type="text/javascript" src="derethMaps.js"></script>
     </head>
-    <body onmousedown="return false;">
-        <div id="wrapper" style="float:left">
-            <canvas id="myCanvas" width="820" height="820" style="background-color:#242F40">
+    <body onmousedown="return false;" style="align-content:center;">
+        <div id="wrapper" style="float:left; width: 85vh; height: 85vh;">
+            <canvas id="myCanvas" style="background-color:#242F40">
             </canvas>
             <div id="buttonWrapper" style="background-color: lightgray; text-align:center;">
                 <input type="image" src="images/reset.png" id="reset" value="reset">
@@ -21,10 +21,10 @@
             <div style="float:left; z-index:1; padding-left: 15px;">
                 <div>
                     <input type="checkbox" id="Town" value="Town" checked="checked" /> Show Towns<br />
+                    <input type="checkbox" id="Cottages" value="Cottages" checked="checked" />Show Cottages<br />
                     <input type="checkbox" id="Player" value="Player" />Show Players<br />
-                    <input type="checkbox" id="Hunting" value="Hunting" checked="checked" />Show Hunting<br />
-                    <input type="checkbox" id="LandblockGrid" value="Landblock" checked="checked" />Show Landblock Grid<br />
-                    <input type="checkbox" id="HighlightLandblocks" value="HighlightLandblock" checked="checked" />Highight Active Landblocks<br />
+                    <input type="checkbox" id="LandblockGrid" value="Landblock" />Show Landblock Grid<br />
+                    <input type="checkbox" id="HighlightLandblocks" value="HighlightLandblock" />Highight Active Landblocks<br />
                     <button onclick="clearSelection();">Clear Selection</button>
                 </div>
                 <div>
@@ -33,7 +33,7 @@
                     <p id="LandblockInfo"></p>
                 </div>
             </div>
-            <div style="float:left;" id="iframeHolder">
+            <div id="iframeHolder">
                 <iframe id="360" src="" width="330" height="240" frameborder="0"></iframe>
             </div>
         </div>
