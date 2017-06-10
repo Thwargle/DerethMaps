@@ -393,29 +393,6 @@ function mapToCanvas(mx, my) {
     var cany = a * my + b;
     return { x: canx, y: cany };
 }
-function drawGrid2() {
-    var linewidth = .5;
-    bh = imgHeight;
-    bw = imgWidth;
-    var uw = bw / gridCount;
-    var offsetw = 0;
-
-    var uh = bh / gridCount;
-    var offseth = 0;
-
-    for (var x = -offsetw; x <= bw + offsetw; x += uw) {
-        context.moveTo(linewidth + x, -offseth);
-        context.lineTo(linewidth + x, bh + offseth);
-    }
-
-    for (var y = -offseth; y <= bh + offseth; y += uh) {
-        context.moveTo(-offsetw, linewidth + y);
-        context.lineTo(bw + offsetw, linewidth + y);
-    }
-
-    context.strokeStyle = "black";
-    context.stroke();
-}
 function getLandblock(mx, my) {
     var xfract = (mx - (-101.9)) / (102 - (-101.9));
     var yfract = 1 - (my - (-102)) / (101.9 - (-102));
@@ -433,6 +410,10 @@ function coordsFromLandblock(lbX, lbY) {
     var my = -102 + (101.9 - (-102)) * (1 - yfract);
     var coord = { x: mx, y: my };
     return coord;
+}
+
+function displayResize() {
+    fitToContainer(document.getElementById("myCanvas"));
 }
 
 window.onload = function () {
@@ -539,6 +520,7 @@ window.onload = function () {
         displayLandblock(mapco.x, mapco.y);
 
     });
+
     function displayLandblock(mx, my) {
         block = getLandblock(mx, my);
         document.getElementById("LandblockInfo").innerHTML = "Landblock: " + block.x + " (0x" + block.x.toString(16) + ") " + block.y + " (0x" + block.y.toString(16) + ")";
