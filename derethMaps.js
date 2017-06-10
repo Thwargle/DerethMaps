@@ -318,7 +318,12 @@ function collides(points, x, y) {
                 landblockDynPoint = true;
             }
             else {
-                collisionElement.innerHTML = "LocationName: " + locationName + "<br />" + "Location Race: " + race + "<br />" + "Special: " + special;
+                if (race == undefined) {
+                    collisionElement.innerHTML = "LocationName: " + locationName + "<br />" + "Special: " + special;
+                }
+                else {
+                    collisionElement.innerHTML = "LocationName: " + locationName + "<br />" + "Location Race: " + race + "<br />" + "Special: " + special;
+                }
                 if (locationName == "Glenden Wood") {
                     threeSixtyView.src = "GlendenWood.html";
                 }
@@ -545,7 +550,7 @@ window.onload = function () {
         }
 
 
-        document.getElementById("debug").innerHTML = "Coordinates: " + yWithCompass + ", " + xWithCompass;
+        document.getElementById("Coordinates").innerHTML = "Coordinates: " + yWithCompass + ", " + xWithCompass;
 
     }
     canvas.addEventListener("mousewheel", function (evt) {

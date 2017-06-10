@@ -461,6 +461,196 @@
     "Type": "Cottages",
     "LocationName": "Adam's Beach",
     "x": "52.8W",
-    "y": "57.5N"
+    "y": "57.5N",
+    "Special": "Cottage"
+  },
+  {
+    "Type": "Cottages",
+    "LocationName": "Adept's Domain",
+    "x": "36.8W",
+    "y": "28.8N",
+    "Special": "Cottage"
+  },
+  {
+    "Type": "Cottages",
+    "LocationName": "Adventurer's Haven Cottages",
+    "y": "1.7N",
+    "x": "36.1E",
+    "Special": "Cottage"
+  },
+  {
+    "Type": "Cottages",
+    "LocationName": "Ahr-Zona",
+    "y": "21.7S",
+    "x": "18.8E",
+    "Special": "Cottage"
+  },
+  {
+    "Type": "Cottages",
+    "LocationName": "Aimaru Plains Cottages",
+    "y": "28.1S",
+    "x": "75.3E",
+    "Special": "Cottage"
+  },
+  {
+    "Type": "Cottages",
+    "LocationName": "Al-Arqis Cottages",
+    "y": "11.9S",
+    "x": "2.7W",
+    "Special": "Cottage"
+  },
+  {
+    "Type": "Cottages",
+    "LocationName": "Al-Hatar Settlement",
+    "y": "34.4S",
+    "x": "18.0E",
+    "Special": "Cottage"
+  },
+  {
+    "Type": "Cottages",
+    "LocationName": "Al-Kasan Settlement",
+    "y": "33.5S",
+    "x": "9.4E",
+    "Special": "Cottage"
+  },
+  {
+    "Type": "Cottages",
+    "LocationName": "Al-Mar Oasis",
+    "y": "47.1S",
+    "x": "16.9E",
+    "Special": "Cottage"
+  },
+  {
+    "Type": "Cottages",
+    "LocationName": "Al-Nosaj",
+    "y": "12.0S",
+    "x": "14.4E",
+    "Special": "Cottage"
+  },
+  {
+    "Type": "Cottages",
+    "LocationName": "Alfreth Ridge Cottages",
+    "y": "20.1N",
+    "x": "10.4E",
+    "Special": "Cottage"
+  },
+  {
+    "Type": "Cottages",
+    "LocationName": "Aloria",
+    "y": "50.4N",
+    "x": "26.4W",
+    "Special": "Cottage"
+  },
+  {
+    "Type": "Cottages",
+    "LocationName": "Anadil",
+    "y": "69.5N",
+    "x": "4.0W",
+    "Special": "Cottage"
+  },
+  {
+    "Type": "Cottages",
+    "LocationName": "Aqalah",
+    "y": "7.3S",
+    "x": "2.3W",
+    "Special": "Cottage"
+  },
+  {
+    "Type": "Cottages",
+    "LocationName": "Ardent Realm",
+    "y": "39.9S",
+    "x": "33.0E",
+    "Special": "Cottage"
+  },
+  {
+    "Type": "Cottages",
+    "LocationName": "Ariake",
+    "y": "16.8S",
+    "x": "76.8E",
+    "Special": "Cottage"
+  },
+  {
+    "Type": "Cottages",
+    "LocationName": "Arida Butte",
+    "y": "23.2S",
+    "x": "36.6E",
+    "Special": "Cottage"
+  },
+  {
+    "Type": "Cottages",
+    "LocationName": "Arqasanti",
+    "y": "24.8S",
+    "x": "15.0E",
+    "Special": "Cottage"
+  },
+  {
+    "Type": "Cottages",
+    "LocationName": "Arrak",
+    "y": "9.5S",
+    "x": "5.2E",
+    "Special": "Cottage"
+  },
+  {
+    "Type": "Cottages",
+    "LocationName": "Arrowdale Cottages",
+    "y": "64.5N",
+    "x": "72.1E",
+    "Special": "Cottage"
+  },
+  {
+    "Type": "Cottages",
+    "LocationName": "Artifice Cottages",
+    "y": "84.8S",
+    "x": "12.8E",
+    "Special": "Cottage"
+  },
+  {
+    "Type": "Cottages",
+    "LocationName": "Asandra Cottages",
+    "y": "56.9N",
+    "x": "27.1W",
+    "Special": "Cottage"
+  },
+  {
+    "Type": "Cottages",
+    "LocationName": "Asbel Domain",
+    "y": "1.3S",
+    "x": "40.1E",
+    "Special": "Cottage"
+  },
+  {
+    "Type": "Cottages",
+    "LocationName": "Auralla Settlement",
+    "y": "52.1N",
+    "x": "45.5W",
+    "Special": "Cottage"
+  },
+  {
+    "Type": "Cottages",
+    "LocationName": "Avatania Cottages",
+    "y": "56.8S",
+    "x": "20.6E",
+    "Special": "Cottage"
+  },
+  {
+    "Type": "Cottages",
+    "LocationName": "Axefall Glen",
+    "y": "30.4N",
+    "x": "40.8W",
+    "Special": "Cottage"
+  },
+  {
+    "Type": "Cottages",
+    "LocationName": "Ayn Tayan",
+    "y": "39.1S",
+    "x": "55.2E",
+    "Special": "Cottage"
+  },
+  {
+    "Type": "Cottages",
+    "LocationName": "Azaroth Cottages",
+    "y": "84.0N",
+    "x": "31.1W",
+    "Special": "Cottage"
   }
 ]
