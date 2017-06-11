@@ -318,8 +318,16 @@ function collides(points, x, y) {
                 landblockDynPoint = true;
             }
             else {
-                if (race == undefined) {
+                if (race == undefined && type != undefined) {
                     collisionElement.innerHTML = "LocationName: " + locationName + "<br />" + "Type: " + special;
+                }
+                else if(race == undefined && type == undefined)
+                {
+                    collisionElement.innerHTML = "LocationName: " + locationName;
+                }
+                else if(race != undefined && type == undefined)
+                {
+                    collisionElement.innerHTML = "LocationName: " + locationName + "<br />" + "Location Race: " + race;
                 }
                 else {
                     collisionElement.innerHTML = "LocationName: " + locationName + "<br />" + "Location Race: " + race + "<br />" + "Type: " + special;
@@ -578,7 +586,32 @@ window.onload = function () {
             draw();
         }
     });
+    canvas.addEventListener("DOMMouseScroll", function (evt) {
+        var delta = evt.wheelDelta ? evt.wheelDelta : -evt.detail;
+        console.log(evt);
+        if (delta >= 0) {
+            absoluteOffset.x = (translatePos.x - xcenter) / scale;
+            absoluteOffset.y = (translatePos.y - ycenter) / scale;
 
+            scale /= scaleMultiplier;
+
+            translatePos.x = (scale * absoluteOffset.x) + xcenter;
+            translatePos.y = (scale * absoluteOffset.y) + ycenter;
+
+            draw();
+        }
+        else {
+            absoluteOffset.x = (translatePos.x - xcenter) / scale;
+            absoluteOffset.y = (translatePos.y - ycenter) / scale;
+
+            scale *= scaleMultiplier;
+
+            translatePos.x = (scale * absoluteOffset.x) + xcenter;
+            translatePos.y = (scale * absoluteOffset.y) + ycenter;
+
+            draw();
+        }
+    });
     canvas.addEventListener("mouseover", function (evt) {
         mouseDown = false;
     });
