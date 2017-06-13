@@ -337,10 +337,15 @@ function collides(points, x, y) {
                 else {
                     collisionElement.innerHTML = "LocationName: " + locationName + "<br />" + "Location Race: " + race + "<br />" + "Type: " + special;
                 }
-                if (locationName == "Glenden Wood") {
-                    threeSixtyView.src = "GlendenWood.html";
+
+                var threeSixtySource = locationName.replace(/\s+/g, '') + ".html";
+
+                if (threeSixtySource == "GlendenWood.html")
+                {
+                    threeSixtyView.src = threeSixtySource;
                 }
-                else {
+                else
+                {
                     threeSixtyView.src = "";
                 }
             }
