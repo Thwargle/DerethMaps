@@ -45,8 +45,10 @@ function draw() {
     base_image = new Image();
     base_image.src = 'highres.png';
 
+    var mobList = document.getElementById("mobList");
+    var selectedMob = mobList.options[mobList.selectedIndex].value;
     imageOverlay = new Image();
-    imageOverlay.src = 'http://mobtracker.yewsplugins.com/BigMaps/Tusker%20Guard.gif';
+    imageOverlay.src = 'http://mobtracker.yewsplugins.com/BigMaps/' + selectedMob + '.gif';
 
     // clear canvas
     context.clearRect(0, 0, canvas.width, canvas.height);
@@ -295,8 +297,14 @@ function drawPoint(context, x, y, width, Type, Race, Special, isHighlighted, isL
 function clearSelection() {
     highlightedDynPoint = -1;
     highlightedPoint = -1;
+    var coordinatesElement = document.getElementById("Coordinates");
+    coordinatesElement.innerHTML = "";
     var collisionElement = document.getElementById("CollisionInfo");
     collisionElement.innerHTML = "";
+    var landblockElement = document.getElementById("LandblockInfo");
+    landblockElement.innerHTML = "";
+    var threeSixtyView = document.getElementById("360");
+    threeSixtyView.src = "";
 }
 function collides(points, x, y) {
     var isCollision = false;
