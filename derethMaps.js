@@ -45,6 +45,9 @@ function draw() {
     base_image = new Image();
     base_image.src = 'highres.png';
 
+    imageOverlay = new Image();
+    imageOverlay.src = 'http://mobtracker.yewsplugins.com/BigMaps/Tusker%20Guard.gif';
+
     // clear canvas
     context.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -53,6 +56,8 @@ function draw() {
     context.scale(scale, scale);
     context.imageSmoothingEnabled = false;
     context.drawImage(base_image, 0, 0);
+    context.globalCompositeOperation = "lighter";
+    context.drawImage(imageOverlay, 0, 0);
 
     var pointsArrayLength = points.length;
     var dPointsArrayLength = dPoints.length;

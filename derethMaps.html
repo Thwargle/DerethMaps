@@ -10,7 +10,7 @@
         <img src="images/derethMapsLogo.png" alt="derethMaps Logo" style="height:35px;" />
         <br />
         <div id="wrapper" style="float:left; width: 85vh; height: 85vh;">
-            <canvas id="myCanvas" style="background-color:#242F40">
+            <canvas id="myCanvas" style="background-color:#1F2B3D">
             </canvas>
             <div id="buttonWrapper" style="background-color: lightgray; text-align:center;">
                 <input type="image" src="images/reset.png" id="reset" value="reset">
@@ -28,6 +28,12 @@
                     <input type="checkbox" id="LandblockGrid" value="Landblock" />Show Landblock Grid<br />
                     <input type="checkbox" id="HighlightLandblocks" value="HighlightLandblock" />Highight Active Landblocks<br />
                     <button onclick="clearSelection();">Clear Selection</button>
+                    <select name="mobList">
+                        <option value="Tusker%20Guard">Tusker Guard</option>
+                        <option value="Diamond%20Golem">Diamond Golem</option>
+                        <option value="Virindi%20Executor">Virindi Executor</option>
+                        <option value="Telumiat%20Hollow%20Minion">Telumiat Hollow Minion</option>
+                    </select>
                 </div>
                 <div>
                     <p id="Coordinates"></p>
