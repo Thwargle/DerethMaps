@@ -117,10 +117,14 @@ function getMobList() {
                 var mobOption = new Option(mobText, mobText);
                 $('#mobList').append(mobOption);
             }
+            $.getScript("dropSearch/chosen.jquery.js", function (data, textStatus, jqxhr) {
+                $.getScript("dropSearch/docsupport/prism.js", function (data, textStatus, jqxhr) {
+                    $.getScript("dropSearch/docsupport/init.js", function (data, textStatus, jqxhr) {
+                    });
+                });
+            });
         }
     };
-
-
     xmlhttp.open("GET", "mobList.txt", true);
     xmlhttp.send();
 }

@@ -1,49 +1,53 @@
 <!DOCTYPE HTML>
+<!-- SelectBox jquery from https://github.com/harvesthq/chosen -->
 <html>
     <head>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="derethMaps.css">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js?v=1.0"></script>
+    <link rel="stylesheet" href="dropSearch/docsupport/style.css">
+    <link rel="stylesheet" href="dropSearch/docsupport/prism.css">
+    <link rel="stylesheet" href="dropSearch/chosen.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js" type="text/javascript"></script>
+    
 	   <script type="text/javascript" src="derethMaps.js"></script>
     </head>
-    <body onresize="displayResize()" style="align-content:center; padding-left:15px;">
-        <img src="images/derethMapsLogo.png" alt="derethMaps Logo" style="height:35px;" />
-        <br />
-        <div id="wrapper" style="float:left; width: 85vh; height: 85vh;">
-            <canvas id="myCanvas" style="background-color:#1F2B3D">
-            </canvas>
-            <div id="buttonWrapper" style="background-color: lightgray; text-align:center;">
-                <input type="image" src="images/reset.png" id="reset" value="reset">
-                <input type="image" src="images/zoomIn.png" id="plus" value="+">
-                <input type="image" src="images/zoomOut.png" id="minus" value="-">
-                <input type="image" src="images/log.png" id="log" value="log">
+<body onresize="displayResize()" style="align-content:center; padding-left:15px;">
+    <img src="images/derethMapsLogo.png" alt="derethMaps Logo" style="height:35px;" />
+    <br />
+    <div id="wrapper" style="float:left; width: 85vh; height: 85vh;">
+        <canvas id="myCanvas" style="background-color:#1F2B3D"></canvas>
+        <div id="buttonWrapper" style="background-color: lightgray; text-align:center;">
+            <input type="image" src="images/reset.png" id="reset" value="reset">
+            <input type="image" src="images/zoomIn.png" id="plus" value="+">
+            <input type="image" src="images/zoomOut.png" id="minus" value="-">
+            <input type="image" src="images/log.png" id="log" value="log">
+        </div>
+    </div>
+    <div style="float:left">
+        <div style="float:left; z-index:1; padding-left: 15px;">
+            <div>
+                <input type="checkbox" id="Town" value="Town" checked="checked" /> Show Towns<br />
+                <input type="checkbox" id="Cottages" value="Cottages" checked="checked" />Show Cottages<br />
+                <input type="checkbox" id="Player" value="Player" />Show Players<br />
+                <input type="checkbox" id="LandblockGrid" value="Landblock" />Show Landblock Grid<br />
+                <input type="checkbox" id="HighlightLandblocks" value="HighlightLandblock" />Highight Active Landblocks<br />
+                <button onclick="clearSelection();">Clear Selection</button>
+                <br />
+                <select id="mobList" class="chosen-select">
+                    <option value="None">None</option>
+                </select>
+            </div>
+            <div>
+                <p id="Coordinates"></p>
+                <p id="CollisionInfo"></p>
+                <p id="LandblockInfo"></p>
             </div>
         </div>
-        <div style="float:left">
-            <div style="float:left; z-index:1; padding-left: 15px;">
-                <div>
-                    <input type="checkbox" id="Town" value="Town" checked="checked" /> Show Towns<br />
-                    <input type="checkbox" id="Cottages" value="Cottages" checked="checked" />Show Cottages<br />
-                    <input type="checkbox" id="Player" value="Player" />Show Players<br />
-                    <input type="checkbox" id="LandblockGrid" value="Landblock" />Show Landblock Grid<br />
-                    <input type="checkbox" id="HighlightLandblocks" value="HighlightLandblock" />Highight Active Landblocks<br />
-                    <button onclick="clearSelection();">Clear Selection</button>
-                    <br />
-                    <select id="mobList">
-                        <option value="None" selected="selected">None</option>
-                    </select>
-                </div>
-                <div>
-                    <p id="Coordinates"></p>
-                    <p id="CollisionInfo"></p>
-                    <p id="LandblockInfo"></p>
-                </div>
-            </div>
-            <div id="iframeHolder">
-                <iframe id="360" src="" width="330" height="240" frameborder="0"></iframe>
-            </div>
+        <div id="iframeHolder">
+            <iframe id="360" src="" width="330" height="240" frameborder="0"></iframe>
         </div>
-        <div style="clear:both;"></div>
-        <footer style="text-align:center;">Powered by <a href="http://www.thwargle.com" title="Thwargle.com">Thwargle Games</a> - Mob Overlays Courtesy of <a href="http://mobtracker.yewsplugins.com" title="Mob Tracker">Yew Wan Sum</a></footer>
-    </body>
+    </div>
+    <div style="clear:both;"></div>
+    <footer style="text-align:center;">Powered by <a href="http://www.thwargle.com" title="Thwargle.com">Thwargle Games</a> - Mob Overlays Courtesy of <a href="http://mobtracker.yewsplugins.com" title="Mob Tracker">Yew Wan Sum</a></footer>
+</body>
 </html>
