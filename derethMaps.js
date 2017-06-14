@@ -48,7 +48,9 @@ function draw() {
     var mobList = document.getElementById("mobList");
     var selectedMob = mobList.options[mobList.selectedIndex].value;
     imageOverlay = new Image();
-    imageOverlay.src = 'http://mobtracker.yewsplugins.com/BigMaps/' + selectedMob + '.gif';
+    if (selectedMob != "None") {
+        imageOverlay.src = 'http://mobtracker.yewsplugins.com/BigMaps/' + selectedMob + '.gif';
+    }
 
     // clear canvas
     context.clearRect(0, 0, canvas.width, canvas.height);
@@ -103,6 +105,26 @@ function getMousePos(canvas, evt) {
 function includesSubstring(x, sub) {
     return x.indexOf(sub) >= 0;
 }
+
+function getMobList() {
+    mobList = new Array();
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            mobList = this.responseText.split(/\n/);
+            for (var i = 0; i < mobList.length; i++) {
+                var mobText = mobList[i].trimRight();
+                var mobOption = new Option(mobText, mobText);
+                $('#mobList').append(mobOption);
+            }
+        }
+    };
+
+
+    xmlhttp.open("GET", "mobList.txt", true);
+    xmlhttp.send();
+}
+
 function getPoints() {
     points = new Array();
     var xmlhttp = new XMLHttpRequest();
@@ -453,6 +475,7 @@ window.onload = function () {
     canvas = document.getElementById("myCanvas");
     context = canvas.getContext("2d");
     fitToContainer(canvas);
+    getMobList();
 
     console.log("a,b=" + scoords(a, b) + ", d,e=" + scoords(d, e));
     console.log("canvas: " + scoords(canvas.clientWidth, canvas.clientHeight));
@@ -580,7 +603,6 @@ window.onload = function () {
 
     }
     canvas.addEventListener("mousewheel", function (evt) {
-        console.log(evt.wheelDelta);
         if ((evt.wheelDelta /  Math.abs(evt.wheelDelta)) >= 0) {
             absoluteOffset.x = (translatePos.x - xcenter) / scale;
             absoluteOffset.y = (translatePos.y - ycenter) / scale;
