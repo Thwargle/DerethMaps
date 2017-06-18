@@ -79,14 +79,12 @@ function draw() {
         //console.log("We got ourselves a landblock: " + isLandblock);
         drawPoint(context, dPoints[i].x, dPoints[i].y, 5, dPoints[i].Type, dPoints[i].Race, dPoints[i].Special, isHightlighted, isLandblock);
     }
-
     if (document.getElementById("LandblockGrid").checked) {
         drawGrid();
     }
     if (document.getElementById("HighlightLandblocks").checked) {
         colorLandblocks(context);
     }
-
     context.restore();
 }
 
@@ -443,9 +441,6 @@ function drawGrid() {
         context.lineTo(canrt.x, canrt.y - linewidth);
         context.stroke();
     }
-
-//    context.strokeStyle = "black";
-//    context.stroke();
 }
 function mapToCanvas(mx, my) {
     var canx = d * mx + e;
