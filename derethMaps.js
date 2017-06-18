@@ -21,7 +21,7 @@ var landblockWidth = mapWidth / gridCount;
 var landblockHeight = mapHeight / gridCount;
 
 var scale = 0.4;
-var scaleMultiplier = 0.8;
+var scaleMultiplier = .9;
 var translatePos;
 
 var a = imgHeight / mapHeight;
@@ -608,24 +608,24 @@ window.onload = function () {
     }
     canvas.addEventListener("mousewheel", function (evt) {
         if ((evt.wheelDelta /  Math.abs(evt.wheelDelta)) >= 0) {
-            absoluteOffset.x = (translatePos.x - xcenter) / scale;
-            absoluteOffset.y = (translatePos.y - ycenter) / scale;
+            absoluteOffset.x = (translatePos.x - evt.clientX) / scale;
+            absoluteOffset.y = (translatePos.y - evt.clientY) / scale;
 
             scale /= scaleMultiplier;
 
-            translatePos.x = (scale * absoluteOffset.x) + xcenter;
-            translatePos.y = (scale * absoluteOffset.y) + ycenter;
+            translatePos.x = (scale * absoluteOffset.x) + evt.clientX;
+            translatePos.y = (scale * absoluteOffset.y) + evt.clientY;
 
             draw();
         }
         else {
-            absoluteOffset.x = (translatePos.x - xcenter) / scale;
-            absoluteOffset.y = (translatePos.y - ycenter) / scale;
+            absoluteOffset.x = (translatePos.x - evt.clientX) / scale;
+            absoluteOffset.y = (translatePos.y - evt.clientY) / scale;
 
             scale *= scaleMultiplier;
 
-            translatePos.x = (scale * absoluteOffset.x) + xcenter;
-            translatePos.y = (scale * absoluteOffset.y) + ycenter;
+            translatePos.x = (scale * absoluteOffset.x) + evt.clientX;
+            translatePos.y = (scale * absoluteOffset.y) + evt.clientY;
 
             draw();
         }
@@ -634,24 +634,24 @@ window.onload = function () {
         var delta = evt.wheelDelta ? evt.wheelDelta : -evt.detail;
         console.log(evt);
         if (delta >= 0) {
-            absoluteOffset.x = (translatePos.x - xcenter) / scale;
-            absoluteOffset.y = (translatePos.y - ycenter) / scale;
+            absoluteOffset.x = (translatePos.x - evt.clientX) / scale;
+            absoluteOffset.y = (translatePos.y - evt.clientY) / scale;
 
             scale /= scaleMultiplier;
 
-            translatePos.x = (scale * absoluteOffset.x) + xcenter;
-            translatePos.y = (scale * absoluteOffset.y) + ycenter;
+            translatePos.x = (scale * absoluteOffset.x) + evt.clientX;
+            translatePos.y = (scale * absoluteOffset.y) + evt.clientY;
 
             draw();
         }
         else {
-            absoluteOffset.x = (translatePos.x - xcenter) / scale;
-            absoluteOffset.y = (translatePos.y - ycenter) / scale;
+            absoluteOffset.x = (translatePos.x - evt.clientX) / scale;
+            absoluteOffset.y = (translatePos.y - evt.clientY) / scale;
 
             scale *= scaleMultiplier;
 
-            translatePos.x = (scale * absoluteOffset.x) + xcenter;
-            translatePos.y = (scale * absoluteOffset.y) + ycenter;
+            translatePos.x = (scale * absoluteOffset.x) + evt.clientX;
+            translatePos.y = (scale * absoluteOffset.y) + evt.clientY;
 
             draw();
         }
