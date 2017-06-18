@@ -47,10 +47,7 @@ function draw() {
 
     var mobList = document.getElementById("mobList");
     var selectedMob = mobList.options[mobList.selectedIndex].value;
-    imageOverlay = new Image();
-    if (selectedMob != "None") {
-        imageOverlay.src = 'http://mobtracker.yewsplugins.com/BigMaps/' + selectedMob + '.gif';
-    }
+
 
     // clear canvas
     context.clearRect(0, 0, canvas.width, canvas.height);
@@ -61,6 +58,11 @@ function draw() {
     context.imageSmoothingEnabled = false;
     context.drawImage(base_image, 0, 0);
     context.globalCompositeOperation = "lighter";
+
+    imageOverlay = new Image();
+    if (selectedMob != "None") {
+        imageOverlay.src = 'http://mobtracker.yewsplugins.com/BigMaps/' + selectedMob + '.gif';
+    }
     context.drawImage(imageOverlay, 0, 0);
 
     var pointsArrayLength = points.length;
@@ -541,9 +543,31 @@ window.onload = function () {
     }, false);
 
     document.getElementById("reset").addEventListener("click", function () {
-        canvas = document.getElementById("myCanvas");
-        var ctx = canvas.getContext('2d');
-        ctx.setTransform(1, 0, 0, 1, 0, 0);
+        var coordinates = coordsFromLandblock(00, 00);
+
+        translatePos = {
+            x: canvas.width / 2,
+            y: canvas.height / 2
+        };
+        var absoluteOffset = {
+            x: canvas.width / 2,
+            y: canvas.height / 2
+        };
+        // Viewport offset in relative (screen) numbers
+        translatePos.x = 0;
+        translatePos.y = 0;
+
+        // Viewport offset in absolute (canvas) numbers
+        absoluteOffset.x = 0;
+        absoluteOffset.y = 0;
+
+
+        var startDragOffset = {};
+        var mouseDown = false;
+
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.translate(translatePos.x, translatePos.y);
+        scale = .4;
     });
 
     // add event listeners to handle screen drag
