@@ -56,7 +56,14 @@ function draw() {
     context.translate(translatePos.x, translatePos.y);
     context.scale(scale, scale);
     context.imageSmoothingEnabled = false;
+
+    var mapAlpha = 1.0 - (document.getElementById("mapAlpha").value / 10.0);
+    console.log("mapAlpha: " + mapAlpha);
+    var oldAlpha = context.globalAlpha;
+    context.globalAlpha = mapAlpha;
     context.drawImage(base_image, 0, 0);
+    context.globalAlpha = oldAlpha;
+
     context.globalCompositeOperation = "lighter";
 
     imageOverlay = new Image();
@@ -428,6 +435,7 @@ function drawGrid() {
         context.beginPath();
         context.moveTo(linewidth + cantop.x, cantop.y);
         context.lineTo(linewidth + canbtm.x, canbtm.y);
+        context.closePath();
         context.stroke();
     }
 
