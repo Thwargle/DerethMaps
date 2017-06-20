@@ -498,6 +498,12 @@ function showMenu() {
     }
 }
 
+function showLandblockClicked() {
+    console.log(document.getElementById("mapAlpha").value);
+    document.getElementById("mapAlpha").value = 5;
+    console.log(document.getElementById("mapAlpha").value);
+}
+
 function displayResize() {
     fitToContainer(document.getElementById("myCanvas"));
 }

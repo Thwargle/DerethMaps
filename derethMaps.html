@@ -16,8 +16,8 @@
     <br />
     <div id="wrapper" style="float:left; height: 85vh;">
         <div style="position:absolute; color:white;">
-            <button id="derethMenu" onclick="showMenu()" style="position:absolute;">Hide Menu</button>
-            <button onclick="clearSelection();" style="margin-left: 100px;">Clear Selection</button>
+            <button id="derethMenu" onclick="showMenu()">Hide Menu</button>
+            <button onclick="clearSelection();">Clear Selection</button>
             <button onclick="copyToClipboard();">Copy Coords</button>
             <br />
             <br />
@@ -26,7 +26,7 @@
                     <input type="checkbox" id="Town" value="Town" checked="checked" /> Show Towns<br />
                     <input type="checkbox" id="Cottages" value="Cottages" checked="checked" />Show Cottages<br />
                     <input type="checkbox" id="Player" value="Player" />Show Players<br />
-                    <input type="checkbox" id="LandblockGrid" value="Landblock" />Show Landblock Grid<br />
+                    <input type="checkbox" id="LandblockGrid" value="Landblock" onchange="showLandblockClicked()" />Show Landblock Grid<br />
                     <input type="checkbox" id="HighlightLandblocks" value="HighlightLandblock" />Highight Active Landblocks<br />
                     <label>Transparency:</label> <input style="padding-left:5px;" id="mapAlpha" type="range" min="0" max="10" value="0" />
                     <br />
