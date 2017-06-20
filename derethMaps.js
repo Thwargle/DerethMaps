@@ -7,6 +7,7 @@ var landblockPoint = -1;
 var highlightedDynPoint = -1;
 var landblockDynPoint = -1;
 var gridCount = 256;
+var displayMenu = false;
 
 // dimensions of the map image we have
 var imgWidth = 2041;
@@ -20,7 +21,7 @@ var mapHeight = 203.9;
 var landblockWidth = mapWidth / gridCount;
 var landblockHeight = mapHeight / gridCount;
 
-var scale = 0.4;
+var scale = 0.9;
 var scaleMultiplier = .9;
 var translatePos;
 
@@ -39,6 +40,8 @@ function fitToContainer(canvas) {
     canvas.style.height = '100%';
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
+    document.getElementById('wrapper').style.height = canvas.offsetHeight;
+    console.log(canvas.offsetWidth);
 }
 
 function draw() {
@@ -475,9 +478,40 @@ function coordsFromLandblock(lbX, lbY) {
     return coord;
 }
 
+function showMenu() {
+    console.log(displayMenu);
+    if (displayMenu) {
+        displayMenu = false;
+        document.getElementById("Menu").innerText = "Show Menu";
+        document.getElementById("menuItems").style.display = 'none';
+        document.getElementById("iframeHolder").style.display = 'none';
+    }
+    else
+    {
+        displayMenu = true;
+        document.getElementById("Menu").innerText = "Hide Menu";
+        document.getElementById("menuItems").style.display = 'block';
+        document.getElementById("iframeHolder").style.display = 'block';
+    }
+}
+
 function displayResize() {
     fitToContainer(document.getElementById("myCanvas"));
 }
+
+(function ($) {
+    $.fn.disableSelection = function () {
+        return this.each(function () {
+            if (typeof this.onselectstart != 'undefined') {
+                this.onselectstart = function () { return false; };
+            } else if (typeof this.style.MozUserSelect != 'undefined') {
+                this.style.MozUserSelect = 'none';
+            } else {
+                this.onmousedown = function () { return false; };
+            }
+        });
+    };
+})(jQuery);
 
 window.onload = function () {
     xcenter = document.getElementById("myCanvas").offsetWidth;
@@ -565,18 +599,18 @@ window.onload = function () {
         absoluteOffset.x = 0;
         absoluteOffset.y = 0;
 
-
         var startDragOffset = {};
         var mouseDown = false;
 
         context.clearRect(0, 0, canvas.width, canvas.height);
         context.translate(translatePos.x, translatePos.y);
-        scale = .4;
+        scale = .9;
     });
 
     // add event listeners to handle screen drag
     canvas.addEventListener("mousedown", function (evt) {
         mouseDown = true;
+        $('*').disableSelection();
         startDragOffset.x = evt.clientX - translatePos.x;
         startDragOffset.y = evt.clientY - translatePos.y;
     });

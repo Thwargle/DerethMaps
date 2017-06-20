@@ -6,8 +6,8 @@ body {
 #wrapper {
     position: relative;
     border: 1px solid #9C9898;
-    width: 820px;
-    height: 820px;
+    width: 99%;
+    height: 99%;
 }
 
 #buttonWrapper {
