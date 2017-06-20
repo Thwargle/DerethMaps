@@ -23,7 +23,7 @@
             <input type="image" src="images/log.png" id="log" value="log">
         </div>
     </div>
-    <div style="float:left">
+    <div style="float:left;">
         <div style="float:left; z-index:1; padding-left: 15px;">
             <div>
                 <input type="checkbox" id="Town" value="Town" checked="checked" /> Show Towns<br />
@@ -31,7 +31,7 @@
                 <input type="checkbox" id="Player" value="Player" />Show Players<br />
                 <input type="checkbox" id="LandblockGrid" value="Landblock" />Show Landblock Grid<br />
                 <input type="checkbox" id="HighlightLandblocks" value="HighlightLandblock" />Highight Active Landblocks<br />
-                <button onclick="clearSelection();">Clear Selection</button><br/>
+                <button onclick="clearSelection();">Clear Selection</button><br />
                 <label>Transparency:</label> <input style="padding-left:5px;" id="mapAlpha" type="range" min="0" max="10" value="0" />
                 <br />
                 <select id="mobList" class="chosen-select">
@@ -44,7 +44,7 @@
                 <p id="LandblockInfo"></p>
             </div>
         </div>
-        <div id="iframeHolder">
+        <div id="iframeHolder" style="display: none;">
             <iframe id="360" src="" width="330" height="240" frameborder="0"></iframe>
         </div>
     </div>

@@ -58,7 +58,6 @@ function draw() {
     context.imageSmoothingEnabled = false;
 
     var mapAlpha = 1.0 - (document.getElementById("mapAlpha").value / 10.0);
-    console.log("mapAlpha: " + mapAlpha);
     var oldAlpha = context.globalAlpha;
     context.globalAlpha = mapAlpha;
     context.drawImage(base_image, 0, 0);
@@ -384,10 +383,12 @@ function collides(points, x, y) {
                 if (threeSixtySource == "GlendenWood.html")
                 {
                     threeSixtyView.src = threeSixtySource;
+                    document.getElementById("iframeHolder").style.display = "block";
                 }
                 else
                 {
                     threeSixtyView.src = "";
+                    document.getElementById("iframeHolder").style.display = "none";
                 }
             }
         }
