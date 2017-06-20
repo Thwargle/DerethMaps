@@ -7,7 +7,8 @@ var landblockPoint = -1;
 var highlightedDynPoint = -1;
 var landblockDynPoint = -1;
 var gridCount = 256;
-var displayMenu = false;
+var displayMenu = true;
+var copyCoords = "";
 
 // dimensions of the map image we have
 var imgWidth = 2041;
@@ -40,8 +41,6 @@ function fitToContainer(canvas) {
     canvas.style.height = '100%';
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
-    document.getElementById('wrapper').style.height = canvas.offsetHeight;
-    console.log(canvas.offsetWidth);
 }
 
 function draw() {
@@ -338,14 +337,19 @@ function clearSelection() {
     collisionElement.innerHTML = "";
     var landblockElement = document.getElementById("LandblockInfo");
     landblockElement.innerHTML = "";
-    var threeSixtyView = document.getElementById("360");
-    threeSixtyView.src = "";
+    var moblist = document.getElementById("mobList");
+    moblist.value = 'None';
+    moblist.selectedIndex = 0;
+    document.getElementsByClassName("chosen-single").innerHTML = "None";
+
+    //var threeSixtyView = document.getElementById("360");
+    //threeSixtyView.src = "";
 }
 function collides(points, x, y) {
     var isCollision = false;
     var isLandblock = false;
     var collisionElement = document.getElementById("CollisionInfo");
-    var threeSixtyView = document.getElementById("360");
+    //var threeSixtyView = document.getElementById("360");
     for (var i = 0; i < points.length; i++) {
         var left = points[i].x - (1 / Math.sqrt(scale)), right = points[i].x + (1 / Math.sqrt(scale));
         var top = points[i].y - (1 / Math.sqrt(scale)), bottom = points[i].y + (1 / Math.sqrt(scale));
@@ -385,13 +389,13 @@ function collides(points, x, y) {
 
                 if (threeSixtySource == "GlendenWood.html")
                 {
-                    threeSixtyView.src = threeSixtySource;
-                    document.getElementById("iframeHolder").style.display = "block";
+                    //threeSixtyView.src = threeSixtySource;
+                    //document.getElementById("iframeHolder").style.display = "block";
                 }
                 else
                 {
-                    threeSixtyView.src = "";
-                    document.getElementById("iframeHolder").style.display = "none";
+                    //threeSixtyView.src = "";
+                    //document.getElementById("iframeHolder").style.display = "none";
                 }
             }
         }
@@ -479,24 +483,28 @@ function coordsFromLandblock(lbX, lbY) {
 }
 
 function showMenu() {
-    console.log(displayMenu);
     if (displayMenu) {
         displayMenu = false;
-        document.getElementById("Menu").innerText = "Show Menu";
+        document.getElementById("derethMenu").innerText = "Show Menu";
         document.getElementById("menuItems").style.display = 'none';
-        document.getElementById("iframeHolder").style.display = 'none';
+        //document.getElementById("iframeHolder").style.display = 'none';
     }
     else
     {
         displayMenu = true;
-        document.getElementById("Menu").innerText = "Hide Menu";
+        document.getElementById("derethMenu").innerText = "Hide Menu";
         document.getElementById("menuItems").style.display = 'block';
-        document.getElementById("iframeHolder").style.display = 'block';
+        //document.getElementById("iframeHolder").style.display = 'block';
     }
 }
 
 function displayResize() {
     fitToContainer(document.getElementById("myCanvas"));
+}
+
+function copyToClipboard() {
+    var text = copyCoords;
+    window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
 }
 
 (function ($) {
@@ -664,8 +672,8 @@ window.onload = function () {
             yWithCompass = Math.abs(roundedY).toString() + "N";
         }
 
-
         document.getElementById("Coordinates").innerHTML = "Coordinates: " + yWithCompass + ", " + xWithCompass;
+        copyCoords = yWithCompass + ", " + xWithCompass;
 
     }
     canvas.addEventListener("mousewheel", function (evt) {

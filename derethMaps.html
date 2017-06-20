@@ -11,38 +11,47 @@
     
 	   <script type="text/javascript" src="derethMaps.js"></script>
     </head>
-<body id="body" onresize="displayResize()" style="align-content:center; padding-left:15px; overflow: no-display;">
+<body id="body" onresize="displayResize()" style="align-content:center; padding-left:15px;">
     <img src="images/derethMapsLogo.png" alt="derethMaps Logo" style="height:35px;" />
     <br />
-    <div id="wrapper" style="float:left; height: 820px;">
-        <div style="position:fixed; padding-top: 5px; padding-left: 5px; color: white;">
-            <button id="Menu" onclick="showMenu();">Show Menu</button>
+    <div id="wrapper" style="float:left; height: 85vh;">
+        <div style="position:absolute; color:white;">
+            <button id="derethMenu" onclick="showMenu()" style="position:absolute;">Hide Menu</button>
+            <button onclick="clearSelection();" style="margin-left: 100px;">Clear Selection</button>
+            <button onclick="copyToClipboard();">Copy Coords</button>
             <br />
-            <div id="menuItems" style="float:left; z-index:1; padding-left: 15px; display:none;">
+            <br />
+            <div id="menuItems" style="float:left; z-index:1; padding-left: 15px;">
                 <div>
                     <input type="checkbox" id="Town" value="Town" checked="checked" /> Show Towns<br />
                     <input type="checkbox" id="Cottages" value="Cottages" checked="checked" />Show Cottages<br />
                     <input type="checkbox" id="Player" value="Player" />Show Players<br />
                     <input type="checkbox" id="LandblockGrid" value="Landblock" />Show Landblock Grid<br />
                     <input type="checkbox" id="HighlightLandblocks" value="HighlightLandblock" />Highight Active Landblocks<br />
-                    <button onclick="clearSelection();">Clear Selection</button><br />
                     <label>Transparency:</label> <input style="padding-left:5px;" id="mapAlpha" type="range" min="0" max="10" value="0" />
                     <br />
                     <select id="mobList" class="chosen-select">
                         <option value="None">None</option>
                     </select>
                 </div>
-                <div>
-                    <p id="Coordinates"></p>
-                    <p id="CollisionInfo"></p>
-                    <p id="LandblockInfo"></p>
-                </div>
             </div>
-            <div id="iframeHolder" style="display: none;">
-                <iframe id="360" src="" width="330" height="240" frameborder="0"></iframe>
+            <div style="padding-left: 5px;">
+                <p id="Coordinates">
+                    Coordinates:
+                    <br />
+                    <br />
+                    LocationName:
+                    <br />
+                    Location Race:
+                    <br />
+                    Type:
+                    <br />
+                </p>
+                <p id="CollisionInfo"></p>
+                <p id="LandblockInfo">Landblock: </p>
             </div>
         </div>
-        <canvas id="myCanvas" style="background-color:#1F2B3D; display: block;"></canvas>
+        <canvas id="myCanvas" style="background-color:#1F2B3D"></canvas>
         <div id="buttonWrapper" style="background-color: lightgray; text-align:center;">
             <input type="image" src="images/reset.png" id="reset" value="reset">
             <input type="image" src="images/zoomIn.png" id="plus" value="+">
