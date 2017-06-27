@@ -2,8 +2,8 @@ var content;
 var context;
 var points = new Array();
 var dPoints = new Array();
-var highlightedPoint = -1;
-var landblockPoint = -1;
+var highlightedPointName = "";
+var landblockPointName = "";
 var highlightedDynPoint = -1;
 var landblockDynPoint = -1;
 var gridCount = 256;
@@ -35,6 +35,8 @@ var xcenter = 0;
 var ycenter = 0;
 
 var locationArray = {};
+
+var poiDict = {};
 
 function fitToContainer(canvas) {
     canvas.style.width = '100%';
@@ -73,13 +75,13 @@ function draw() {
     }
     context.drawImage(imageOverlay, 0, 0);
 
-    var pointsArrayLength = points.length;
     var dPointsArrayLength = dPoints.length;
 
-    for (i = 0; i < pointsArrayLength; i++) {
-        var isHightlighted = (highlightedPoint == i);
+    for (var poiName in poiDict) {
+        var poitem = poiDict[poiName];
+        var isHightlighted = (highlightedPointName == poitem.LocationName);
         var isLandblock = -1;
-        drawPoint(context, points[i].x, points[i].y, 5, points[i].Type, points[i].Race, points[i].Special, isHightlighted, isLandblock);
+        drawPoint(context, poitem.x, poitem.y, 5, poitem.Type, poitem.Race, poitem.Special, isHightlighted, isLandblock);
     }
     for (i = 0; i < dPointsArrayLength; i++) {
         var isHightlighted = (highlightedDynPoint == i);
@@ -138,7 +140,7 @@ function getMobList() {
 }
 
 function getPoints() {
-    points = new Array();
+    poiDict = {};
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -199,9 +201,15 @@ function getPoints() {
                 }
 
                 var point = { Type: json[i].Type, Race: json[i].Race, Special: json[i].Special, LocationName: json[i].LocationName, x: x, y: y };
-                points.push(point);
+                //points.push(point);
+
+                if (point.LocationName in poiDict == false) {
+                    poiDict[point.LocationName] = point;
+                } else {
+                    console.log("Duplicate location name: " + point.LocationName);
+                }
             }
-            draw();
+            getWikiPoints();
         }
     };
 
@@ -209,6 +217,58 @@ function getPoints() {
     xmlhttp.open("GET", "coords.json?_=" + new Date().getTime().toString(), true);
     xmlhttp.send();
 }
+
+function getWikiPoints() {
+    points = new Array();
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var json = JSON.parse(this.responseText);
+            var totalItems = Object.keys(json).length;
+            for (var i = 0; i < totalItems; i++) {
+                var wikiLocation = json[i].location; // format is "9.6N 36.9E" or "22.5N, 4.9E"
+                wikiLocation = wikiLocation.replace(",", "");
+                var sep = wikiLocation.indexOf(" ");
+                // Note that y is first and x is second
+                var y = wikiLocation.substring(0, sep);
+                var x = wikiLocation.slice(sep - wikiLocation.length);
+                var landblock = json[i].locationString;
+
+                if (includesSubstring(x, 'E')) {
+                    x = x.substring(0, x.length - 1);
+                    x = x * 1;
+                }
+                else {
+                    xInt = x.substring(0, x.length - 1);
+                    x = xInt * -1;
+                }
+
+
+                if (includesSubstring(y, 'S')) {
+                    y = y.substring(0, y.length - 1);
+                    y = y * 1;
+                }
+                else {
+                    yInt = y.substring(0, y.length - 1);
+                    y = yInt * -1;
+                }
+
+                var point = { Type: "Housing", LocationName: json[i].name, x: x, y: y };
+
+                if (point.LocationName in poiDict == false) {
+                    poiDict[point.LocationName] = point;
+                } else {
+                    console.log("Duplicate location name: " + point.LocationName);
+                }
+            }
+        }
+    };
+
+
+    xmlhttp.open("GET", "housing.json?_=" + new Date().getTime().toString(), true);
+    xmlhttp.send();
+}
+
 
 function getDynamicPlayers() {
     dPoints = new Array();
@@ -300,7 +360,7 @@ function drawPoint(context, x, y, width, Type, Race, Special, isHighlighted, isL
             context.drawImage(town_image, canx - rectWidth / 2, cany - rectWidth / 2, rectWidth, rectWidth);
         }
     }
-    else if (Type == "Cottages") {
+    else if (Type == "Cottages" || Type == "Housing") {
         if (document.getElementById("Cottages").checked) {
             context.beginPath();
             context.arc(canx, cany, circleRadius, 0, 2 * Math.PI);
@@ -331,6 +391,7 @@ function drawPoint(context, x, y, width, Type, Race, Special, isHighlighted, isL
 function clearSelection() {
     highlightedDynPoint = -1;
     highlightedPoint = -1;
+    highlightedPointName = "";
     var coordinatesElement = document.getElementById("Coordinates");
     coordinatesElement.innerHTML = "";
     var collisionElement = document.getElementById("CollisionInfo");
@@ -345,55 +406,52 @@ function clearSelection() {
     //var threeSixtyView = document.getElementById("360");
     //threeSixtyView.src = "";
 }
-function collides(points, x, y) {
+function collides(x, y) {
     var isCollision = false;
     var isLandblock = false;
     var collisionElement = document.getElementById("CollisionInfo");
     //var threeSixtyView = document.getElementById("360");
-    for (var i = 0; i < points.length; i++) {
-        var left = points[i].x - (1 / Math.sqrt(scale)), right = points[i].x + (1 / Math.sqrt(scale));
-        var top = points[i].y - (1 / Math.sqrt(scale)), bottom = points[i].y + (1 / Math.sqrt(scale));
+    for (var poiName in poiDict) {
+        var poitem = poiDict[poiName];
+        var left = poitem.x - (1 / Math.sqrt(scale)), right = poitem.x + (1 / Math.sqrt(scale));
+        var top = poitem.y - (1 / Math.sqrt(scale)), bottom = poitem.y + (1 / Math.sqrt(scale));
         if (right >= x
             && left <= x
             && bottom >= y
             && top <= y) {
-            highlightedPoint = i;
-            landblockDynPoint = i;
             isCollision = true;
             isLandblock = true;
-            var type = points[i].Type;
-            var locationName = points[i].LocationName;
-            var race = points[i].Race;
-            var special = points[i].Special;
+            var type = poitem.Type;
+            var locationName = poitem.LocationName;
+            highlightedPointName = locationName;
+            landblockPointName = locationName;
+            var race = poitem.Race;
+            var special = poitem.Special;
 
             if (type == "Landblock") {
                 landblockDynPoint = true;
             }
             else {
                 if (race == undefined && type != undefined) {
-                    collisionElement.innerHTML = "LocationName: " + locationName + "<br />" + "Type: " + special;
+                    collisionElement.innerHTML = "LocationName: " + locationName + "<br />" + "Type: " + type + " (Special: " + special + ")";
                 }
-                else if(race == undefined && type == undefined)
-                {
+                else if (race == undefined && type == undefined) {
                     collisionElement.innerHTML = "LocationName: " + locationName;
                 }
-                else if(race != undefined && type == undefined)
-                {
+                else if (race != undefined && type == undefined) {
                     collisionElement.innerHTML = "LocationName: " + locationName + "<br />" + "Location Race: " + race;
                 }
                 else {
-                    collisionElement.innerHTML = "LocationName: " + locationName + "<br />" + "Location Race: " + race + "<br />" + "Type: " + special;
+                    collisionElement.innerHTML = "LocationName: " + locationName + "<br />" + "Location Race: " + race + "<br />" + "Type: " + type + " (Special: " + special + ")";
                 }
 
                 var threeSixtySource = locationName.replace(/\s+/g, '') + ".html";
 
-                if (threeSixtySource == "GlendenWood.html")
-                {
+                if (threeSixtySource == "GlendenWood.html") {
                     //threeSixtyView.src = threeSixtySource;
                     //document.getElementById("iframeHolder").style.display = "block";
                 }
-                else
-                {
+                else {
                     //threeSixtyView.src = "";
                     //document.getElementById("iframeHolder").style.display = "none";
                 }
@@ -489,8 +547,7 @@ function showMenu() {
         document.getElementById("menuItems").style.display = 'none';
         //document.getElementById("iframeHolder").style.display = 'none';
     }
-    else
-    {
+    else {
         displayMenu = true;
         document.getElementById("derethMenu").innerText = "Hide Menu";
         document.getElementById("menuItems").style.display = 'block';
@@ -499,12 +556,10 @@ function showMenu() {
 }
 
 function showLandblockClicked() {
-    if (document.getElementById("LandblockGrid").checked)
-    {
+    if (document.getElementById("LandblockGrid").checked) {
         document.getElementById("mapAlpha").value = 5;
     }
-    else
-    {
+    else {
         document.getElementById("mapAlpha").value = 0;
     }
 }
@@ -655,7 +710,7 @@ window.onload = function () {
         //console.log("mapxy: " + scoords(mapco.x, mapco.y));
 
         displayCoord(mapco.x, mapco.y);
-        collides(points, mapco.x, mapco.y);
+        collides(mapco.x, mapco.y);
         displayLandblock(mapco.x, mapco.y);
 
     });
@@ -688,7 +743,7 @@ window.onload = function () {
 
     }
     canvas.addEventListener("mousewheel", function (evt) {
-        if ((evt.wheelDelta /  Math.abs(evt.wheelDelta)) >= 0) {
+        if ((evt.wheelDelta / Math.abs(evt.wheelDelta)) >= 0) {
             absoluteOffset.x = (translatePos.x - evt.clientX) / scale;
             absoluteOffset.y = (translatePos.y - evt.clientY) / scale;
 
