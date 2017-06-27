@@ -86,7 +86,6 @@ function draw() {
     for (i = 0; i < dPointsArrayLength; i++) {
         var isHightlighted = (highlightedDynPoint == i);
         var isLandblock = (landblockDynPoint == i);
-        //console.log("We got ourselves a landblock: " + isLandblock);
         drawPoint(context, dPoints[i].x, dPoints[i].y, 5, dPoints[i].Type, dPoints[i].Race, dPoints[i].Special, isHightlighted, isLandblock);
     }
     if (document.getElementById("DisplayLandblockGrid").checked) {
@@ -286,7 +285,6 @@ function getDynamicPlayers() {
                 var x = decodeMapString(sx);
                 var y = decodeMapString(sy);
 
-                //console.log("Location: " + json[i].LocationName + " Race: " + json[i].Race + " X: " + json[i].x);
                 var point = { Type: json[i].Type, Location: json[i].LocationName, Race: json[i].Race, x: x, y: y };
                 dPoints.push(point);
             }
@@ -411,72 +409,84 @@ function clearSelection() {
 function collides(x, y) {
     var isCollision = false;
     var isLandblock = false;
-    var collisionElement = document.getElementById("CollisionInfo");
     //var threeSixtyView = document.getElementById("360");
     for (var poiName in poiDict) {
         var poitem = poiDict[poiName];
         var left = poitem.x - (1 / Math.sqrt(scale)), right = poitem.x + (1 / Math.sqrt(scale));
         var top = poitem.y - (1 / Math.sqrt(scale)), bottom = poitem.y + (1 / Math.sqrt(scale));
+        var type = poitem.Type;
         if (right >= x
             && left <= x
             && bottom >= y
             && top <= y) {
             isCollision = true;
             isLandblock = true;
-            var type = poitem.Type;
-            var locationName = poitem.LocationName;
-            highlightedPointName = locationName;
-            landblockPointName = locationName;
-            var race = poitem.Race;
-            var special = poitem.Special;
-            var houseCount = poitem.HouseCount;
 
             if (type == "Landblock") {
                 landblockDynPoint = true;
             }
-            else {
-                var html = "Type: " + type;
+            else if(type == "Town" && document.getElementById("DisplayTown").checked) {
+                getPointDataHTML(poitem);
+            }
+            else if (type == "Housing" && document.getElementById("DisplayHousing").checked) {
+                getPointDataHTML(poitem);
+            }
+            else
+            {
 
-                if (locationName != undefined && locationName != "") {
-                    html += "<br />" + "Location Name: " + locationName;
-                }
-                if (race != undefined && race != "") {
-                    html += "<br />" + "Location Race: " + race;
-                }
-                if (special != undefined && special != "") {
-                    html += "<br />" + "Special: " + special;
-                }
-
-                if (houseCount != undefined && houseCount != "") {
-                    html += "<br />" + "Houses: " + houseCount;
-                }
-
-                collisionElement.innerHTML = html;
-
-                var threeSixtySource = locationName.replace(/\s+/g, '') + ".html";
-
-                if (threeSixtySource == "GlendenWood.html") {
-                    //threeSixtyView.src = threeSixtySource;
-                    //document.getElementById("iframeHolder").style.display = "block";
-                }
-                else {
-                    //threeSixtyView.src = "";
-                    //document.getElementById("iframeHolder").style.display = "none";
-                }
             }
         }
     }
 }
+
+function getPointDataHTML(poitem) {
+    var collisionElement = document.getElementById("CollisionInfo");
+    collisionElement.innerHTML = "";
+    var type = poitem.Type;
+    var locationName = poitem.LocationName;
+    highlightedPointName = locationName;
+    landblockPointName = locationName;
+    var race = poitem.Race;
+    var special = poitem.Special;
+    var houseCount = poitem.HouseCount;
+    var html = "Type: " + type;
+
+    if (locationName != undefined && locationName != "") {
+        html += "<br />" + "Location Name: " + locationName;
+    }
+    if (race != undefined && race != "") {
+        html += "<br />" + "Location Race: " + race;
+    }
+    if (special != undefined && special != "") {
+        html += "<br />" + "Special: " + special;
+    }
+
+    if (houseCount != undefined && houseCount != "") {
+        html += "<br />" + "Houses: " + houseCount;
+    }
+
+    collisionElement.innerHTML = html;
+
+    var threeSixtySource = locationName.replace(/\s+/g, '') + ".html";
+
+    if (threeSixtySource == "GlendenWood.html") {
+        //threeSixtyView.src = threeSixtySource;
+        //document.getElementById("iframeHolder").style.display = "block";
+    }
+    else {
+        //threeSixtyView.src = "";
+        //document.getElementById("iframeHolder").style.display = "none";
+    }
+}
+
 function colorLandblocks(context) {
     var canvasBlockWidth = landblockWidth * d;
     var canvasBlockHeight = landblockHeight * a;
     for (bx in locationArray) {
         for (by in locationArray[bx]) {
             var block = locationArray[bx][by];
-            //console.log("block: " + scoords(bx, by));
             var x = (bx - 128) * landblockWidth;
             var y = (126 - by) * landblockHeight;
-            //console.log("mapblock: " + scoords(x, y));
             // Convert map coordinates to canvas coordinates
             var canx = d * x + e;
             var cany = a * y + b;
@@ -715,8 +725,7 @@ window.onload = function () {
             y: (canco.y - e) / d
         };
 
-        //console.log("mapxy: " + scoords(mapco.x, mapco.y));
-
+        clearSelection();
         displayCoord(mapco.x, mapco.y);
         collides(mapco.x, mapco.y);
         displayLandblock(mapco.x, mapco.y);
