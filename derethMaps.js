@@ -398,9 +398,6 @@ function clearSelection() {
     collisionElement.innerHTML = "";
     var landblockElement = document.getElementById("LandblockInfo");
     landblockElement.innerHTML = "";
-    var moblist = document.getElementById("mobList");
-    moblist.value = 'None';
-    moblist.selectedIndex = 0;
     document.getElementsByClassName("chosen-single").innerHTML = "None";
 
     //var threeSixtyView = document.getElementById("360");
