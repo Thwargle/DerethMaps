@@ -24,7 +24,7 @@
             <div id="menuItems" style="float:left; z-index:1; padding-left: 15px;">
                 <div>
                     <input type="checkbox" id="DisplayTown" value="Town" checked="checked" /> Show Towns<br />
-                    <input type="checkbox" id="DisplayHousing" value="Housing" checked="checked" />Show Housing<br />
+                    <input type="checkbox" id="DisplayHousing" value="Housing" />Show Housing<br />
                     <input type="checkbox" id="DisplayPlayer" value="Player" />Show Players<br />
                     <input type="checkbox" id="DisplayLandblockGrid" value="Landblock" onchange="showLandblockClicked()" />Show Landblock Grid<br />
                     <input type="checkbox" id="DisplayHighlightLandblocks" value="HighlightLandblock" />Highight Active Landblocks<br />
@@ -36,9 +36,9 @@
                 </div>
             </div>
             <div style="padding-left: 5px;">
+                <p id="LandblockInfo"></p>
                 <p id="Coordinates"></p>
                 <p id="CollisionInfo"></p>
-                <p id="LandblockInfo"></p>
             </div>
         </div>
         <canvas id="myCanvas" style="background-color:#1F2B3D"></canvas>

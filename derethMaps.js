@@ -253,7 +253,7 @@ function getWikiPoints() {
                     y = yInt * -1;
                 }
 
-                var point = { Type: "Housing", LocationName: json[i].name, x: x, y: y, ImgUrl: "whee" };
+                var point = { Type: "Housing", LocationName: json[i].name, x: x, y: y};
                 point["HouseCount"] = json[i].houseCount;
                 //point["ImgUrl"] = json["imgUrl-src"];
 
@@ -438,7 +438,7 @@ function collides(x, y) {
                 var html = "Type: " + type;
 
                 if (locationName != undefined && locationName != "") {
-                    html += "<br />" + "LocationName: " + locationName;
+                    html += "<br />" + "Location Name: " + locationName;
                 }
                 if (race != undefined && race != "") {
                     html += "<br />" + "Location Race: " + race;
