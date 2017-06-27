@@ -89,10 +89,10 @@ function draw() {
         //console.log("We got ourselves a landblock: " + isLandblock);
         drawPoint(context, dPoints[i].x, dPoints[i].y, 5, dPoints[i].Type, dPoints[i].Race, dPoints[i].Special, isHightlighted, isLandblock);
     }
-    if (document.getElementById("LandblockGrid").checked) {
+    if (document.getElementById("DisplayLandblockGrid").checked) {
         drawGrid();
     }
-    if (document.getElementById("HighlightLandblocks").checked) {
+    if (document.getElementById("DisplayHighlightLandblocks").checked) {
         colorLandblocks(context);
     }
     context.restore();
@@ -253,7 +253,9 @@ function getWikiPoints() {
                     y = yInt * -1;
                 }
 
-                var point = { Type: "Housing", LocationName: json[i].name, x: x, y: y };
+                var point = { Type: "Housing", LocationName: json[i].name, x: x, y: y, ImgUrl: "whee" };
+                point["HouseCount"] = json[i].houseCount;
+                //point["ImgUrl"] = json["imgUrl-src"];
 
                 if (point.LocationName in poiDict == false) {
                     poiDict[point.LocationName] = point;
@@ -340,7 +342,7 @@ function drawPoint(context, x, y, width, Type, Race, Special, isHighlighted, isL
     rectWidth = 10 / Math.sqrt(scale);
 
     if (Type == "Town") {
-        if (document.getElementById("Town").checked) {
+        if (document.getElementById("DisplayTown").checked) {
             town_image = new Image();
             if (Race == "Aluvian") {
                 town_image.src = 'images/Map_Point_Aluv_Town.png';
@@ -361,7 +363,7 @@ function drawPoint(context, x, y, width, Type, Race, Special, isHighlighted, isL
         }
     }
     else if (Type == "Cottages" || Type == "Housing") {
-        if (document.getElementById("Cottages").checked) {
+        if (document.getElementById("DisplayHousing").checked) {
             context.beginPath();
             context.arc(canx, cany, circleRadius, 0, 2 * Math.PI);
             context.fillStyle = '#00FF00';
@@ -373,7 +375,7 @@ function drawPoint(context, x, y, width, Type, Race, Special, isHighlighted, isL
         }
     }
     else if (Type == "Player") {
-        if (document.getElementById("Player").checked) {
+        if (document.getElementById("DisplayPlayer").checked) {
             player_image = new Image();
             player_image.src = 'images/playerHead.png';
             context.drawImage(player_image, canx, cany - 10, 3, 3);
@@ -427,23 +429,29 @@ function collides(x, y) {
             landblockPointName = locationName;
             var race = poitem.Race;
             var special = poitem.Special;
+            var houseCount = poitem.HouseCount;
 
             if (type == "Landblock") {
                 landblockDynPoint = true;
             }
             else {
-                if (race == undefined && type != undefined) {
-                    collisionElement.innerHTML = "LocationName: " + locationName + "<br />" + "Type: " + type + " (Special: " + special + ")";
+                var html = "Type: " + type;
+
+                if (locationName != undefined && locationName != "") {
+                    html += "<br />" + "LocationName: " + locationName;
                 }
-                else if (race == undefined && type == undefined) {
-                    collisionElement.innerHTML = "LocationName: " + locationName;
+                if (race != undefined && race != "") {
+                    html += "<br />" + "Location Race: " + race;
                 }
-                else if (race != undefined && type == undefined) {
-                    collisionElement.innerHTML = "LocationName: " + locationName + "<br />" + "Location Race: " + race;
+                if (special != undefined && special != "") {
+                    html += "<br />" + "Special: " + special;
                 }
-                else {
-                    collisionElement.innerHTML = "LocationName: " + locationName + "<br />" + "Location Race: " + race + "<br />" + "Type: " + type + " (Special: " + special + ")";
+
+                if (houseCount != undefined && houseCount != "") {
+                    html += "<br />" + "Houses: " + houseCount;
                 }
+
+                collisionElement.innerHTML = html;
 
                 var threeSixtySource = locationName.replace(/\s+/g, '') + ".html";
 
@@ -556,7 +564,7 @@ function showMenu() {
 }
 
 function showLandblockClicked() {
-    if (document.getElementById("LandblockGrid").checked) {
+    if (document.getElementById("DisplayLandblockGrid").checked) {
         document.getElementById("mapAlpha").value = 5;
     }
     else {
