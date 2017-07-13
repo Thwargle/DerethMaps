@@ -1,20 +1,26 @@
 [
-	{
-	"Type":"Player", 
-		"LocationName":"Zorgle", 
-		"x":"16.8957764859759E", 
-		"y":"22.8692143484341S"
-		}, 
-	{
-	"Type":"Player", 
-		"LocationName":"Thwargle", 
-		"x":"10.0362087097184548E", 
-		"y":"10.7353584490416S"
-		}, 
-	{
-	"Type":"Player", 
-		"LocationName":"Kristoff", 
-		"x":"13.6720040537287E", 
-		"y":"4.42966078847168N"
-		}
-	]
+  {
+    "Type": "Player",
+    "LocationName": "Zorgle",
+    "x": "16.8957764859759E",
+    "y": "22.8692143484341S"
+  },
+  {
+    "Type": "Player",
+    "LocationName": "Thwargle",
+    "x": "10.0362087097184548E",
+    "y": "10.7353584490416S"
+  },
+  {
+    "Type": "Player",
+    "LocationName": "Kristoff",
+    "x": "13.6720040537287E",
+    "y": "4.42966078847168N"
+  },
+  {
+    "Type": "Player",
+    "LocationName": "ImmortalBob",
+    "x": "67.3w",
+    "y": "26.2S"
+  }
+]

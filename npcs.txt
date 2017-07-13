@@ -1,0 +1,1681 @@
+Agent of the Arcanum|1.7N, 71.9W|Collector|Housing
+Aun Aemaua|1.5N, 71.7W|Quest|Ithaenc Quiddity Seed Quest
+Blacksmith Magarith|1.5N, 72.0W|Shopkeeper|Armor &amp; weapons
+Fort Tethana Sentry|1.6N, 71.6W|Sentry|Opens the main gate
+Grand Master Scrivener of Creature Magic|1.6N, 71.9W|Shopkeeper|Level VI Scrolls &amp; Foci
+Grand Master Scrivener of Item Magic|1.6N, 71.9W|Shopkeeper|Level VI Scrolls &amp; Foci
+Grand Master Scrivener of Life Magic|1.6N, 71.9W|Shopkeeper|Level VI Scrolls &amp; Foci
+Grand Master Scrivener of War Magic|1.6N, 71.9W|Shopkeeper|Level VI Scrolls &amp; Foci
+Leather Crafter|1.5N, 72.0W|Crafter|Crafts creature hides
+Lieutenant Durgan|1.5N, 71.6W|Quest|The Dark Spiral Quest
+Mothdor the Bowyer|1.5N, 71.9W|Shopkeeper|Missle weapons, ammunition &amp; keys
+Saqr|1.5N, 71.8W|Quest|Plate Armoredillo Kill Task
+Shopkeeper Yoshi Deshi|1.5N, 71.6W|Shopkeeper|Basic supplies &amp; rumors
+Soldier (Fort Tethana)|1.6N, 71.7W|Quest|Fort Tethana Tug of War
+Town Crier|1.6N, 71.7W|Misc|Rumors
+Tumerok Collector|1.5N, 71.7W|Collector|Collects Tumerok Insignia
+Xsao Lann|1.5N, 71.6W|Quest|Lost Pet
+Zisaha bint Jaidka the Mage|1.8N, 72.8W|Mastermage|Magical supplies
+Agent of the Arcanum|42.1N, 33.9E|Collector|Housing
+Alcott|42.1N, 33.6E|Quest|Lifestone Greeter
+Alfrin|42.2N, 33.7E|Quest|Alfrin's Stolen Supplies
+Aluvian Low-Stakes Gamesmaster|40.8N, 33.6E|Quest|Dens of Iniquity
+Aluvian Mid-Stakes Gamesmaster|40.8N, 33.6E|Quest|Dens of Iniquity
+Aluvian High-Stakes Gamesmaster|40.8N, 33.6E|Quest|Dens of Iniquity
+Apprentice Alchemist (Holtburg)|42.1N, 33.8E|Quest|Crafter Quest
+Apprentice Scrivener of Creature Magic (Level I)|41.6N, 34.0E|Shopkeeper|Level I Scrolls &amp; Foci
+Apprentice Scrivener of Creature Magic (Level II)|41.6N, 34.0E|Shopkeeper|Level II Scrolls &amp; Foci
+Apprentice Scrivener of Item and War Magic (Level I)|41.6N, 34.0E|Shopkeeper|Level I Scrolls &amp; Foci
+Apprentice Scrivener of Item and War Magic (Level II)|41.6N, 34.0E|Shopkeeper|Level II Scrolls &amp; Foci
+Apprentice Scrivener of Life Magic (Level I)|41.6N, 34.0E|Shopkeeper|Level I Scrolls &amp; Foci
+Apprentice Scrivener of Life Magic (Level II)|41.6N, 34.0E|Shopkeeper|Level II Scrolls &amp; Foci
+Arcanum Refurbisher|42.1N, 33.9E|Crafter|Fixes miscolored Bronze Statues
+Archmage Cindrue|42.6N, 33.9E|Shopkeeper|Magical supplies, Large Trade Notes
+Asenala|42.6N, 33.9E|Shopkeeper|Summoning supplies.
+Aun Kielerea|41.6N, 34.2E|Quest|Aun Golem Hunters
+Barkeeper Wilomine|42.2N, 33.7E|Shopkeeper|Contracts, Food
+Boddry the Chancy|40.8N, 33.6E|Shopkeeper|Dens of Iniquity
+Buckminster|42.2N, 33.7E|Quest|Bartender Greeter
+Collector|42.7N, 33.6E|Collector|Collector of various trophies
+Contract Broker (Holtburg){{!}}Contract Broker|42.2N, 33.7E|Broker|Contracts
+Dwennon|42.6N, 33.5E|Quest|Cow Tipping
+Ecutha the Tailor|42.6N, 33.5E|Shopkeeper|Clothing
+Eldrista the Adventurer|35.7N, 33.4E|Quest|Lilitha's Lost Bow
+Elise Du Ricard|35.2N, 39.3E|Quest|Pet Shop Quest
+Fispur Ansel the Grocer|42.2N, 22.6E|Shopkeeper|Food and cooking supplies
+Flinrala Ryndmad|42.2N, 33.7E|Quest|Brogord's Demise
+Gawain Cooper|42.2N, 33.7E|Quest|Contract for 50-100 Contracts
+Gharon al-Bhavarn|35.2N, 39.3E|Quest|Pet Shop Quest
+Healer (42.4N, 32.2E){{!}}Healer|42.4N, 32.2E|Shopkeeper|Healing kits, potions, services
+Healer (44.9N, 36.4E){{!}}Healer|44.9N, 36.4E|Shopkeeper|Healing kits, potions, services
+Hemmik the Sly|34.0N, 39.7E|Quest|Elemental Weeping Weapons
+Hudriffa the Shopkeeper|39.5N, 33.4E|Shopkeeper|Basic supplies
+Journeyman Scrivener of Item Magic|41.6N 34.0E|Shopkeeper|Level III Scrolls &amp; Foci
+Journeyman Scrivener of Creature Magic|41.6N 34.0E|Shopkeeper|Level III Scrolls &amp; Foci
+Journeyman Scrivener of Life Magic|41.6N 34.0E|Shopkeeper|Level III Scrolls &amp; Foci
+Journeyman Scrivener of War Magic|41.6N 34.0E|Shopkeeper|Level III Scrolls &amp; Foci
+Larinne Kerendova|35.2N, 39.3E|Quest|Pet Shop Quest
+Ma-Kii|35.2N, 39.3E|Quest|Pet Shop Quest
+Merchant (41.7N, 35.2E){{!}}Merchant|41.7N, 35.2E|Shopkeeper|Basic supplies
+Monty the Munificent|40.8N, 33.6E|Quest|Dens of Iniquity
+Monyra the Jeweler|42.6N, 33.9E|Shopkeeper|Gems and jewelry
+Novedion the Gem Seller|42.2N, 33.8E|Shopkeeper|Protection gems
+Obsidian Enchantress|40.8N, 32.6E|Crafter|Deals in obsidian items
+Pawn Shopkeep|40.8N, 33.6E|Shopkeeper|Dens of Iniquity
+Peddler (42.4N, 32.2E){{!}}Peddler|42.4N, 32.2E|Shopkeeper|Basic supplies
+Rand, Game Hunter|42.2N, 33.9E|Quest|Monthly Game Hunter
+Rare Exchanger|40.8N, 33.6E|Quest|Dens of Iniquity
+Reformed Bandit|42.8N, 29.5E|Quest|Elysa's Favor Quest
+Royal Guard (Small Mukkir Squasher Quest){{!}}Royal Guard|41.6N, 34.2E|Quest|Small Fledgling Mukkir Kill Task
+Scribe Renald the Younger|42.1N, 33.8E|Shopkeeper|Blank writing materials and texts
+Scrivener of Item Magic|41.6N 34.0E|Shopkeeper|Level IV Scrolls &amp; Foci
+Scrivener of Creature Magic|41.6N 34.0E|Shopkeeper|Level IV Scrolls &amp; Foci
+Scrivener of Void Magic|41.6N 34.0E|Shopkeeper|Level I-IV Scrolls &amp; Foci
+Scrivener of War Magic|41.6N 34.0E|Shopkeeper|Level IV Scrolls
+Sean the Speedy|42.2N, 33.7E|Quest|Dereth Exploration
+Sedor Wystan the Blacksmith|42.6N, 33.6E|Shopkeeper|Armor and weapons
+Sentry|39.3N 33.1E|Misc|
+Sentry|42.4N, 30.4E|Misc|
+Shopkeeper Renald the Elder|42.1N, 33.8E|Shopkeeper|General Supplies
+Sir Rylanan|41.6N, 34.2E|Quest|Elysa's Favor Quest
+Sontella Dragroff the Bowyer|42.6N, 33.7E|Shopkeeper|Missile weapons, ammo, and fletching supplies
+Tackle Master|43.0N, 34.1E|Quest|Fishing
+Tamara Mistrunner|35.2N, 39.3E|Quest|Pet Shop Quest
+Thelnoth Cort the Healer|42.7N, 33.4E|Shopkeeper|Potions, healing kits, and magic services
+Thorolf|42.2N, 33.7E|Quest|Pathwarden Armor
+Tirenia|42.1N, 33.7E|Quest|Assault Quest
+Tornash|46.8N, 30.5E|Quest|Gift Box Quest
+Wantorth the Shopkeeper|42.4N, 30.8E|Shopkeeper|Basic supplies
+Weaponsmith (38.6N, 30.4E){{!}}Weaponsmith|38.6N, 30.4E|Shopkeeper|Weapons
+Wedding Planner|42.1N, 33.9E|Shopkeeper|Wedding supplies
+Woodsman|43.4N, 33.3E|Shopkeeper|Housing Decorations
+Worcer|42.2N, 33.7E|Quest|Worcer's Missing Heirlooms
+Black Ferah (NPC){{!}}Black Ferah|29.2S, 95.8E|Quest|Shadow Communication
+Shadow Captain (NPC){{!}}Shadow Captain|27.9S, 95.6E|Quest|Shadow Assault
+Shadow Soldier (NPC){{!}}Shadow Soldier|27.9S, 95.6E|Quest|Shadow Assault
+Royal Guard - Grievver Shredder Hunter Kill Task{{!}}Royal Guard|30.3S, 94.8E|Quest|Grievver Shredder Kill Task
+Umbral Guard - Devourer Margul Kill Task{{!}}Umbral Guard|30.3S, 94.8E|Quest|Devourer Margul Kill Task
+Umbral Guard - Shadow Flyer Kill Task{{!}}Umbral Guard|30.3S, 94.8E|Quest|Shadow Flyer Kill Task
+Royal Guard - Shadow Kill Task{{!}}Royal Guard|30.2S, 94.8E|Quest|Shadow Kill Task
+Royal Guard - Void Lord Kill Task{{!}}Royal Guard|30.3S, 94.8E|Quest|Void Lord Kill Task
+Royal Guard - Shadowy Pillar Kill Task{{!}}Royal Guard|30.2S, 94.8E|Quest|Shadowy Pillar Kill Task
+Agent of the Arcanum|32.6S, 72.5E|Collector|Housing
+Ai Konaji the Jeweler|33.2S, 72.7E|Shopkeeper|Gems and jewelry
+Apprentice Alchemist (Shoushi)|33.3S, 72.8E|Quest|Crafter Quest
+Apprentice Scrivener of Creature Magic (Level I)|33.6S, 73.4E|Shopkeeper|Level I Scrolls &amp; Foci
+Apprentice Scrivener of Creature Magic (Level II)|33.6S, 73.4E|Shopkeeper|Level II Scrolls &amp; Foci
+Apprentice Scrivener of Item and War Magic (Level I)|33.6S, 73.4E|Shopkeeper|Level I Scrolls &amp; Foci
+Apprentice Scrivener of Item and War Magic (Level II)|33.6S, 73.4E|Shopkeeper|Level II Scrolls &amp; Foci
+Apprentice Scrivener of Life Magic (Level I)|33.6S, 73.4E|Shopkeeper|Level I Scrolls &amp; Foci
+Apprentice Scrivener of Life Magic (Level II)|33.6S, 73.4E|Shopkeeper|Level II Scrolls &amp; Foci
+Arcanum Refurbisher|32.6S, 72.5E|Crafter|Fixes miscolored Bronze Statues
+Archmage (33.7S, 79.9E){{!}}Archmage|33.7S, 79.9E|Shopkeeper|Magical supplies
+Archmage Chen Wah-ji|33.8S, 72.6E|Shopkeeper|Magical Supplies, Large trade notes
+Brother Gonun the Scribe|33.7S, 73.1E|Shopkeeper|Blank writing materials and texts
+Collector|33.5S, 72.9E|Collector|Collector of various trophies
+Contract Broker (Shoushi)|33.5S, 73.0E|Shopkeeper|Contracts
+Farmer (38.1S, 68.1E){{!}}Farmer|38.1S, 68.1E|Shopkeeper|Cooking supplies and food
+Gonjoku Den|33.4S, 73.3E|Quest|Trade Alliance Quest
+Hadiya bint Anan|33.7S, 73.1E|Quest|Kilif Zefir Kill Task
+Hau Ji Tan the Grocer|33.3S, 73.1E|Shopkeeper|Food and cooking supplies
+Haya Su Ka|34.2S, 73.7E|Shopkeeper|Food, Paper, Gan-Zo's Low-Stakes Gambling Token,> Casino Gambling Tokens
+Healer (26.7S, 65.1E){{!}}Healer|26.7S, 65.1E|Shopkeeper|Healing kits, potions, services
+Hiro Ishigame|33.7S 72.8E|Quest|Green Mire Grave Quest
+Jaikite Sanzen the Barkeeper|33.7S, 72.5E|Shopkeeper|Food, drinks, and rumors
+Journeyman Scrivener of Item Magic|33.6S, 73.4E|Shopkeeper|Level III Scrolls &amp; Foci
+Journeyman Scrivener of Creature Magic|33.6S, 73.4E|Shopkeeper|Level III Scrolls &amp; Foci
+Journeyman Scrivener of Life Magic|33.6S, 73.4E|Shopkeeper|Level III Scrolls &amp; Foci
+Journeyman Scrivener of War Magic|33.6S, 73.4E|Shopkeeper|Level III Scrolls &amp; Foci
+Lo Raen|33.5S, 72.4E|Quest|Rat Catcher
+Lou Ka|33.5S, 73.0E|Quest|Lou Ka's Stolen Items
+Merchant (30.7S, 72.1E){{!}}Merchant|30.7S, 72.1E|Shopkeeper|Basic supplies
+Mi Gan-Zo|34.2S, 73.7E|Quest|Gambling
+Nen Ai|34.8S, 71.2E|Quest|Nen Ai's Pet Drudge
+Nen Gou the Shopkeeper|33.5S, 69.9E|Shopkeeper|Basic supplies
+Nin Hong the Barkeeper|33.5S, 73.0E|Shopkeeper|Food, drinks, and rumors
+Ohayashi Hiroshi|33.5S, 73.0E|Quest|Contracts
+Oi Ra the Shopkeeper|6.6S, 75.8E|Shopkeeper|Basic supplies
+Oi-Tong Ye|33.5S, 73.0E|Quest|Four Stones of Jojii, Exploration Society Letters
+Oneros the Gem Seller|33.5S, 72.8E|Shopkeeper|Protection gems
+Ostentatious Farmer|37.4S, 75.5E|Quest|Elysa's Favor Quest
+Pathwarden Koro Ijida|33.5S, 72.8E|Quest|Training Academy Quest
+Pawn Shopkeep|34.2S, 73.7E|Shopkeeper|Basic Supplies
+Peddler (27.8S, 68.3E){{!}}Peddler|27.8S, 68.3E|Shopkeeper|Basic supplies
+Peddler (25.7S, 74.7E){{!}}Peddler|25.7S, 74.7E|Shopkeeper|Basic supplies
+Royal Guard (Small Mukkir Squasher Quest){{!}}Royal Guard|32.8S, 73.3E|Quest|Small Fledgling Mukkir Kill Task
+Sacmisi|33.8S, 72.6E|Shopkeeper|Summoning supplies.
+San Ming|33.5S, 72.8E|Quest|Blood Shreth Kill Task
+Sayuji Jina|33.3S, 72.8E|Quest|Tanada House of Storms Quest
+Scrivener of Item Magic|33.6S, 73.4E|Shopkeeper|Level IV Scrolls &amp; Foci
+Scrivener of Creature Magic|33.6S, 73.4E|Shopkeeper|Level IV Scrolls &amp; Foci
+Scrivener of Life Magic|33.6S, 73.4E|Shopkeeper|Level IV Scrolls &amp; Foci
+Scrivener of Void Magic|33.6S, 73.4E|Shopkeeper|Level I-IV Scrolls &amp; Foci
+Scrivener of War Magic|33.6S, 73.4E|Shopkeeper|Level IV Scrolls
+Sentry|33.8S, 69.5E|Misc|
+Sentry|36.8S, 76.1E|Misc|
+Sho High-Stakes Gamesmaster|34.2S, 73.7E|Quest|Gambling
+Sho Low-Stakes Gamesmaster|34.2S, 73.7E|Quest|Gambling
+Sho Mid-Stakes Gamesmaster|34.2S, 73.7E|Quest|Gambling
+Shopkeeper Gonjoku Ryumi|33.7S, 72.8E|Shopkeeper|General Supplies
+Sir Tenshin|32.8S, 73.3E|Quest|Elysa's Favor Quest
+Tailor Ma Shih|33.2S, 73.0E|Shopkeeper|Clothing
+Trophy Smith|33.5S 72.6E|Crafter|
+Ven Ounan the Blacksmith|33.5S, 72.6E|Shopkeeper|Armor and weapons
+Wedding Planner|32.6S, 72.5E|Shopkeeper|Wedding supplies
+Yaohan Tong the Healer|33.8S, 73.0E|Shopkeeper|Potions, healing kits, and magic services
+Zhofon No the Bowyer|33.4S, 72.5E|Shopkeeper|Missile weapons, ammo, and fletching supplies
+Apprentice Scrivener of Creature Magic (Level I)|72.1N, 61.4W|Shopkeeper|Level I Scrolls &amp; Foci
+Apprentice Scrivener of Creature Magic (Level II)|72.1N, 61.4W|Shopkeeper|Level II Scrolls &amp; Foci
+Apprentice Scrivener of Item and War Magic (Level I)|72.1N, 61.4W|Shopkeeper|Level I Scrolls &amp; Foci
+Apprentice Scrivener of Item and War Magic (Level II)|72.1N, 61.4W|Shopkeeper|Level II Scrolls &amp; Foci
+Apprentice Scrivener of Life Magic (Level I)|72.1N, 61.4W|Shopkeeper|Level I Scrolls &amp; Foci
+Apprentice Scrivener of Life Magic (Level II)|72.1N, 61.4W|Shopkeeper|Level II Scrolls &amp; Foci
+Journeyman Scrivener of Item Magic|41.6N 34.0E|Shopkeeper|Level III Scrolls &amp; Foci
+Journeyman Scrivener of Creature Magic|41.6N 34.0E|Shopkeeper|Level III Scrolls &amp; Foci
+Journeyman Scrivener of Life Magic|41.6N 34.0E|Shopkeeper|Level III Scrolls &amp; Foci
+Journeyman Scrivener of War Magic|41.6N 34.0E|Shopkeeper|Level III Scrolls &amp; Foci
+Scrivener of Item Magic|41.6N 34.0E|Shopkeeper|Level IV Scrolls &amp; Foci
+Scrivener of Creature Magic|41.6N 34.0E|Shopkeeper|Level IV Scrolls &amp; Foci
+Scrivener of Life Magic|41.6N 34.0E|Shopkeeper|Level IV Scrolls &amp; Foci
+Scrivener of Void Magic|41.6N 34.0E|Shopkeeper|Level I-IV Scrolls &amp; Foci
+Scrivener of War Magic|41.6N 34.0E|Shopkeeper|Level IV Scrolls
+Elena Du Furza|71.8N, 61.0W|Quest NPC|Sanamar Starter Quests#The Beacon,> The Beacon
+Lorca Sammel|71.9N, 60.9W|Quest NPC|Sanamar Starter Quests#The Missing Necklace,> The Missing Necklace
+Rand|71.8N, 60.8W|Quest NPC|Brewmaster Quest
+Barkeeper Jean Vaden|71.8N, 60.8W|Shopkeeper|Food, Drinks, Rumors.
+Tailor Monique du Bressa|71.8N, 61.1W|Shopkeeper|Clothing
+Trilaine di Ricard|72.1N, 61.2W|Crafter|Masks
+Luressi di Maki|72.0N, 61.4W|Crafter|Hand Silyun Portal Gems for a V Note
+Portal Guardian|72.1N, 60.9W|Quest NPC|Thrungus Hovels
+Sanamar Collector|71.9N 61.0W|Collector|
+Red Bull of Sanamar|71.9N, 60.8W|Miscellaneous|Red Bull of Sanamar Quest
+Anton Silezi|71.9N, 60.8W|Quest NPC|Trade Alliance Quest
+Pathwarden Thierra Molanti|72.0N 60.9W|Quest NPC|Training Academy Quest
+Grocer Jaffres Dini|71.8N 61.0W|Shopkeeper|Food, Cooking Items
+Shopkeeper Tod Burgni|71.8N 61.0W|Shopkeeper|Basic Supplies, Containers (Red)
+Fletcher Mikael di Suinn|72.0N, 61.1W|Shopkeeper|Fletching Supplies
+Jeweler Susana Arlean|71.8N, 61.1W|Shopkeeper|Gems, Jewelry
+Malrin|71.8N, 60.8W|Quest NPC|Coral Golem Kill Task
+Fabian Strinjelli|72.0N 61.1W|Quest NPC|Lunnum's Disappearance
+Alessandro Mardor|72.0N, 61.2W|Quest NPC|Polardillo Kill Task
+Turien Di Furza|71.8N, 61.2W|Quest NPC|Pet Shop Quest, Sword of Bellenesse
+Scribe Benno di Hergeaux|71.8N, 61.3W|Shopkeeper|Books, Paper
+Paissen du Kim|71.8N, 61.3W|Miscellaneous|
+Blacksmith Karlus Loc|71.8N, 61.3W|Shopkeeper|Armor, Weapons
+Healer Deme du Laur|71.9N, 61.3W|Shopkeeper|Healing Kits, Potions
+Archmage Luchessa du Lamiere|71.8N, 61.3W|Shopkeeper|Magic Supplies
+Giordonni|72.1N, 61.4W|Quest NPC|Loyalty Reset Quest
+Stuven di Bonachien|72.1N, 61.4W|Miscellaneous|
+Arcanum Refurbisher|72.5N, 60.7W|Miscellaneous|
+Monster Fight Bookie|72.8N 60.7W|Quest NPC|Monster Fights
+Seneschal Dalmour|71.3N 60.7W|Quest NPC|Fledgemaster's Tusk Quest
+Agent of the Arcanum|33.5N, 56.9E|Collector|Housing
+Anasha|33.4N, 56.6E|Quest|Gift Box Quest
+Apprentice Alchemist|33.4N, 56.8E|Quest|Crafter Quest
+Barkeep Lienne|33.4N, 56.8E|Shopkeeper|Food
+Barkeep Mae Lilidag|33.4N, 56.8E|Shopkeeper|Rumors, directions, food
+Belthew Shearstone the Jeweler|33.5N, 56.7E|Shopkeeper|Gems, jewelry
+Branwyn|29.1N, 57.9E|Quest|The Temple of Xik Minru
+Carsith the Weaponsmith|33.6N, 56.6E|Shopkeeper|Weapons, shields
+Cateril Carsmad the Armorer|33.6N, 56.6E|Shopkeeper|Armor
+Davis the Tailor|33.4N, 56.6E|Shopkeeper|Clothing, lockpicks
+Denterra the Healer|41.1N, 56.4E|Shopkeeper|Potions, healing kits, services
+Emissary of Asheron (Free Weapons)|3.6N, 56.9E|Quest|Quest Weapon Coin
+Emissary of Asheron (Melee Rares)|3.6N, 56.9E|Quest|Rare Coin
+Emissary of Asheron (Weapon Imbues)|3.6N, 56.9E|Quest|Imbue Swap Coins
+Farmer (Arwic)|32.6N, 55.0E|Shopkeeper|Food, cooking items, containers
+Free Weapon Vendor|3.6N, 56.9E|Shopkeeper|Quest weapons
+Grocer Rodega Tyning|33.6N, 56.7E|Shopkeeper|Food, cooking items
+Guard Audrey|33.4N, 56.8E|Quest|Soul Stone Quest
+Harald the Fletcher|32.8N, 55.8E|Shopkeeper|Missile weapons and ammunition
+Healer Dragando the Leech|33.6N, 56.7E|Shopkeeper|Potions, healing kits
+Hiyp the Toad|33.4N, 56.7E|Quest|Olthoi Shield Quest
+Jacob Durstan|33.6N, 56.8E|Quest|Jacob's Axe Quest
+Laqisha the Scribe|31.2N, 56.3E|Shopkeeper|Rumors, directions, guides
+Leather Crafter|33.4N, 56.6E|Collector|Collects hides
+Magus Guthima the Wise|32.8N, 56.7E|Shopkeeper|Spell components, mana stones,&lt;br&gt;alchemical items, Containers (Gray)
+Marid|33.6N, 56.8E|Shopkeeper|Stipend items
+Melee Rare Vendor|3.6N, 56.9E|Shopkeeper|Rare weapons
+Monroe|33.6N, 56.8E|Quest|Stipends
+Olthoi Hunter|30.9N 56.3E|Quest|Olthoi Queen Quest&lt;br&gt;Asheron's Raiment Quest&lt;br&gt;Olthoi Armor&lt;br&gt;3 Kill Tasks
+Pevilo ibn Djimin|33.5N, 56.8E|Shopkeeper|Weapon summoning gems
+Professor of Creature Magic|33.5N, 56.6E|Quest|Professors of Magic
+Professor of Item Magic|33.5N, 56.6E|Quest|Professors of Magic
+Professor of Life Magic|33.5N, 56.6E|Quest|Professors of Magic
+Professor of War Magic|33.5N, 56.6E|Quest|Professors of Magic
+Professor of Void Magic|33.5N, 56.6E|Quest|Professors of Magic
+Scrivener of Creature Magic|33.5N, 56.6E|Shopkeeper|Scrolls, foci
+Scrivener of Item Magic|33.5N, 56.6E|Shopkeeper|Scrolls, foci
+Scrivener of Life Magic|33.5N, 56.6E|Shopkeeper|Scrolls, foci
+Scrivener of War Magic|33.5N, 56.6E|Shopkeeper|Scrolls, foci
+Shopkeep Mirinda|33.4N, 56.6E|Shopkeeper|Armor, weapons, containers, cooking items
+Surnad the Peddler|41.1N, 56.4E|Shopkeeper|general supplies
+Translator Aun Laokhe|33.5N, 56.8E|Quest|Blackmire Lore&lt;br&gt;Carved Gemstone Lockpicks Quest&lt;br&gt;King Toad Idol Quest
+Weapon Imbue Vendor|3.6N, 56.9E|Shopkeeper|Foolproof salvage, Weapon augmentations
+Agent of the Arcanum|10.0N, 58.4E|Quest|Housing
+Apprentice Fletcher (Rithwic)|10.4N, 58.2E|Quest|Crafter Quest
+Archmage Nulsymber|10.8N, 59.3E|Shopkeeper|Magical Supplies, Portal Gems
+Astara Duskshield|10.3N, 58.3E|Quest|Spear of the Given Heart Quest
+Barkeep Ricetha|10.7N, 58.2E|Shopkeeper|Food, Drink &amp; Rumors
+Brentsella|7.6N, 58.2E|Quest|Rithwic Starter Quests
+Brisin the Healer|10.8N, 58.4E|Shopkeeper|Healing supplies
+Celcynd the Dour|10.8N, 58.4E|Quest|Exploration Society Letters, Oswald's Dirk Quest, Rithwic Starter Quests, Water of Mount Lethe
+Collector|10.6N, 58.2E|Trophy Collector|Collects Monster Trophies
+Delton Hardor|10.7N, 59.4E|Shopkeeper|Spear of the Given Heart Quest
+Dortold the Tailor|10.4N, 58.2E|Shopkeeper|Clothing
+Erludd the Cur the Barkeeper|10.7N, 59.4E|Shopkeeper|Food, Drink &amp; Rumors
+Farmer (Rithwic)|10.4N, 53.5E|Shopkeeper|Food, Cooking Items
+Girdweld the Shopkeeper|7.6N, 58.4E|Shopkeeper|Basic supplies
+Hydeatha the Shopkeeper|10.2N, 61.4E|Shopkeeper|Basic supplies
+Ji Tenxien the Tailor|10.7N, 59.2E|Shopkeeper|Clothing
+Journeyman Scrivener of Creature Magic|10.4N, 58.4E|Shopkeeper|Level III Scrolls &amp; Foci
+Journeyman Scrivener of Item Magic|10.4N, 58.4E|Shopkeeper|Level III Scrolls &amp; Foci
+Journeyman Scrivener of Life Magic|10.4N, 58.4E|Shopkeeper|Level III Scrolls &amp; Foci
+Journeyman Scrivener of War Magic|10.4N, 58.4E|Shopkeeper|Level III Scrolls &amp; Foci
+Luthin the Smith|10.8N, 58.6E|Shopkeeper|Chainmail, Studded Leather Armor
+Mindorla|10.8N, 58.6E|Quest|Rithwic Starter Quests
+Peddler (Rithwic)|9.9N, 58.5E|Shopkeeper|Basic supplies (Sword of Lost Light Rumors on the ground)
+Ringoshu the Apple Seller|13.6N, 50.7E|Shopkeeper|Trothyr's Rest Key, Trothyr's Rest Rumor, Apple, Tart Apple
+Roaming Bowyer (Rithwic)|11.3N 55.7E|Shopkeeper|Fletching Supplies
+Roaming Bowyer (Outskirts Rithwic)|10.4N, 53.5E|Shopkeeper|Fletching Supplies
+Royal Guard Gabrielle|10.5N, 58.2E||
+Soldona Wotmad the Jeweler|10.8N, 59.3E|Shopkeeper|Jewelery
+Tackle Master|10.7N, 58.7E|Quest|Fishing
+Trothyd Fletcher|10.5N, 58.4E|Shopkeeper|Missle weapons &amp; ammunition
+Urnolt the Jeweler|10.6N, 58.4E|Shopkeeper|Gems &amp; Jewelery
+Weaponsmith Baizai En|10.3N, 58.2E|Shopkeeper|Weapons
+Weary-looking Man (Rithwic)|10.7N, 59.4E|Shopkeeper|Dryreach Key, Dryreach Rumor
+Wedding Planner|10.0N, 58.4E|Shopkeeper|Wedding Items
+Wylreda the Scribe|10.6N, 58.4E|Shopkeeper|Books &amp; Paper
+Ynarre the Grocer|10.2N, 58.5E|Shopkeeper|Very basic supplies
+Acina Hilmad the Grocer|25.7N, 48.5E|Shopkeeper|Food, Cooking Supplies.
+Apprentice Scrivener of Creature Magic (Level I)|25.7N, 49.4E|Shopkeeper|Level I Scrolls &amp; Foci
+Apprentice Scrivener of Creature Magic (Level II)|25.7N, 49.4E|Shopkeeper|Level II Scrolls &amp; Foci
+Apprentice Scrivener of Item and War Magic (Level I)|25.7N, 49.4E|Shopkeeper|Level I Scrolls &amp; Foci
+Apprentice Scrivener of Item and War Magic (Level II)|25.7N, 49.4E|Shopkeeper|Level II Scrolls &amp; Foci
+Apprentice Scrivener of Life Magic (Level I)|25.7N, 49.4E|Shopkeeper|Level I Scrolls &amp; Foci
+Apprentice Scrivener of Life Magic (Level II)|25.7N, 49.4E|Shopkeeper|Level II Scrolls &amp; Foci
+Journeyman Scrivener of Item Magic|25.7N, 49.4E|Shopkeeper|Level III Scrolls &amp; Foci
+Journeyman Scrivener of Creature Magic|25.7N, 49.4E|Shopkeeper|Level III Scrolls &amp; Foci
+Journeyman Scrivener of Life Magic|25.7N, 49.4E|Shopkeeper|Level III Scrolls &amp; Foci
+Journeyman Scrivener of War Magic|25.7N, 49.4E|Shopkeeper|Level III Scrolls &amp; Foci
+Scrivener of Item Magic|25.7N, 49.4E|Shopkeeper|Level IV Scrolls &amp; Foci
+Scrivener of Creature Magic|25.7N, 49.4E|Shopkeeper|Level IV Scrolls &amp; Foci
+Scrivener of Life Magic|25.7N, 49.4E|Shopkeeper|Level IV Scrolls &amp; Foci
+Scrivener of War Magic|25.7N, 49.4E|Shopkeeper|Level IV Scrolls &amp; Foci
+Avalenne Hilmad the Healer|25.7N, 48.5E|Shopkeeper|Healing Potions, Kits.
+Culthea Ironshaper|25.8N, 49.2E|Shopkeeper|Armor
+Extorl the Ox, Weaponsmith|25.8N, 49.2E|Shopkeeper|Weapons.
+Jeweler Suya bint Habil|25.7N, 49.1E|Shopkeeper|Gems, Jewelry
+Magrom the Red, Barkeeper|25.7N, 48.5E|Shopkeeper|Rumors, Food, Drinks, Decoration
+Magus Gondibyr Langarl|25.8N, 49.4E|Shopkeeper|Magic Supplies
+Merchant Ledine|25.5N, 49.2E|Shopkeeper|Basic Supplies, Containers (Blue &amp; Purple Packs)
+Scildith Dyrson the Bowyer|25.3N, 49.1E|Shopkeeper|Fletching Supplies, Ammunition
+Archmage (Cragstone)|22.5N, 44.0E|Shopkeeper|Magic Supplies
+Farmer Pogget|23.4N, 46.1E|Shopkeeper|Food, Cooking Supplies
+Minthada the Librarian|26.0N, 47.0E|Shopkeeper|Books, Papers, Texts
+Peddler (Cragstone Farms)|22.5N, 43.9E|Shopkeeper|Basic Supplies
+Roaming Bowyer (Cragstone)|23.5N, 46.2E|Shopkeeper|Fletching Supplies, Ammunition
+Steiner's Apprentice Craftsman|24.6N, 47.1E|Shopkeeper|Housing Decoration
+Alec|25.8N, 49.2E|Quest|Noble Weapons Quest
+Alex Brummel|24.9N, 48.5E|Quest|Augmentation Gems
+Arturus of the Eldrytch Web|26.3N, 49.6E|Quest|Eldrytch Web Initiation
+Barnar the Tinker|25.3N, 49.1E|Quest|Composite Weapons Quest
+Brienne Carlus|25.5N, 48.4E|Quest|Augmentation Gems
+Burrell Sammrun|25.5N, 48.4E|Quest|Augmentation Gems
+Corporal Liao Chen|25.6N, 49.4E|Quest|Monouga Laboratory
+Edobar the Esoteric|26.0N, 47.0E|Quest|Grael's Rage, The Shadows of Bitter Winter
+Emily Yarow|24.9N, 48.5E|Quest|Augmentation Gems
+Felizio Calmasi|25.7N, 48.8E|Quest|Apostate Excavation Investigation
+Glysander Cartoth|25.7N, 48.5E|Quest|Thorsten Cragstone's Armor &amp; Axe
+Guard Devon|25.7N, 48.8E|Quest|Burun Kings
+Guard Ellyon|25.7N, 48.8E|Quest|Burun Kings
+Guard Fassel|25.7N, 48.8E|Quest|Burun Kings
+Guard Haigh|25.7N, 48.8E|Quest|Burun Kings
+Guard Hamdyn|25.7N, 48.8E|Quest|Burun Kings
+Guard Lo Pan|25.7N, 48.8E|Quest|Burun Kings
+Guard Sorchia|25.7N, 48.8E|Quest|Burun Kings
+Gustuv Lansdown|24.9N, 48.5E|Quest|Augmentation Gems
+Jarvis Hammerstone|25.6N, 49.4E|Quest|Bonecrunch, Cull the Drudges,> Drudge Kill Tasks
+Joshun Felden|25.5N, 48.4E|Quest|Augmentation Gems
+Kris Cennis|25.5N, 48.4E|Quest|Augmentation Gems
+Lenor Turk|25.5N, 48.4E|Quest|Augmentation Gems
+Lieutenant Kenneth|25.8N, 49.1E|Quest|Assault Weapons
+Oswent the Pale|25.7N, 49.2E|Quest|Bur Recall Quest, Aerbax's Prodigal Lugian
+Robert Crow|25.5N, 48.4E|Quest|Augmentation Gems
+Royal Guard (Olthoi Weapons Quest)|25.8N, 49.1E|Quest|Olthoi Weapons Quest
+Royal Guard Qumasha|26.0N, 49.1E|Quest|Necklace of the Elemental Adepts Quest
+Shan Zhen|25.8N 49.2E|Quest|Asheron's Departure
+Chosen of Asheron (Cragstone)|23.6N, 49.1E|Quest|
+Hemmik the Sly|34.0N, 39.7E|Quest|Elemental Weeping Weapons
+Hoogan|25.4N 45.9E|Quest|Aerbax's Prodigal Drudge
+Sergeant Shanks|25.4N 45.9E|Quest|Aerbax's Prodigal Drudge
+Tackle Master|29.0N, 43.9E|Quest|Fishing
+Agent of the Arcanum|24.6N, 47.1E|Crafter|
+Arcanum Mana-smith|25.7N 48.3E|Crafter|
+Arcanum Quota Officer|25.7N 48.3E|Crafter|
+Arcanum Researcher|26.0N, 47.0E|Crafter|
+Bartholomew Steiner|24.6N, 47.1E|Crafter|
+Ivory Crafter|25.7N, 48.8E|Crafter|
+Leather Crafter|25.8N, 49.2E|Crafter|
+Wing Collector|25.5N, 49.2E|Crafter|
+Bretself the Translator|26.0N, 47.0E|Miscellaneous|
+Abd-al-Matin Basshir|21.7S, 1.6W|Quest|Contract for 50-100 Contracts
+Agent of the Arcanum|21.8S, 1.6W|Crafter|
+Ahyara|21.3S, 1.2E|Quest|Note of Congratulation
+Akyafi ibn Sumwar|21.7S, 1.6W|Quest|Search for Abmim ibn Ibsar &amp; Mad Star Investigation
+Apprentice Alchemist (Yaraq)|21.6S, 1.6W|Quest|Crafter Quest
+Apprentice Scrivener of Creature Magic (Level I)|21.5S, 1.3W|Shopkeeper|Level I Scrolls &amp; Foci
+Apprentice Scrivener of Creature Magic (Level II)|21.5S, 1.3W|Shopkeeper|Level II Scrolls &amp; Foci
+Apprentice Scrivener of Item and War Magic (Level I)|21.5S, 1.3W|Shopkeeper|Level I Scrolls &amp; Foci
+Apprentice Scrivener of Item and War Magic (Level II)|21.5S, 1.3W|Shopkeeper|Level II Scrolls &amp; Foci
+Apprentice Scrivener of Life Magic (Level I)|21.5S, 1.3W|Shopkeeper|Level I Scrolls &amp; Foci
+Apprentice Scrivener of Life Magic (Level II)|21.5S, 1.3W|Shopkeeper|Level II Scrolls &amp; Foci
+Archmage Inyamkaya bint Ruz|21.6S, 1.6W|Shopkeeper|Magical supplies.
+Arlad ibn Mulud the Tailor|21.4S, 1.6W|Shopkeeper|Clothing
+Arshid al-Qiyid|21.5S, 0.7W|Quest|Dens of Iniquity
+Ashadi bint Samaq|21.5S, 0.7W|Shopkeeper|Dens of Iniquity
+Atqur the Shopkeeper|18.7S, 1.5W|Shopkeeper|Basic supplies.
+Barkeep Jubal al-Baljad|21.7S, 1.6W|Shopkeeper|Food, drinks, and rumors.
+Bhravarn ibn Salizim|21.5S, 1.6W|Quest|Sword of Bellenesse
+Buray ibn Tamsa the Blacksmith|21.5S, 1.6W|Shopkeeper|Armor and weapons.
+Collector|21.7S, 1.6W|Crafter|
+Contract Broker (Yaraq){{!}}Contract Broker|21.7S, 1.6W|Broker|Contracts
+Dame Tsaya|21.0S, 0.8W|Quest|Elysa's Favor Quest
+Drawohan the Gem Seller|21.7S, 1.6W|Shopkeeper|Protection gems.
+Gharu'ndim Low-Stakes Gamesmaster|21.5S, 0.7W|Quest|Dens of Iniquity
+Gharu'ndim Mid-Stakes Gamesmaster|21.5S, 0.7W|Quest|Dens of Iniquity
+Gharu'ndim High-Stakes Gamesmaster|21.5S, 0.7W|Quest|Dens of Iniquity
+Iaret|21.6S, 1.6W|Shopkeeper|Summoning supplies.
+Journeyman Scrivener of Item Magic|21.5S, 1.3W|Shopkeeper|Level III Scrolls &amp; Foci
+Journeyman Scrivener of Creature Magic|21.5S, 1.3W|Shopkeeper|Level III Scrolls &amp; Foci
+Journeyman Scrivener of Life Magic|21.5S, 1.3W|Shopkeeper|Level III Scrolls &amp; Foci
+Journeyman Scrivener of War Magic|21.5S, 1.3W|Shopkeeper|Level III Scrolls &amp; Foci
+Ladim al-Faji the Bowyer|21.5S, 1.6W|Shopkeeper|Missile weapons, ammo, and fletching supplies.
+Lubziklan al-Luq|22.4S, 1.9W|Quest|Lubziklan al-Luq's Stolen Goods
+Lu'zura the Shopkeeper|21.3S, 1.3E|Shopkeeper|Basic supplies.
+Mara al-Luq|21.7S, 1.6W|Quest|Exploration Society Letters
+Ma'yad ibn Ibsar|21.7S, 1.6W|Quest|Search for Abmim ibn Ibsar &amp; Mad Star Investigation
+Mulud al-Iyar the Healer|21.4S, 1.6W|Shopkeeper|Potions, healing kits, and magic services.
+Nasun ibn Tifar|18.6S, 1.4W|Quest|Note of Congratulation
+Nuya bint Mulud the Grocer|21.4S, 1.6W|Shopkeeper|Food and cooking supplies.
+Pathwarden Qanara bint Qolosh|21.5S, 1.7W|Quest|Training Academy Quest
+Pawn Shopkeep|21.5S, 0.7W|Shopkeeper|Dens of Iniquity
+Rahira bint Hisan the Shopkeeper|21.6S, 1.6W|Shopkeeper|General Supplies.
+Rare Exchanger (Arshid's Den of Iniquity){{!}}Rare Exchanger|21.5S, 0.7W|Quest|Dens of Iniquity
+Royal Guard (Small Mukkir Squasher Quest)|21.0S, 0.8W|Quest|Small Fledgling Mukkir Kill Task
+Scrivener of Creature Magic|21.5S, 1.3W|Shopkeeper|Level IV Scrolls &amp; Foci
+Scrivener of Item Magic|21.5S, 1.3W|Shopkeeper|Level IV Scrolls &amp; Foci
+Scrivener of Life Magic|21.5S, 1.3W|Shopkeeper|Level IV Scrolls &amp; Foci
+Scrivener of Void Magic|21.5S, 1.3W|Shopkeeper|Level I-IV Scrolls &amp; Foci
+Scrivener of War Magic|21.5S, 1.3W|Shopkeeper|Level IV Scrolls
+Sentry|21.0S, 0.8W|Miscellaneous|
+Stranger in Town|23.7S, 2.8W|Quest|Elysa's Favor Quest
+Tackle Master|22.0S, 2.2W|Quest|Fishing
+Tariqana bint Hin the Jeweler|21.6S, 1.6W|Shopkeeper|Gems and jewelry.
+Wasifa al-Kani the Scribe|21.6S, 1.6W|Shopkeeper|Blank writing materials and texts.
+Wedding Planner|21.8S, 1.6W|Shopkeeper|Wedding supplies.
+Agent of the Arcanum|68.6N, 21.7W|Crafter|
+Archmage Ta Ri|69.0N, 21.7W|Shopkeeper|Magic Supplies
+Corin of Stonehold|68.7N, 21.6W|Shopkeeper|Food, Cooking Supplies
+Farmer (Stonehold)|68.6N, 21.7W|Shopkeeper|Food, Cooking Supplies
+Gerhi, Bowyer of Stonehold|68.9N, 21.6W|Shopkeeper|Fletching Supplies
+Grand Master Scrivener of Creature Magic|68.7N, 21.5W|Shopkeeper|Level VI Scrolls
+Grand Master Scrivener of Item Magic|68.7N, 21.5W|Shopkeeper|Level VI Scrolls
+Grand Master Scrivener of Life Magic|68.7N, 21.5W|Shopkeeper|Level VI Scrolls
+Grand Master Scrivener of War Magic|68.7N, 21.5W|Shopkeeper|Level VI Scrolls
+Healer of Stonehold|68.8N, 21.8W|Shopkeeper|Healing Supplies
+Vivaina, Shopkeep of Stonehold|68.6N, 21.7W|Shopkeeper|Armor, Basic Supplies, Rumors
+Archmage (Igloo)|70.5N, 17.3W|Shopkeeper|Magic Supplies
+Archmage (Stonehold)|79.2N, 15.6W|Shopkeeper|Magic Supplies
+Roaming Bowyer (Stonehold)|79.2N, 15.6W|Shopkeeper|Fletching Supplies
+Roaming Bowyer (Osteth North Beach)|86.0N, 27.7W|Shopkeeper|Fletching Supplies
+Snowman (NPC)|71.4N, 22.2W|Shopkeeper|Cold Supplies
+Snowman (NPC)|73.8N, 13.7W|Shopkeeper|Cold Supplies
+Belinda du Loc|68.9N, 21.6W|Quest|Fallen Creature Kill Task, Banished Creature Kill Task, Rare Game Kill Task
+Cyphis Suldow|68.8N, 21.6W|Quest|Banderling Haunt
+Drozer|68.9N, 21.4W|Quest|House Plants
+Kai Mallan, Sho Enchanter|69.2N 17.2W|Quest|Gelidite Library Quest
+Olcris, Nuhmudira's Student|68.7N, 21.6W|Quest|Halls of Knorr, Collegium Occultus Ring Quest, Knorr Quiddity Seed Quest
+Suzuhara Baijin|68.9N, 21.8W|Quest|Suzuhara Baijin's Delivery
+Verdentine Magnan|75.5N, 20.6W|Quest|Flags
+Zahir|68.7N 21.5W|Quest|Elemental Kill Task
+Barkeep Bai Yao Feng|12.0S, 42.6E|Shopkeeper|Rumors, Food, Drinks.
+Grocer Nan-Yu-Yenbuto|12.2S, 42.3E|Shopkeeper|Food, Cooking Supplies.
+Farmer (Yanshi Festival Grounds)|12.8S, 42.6E|Shopkeeper|Food, Cooking items
+Healer Kai Tonweh|11.9S, 42.4E|Shopkeeper|Healing Potions, Kits.
+Jeweler Ryuhan Wu|12.2S, 42.6E|Shopkeeper|Gems, Jewelry.
+Kai Go-Suo the Scribe|11.9S, 42.4E|Shopkeeper|Books, Paper, Texts.
+Master Sonji Pan, Archmage|11.9S, 42.4E|Shopkeeper|Magic Supplies.
+Nu Sha the Weaponsmith|12.2S, 42.6E|Shopkeeper|Weapons.
+Ribusha Sennei the Bowyer|12.1S, 42.6E|Shopkeeper|Fletching Supplies, Ammunition.
+Shin Ou-Ye the Shopkeeper|12.2S, 42.3E|Shopkeeper|Basic Supplies.
+Wah Fo-Za the Armorer|12.2S, 42.6E|Shopkeeper|Armor.
+Zan Wa-Shabu the Tailor|12.2S, 42.6E|Shopkeeper|Clothing.
+Dou In the Shopkeeper|9.9S, 46.6E|Shopkeeper|Basic Supplies
+Farmer (Yanshi)|11.8S, 47.5E|Shopkeeper|Food, Cooking items
+Healer (Yanshi)|15.1S, 50.4E|Shopkeeper|Healing Potions, Kits
+Wandering Bowyer (Yanshi)|13.2S, 43.4E|Shopkeeper|Fletching Supplies
+Journeyman Scrivener of Creature Magic|11.8S, 42.6E|Shopkeeper|Level III Scrolls
+Journeyman Scrivener of Item Magic|11.8S, 42.6E|Shopkeeper|Level III Scrolls
+Journeyman Scrivener of Life Magic|11.8S, 42.6E|Shopkeeper|Level III Scrolls
+Journeyman Scrivener of War Magic|11.8S, 42.6E|Shopkeeper|Level III Scrolls
+Ru Chi the Shopkeeper|15.6S, 46.5E|Shopkeeper|Basic Supplies
+Beldin the Gem Dealer|12.8S 46.0E|Shopkeeper|Portal Gems, Decanter of Nullified Essence 
+Archmage Le-Ai Ren|20.6S, 44.2E|Shopkeeper|Magic Supplies
+Farmer Ri Na|20.6S, 44.2E|Shopkeeper|Food, Cooking Items
+Ru Shaha the Healer|20.6S, 44.2E|Shopkeeper|Healing Potions, Kits
+Weaponsmith Lun Dou|20.6S, 44.2E|Shopkeeper|Weapons.
+Wedding Planner|12.0S, 42.6E|Shopkeeper|Wedding Supplies
+Apprentice Fletcher (Yanshi)|12.1S, 42.6E|Quest|Crafter Quest
+Bleeargh, Mosswart Swamp Lord|12.1S, 42.6E|Quest|Bleeargh's Gratitude
+Bromord Morresten|12.4S, 43.3E|Quest|Prince's Medal of Bravery
+Dai Ya the Scholar|12.0S, 42.6E|Quest|Exploration Society Letters
+Ookami Kiri|12.0S, 42.6E|Quest|Tanada House of Earth, Tanada Clan Master's Medallion
+Royal Guard Adrana|12.3S, 42.4E|Quest|Shield of Yanshi Quest
+Ydnew|12.0S, 42.6E|Quest|Hidden Entrance
+Lou Ei the Collector|9.9S, 46.6E|Quest|Yanshi Starter Quests
+Te Ven the Collector|15.6S, 46.5E|Quest|Yanshi Starter Quests
+Emissary of Asheron (Yanshi)|12.7S, 46.5E|Quest|Harbinger Quest, Aerbax's Prodigal Harbinger
+Issk|12.9S, 46.5E|Quest|Harbinger Quest, Aerbax's Prodigal Harbinger
+Vincadi|12.6S, 46.7E|Quest|Harbinger Quest, Aerbax's Prodigal Harbinger
+Agent of the Arcanum|12.0S, 42.6E|Crafter|
+Collector|12.0S, 42.6E|Crafter|
+Ansar El-Kerdany|83.2S, 47.2E|Quest|Monthly Explorer Society Quests
+Archmage Kiko of Kara|83.4S, 47.0E|Shopkeeper|Spell Components, Alchemical Items, Magic Items
+Esmond Fielding|83.2S, 47.2E|Quest|Monthly Explorer Society Quests
+Grand Master Scrivener of Creature Magic|83.4S 47.0E|Shopkeeper|level VI scrolls
+Grand Master Scrivener of Item Magic|83.4S 47.0E|Shopkeeper|level VI scrolls
+Grand Master Scrivener of Life Magic|83.4S 47.0E|Shopkeeper|level VI scrolls
+Grand Master Scrivener of War Magic|83.4S 47.0E|Shopkeeper|level VI scrolls
+Grularr Wa'ydo|83.4S, 47.2E|Quest|Count Phainor's Amulet
+Healer Kana of Kara|83.4S, 47.1E|Shopkeeper|Potions, Healing Kits
+Koro of Kara, Farmer|83.3S, 47.2E|Shopkeeper|Food, Cooking Items, Containers.
+Kuhira of Kara|83.3S, 47.1E|Shopkeeper|Armor
+Niccolo De Luca|83.2S, 47.2E|Quest|Monthly Explorer Society Quests
+Shopkeep Kuro of Kara|83.4S, 47.1E|Shopkeeper|Basic Supplies
+Tatuso of Kara|82.8S, 47.2E|Shopkeeper|Fletching Supplies
+Journeyman Alchemist (Kara)|83.4S, 47.2E|Quest|Crafter Quest
+Miko Li, Jojii Adherent|83.4S, 47.2E|Quest|Path of the Jojii Adherent
+Koga Hideki|82.9S, 46.0E|Quest|Shadow Armor
+Agent of the Arcanum|82.8S, 47.0E|Crafter|Writ of Refuge,> Writs of Refuge
+Leather Crafter|83.4S, 47.1E|Crafter|Creature Hides
+Aldera Brunall Weaponsmith|39.5S, 83.3E|Shopkeeper|Weapons.
+Apprentice Scrivener of Item and War Magic (Level I)|39.4S, 83.0E|Shopkeeper|Level I Scrolls &amp; Foci
+Apprentice Scrivener of Item and War Magic (Level II)|39.4S, 83.0E|Shopkeeper|Level II Scrolls &amp; Foci
+Apprentice Scrivener of Life Magic (Level I)|39.4S, 83.0E|Shopkeeper|Level I Scrolls &amp; Foci
+Apprentice Scrivener of Life Magic (Level II)|39.4S, 83.0E|Shopkeeper|Level II Scrolls &amp; Foci
+Apprentice Scrivener of Creature Magic (Level I)|39.4S, 83.0E|Shopkeeper|Level I Scrolls &amp; Foci
+Apprentice Scrivener of Creature Magic (Level II)|39.4S, 83.0E|Shopkeeper|Level II Scrolls &amp; Foci
+Journeyman Scrivener of Creature Magic|39.4S, 83.0E|Shopkeeper|Level III Scrolls &amp; Foci
+Journeyman Scrivener of Item Magic|39.4S, 83.0E|Shopkeeper|Level III Scrolls &amp; Foci
+Journeyman Scrivener of Life Magic|39.4S, 83.0E|Shopkeeper|Level III Scrolls &amp; Foci
+Journeyman Scrivener of War Magic|39.4S, 83.0E|Shopkeeper|Level III Scrolls &amp; Foci
+Scrivener of Creature Magic|39.4S, 83.0E|Shopkeeper|Level IV Scrolls &amp; Foci
+Scrivener of Item Magic|39.4S, 83.0E|Shopkeeper|Level IV Scrolls &amp; Foci
+Scrivener of Life Magic|39.4S, 83.0E|Shopkeeper|Level IV Scrolls &amp; Foci
+Scrivener of War Magic|39.4S, 83.0E|Shopkeeper|Level IV Scrolls &amp; Foci
+Arcanum Broker|39.8S, 81.2E|Shopkeeper|Buys loot
+Archmage Anyao Zai|38.9S, 83.0E|Shopkeeper|Magic Supplies.
+Archmage Shikiru Nohon|38.9S, 83.2E|Shopkeeper|Magic Supplies.
+Barkeeper Chon Nuo|39.2S, 83.4E|Shopkeeper|Food, Drinks.
+Barkeeper Fo Ya-Un|39.1S, 83.4E|Shopkeeper|Rumors, Food, Drinks.
+Fenza Tan the Scribe|39.3S, 82.9E|Shopkeeper|Books, Paper, Texts.
+Goro Yu-Ban the Provisioner|39.4S, 83.6E|Shopkeeper|Basic Supplies.
+Jubei's Apprentice Craftsman|39.4S, 82.8E|Shopkeeper|Furniture, Housing Decoration.
+Kento Do the Grocer|39.4S, 83.6E|Shopkeeper|Food, Cooking Supplies.
+Kouxao Ei the Healer|38.9S, 83.4E|Shopkeeper|Healing Potions, Kits.
+Lai Konsho the Armorsmith|39.1S, 83.0E|Shopkeeper|Armor.
+Muozhen Wa the Jeweler|39.3S, 83.2E|Shopkeeper|Jewelry.
+Rayyib al-Afij the Armorer|39.3S, 83.5E|Shopkeeper|Armor.
+Tailor Chueh Jian|39.5S, 83.1E|Shopkeeper|Clothing.
+Yatenyu Zhuong the Bowyer|39.5S, 82.9E|Shopkeeper|Fletching items, Ammunition.
+Archmage (Hebian-To)|33.7S, 79.9E|Shopkeeper|Magic Supplies
+Ran Le the Librarian|39.2S, 81.6E|Shopkeeper|Books, Papers, Texts
+Akemi Fei|38.9S, 83.0E|Quest|Augmentation Gems
+Enli Yuo|39.2S, 83.4E|Quest|Augmentation Gems
+Gan Fo|38.9S, 83.0E|Quest|Augmentation Gems
+Ilin Wis|39.7S, 83.6E|Quest|Augmentation Gems
+Kirina of the Celestial Hand|39.7S, 83.6E|Quest|Celestial Hand Initiation
+Kyujo Rujen|39.3S, 83.5E|Quest|Augmentation Gems
+Li Fong|38.9S, 83.0E|Quest|Noble Weapons
+Lu Bao|39.1S, 83.4E|Quest|Augmentation Gems
+Nawamara Dia|39.3S, 83.2E|Quest|Augmentation Gems
+Rikshen Ri|39.1S 83.4E|Quest|Augmentation Gems
+Shosa Kiroji Matanui|39.0S, 83.2E|Quest|Tumerok Training Camps (Assault Weapons)
+Shujio Milao|38.9S, 83.4E|Quest|Augmentation Gems
+Tanada Sajo|38.9S, 83.0E|Quest|Tanada House of Fire Quest
+Chosen of Asheron (Hebian-To)|41.9S, 83.0E|Quest|
+Agent of the Arcanum|39.4S, 82.8E|Crafter|
+Arcanum Mana-smith|39.8S, 81.2E|Crafter|
+Arcanum Quota Officer|39.8S, 81.2E|Crafter|
+Arcanum Researcher|39.2S, 81.6E|Crafter|
+Jewel Collector|38.9S, 83.2E|Crafter|
+Jubei Minawoto|39.4S, 82.8E|Crafter|
+Obsidian Enchantress|39.0S, 81.0E|Crafter|
+Trophy Smith|39.5S, 83.1E|Crafter|
+Fanzen San the Translator|39.2S, 81.6E|Miscellaneous|Translator
+Archmage Jo Ji-Shen|52.6S, 82.1E|Shopkeeper|Spell Components, Magic Items, Mana Stones.
+Blacksmith Ton Wing|52.8S, 82.3E|Shopkeeper|Armor, Weapons
+Jo Gau the Grocer|52.5S, 82.4E|Shopkeeper|Food, Cooking Items.
+Journeyman Scrivener of Creature Magic|52.7S, 82.6E|Shopkeeper|Level III Scrolls
+Journeyman Scrivener of Item Magic|52.7S, 82.6E|Shopkeeper|Level III Scrolls
+Journeyman Scrivener of Life Magic|52.7S, 82.6E|Shopkeeper|Level III Scrolls
+Journeyman Scrivener of War Magic|52.7S, 82.6E|Shopkeeper|Level III Scrolls
+Le Ben the Healer|52.3S, 82.8E|Shopkeeper|Potions, Healing Kits.
+Nun Hong the Jeweler|52.6S, 82.1E|Shopkeeper|Jewelry, Gems.
+Scribe Lashi Oi|52.3S, 82.8E|Shopkeeper|Books, Paper.
+Tailor Yajyi San|52.6S, 82.1E|Shopkeeper|Clothing.
+Wah Chon the Barkeep|52.6S, 82.1E|Shopkeeper|Rumors, Food, Cooking Items.
+Wedding Planner|52.9S, 82.5E|Shopkeeper|Clothing, Portal Gems, Wedding Supplies
+Wuo Ha the Provisioner|52.6S, 82.0E|Shopkeeper|Basic Supplies.
+Ye Te the Bowyer|52.7S, 82.4E|Shopkeeper|Fletching Items, Ammunition.
+Archmage (Nanto)|57.4S, 80.3E|Shopkeeper|Spell Components.
+Healer (Nanto)|57.4S, 80.3E|Shopkeeper|Potions, Healing Kits.
+Hon Fo the Shopkeeper|52.4S, 85.3E|Shopkeeper|Basic Supplies.
+Merchant (Nanto)|57.4S, 80.3E|Shopkeeper|Basic Supplies.
+Yao Lun the Shopkeeper|49.1S, 81.7E|Shopkeeper|Basic Supplies.
+Apprentice Cook (Nanto)|52.5S, 82.0E|Quest|Crafter Quest
+Miyako Nujou-Wah|52.5S, 82.0E|Quest|Miyako's Moonstone Quest
+Shin Ro|52.6S, 82.1E|Quest|Nanto Starter Quests, Exploration Society Letters
+Ikomi Ra, Jojii Adherent|49.1S, 81.7E|Quest|Path of the Jojii Adherent
+Inuo KonKou|52.4S, 85.3E|Quest|Magical Lights
+Ji Ra Ping|49.1S, 81.7E|Quest|Water for Ji Ra Ping
+Tackle Master|52.6S, 80.8E|Quest|Fishing
+Agent of the Arcanum|52.9S, 82.5E|Crafter|
+Collector|52.7S, 82.4E|Crafter|
+Wa Shi|52.4S, 82.0E|Crafter|Rat Collector
+Ook|52.6S, 82.0E|Quest|Bobo's Medicine
+Han Rin-Jo, Jojii Adherent|52.4S, 82.0E|Quest|Path of the Jojii Adherent
+Farmer Ar'Oyd|53.1S, 80.7E|Quest|Don't Feed the Fowl
+Agent of the Arcanum|74.2S, 19.2E|Collector|Housing
+Almina bint Atwab the Weaponsmith|74.4S, 19.2E|Shopkeeper|Weapons
+Aun Maerirea|74.5S, 19.3E|Quest|Glacial Golem Margrave Kill Task
+Darsida al-Qawa|73.9S, 19.1E|Quest|Bestowers' Guild of Dereth
+Fazlim ibn Masay the Tailor|74.5S, 19.3E|Shopkeeper|Clothing
+Farmer (Qalaba'r)|74.2S, 21.9E|Shopkeeper|Food, Cooking Supplies
+Gharuya al-Dhul the Grocer|74.5S, 19.3E|Shopkeeper|Containers, food, cooking items
+Guard Taziq|74.3S, 19.1E|Quest|Virindi Paradox Kill Task
+Healer Windotha Sofyld|74.4S, 19.4E|Shopkeeper|Potions, healing kits
+Iquba al-Julmud the Barkeeper|74.3S, 19.1E|Shopkeeper|Rumors, food
+Journeyman Alchemist|74.3S, 19.3E|Quest|Crafter Quest
+Jumzik al-Budim the Archmage|74.4S, 19.4E|Shopkeeper|Spell components, mana stones,&lt;br&gt;magic items, alchemy items
+Kuyalal al-A'ma the Jeweler|74.3S, 19.3E|Shopkeeper|Gems, jewelry
+Leather Crafter|74.5S, 19.3E|Collector|Collector of hides
+Master Scrivener of Creature Magic|74.0S, 19.0E|Shopkeeper|Creature Magic spell scrolls &amp; foci
+Master Scrivener of Item Magic|74.0S, 19.0E|Shopkeeper|Item Magic spell scrolls &amp; foci
+Master Scrivener of Life Magic|74.0S, 19.0E|Shopkeeper|Life Magic spell scrolls &amp; foci
+Master Scrivener of Void Magic|74.0S, 18.9E|Shopkeeper|Void Magic spell scrolls &amp; foci
+Master Scrivener of War Magic|74.0S, 18.9E|Shopkeeper|War Magic spell scrolls &amp; foci
+Miya bint Atwab the Bowyer|74.4S, 19.2E|Shopkeeper|Fletching supplies, missile weapons
+Nerezi ibn Risad|73.9S, 19.1E|Shopkeeper|Bestowers' Guild of Dereth
+Nomea ibn Makar|74.3S, 19.1E|Quest|Aerbax's Prodigal Tumerok
+Qath al-Haddash|74.2S, 19.2E|Quest|Faces of the Mukkir&lt;br&gt;Mukkir Nest Quest
+Roaming Bowyer (Outskirts Qalaba'r)|74.2S, 21.9E|Shopkeeper|Fletching Supplies, Ammunition
+Stone Collector|74.3S, 19.1E|Collector|Collector of various items
+Suntar al-Tashqat the Shopkeep|74.3S, 19.3E|Shopkeeper|Armor, weapons, food, lockpicks,&lt;br&gt;containers (Red), cooking items
+Tamara bint Atwab the Armorer|74.4S, 19.2E|Shopkeeper|Armor
+Trophy Smith|74.4S, 19.2E|Collector|Collector of various items
+Uthab ibn Yafij the Scribe|74.3S, 19.3E|Shopkeeper|Parchment, books, guide books
+Agent of the Arcanum|0.6N, 50.6E|Collector|Housing
+Apprentice Cook (Lytelthorpe)|0.7N, 51.2E|Quest|Crafter Quest
+Archmage Den Ou|0.7N, 51.0E|Shopkeeper|Spell comps, portal gems,&lt;br&gt;mana stones, alchemical items
+Beltslora|1.0N, 48.3E|Quest|Beltslora's Pretty Shirt
+Cemcera the Shopkeeper|0.5N, 51.2E|Shopkeeper|Armor, weapons, containers (Teal),&lt;br&gt;cooking items
+Collector|0.5N, 51.4E|Collector|Collects various trophies
+Dafrida the Tailor|0.7N, 51.2E|Shopkeeper|Clothes
+Dame Brinna O'Shea|1.0N, 51.1E|Quest|Noir Assassination Investigation
+Ercel|1.0N, 54.3E|Quest|Ercel's Lost Book
+Frest Greelving|6.0N, 43.7E|Quest|Frest Greelving's Haunted Mansion
+Grocer Cortarn|0.5N, 51.0E|Shopkeeper|Containers, food, cooking items
+Guard Chandler Hammett|0.9N, 51.1E|Quest|Noir Assassination Investigation
+Gylfolma the Scribe|0.5N, 51.0E|Shopkeeper|Guides and rumors
+Healer Beysta|0.7N, 51.4E|Shopkeeper|Potions, healing kits
+Journeyman Scrivener of Creature Magic|0.6N, 51.5E|Shopkeeper|Scrolls, foci
+Journeyman Scrivener of Item Magic|0.6N, 51.5E|Shopkeeper|Scrolls, foci
+Journeyman Scrivener of Life Magic|0.6N, 51.5E|Shopkeeper|Scrolls, foci
+Journeyman Scrivener of War Magic|0.6N, 51.5E|Shopkeeper|Scrolls, foci
+Larry the Rabbit Master|1.9N, 41.6E|Quest|Bunny Master Title
+Lord Aleval|1.0N, 51.1E|Quest|Exploration Society Letters&lt;br&gt;Lost Distillery Quest&lt;br&gt;Lytelthorpe Starter Quests
+Riflyffa the Shopkeeper|1.0N, 54.3E|Shopkeeper|Armor, weapons, containers (Aqua)
+Sathagg the Jeweler|0.7N, 51.0E|Shopkeeper|Gems, Jewelry
+Selflora the Barkeep|0.5N, 51.4E|Shopkeeper|Directions, rumors, food
+Sitrath the Smith|0.8N, 51.5E|Shopkeeper|Guides, lockpicks, tools, weapons
+Slithe Tradittor|3.8N, 44.9E|Quest|Arcane Pedestal Quest
+Smith Baltiff|0.8N, 51.5E|Shopkeeper|Armor
+Taryla the Bowyer|0.7N, 51.2E|Shopkeeper|Missile weapons and ammunition
+Tromylda the Shopkeeper|1.0N, 48.3E|Shopkeeper|Armor, weapons, containers
+Wedding Planner|0.6N, 50.6E|Shopkeeper|Wedding food, clothing, invitations
+William Witty|0.3N, 51.8E|Quest|Crafts Rabbit carcass and pelts
+Wing Collector|0.7N, 51.4E|Collector|Collects Phyntos Wasp and Gromnie wings
+Apprentice Scrivener of Creature Magic (Level I)|13.6N, 0.7E|Shopkeeper|Level I Scrolls
+Apprentice Scrivener of Creature Magic (Level II)|13.6N, 0.7E|Shopkeeper|Level II Scrolls
+Apprentice Scrivener of Item and War Magic (Level I)|13.6N, 0.7E|Shopkeeper|Level I Scrolls
+Apprentice Scrivener of Item and War Magic (Level II)|13.6N, 0.7E|Shopkeeper|Level II Scrolls
+Apprentice Scrivener of Life Magic (Level I)|13.6N, 0.7E|Shopkeeper|Level I Scrolls
+Apprentice Scrivener of Life Magic (Level II)|13.6N, 0.7E|Shopkeeper|Level II Scrolls
+Journeyman Scrivener of Creature Magic|13.6N, 0.7E|Shopkeeper|Level III Scrolls
+Journeyman Scrivener of Item Magic|13.6N, 0.7E|Shopkeeper|Level III Scrolls
+Journeyman Scrivener of Life Magic|13.6N, 0.7E|Shopkeeper|Level III Scrolls
+Journeyman Scrivener of War Magic|13.6N, 0.7E|Shopkeeper|Level III Scrolls
+Scrivener of Creature Magic|13.6N, 0.7E|Shopkeeper|Level IV Scrolls
+Scrivener of Item Magic|13.6N, 0.7E|Shopkeeper|Level IV Scrolls
+Scrivener of Life Magic|13.6N, 0.7E|Shopkeeper|Level IV Scrolls
+Scrivener of War Magic|13.6N, 0.7E|Shopkeeper|Level IV Scrolls
+Barkeeper Ghazi al-Barbasin|13.8N 0.7E|Shopkeeper|Food, Drinks, Rumors
+Maftaltub al-Sur the Bowyer|13.9N 0.7E|Shopkeeper|Fletching Items, Missile Weapons
+Djusufa bint Huqis the Jeweler|13.7N 0.7E|Shopkeeper|Jewelry
+Muda bint Qalakh the Tailor|13.9N 0.6E|Shopkeeper|Clothing
+Zubid ibn Ifi the Grocer|13.9N 0.6E|Shopkeeper|Containers, Food, Cooking Items
+Shopkeep Yudi ibn Zayrim|13.7N 0.7E|Shopkeeper|General Supplies
+Archmage Asaina al-Arqis|13.8N 0.1E|Shopkeeper|Spell Components, Alchemical Items
+Jordan's Apprentice Craftsman|13.2N 0.3E|Shopkeeper|Furniture, Decoration
+Healer Hisuf ibn Shudir|13.8N 0.1E|Shopkeeper|Healing Potions, Services
+Qufana al-Khurti the Blacksmith|13.9N 0.7E|Shopkeeper|Armor &amp; Weapons
+Suma bint Nayn the Librarian|13.8N 0.1E|Shopkeeper|Books and Paper
+Jizal al-Nurla the Scribe|13.8N 0.1E|Shopkeeper|Books and Paper
+Coron Usgin|13.7N 0.7E|Quest|Horn of Vigilance
+Dumida bint Ruminre|13.9N 0.E|Quest|Augmentation Gems
+Husoon|13.9N 0.6E|Quest|Augmentation Gems
+Jondor Torgren|13.6N 0.7E|Quest|Investigate the Factions
+Kilaf|13.7N 0.7E|Quest|Augmentation Gems
+Meshenq|13.8N 0.6E|Quest|Tanada House of Water
+Ned the Clever|13.4N 0.9E|Quest|Nexus Crawl, Portal Space Research
+Rahina bint Zalanis|13.7N 0.7E|Quest|Augmentation Gems
+Ufet, Prophet of Blades|13.9N 0.7E|Quest|Tumerok Training Camps
+Zava bint Laurma|13.9N 0.6E|Quest|Sishalti Slithis Kill Task
+Devana bint Hamudi|12.9N 0.4E|Quest|Hamud's Pyreal Katar
+Maqudh al Nishadina|13.0N 0.6E|Quest|Silifi of Crimson Stars
+Ayesha of the Radiant Blood|12.8N 0.7E|Quest|Radiant Blood Initiation
+Darhy, Assistant to Nuhmudira|13.2N 0.8E|Quest|Ancient Olthoi Queen
+Ecorto the Lost Director|13.7N 0.1E|Quest|New Singular Repositories
+Apprentice Alchemist (Zaikhal)|13.9N 0.1E|Quest|Crafter Quest
+Arcanum Researcher|13.9N 0.1E|Quest|Bronze Statue Weapons
+Danira the Dusty|13.9N 0.1E|Quest|Lord Rytheran's Journal
+Dizah ibn Nadqab|12.2N, 2.4E|Quest|Impious Staff Quest
+Coman ibn Rashid|13.6N, 0.7E|Quest|???
+Arcanum Quota Officer|13.4N 0.5E|Crafter|Pristine Mana Shard
+Arcanum Mana-smith|13.4N 0.5E|Crafter|Pristine Mana Shard
+Stone Collector|13.9N 0.7E|Crafter|for example Golem Hearts
+Ivory Crafter|13.8N 0.7E|Crafter|
+Agent of the Arcanum|13.2N 0.3E|Crafter|
+Jordan Ibn'Ikia|13.2N 0.3E|Crafter|Furniture related
+Arcanum Broker|13.4N 0.5E|Miscellaneous|Will buy loot
+Kuyiza bint Zayi the Translator|13.8N 0.1E|Miscellaneous|Translator
+Diyas al-Yat|13.8N 0.1E|Miscellaneous|Translator of Virindi Lore and Message Shards
+Agent of the Arcanum|7.3N, 4.5E|Collector|Housing
+Al-Jalima Spice Merchant|7.6N, 4.8E|Shopkeeper|Spices
+Archmage Marnai ibn Ayyar|7.2N, 4.6E|Shopkeeper|Spellcomps, mana stones, alchemical items
+Busbawasa the Smith|7.4N, 4.6E|Shopkeeper|Armor, weapons
+Healer Hansur al-Hirwak|7.2N, 4.6E|Shopkeeper|Potions, healing kits
+Jibril ibn Rashid|7.1N, 3.0E|Quest|Shadow Armor Quest
+Janda Sulifiya|7.4N, 4.6E|Collector|Masks and Guises
+Janda's Apprentice|7.4N, 4.6E|Collector|Apprentice Mask Maker
+Lonely Archmage|7.9N 8.6E|Shopkeeper|Spell components, mana charges, alchemical items
+Lonely Merchant|13.4N 5.3E|Shopkeeper|Armor, weapons, containers, cooking items
+Lonely Weaponsmith|7.0N 12.6E|Shopkeeper|Weapons, armor
+Rah bint Khurdig the Bowyer|7.6N, 5.0E|Shopkeeper|Missle weapons and ammunition, lockpicks
+Scrivener of Creature Magic|7.5N, 4.7E|Shopkeeper|Scrolls, focii
+Scrivener of Item Magic|7.5N, 4.7E|Shopkeeper|Scrolls, focii
+Scrivener of Life Magic|7.5N, 4.7E|Shopkeeper|Scrolls, focii
+Scrivener of War Magic|7.5N, 4.7E|Shopkeeper|Scrolls, focii
+Su'nah bint Arfiz the Shopkeeper|7.6N, 4.8E|Shopkeeper|Armor, weapons, directions, containers, cooking items
+Tamar ibn Rashid|7.1N, 3.0E|Shopkeeper|Shadow armor dyes
+Tazal al-Ashfai|6.1N, 3.5E|Quest|The Mage Academy
+Trevor Shunderson|7.2N, 4.6E|Quest (Seasonal)|Undead Attack on Al-Jalima
+Archmage Tawa Matema|28.4S, 59.6E|Shopkeeper|Magic Supplies.
+Bukai Fu-ya the Bowyer|28.6S, 59.4E|Shopkeeper|Fletching Supplies, Ammunition.
+Chueh Kaigin the Jeweler|228.8S, 59.4E|Shopkeeper|Gems, Jewelry
+Grocer Pon Hau-jo|28.5S, 59.2E|Shopkeeper|Food, Cooking Supplies.
+Healer Xidan Fensen|28.7S, 59.5E|Shopkeeper|Healing Potions, Kits.
+Hiruhi Fensen the Scribe|28.7S, 59.5E|Shopkeeper|Books, Paper, Texts.
+Ite Kenzen the Barkeeper|28.8S, 59.2E|Shopkeeper|Food, Drinks, Rumors.
+Scrivener of Creature Magic|29.0S, 59.5E|Shopkeeper|Level IV Scrolls.
+Scrivener of Item Magic|29.0S, 59.5E|Shopkeeper|Level IV Scrolls.
+Scrivener of Life Magic|29.0S, 59.5E|Shopkeeper|Level IV Scrolls.
+Scrivener of War Magic|29.0S, 59.5E|Shopkeeper|Level IV Scrolls.
+Shopkeeper Yunen Ye|28.2S, 59.2E|Shopkeeper|Basic Supplies.
+Son Jaiken the Armorer|28.9S, 59.3E|Shopkeeper|Armor.
+To-ping Ra the Tailor|28.2S, 59.2E|Shopkeeper|Clothing.
+Tong La-chin the Weaponsmith|28.9S, 59.3E|Shopkeeper|Weapons.
+Archmage (Sawato)|25.6S, 57.6E|Shopkeeper|Magic Supplies
+Healer (Sawato)|34.6S, 59.7E|Shopkeeper|Healing Kits, Potions
+Peddler (Sawato)|35.1S, 60.5E|Shopkeeper|Basic Supplies
+Wandering Bowyer (Sawato)|21.7S, 52.1E|Shopkeeper|Fletching Supplies, Ammunition
+Apprentice Fletcher (Sawato)|28.6S, 59.4E|Quest|Crafter Quest
+Hasin Lin|28.9S, 59.3E|Quest|Soul Hunter Quest
+Nomendar al-Rakh|28.7S, 59.2E|Quest|Northern Shroud Cabal, Southern Shroud Cabal
+Pau Yajin|28.8S, 59.4E|Quest|Tanada Temple of Black Water
+Ro Bi-Jor, Apprentice Tailor|28.2S, 59.2E|Quest|Heart of Innocence Quest
+Sergeant Huang|28.9S, 59.3E|Quest|Sawato Extortion
+Unfriendly Barkeeper|25.3S, 56.6E|Quest|Sawato Extortion
+Grearrk, Mosswart Emissary|29.0S, 58.2E|Quest|The Homunculus
+Agent of the Arcanum|28.8S, 59.1E|Crafter|
+Jewel Collector|28.7S, 59.3E|Crafter|
+Leather Crafter|28.5S, 59.2E|Crafter|
+Trophy Smith|28.9S, 59.3E|Crafter|
+Tsua Kagemata|28.8S, 59.4E|Crafter|Mask Maker
+Tsua's Apprentice|28.8S, 59.4E|Crafter|Apprentice Mask Maker
+Wing Collector|28.7S, 59.3E|Crafter|
+Town Crier|29.3S 58.8E|Miscellaneous|
+Aaminah|60.0S, 87.8W|Quest|Oswald's Dirk Quest, Heart of Innocence
+Agent of the Arcanum|59.8S, 87.8W|Collector|Housing
+Alishia bint Aldan|60.0S 87.8W|Quest|Augmentation Gems
+Aludi al-Jaladh|60.7S, 88.0W|Quest|Drudge Aviator
+Anfram Mellow|60.0S 87.8W|Quest|Augmentation Gems
+Aun Aukherea|60.7S, 88.0W|Quest|Coral Golem Viceroy Kill Task
+Aun Javhalrea, the Game Warden|60.7S, 88.0W|Quest|Dire Champions
+Aun Khekierea|60.7S, 88.0W|Quest|Coral Golem Viceroy Kill Task
+Berkholt the Burly Barkeep|59.7S, 88.0W|Shopkeeper|Rumors, food, drink
+Carenzi Race Bookie|59.2S, 88.4W|Quest|Carenzi Race Track
+Claude the Archmage|59.2S, 88.3W|Shopkeeper|Spell components, mana stones, alchemical items
+Dionaea|59.7S, 88.0W|Quest|House Plants
+Ellimar Jorning the Healer|60.0S, 87.8W|Shopkeeper|Potions, healing kits, spell comps (potions only)
+Ennio di Cinghalle|59.6S, 87.7W|Quest|Aerbax's Prodigal Banderling&lt;br&gt;The Archivist Quest
+Erik Festus|59.8S, 87.8W|Quest|Augmentation Gems
+Gaston Shadowbound|59.7S, 88.0W|Quest|Investigate the Factions
+Grand Master Scrivener of Creature Magic|59.9S, 88.2W|Shopkeeper|Scrolls, foci
+Grand Master Scrivener of Item Magic|59.9S, 88.2W|Shopkeeper|Scrolls, foci
+Grand Master Scrivener of Life Magic|59.9S, 88.2W|Shopkeeper|Scrolls, foci
+Grand Master Scrivener of Void Magic|59.9S, 88.2W|Shopkeeper|Scrolls, foci
+Grand Master Scrivener of War Magic|59.9S, 88.2W|Shopkeeper|Scrolls, foci
+Grocer Nihara bint Umar|59.7S, 88.0W|Shopkeeper|Containers, food, cooking items
+Guard Bey|59.8S, 88.2W|Quest|Moarsmen on the Shores
+Guard Q'alia|60.0S, 88.0W|Quest|Virindi Quidiox Kill Task
+Guard Winterborn|59.7S, 87.8W|Quest|Aerbax's Prodigal Banderling
+Harkwull the Discreet|59.7S, 88.0W|Quest|Whispering Blade Chapterhouse Access
+Havala bint Mylos|60.1S, 87.9W|Quest|Composite Weapons Quest
+Hoshar ibn Jalaq|59.6S, 88.0W|Quest|Splitting Grael (High), Mukkir Aspect of Grael
+Ivory Crafter|60.0S, 88.1W|Collector|Collector of various ivory trophies
+Jeweler Daryam ibn Zubed|59.8S, 88.1W|Shopkeeper|Gems, jewelry, lockpicks
+Joku Shunja|60.1S, 88.0W|Quest|Investigate the Factions
+Laedron the Geomancer|59.9S, 88.0W|Quest|Tainted Ley Line Nodes
+Leather Crafter|60.1S, 88.0W|Collector|Collector of various hides
+Leopold|59.2S, 88.3W|Quest|Delving into Claude's Mind&lt;br&gt;Masks
+Lamorda Loschi|59.6S, 88.0W|Quest|Splitting Grael (Low)
+Lydda|59.7S, 88.0W|Quest|Loyalty Reset Quest
+Mekhmet|59.7S, 88.2W|Quest|Shade Iron
+Merwart Mundagurg|59.7S, 88.2W|Quest|Tentacles of T'thuun
+Qurakh al-Taal|59.9S, 87.9W|Quest|Investigate the Factions
+Rohula bint Ludun|59.8S, 87.8W|Quest|Augmentation Gems
+Sang Nen-Kai the Weaponsmith|60.1S, 88.0W|Shopkeeper|Weapons
+Scribe Muhiza bint Murqidh|60.0S, 87.8W|Shopkeeper|Guides
+Shuthoth|60.1S, 87.7W|Quest|Gateway to the Deep
+Soju Bo-Ki|59.6S, 88.0W|Quest|Splitting Grael (Mid)
+Sung Wenxio the Armorer|60.1S, 88.0W|Shopkeeper|Armor
+Tanami Kei|59.7S, 88.0W|Quest|Ishaq's Lost Key Quest
+Thiuda the Sharp-Eyed Bowyer|60.1S, 87.9W|Shopkeeper|Missle weapons, fletching supplies
+Town Crier|59.9S, 87.8W|Misc|Provides rumors
+Ulgrim the Unpleasant|59.7S, 88.0W|Quest|Rumors, Ulgrim's Recall&lt;br&gt;Ulgrim's Drinking Contest
+Vierana du Canamorra|60.0S, 87.8W|Quest|Investigate the Factions
+Watcher of the Dead|60.1S, 88.1W|Quest|Clutch of Kings
+Yuan Hanzu|60.1S, 87.9W|Quest|Composite Weapons Quest&lt;br&gt;Composite Weapons Upgrade
+Agent of the Arcanum|54.3S, 73.3E|Crafter|
+Archmage Ta Ban-Yu|54.4S, 73.5E|Shopkeeper|Magic Supplies
+Bu-Chi Long the Armorer|54.6S, 73.2E|Shopkeeper|Armor
+Do Za-I the Weaponsmith|54.6S, 73.2E|Quest|Ries Woron and the Thugs
+Farmer (Lin)|55.6S, 74.1E|Shopkeeper|Food, Cooking Supplies, Containers
+Healer Kai Kou|54.2S, 74.0E|Shopkeeper|Healing Potions, Kits
+Lo Ma the Jeweler|54.4S, 73.1E|Shopkeeper|Gems, Jewelry
+Ri-Gau Ro the Bowyer|54.6S, 72.9E|Shopkeeper|Fletching Supplies, Ammunition
+Scrivener of Creature Magic|54.1S, 74.0E|Shopkeeper|Level IV Scrolls
+Scrivener of Item Magic|54.1S, 74.0E|Shopkeeper|Level IV Scrolls
+Scrivener of Life Magic|54.1S, 74.0E|Shopkeeper|Level IV Scrolls
+Scrivener of War Magic|54.1S, 74.0E|Shopkeeper|Level IV Scrolls
+Tekai Shou the Scribe|54.4S, 73.1E|Shopkeeper|Books, Paper
+Tian Li Quan|54.4S, 73.1E|Quest|Spear of the Given Heart Quest
+To Za-I the Weaponsmith|54.6S, 73.2E|Shopkeeper|Weapons
+Vuo Nin the Barkeep|54.5S, 72.7E|Shopkeeper|Food, Rumors, Cooking Supplies
+Collector|54.4S, 72.9E|Crafter|
+Wing Collector|54.4S, 72.9E|Crafter|
+Apprentice Alchemist (Lin)|54.4S, 73.5E|Quest|Crafter Quest
+Balthazar, Royal Guardian|54.8S, 74.4E|Quest|The Callous Heart, Ruined Amulets, Nuhmudira's Boon Quest
+Jaizen Tan|53.9S, 74.4E|Quest|Bestowers' Guild of Dereth
+Naba Ko-Zin|53.9S, 74.4E|Quest|Bestowers' Guild of Dereth
+Shoichi|54.4S, 72.9E|Quest|Tusker Guard Kill Task
+Agent of the Arcanum|48.0S, 24.5E|Collector|Housing
+Apprentice Fletcher|47.1S, 24.7E|Quest|Crafter Quest
+Armorer Hinfiya bint Ju|47.4S, 25.0E|Shopkeeper|Armor
+Barkeep Mausin ibn Hi|47.6S, 24.6E|Shopkeeper|Rumors, guides, food
+Bowyer Safruya bint Bilak|47.1S, 24.7E|Shopkeeper|Missile weapons and ammunition
+Grocer Sina bint Idnun|47.8S, 24.6E|Shopkeeper|Food, containers
+Jeweler Hawtala bint Arsha|47.5S, 24.6E|Shopkeeper|Gems, jewelry
+Najmima the Archmage|47.2S, 24.9E|Shopkeeper|Spell comps, mana stones,&lt;br&gt;alchemical items
+Najsuf al-Afan the Shopkeeper|47.5S, 24.6E|Shopkeeper|Armor, weapons, containers,&lt;br&gt;cooking items
+Scribe Tashwi ibn Sayat|47.5S, 24.6E|Shopkeeper|Rumors, guides
+Scrivener of Creature Magic|47.1S, 24.6E|Shopkeeper|Scrolls, focii
+Scrivener of Item Magic|47.1S, 24.6E|Shopkeeper|Scrolls, focii
+Scrivener of Life Magic|47.1S, 24.6E|Shopkeeper|Scrolls, focii
+Scrivener of War Magic|47.1S, 24.6E|Shopkeeper|Scrolls, focii
+Tailor Zayjah|48.0S, 24.6E|Shopkeeper|Clothing
+Tumina the Healer|4.7S, 24.6E|Shopkeeper|Potions, healing kits
+Weaponsmith Mura bint Mu'ja|47.4S, 25.0E|Shopkeeper|Weapons
+Aino Lunnan-Shin|41.7S, 16.1E|Quest|Gem of Impulse Quest
+Alaine the Apprentice|41.8S, 15.8E|Quest|Isparian Weapons Quest
+Atamarr|41.7S, 15.8E|Quest|Atamarr Tasks, Gear Knight Construction
+Bhab, Arcanum Tinkerer|41.6S, 15.8E|Quest|Bronze Statues Quest, Nuhmudira's Boon Quest
+Ciandra, Arcanum Alchemist|41.8S, 15.8E|Quest|Harbinger, Repaired Shadow Stone, Shadowfire Stone Quest, Prismatic Shadow Armor Quest, Isparian Weapons Quest
+Hiro, Arcanum Artificer|41.6S, 15.8E|Quest|The Moars, Nuhmudira's Boon Quest
+Janier al-Evv|41.8S, 15.8E|Shopkeeper|Alchemical Throwing Phials
+Kaytin|41.7S, 15.8E|Quest|Gear Knight Construction
+Merkitz ibn'Akadh|41.7S, 15.8E|Arcanum Portalmancer|Direlands Gear Knight Resistance Camp
+Nurino|41.6S, 15.8E|Quest|Gear Knight Parts
+Scrivener of Creature Magic|41.9S, 15.9E|Shopkeeper|Scrolls, foci
+Scrivener of Item Magic|41.9S, 15.9E|Shopkeeper|Scrolls, foci
+Scrivener of Life Magic|41.9S, 15.9E|Shopkeeper|Scrolls, foci
+Scrivener of War Magic|41.9S, 15.9E|Shopkeeper|Scrolls, foci
+Talar the Apprentice|41.8S, 15.8E|Quest|Aerbax's Prodigal Harbinger, Prismatic Shadow Armor Quest
+Town Crier|41.9S, 16.2E|Rumors|Provides rumors for free and for pyreal
+Archmage Zarri ibn Khaybi|41.9S, 16.2E|Shopkeeper|Magical supplies
+Barkeep Anarn|41.9S, 16.2E|Shopkeeper|Food and drink
+Farmer Khurah al-Rujarkir|41.9S, 16.2E|Shopkeeper|Basic supplies
+Fazyad ibn Raymar|41.9S, 16.2E|Collector|Collects rat tails
+Jeweler Jurraf al-Djiqidh|41.9S, 16.2E|Shopkeeper|Gems, jewelry and tools
+Bowyer Hanra ibn Zarib|41.9S, 16.2E|Shopkeeper|Archer supplies
+Sifida bint Naril the Scribe|41.9S, 16.2E|Shopkeeper|Books and parchment
+Smith Ashaira bint Maisa|41.9S, 16.2E|Shopkeeper|Armor and weapons
+Town Crier|41.9S, 16.2E|Herald|Provides rumors for free and for pyreal
+Agonno Filleteppe the Tailor|81.3N, 70.1W|Shopkeeper|Clothing.
+Aidanan Ignarias the Blacksmith|87.1N 70.5W|Shopkeeper|Armor, Weapons.
+Aldonti di Soludatis the Jeweler|87.1N 70.7W|Shopkeeper|Gems, Jewelry.
+Archmage Pazzescorios di Frodenci|87.4N 70.5W|Shopkeeper|Spell Components, Robes, Magic Items.
+Barkeeper Mallia Quios|87.3N 70.3W|Shopkeeper|Rumors, Food.
+Benedetta du Lucrezza the Healer|87.4N 70.5W|Shopkeeper|Potions, Healing Kits.
+Bowyer Cecili Blocconda|87.0N 70.6W|Shopkeeper|Fletching Items, Ammunition.
+Calvinne Sporgenzenni the Shopkeeper|87.3N 70.3W|Shopkeeper|Basic Supplies.
+Scribe Copiara Parolinnis|87.4N 70.5W|Shopkeeper|Books, Paper.
+Carlito Gallo|87.4N 70.5W|Quest|Augmentation Gems
+Chef Martam|87.4N 70.5W|Quest|Cave Penguin Eggs.
+Donatello Linante|87.4N 70.5W|Quest|Augmentation Gems
+Enzo Ilario|87.4N, 70.5W|Quest|Arctic Mattekar Kill Task
+Grand Mother|87.4N 70.5W|Quest|Eleonora's Heart, Knights of Karlun, Marauder's Lair
+Hashina|87.3N 70.5W|Quest|Head of Baron Entemarre.
+Huntsman of Silyun|86.9N 70.0W|Quest|Chasing Oswald
+Lucari di Bellenesse|87.4N 70.5W|Quest|Sword of Bellenesse
+Mancanza the Wanderer|87.0N 70.4W|Quest|The Hunt for Muldaveus
+Raphel Detante|87.4N 70.5W|Quest|Augmentation Gems
+Rickard Dumalia|87.4N 70.6W|Quest|Augmentation Gems
+Royal Scout (T'Thuun's Marauders){{!}}Royal Scout|87.4N, 70.9W|Quest|T'Thuun's Marauders
+Scorus|87.5N, 70.3W|Quest|Fiun Healing Machine Quest
+Lila Fiori|86.8N 70.3W|Crafter|Snow Lily
+Fratellodunon Ribellarista|87.4N 70.9W|Miscellaneous|
+Fratellone Ribellarista|87.4N 70.9W|Miscellaneous|
+Marlan Nessunello|87.1N 70.7W|Miscellaneous|
+Mendica Scarsolo|87.3N 70.3W|Miscellaneous|
+Raimonestes Risolu|87.3N 70.5W|Miscellaneous|
+Sacci Mijob|87.3N 70.5W|Miscellaneous|
+Archmage Yuzai Zhen|61.4S, 82.5E|Shopkeeper|Magic Supplies, Containers (Black)
+Fen Hau-Lai the Armorer|61.8S, 82.2E|Shopkeeper|Armor.
+Grocer Riku Ryu|61.8S, 81.8E|Shopkeeper|Food, Cooking Supplies.
+Healer Tonsho Ha|61.9S, 81.9E|Shopkeeper|Healing potions, Healing Kits.
+Jeweler Liman Pon|61.3S, 82.1E|Shopkeeper|Gems, Jewelry.
+Shui Tentou the Bowyer|61.8S, 82.0E|Shopkeeper|Fletching Supplies, Ammunition.
+Scrivener of Creature Magic|61.9S, 82.2E|Shopkeeper|Level IV Scrolls
+Scrivener of Item Magic|61.9S, 82.2E|Shopkeeper|Level IV Scrolls
+Scrivener of Life Magic|61.9S, 82.2E|Shopkeeper|Level IV Scrolls
+Scrivener of War Magic|61.9S, 82.2E|Shopkeeper|Level IV Scrolls
+Tailor Ka Shen-Ku|61.8S, 81.8E|Shopkeeper|Clothing.
+Te Ketnan the Barkeep|61.4S, 81.9E|Shopkeeper|Rumors, Food, Drinks.
+Xi Hau-Lai the Weaponsmith|61.8S, 82.2E|Shopkeeper|Weapons.
+Master Shoyanen Kenchu the Archmage|63.5S 85.9E|Shopkeeper|Magic supplies
+Archmage (Xinh)|82.1S, 63.7E|Shopkeeper|Magic supplies
+Peddler (Xinh)|82.1S, 63.7E|Shopkeeper|Basic supplies
+Master Liao Oazaka|61.8S, 82.4E|Quest|Nanjou Shou-jen Armor
+Honshu Takeda|77.7S, 59.2E|Quest|Path of the Jojii Adherent
+Agent of the Arcanum|61.2S, 81.7E|Crafter|
+Wing Collector|61.7S, 82.2E|Crafter|
+Town Crier|61.9S, 82.4E|Miscellaneous|
+Apprentice Cook (Mayoi)|61.8S, 81.8E|Quest|Crafter Quest
+Captain Warner|61.4S 82.5E|Quest|Ritual of the Blight
+Guard Taizo|61.4S 82.5E|Quest|Moarsmen on the Shores
+Nawamara Ujio|61.8S 82.0E|Quest|Augmentation Gems
+Sara Sen|61.5S, 82.4E|Quest|House Plants
+Tai Wo|61.8S, 82.4E|Quest|Thorsten Cragstone's Armor &amp; Axe
+Archmage Philomon|69.6N 17.6E|Shopkeeper|Spell Components, Magic Items, Mana Stones etc.
+Brother Jarviso|69.6N 17.6E|Shopkeeper|Books, Paper, Healing Kits, Potions
+Gormling the Sneaky Seneschal|69.6N 17.6E|Quest|Feud of Neydisa and Bandit Castle
+Ivory Crafter|69.9N, 16.6E|Crafter|
+Journeyman Cook (Neydisa Castle)|69.6N 17.6E|Quest|Crafter Quest
+Lady Tallial|69.6N 17.6E|Quest|Feud of Neydisa and Bandit Castle
+Lisatha the Bowyer|69.6N 17.6E|Shopkeeper|Fletching Supplies, Missile Weapons
+Nelvaine the Brewer|69.6N 17.6E|Shopkeeper|Rumors, Beers, Beer Stein
+Viamasa the Weaponsmith|69.6N 17.6E|Shopkeeper|Keys, Tools, Weapons
+Yi Yo-Jin|69.6N 17.6E|Crafter|Leather Crafter (Mattekar Hide)
+Amelia|64.8S 43.8W|Quest NPC|Talk to her to start the quest
+Apep-tek the Tolerant|65.3S, 44.0W|Collector|Gives 15 Million xp for 10 Pyre Shrouds (must be level 100+)
+Candrus Steady-Hand|65.8S, 45.3W|Quest NPC|Investigate the Factions
+Jawaq ibn Janath|64.2S, 44.0W|Quest NPC|Investigate the Factions
+Kousu Temo|65.3S, 42.3W|Quest NPC|Investigate the Factions
+Lo Shoen|65.3S, 43.4W|Quest NPC|Grave Rat Kill Task and DeathTail Quest
+Hurnmel the Smith|65.4S 44.0W|Shopkeeper|Sells a variety of items in exchange for Ancient Mhoire Coins
+Jester (NPC)|64.6S 43.8W|Quest NPC|K'nath Core Quest
+Jester (NPC)|65.8S 43.8W|Quest NPC|Jester's Lost Marbles
+Shade of Parieth|65.6S 43.9W|Collector|6 Million xp per 10 Exhumed Bones
+Sharia Blackmist|65.3S 43.3W|Quest NPC|Ghost Hunter Quest
+Skettek the Wanderer|65.3S, 43.4W|Shopkeeper|Vendor with regular supplies (spell comps, fletching supplies, alchemy supplies, etc.)
+Aderma the Lapidary|17.9N, 63.3E|Shopkeeper|Jewelery
+Cynsela the Tailor|17.5N, 63.5E|Shopkeeper|Clothing
+Grocer Parsal|17.5N, 63.5E|Shopkeeper|Cooking Items
+Degel Parson the Scrivener|17.5N, 63.5E|Shopkeeper|Books and Rumors
+Bowyer Bronwin|17.3N, 63.2E|Shopkeeper|Bowyer
+Farnum the Provisioner|17.8N, 63.5E|Shopkeeper|Basic Supplies
+Belbeca the Archmage|17.3N, 63.4E|Shopkeeper|Magical Supplies
+Sodyla Thurmad the Healer|17.3N, 63.4E|Shopkeeper|Healing Supplies
+Rundiscar the Weaponsmith|17.4N, 63.5E|Shopkeeper|Weapons
+Getram the Armorer|17.4N, 63.5E|Shopkeeper|Armor
+Weary-looking Man (Eastham)|17.5N 63.4E|Shopkeeper|Dryreach Rumor &amp; Key
+Byrdara the Barkeeper|17.7N 63.2E|Shopkeeper|Various food items and rumor
+Scrivener of Item Magic|17.6N 63.1E|Shopkeeper|Level IV Scrolls
+Scrivener of Creature Magic|17.6N 63.1E|Shopkeeper|Level IV Scrolls
+Scrivener of Life Magic|17.6N 63.1E|Shopkeeper|Level IV Scrolls
+Scrivener of War Magic|17.6N 63.1E|Shopkeeper|Level IV Scrolls
+Merchant (Eastham)|26.3N, 63.9E|Shopkeeper|Basic Supplies
+Ivory Crafter|17.3N, 63.2E|Crafter|
+Wing Collector|17.7N 63.2E|Crafter|
+Alexander the Deft|17.4N, 63.5E|Crafter|Mask Maker
+Alexander's Apprentice|17.4N, 63.5E|Crafter|Mask Maker
+Agent of the Arcanum|17.4N, 62.9E|Crafter|Housing Writs
+Apprentice Fletcher (Eastham)|17.0N, 63.3E|Quest|Crafter Quest
+Asheron's Investigator|17.6N, 63.5E|Quest|T'Thuun's Marauders
+Aun Tiulerea|16.5N, 63.6E|Quest|Copper Golem Kingpin Kill Task
+Caranis the Dependable|17.3N, 63.2E|Quest|Bestowers' Guild of Dereth
+Hei Shou|17.5N, 63.5E|Quest|Unleash the Gearknights
+Eluard the Namer|17.3N, 63.2E|Quest|Bestowers' Guild of Dereth
+Alean the Steel Forger|18.5N, 62.8E|Quest|Shadow Armor Quest
+Emissary of Asheron (Eastham)|17.9N, 64.3E|Quest|
+Maere the Dyepot Peddlar|18.5N, 62.8E|Shopkeeper|Shadow Armor Quest, Dyes
+Olivier Rognath|17.5N, 63.3E|Quest|Mace of the Explorer Quest
+Samuel, Former Guardian|17.7N 63.1E|Quest|Black Marrow Tea
+Avorgild the Shopkeeper|44.3N 43.4W|Shopkeeper|Basic Supplies, Rumors.
+Brenica the Jeweler|44.1N 43.5W|Shopkeeper|Jewelry.
+Plateau Spice Merchant|44.3N 43.4W|Shopkeeper|Spices.
+Scribe Finaver|44.4N 43.4W|Shopkeeper|Books and Paper.
+Master Scrivener of Creature Magic|44.2N 43.5W|Shopkeeper|Level V Scrolls.
+Master Scrivener of Item Magic|44.2N 43.5W|Shopkeeper|Level V Scrolls.
+Master Scrivener of Life Magic|44.2N 43.5W|Shopkeeper|Level V Scrolls.
+Master Scrivener of War Magic|44.2N 43.5W|Shopkeeper|Level V Scrolls.
+Ka Ku-To the Tailor|40.6N, 41.6W|Shopkeeper|Armor, Clothing Inner Dungeon Key.
+Journeyman Fletcher (Plateau)|44.0N 43.5W|Quest|Crafter Quest
+Jun Sawashima|44.1N 43.4W|Quest|Defense of Zaikhal
+Lieutenant Allandal|42.9N, 42.4W|Quest|Plateau Village Transit, The Dark Spiral Quest
+Mairisa bint Fuda|44.1N 43.5W|Quest|Frore
+Agent of the Arcanum|44.2N 43.2W|Crafter|
+Leather Crafter|44.0N 43.5W|Crafter|
+Trophy Smith|44.3N 43.4W|Crafter|
+Grand Sentinel Tretia|45.7N 43.3W|Miscellaneous|Wedding Trials
+Agent of the Arcanum|8.1S, 73.1E|Collector|Housing
+Archmage Bendrew Efrith|8.2S, 73.0E|Shopkeeper|Magical Supplies
+Barkeep Mordmor|8.1S, 73.1E|Shopkeeper|Food, Cooking Items, Rumors
+Binthura the Beggar|8.0S, 73.1E|Quest|Gold Hill Ruins Quest
+Dinsmal the Beggar|8.2S, 73.2E|Quest|Gold Hill Ruins Quest
+Esteca the Bowyer|8.0S, 73.0E|Shopkeeper|Fletching Supplies, Ammunition
+Farmer (Dryreach)|1.4S, 71.9E|Shopkeeper|Food, Cooking Items
+Gorak|7.9S, 73.2E|Quest|Captain K'rank's Errands
+Helford Beldryn the Grocer|7.9S, 73.1E|Shopkeeper|Food, Cooking Items
+Journeyman Alchemist (Dryreach)|8.1S, 73.1E|Quest|Crafter Quest
+Landeth Colson the Jeweler|8.2S, 73.0E|Shopkeeper|Jewelry
+Lieutenant Rothe|8.2S, 73.1E|Quest|Overlord's Sword Quest, Tumerok Gladiator Kill Task
+Ludora the Healer|8.0S, 73.2E|Shopkeeper|Healing Kits &amp; Potions
+Old Wylfed the Scribe|7.9S, 73.1E|Shopkeeper|Books, Paper
+Orcud the Beggar|7.9S, 73.0E|Quest|Gold Hill Ruins Quest
+Rindelle the Shopkeeper|8.2S, 73.0E|Shopkeeper|Basic Supplies
+Royal Guard Tabbeth|7.9S, 73.1E|Quest|The Temple of Kivik Lir
+Sorden Edelson the Smithy|8.0S, 73.0E|Shopkeeper|Armor, Weapons
+Tilutha Beldryn the Tailor|7.9S, 73.1E|Shopkeeper|Clothing
+Town Crier|8.1S, 73.1E||Rumors
+Tumerok Collector|8.1S, 73.1E|Collector|Gold Tumerok Insignia
+Yu Vuo-Ki|8.5S, 73.3E|Quest|Dansha-Ki's Rescue
+Bowyer Jyi Zhente|49.7S, 62.4E|Shopkeeper|Fletching Items, Ammunition.
+Denki Sokuto the Scribe|49.5S, 62.5E|Shopkeeper|Books, Papers.
+Healer Fan Lun-Kou|49.6S, 62.6E|Shopkeeper|Healing Kits, Potions.
+Kiun Baicho the Barkeeper|49.5S, 62.7E|Shopkeeper|Food, Cooking Items, Rumors.
+Lobu Shui the Armorer|49.2S, 62.4E|Shopkeeper|Armor.
+Magus Ku Min|50.0S, 62.5E|Shopkeeper|Magic Supplies.
+Muoyen Han the Grocer|49.3S, 62.5E|Shopkeeper|Food, Cooking Supplies.
+Nuru Misho the Jeweler|49.6S, 62.3E|Shopkeeper|Gems, Jewelry.
+Scrivener of Creature Magic|49.2S, 62.7E|Shopkeeper|Level IV Scrolls &amp; Foci.
+Scrivener of Item Magic|49.2S, 62.7E|Shopkeeper|Level IV Scrolls &amp; Foci.
+Scrivener of Life Magic|49.2S, 62.7E|Shopkeeper|Level IV Scrolls &amp; Foci.
+Scrivener of War Magic|49.2S, 62.7E|Shopkeeper|Level IV Scrolls &amp; Foci.
+Shen Ai-Shen the Weaponsmith|49.2S, 62.4E|Shopkeeper|Weapons.
+Shopkeeper Ginan Wah|49.4S, 62.6E|Shopkeeper|Basic Supplies, Containers (White)
+Spice Merchant Chiani|49.3S, 62.5E|Shopkeeper|Cooking Supplies.
+Tailor Zhoyong Wa-son|49.4S, 62.4E|Shopkeeper|Clothing.
+Archmage (Mage Pass)|52.1S, 51.0E|Shopkeeper|Magic Supplies
+Blacksmith (Baishi Fort)|48.6S, 60.0E|Shopkeeper|Armor, weapons.
+Merchant (Baishi Fort)|48.6S, 60.0E|Shopkeeper|Armor, weapons, clothing.
+Carolyn Woron|49.5S, 62.7E|Quest|Ries Woron's Story
+Fergal the Dire|49.4S, 62.4E|Quest|Dire Mattekar Kill Task
+Fiona Woron|49.5S, 62.7E|Quest|Rescue Fiona Woron
+Isparian Combat Arena Master|49.5S, 62.6E|Quest|Isparian Combat Arena
+Lia Tze|49.4S, 62.4E|Quest|Thorsten Cragstone's Armor &amp; Axe
+Ries Woron|49.5S, 62.7E|Quest|Ries Woron and the Thugs
+Drunken Madman|53.0S 61.0E|Miscellaneous|Casting Stein, Weeping Weapons, Ulgrim's Drinking Contest
+Agent of the Arcanum|49.7S, 62.6E|Crafter|
+Jewel Collector|49.5S, 62.7E|Crafter|
+Leather Crafter|49.4S, 62.4E|Crafter|
+Wing Collector|49.5S, 62.4E|Crafter|
+Armorer Padira Yukinara|74.6S 84.7E|Shopkeeper|Armor
+Barkeep Brita the Boisterous|74.3S 84.3E|Shopkeeper|Food, Drinks, Rumors
+Healer Sanami Siohiro|74.5S 85.0E|Shopkeeper|Potions, Healing Kits
+Jeweler Imad Nedjim|74.3S 84.7E|Shopkeeper|Gems, Jewelry
+Kamira Mohonoko the Provisioner|74.3S 84.3E|Shopkeeper|Basic Supplies
+Natalie the Scribe|74.5S 85.0E|Shopkeeper|Books, Paper
+Sharon the Skilled, Bowyer|74.4S 84.5E|Shopkeeper|Fletching Supplies, Ammunition
+Vanten the Archmage|74.4S 84.1E|Shopkeeper|Spell Components, Alchemical Items, Magic Items
+Weaponsmith Illic Ibn'Abulfiq|74.6S 84.7E|Shopkeeper|Weapons
+Corporal Massein|74.3S 84.6E|Quest|Mosswart Townsfolk Kill Task
+Guard Hrothgar|74.3S 84.6E|Quest|Missing Persons Investigation (Retired)
+Sergeant Brigitta|74.3S 84.6E|Quest|Aerbax's Prodigal Mosswart
+Agent of the Arcanum|74.8S 84.0E|Crafter|
+Ivory Crafter|74.7S 84.7E|Crafter|
+Leather Crafter|74.3S 84.6E|Crafter|
+Aluvian Spearman|74.3S 84.6E|Miscellaneous|patrolling the beach
+Gharu'ndim War Mage|74.3S 84.6E|Miscellaneous|patrolling the beach
+Gharu'ndim Warrior|74.3S 84.6E|Miscellaneous|patrolling the beach
+Sho Swordsman|74.3S 84.6E|Miscellaneous|patrolling the beach
+Town Crier|74.1S 84.1E|Miscellaneous|Rumors
+Zenzaburou Hensu|74.6S 84.5E|Miscellaneous|Town Founder
+Archmage Dou Ran|61.8S 51.3W|Shopkeeper|Spell Components, Magic Items, Mana Stones, etc.
+Bowyer Xana Bin-Xara|61.8S 51.3W|Shopkeeper|Fletching Supplies.
+Grand Master Scrivener of Creature Magic|62.4S, 51.2W|Shopkeeper|Level VI Spells
+Grand Master Scrivener of Item Magic|62.4S, 51.2W|Shopkeeper|Level VI Spells
+Grand Master Scrivener of Life Magic|62.4S, 51.2W|Shopkeeper|Level VI Spells
+Grand Master Scrivener of War Magic|62.4S, 51.2W|Shopkeeper|Level VI Spells
+Goku Bai-Akane the Barkeep|61.8S 51.3W|Shopkeeper|Rumors, Food, Cooking Supplies
+Kan Chi Gai the Healer|61.9S, 51.5W|Shopkeeper|Healing Kits, Potions
+Nakoro Eshii-Shinjo the Provisioner|61.8S 51.3W|Shopkeeper|Basic Supplies
+Pang Sin-Xiang the Weaponsmith|61.9S, 51.5W|Shopkeeper|Weapons
+Ximi Nu the Blacksmith|61.9S, 51.5W|Shopkeeper|Armor
+Aun Teverea|62.3S, 51.4W|Quest|Town Founder
+Caelis Renning|62.3S, 51.4W|Quest|Town Founder
+Guard Li|61.8S, 51.3W|Quest|Shadow-touched Virindi Paradox Kill Task
+Kreavon|62.3S, 51.4W|Quest|Town Founder
+Lacarra Avanthi|61.8S 51.3W|Quest|Disturbance in the Ley Lines
+Nona|61.8S 51.3W|Quest|K'nath An'dras Kill Task
+Riordin Nightbane|61.9S, 51.5W|Quest|Aegis of the Golden Flame
+Sarkin Killcrane|61.9S, 51.5W|Quest|Sepulcher of Nightmares,Targor's Awakening,The Temple of Xik Minru,Shadowfire Stone Quest
+Xanda Har|61.8S 51.3W|Quest|Bandits of the Creepy Chambers
+Zho Heishan|61.9S, 51.4W|Quest|Disturbance in the Ley Lines
+Agent of the Arcanum|61.8S 51.3W|Crafter|
+Black Hill Collector|62.1S, 50.4W|Crafter|
+Black Hill Trophy Smith|62.1S, 50.4W|Crafter|
+Adara al-Rajin|31.0S, 13.7E|Quest|Realaidain Raiment
+Agent of the Arcanum|31.6S, 13.5E|Collector|Housing
+Apprentice Cook (Al-Arqas)|31.1S, 13.9E|Quest|Crafter Quest
+Archmage (Al-Arqas)|34.3S, 14.4E|Shopkeeper|Magic Supplies
+Archmage Jiz ibn Ijfai|31.0S, 14.0E|Shopkeeper|Portal gems, spell components, mana stones
+Bashkiya the Scribe|31.0S, 14.0E|Shopkeeper|Guide books, rumors, directions
+Collector|31.0S, 13.7E|Collector|Collector of various trophies
+Gerloc the Defender|31.3S, 13.5E|Quest|Fenmalain Vestibule Quest, Caulnalain Vestibule Quest, Shendolain Vestibule Quest
+Gersan the Sureshot|31.3S, 13.5E|Quest|Fenmalain Vestibule Quest, Caulnalain Vestibule Quest, Shendolain Vestibule Quest
+Gervena the Oblique|31.3S, 13.5E|Quest|Fenmalain Vestibule Quest, Caulnalain Vestibule Quest, Shendolain Vestibule Quest
+Healer Sunwi|31.3S, 13.8E|Shopkeeper|Potions, healing kits
+Hinnabqiq the Jeweler|31.3S, 13.4E|Shopkeeper|Gems, jewelry, guides, lockpicks, tools
+Itir ibn Ativ the Barkeep|31.1S, 14.1E|Shopkeeper|Food, drink, directions
+Jalina al-Hajj|31.1S, 13.9E|Quest|Homecoming Pennant
+Jilsaya bint Dah|31.3S, 13.5E|Quest|Exploration Society Letters&lt;br&gt;Al-Arqas Starter Quests
+Journeyman Scrivener of War Magic|31.5S, 13.7E|Shopkeeper|Scrolls, foci
+Journeyman Scrivener of Item Magic|31.5S, 13.7E|Shopkeeper|Scrolls, foci
+Journeyman Scrivener of Creature Magic|31.5S, 13.7E|Shopkeeper|Scrolls, foci
+Journeyman Scrivener of Life Magic|31.5S, 13.7E|Shopkeeper|Scrolls, foci
+Muta al-Mai the Bowyer|31.0S, 13.7E|Shopkeeper|Missile weapons and ammunition
+Nurbaha bint Dah|31.3S 10.8E|Quest|Rusted Knife Quest
+Sarqah bint Ak|28.1S 13.6E|Quest|Drudge Charm Quest
+Shopkeep Qufar ibn Ijtalwa|31.1S, 14.1E|Shopkeeper|Armor, weapons, containers, cooking items
+Shopkeeper Tirua|31.3S, 10.8E|Shopkeeper|Armor, weapons, containers
+Shopkeeper Yasiya|28.2S, 13.8E|Shopkeeper|Armor, weapons, containers
+Sidzika the Grocer|31.0S, 14.0E|Shopkeeper|Food, cooking items
+Smith Dah bint Nas|31.0S, 13.7E|Shopkeeper|Armor, weapons
+Tailor Najsun|31.0S, 14.0E|Shopkeeper|Clothes
+Wedding Planner|31.6S, 13.5E|Shopkeeper|Wedding Trials
+Agent of the Arcanum|3.1S, 19.2E|Quest|Housing
+Apprentice Fletcher (Samsur)|2.9S, 19.6E|Quest|Crafter Quest
+Armorer Talam ibn Tarish|2.9S, 19.5E|Shopkeeper|Armor, shields
+Ashqa the Shopkeeper|3.1S, 22.1E|Shopkeeper|Armor, containers (Black), cooking items, weapons
+Aun Akuarea|2.6S, 19.9E|Quest|Mud Golem Sludge Lord Kill Task
+Collector|2.8S, 19.6E|Collector|Collector of various trophies
+Da'hir ibn Khayzur the Archmage|2.9S, 19.3E|Shopkeeper|Spell components, portal gems, mana charges
+Healer Burah bint Fathlan|2.8S, 19.5E|Shopkeeper|Potions, healing kits
+Jeweler Fathlan ibn Nuril|2.8S, 19.5E|Shopkeeper|Gems, jewelry
+Journeyman Scrivener of Creature Magic|3.0S, 19.4E|Shopkeeper|Scrolls, foci
+Journeyman Scrivener of Item Magic|3.0S, 19.4E|Shopkeeper|Scrolls, foci
+Journeyman Scrivener of Life Magic|3.0S, 19.4E|Shopkeeper|Scrolls, foci
+Journeyman Scrivener of War Magic|3.0S, 19.4E|Shopkeeper|Scrolls, foci
+Merchant (Samsur)|4.5S, 23.5E|Shopkeeper|General Supplies
+Merchant (Small Cave)|4.1S, 17.3E|Shopkeeper|General Supplies
+Mishiya al-Abdi the Barkeeper|2.8S, 19.6E|Shopkeeper|Directions, rumors, food
+Nasruya al-Khanjan the Tailor|2.9S, 19.3E|Shopkeeper|Clothing
+Nu'nifiba the Shopkeeper|0.2N, 16.4E|Shopkeeper|Armor, containers, cooking items, weapons
+Obsidian Enchanter|3.8S 20.6E|Crafter|Creates items out of Obsidian
+Royal Quartermaster|2.8S 19.6E|Shopkeeper|Exchanges Orders for Writ of Apology
+Rubid al-Jurma|0.0S, 16.3E|Quest|Exploration Society Letters, Musansayn's Library
+Saqat|3.2S, 22.2E|Quest|The Old Dry Well
+Shopkeep Julsama bint Sakim|2.9S, 19.6E|Shopkeeper|Armor, guides, containers, lockpicks, tools, weapons
+Sutaiya bint Yil the Scribe|2.9S, 19.3E|Shopkeeper|Rumors, directions, guides, books
+Thawasa al-La'ud the Bowyer|2.9S, 19.6E|Shopkeeper|Missile weapons and ammunition
+Trophy Smith|2.8S, 19.5E|Collector|Collector of various items
+Ushad al-Fasam the Grocer|2.9S, 19.3E|Shopkeeper|Containers, food, cooking items
+Weaponsmith Ayiz ibn Khayt|2.9S, 19.5E|Shopkeeper|Weapons
+Wedding Planner|3.1S, 19.2E|Shopkeeper|Wedding Trials
+Afsan ibn Kusain the Barkeep|13.8S, 5.5E|Shopkeeper|Rumors, Food, Cooking Supplies.
+Archmage Dakila bint Ma'liz|15.3S, 5.4E|Shopkeeper|Spell Components, Mana Stones.
+Bowyer Shurida bint Zaud|14.0S, 5.4E|Shopkeeper|Fletching Supplies.
+Djuyat ibn Fisa the Armorer|13.9S, 5.0E|Shopkeeper|Weapons.
+Grocer Tashhir ibn Najrak|14.9S, 5.9E|Shopkeeper|Food, Cooking Supplies.
+Healer Jilrisi ibn Makhur|14.6S, 6.3E|Shopkeeper|Healing Potions, Kits.
+Journeyman Scrivener of Item Magic|14.1S, 4.4E|Shopkeeper|Level III Scrolls &amp; Foci
+Journeyman Scrivener of Creature Magic|14.1S, 4.4E|Shopkeeper|Level III Scrolls &amp; Foci
+Journeyman Scrivener of Life Magic|14.1S, 4.4E|Shopkeeper|Level III Scrolls &amp; Foci
+Journeyman Scrivener of War Magic|14.1S, 4.4E|Shopkeeper|Level III Scrolls &amp; Foci
+Lalid al-Jasi the Jeweler|13.8S, 5.5E|Shopkeeper|Jewelry, Gems.
+Maqura al-Waryah the Blacksmith|13.9S, 5.0E|Shopkeeper|Armor.
+Shopkeep Bubtil al-Taywi|15.1S, 4.4E|Shopkeeper|Basic Supplies.
+Tailor Fadnuj ibn Samil|14.8S, 5.9E|Shopkeeper|Clothing.
+Anid Al-Fadee|13.3S, 5.1E|Quest|Mnemosynes
+Agent of the Arcanum|14.8S 5.8E|Crafter|
+Gabal Feteh|13.3S, 5.1E|Quest|Mnemosynes
+Ya-Bint-Al-Hawa|13.3S, 5.1E|Quest|Mnemosynes
+Adraha bint Safsan the Appraiser|25.9S, 28.2E|Shopkeeper|Gems, Jewelry
+Archmage Sammam al-Ashiz|25.0S, 28.3E|Shopkeeper|Magic Supplies
+Barshid al-Juhir the Scribe|25.9S, 28.2E|Shopkeeper|Texts
+Maryata bint Daris the Barkeep|25.5S, 28.2E|Shopkeeper|Food, Drinks, Rumors
+Nashima al-Haruq the Healer|25.5S, 28.3E|Shopkeeper|Healing Potions, Kits
+Ruza bint Tinun the Armorer|25.4S, 28.2E|Shopkeeper|Armor
+Scrivener of Creature Magic|25.3S, 28.2E|Shopkeeper|Level IV Scrolls
+Scrivener of Item Magic|25.3S, 28.2E|Shopkeeper|Level IV Scrolls
+Scrivener of Life Magic|25.3S, 28.2E|Shopkeeper|Level IV Scrolls
+Scrivener of War Magic|25.3S, 28.2E|Shopkeeper|Level IV Scrolls
+Tailor Istima al-Mahat|25.5S, 28.2E|Shopkeeper|Clothing
+Ulib ibn Ghunir the Weaponsmith|25.4S, 28.2E|Shopkeeper|Weapons
+Waham ibn Fadyat the Shopkeeper|25.9S, 28.2E|Shopkeeper|Basic Supplies
+Yahr ibn Ajaj the Bowyer|25.3S, 28.3E|Shopkeeper|Fletching Supplies
+Ziya bint Balun the Grocer|25.7S, 28.3E|Shopkeeper|Food, Cooking Supplies
+Apprentice Cook (Uziz)|25.7S, 28.3E|Quest|Crafter Quest
+Agent of the Arcanum|25.1S, 28.2E|Crafter|
+Collector|25.0S, 28.3E|Crafter|
+Ivory Crafter|25.0S, 28.3E|Crafter|
+Leather Crafter|25.1S, 28.2E|Crafter|
+Peddler (Uziz)|31.0S, 24.7E|Shopkeeper|Basic Supplies
+Desert Archmage|31.5S, 37.1E|Shopkeeper|Magic Supplies
+Archmage (Westwatch)|72.8N 73.5W|Shopkeeper|Clothing, Mana Stones, Spell Components, Magic Items, Alchemical Items
+Blacksmith (Westwatch)|72.8N 73.5W|Shopkeeper|Armor, Weapons
+Healer (Westwatch)|72.8N 73.5W|Shopkeeper|Healing Items, Services
+Master Scrivener of Creature Magic|72.9N, 73.6W|Shopkeeper|Level V Scrolls
+Master Scrivener of Item Magic|90.3N, 43.3W|Shopkeeper|Level V Scrolls
+Master Scrivener of Life Magic|72.9N, 73.6W|Shopkeeper|Level V Scrolls
+Master Scrivener of War Magic|90.3N, 43.3W|Shopkeeper|Level V Scrolls
+Shopkeeper (Westwatch)|72.8N 73.5W|Shopkeeper|Basic Supplies, Containers
+Clemenza|72.7N, 73.4W|Quest|Eater Jaws
+Jiang Li|72.7N, 73.3W|Quest|Deathcap Thrungus Kill Task
+Archmage (Eastwatch){{!}}Archmage|90.4N, 43.1W|Shopkeeper|Clothing, Mana Stones, Spell Components, Magic Items, Alchemical Items
+Blacksmith (Eastwatch){{!}}Blacksmith|90.4N, 43.1W|Shopkeeper|Armor, Weapons
+Grand Master Scrivener of Creature Magic|90.2N, 42.9W|Shopkeeper|Level VI Scrolls
+Grand Master Scrivener of Item Magic|90.3N, 43.3W|Shopkeeper|Level VI Scrolls
+Grand Master Scrivener of Life Magic|90.2N, 42.9W|Shopkeeper|Level VI Scrolls
+Grand Master Scrivener of War Magic|90.3N, 43.3W|Shopkeeper|Level VI Scrolls
+Healer (Eastwatch){{!}}Healer|90.4N, 43.1W|Shopkeeper|Healing Items, Services
+Shopkeeper (Eastwatch){{!}}Shopkeeper|90.4N, 43.1W|Shopkeeper|Basic Supplies, Containers
+Claire Artmad|90.2N, 43.1W|Quest|Tukora Lieutenant Kill Task
+Francisco the Hunter|90.7N, 43.0W|Quest|Moarsmen on the Shores
+Marcello|90.2N, 43.1W|Quest|Olthoi Ripper Kill Task
+Moina|90.4N, 43.1W|Quest|Grievver Violator Kill Task
+Orfeo Orlando|90.2N, 43.1W|Quest|Mosswart Worshipper Kill Task
+Ricardo|90.3N, 43.1W|Quest|Ricardo's Blood Gem
+Ruqaya al Mubarak|90.3N, 43.1W|Quest|Wicked Skeleton Kill Task
+Ryuichi Tai|90.3N, 43.0W|Quest|Floeshark Kill Task
+Taku Yukio|90.3N, 43.1W|Quest|Naughty Skeleton Kill Task
+Xun Yu|90.2N, 43.1W|Quest|Repugnant Eater Kill Task
+Janus Roma the Shopkeep|40.8N, 83.1W|Shopkeeper|Books, Parchment, Containers (Red)
+Lam Yi the Jeweler|40.6N, 83.1W|Shopkeeper|Gems, Jewelery, Lockpicks
+Leyrale Shalorn the Tailor|40.6N, 82.9W|Shopkeeper|Clothing
+Micon Stuvis the Barkeep|40.7N, 83.0W|Shopkeeper|Food, Drinks and Rumors
+Milanna Russmad the Mage|40.8N, 83.3W|Shopkeeper|Magical Supplies
+Ton Ai Yen the Armorer|40.9N, 83.4W|Shopkeeper|Weapons and Armor
+Afra bint Abbas|40.8N, 83.0W|Quest|Ebon Gromnie Kill Task
+Bachus Flufens|40.7N, 83.0W|Quest|Aun Tanua's War Taiaha Quest
+Behdo Yii|40.8N, 83.3W|Quest|Olthoi Pincers
+Guard Liaza|40.8N 83.0W|Quest|Moarsmen on the Shores
+Susana du Loc|40.7N, 83.2W|Quest|Hea Windreave Kill Task
+Ling Xiao the Collector|40.7N, 83.0W|Crafter|Carenzi Sentry pelts, Tidal Siraluun claws, Drudge charms, or Water Golem hearts
+Andrea Dilazo|40.7N, 83.1W|Miscellaneous|
+Lucio Murrio|40.6N, 83.0W|Miscellaneous|
+Niccolo Brasi|40.9N, 83.4W|Miscellaneous|
+Piero Cenizzi|40.8N, 83.0W|Miscellaneous|
+Town Crier|40.6N, 83.0W|Miscellaneous|
+Brother Ku-Xao Sutan the Monk|39.5N, 75.2W|Shopkeeper|Parchment and Books
+Dorlan the Armorer|39.2N, 75.5W|Shopkeeper|Aluvian Weapons and Armor
+Lark Grifanna the Barkeep|39.2N, 75.0W|Shopkeeper|Food, Drinks, and Rumors
+Lucarus Malloni the Armorer|39.1N, 75.4W|Shopkeeper|Viamontian Weapons and Armor
+Nathious Agoren the Jeweler|39.0N, 75.3W|Shopkeeper|Gems and Jewelery
+Wahnaqa bint Fayat the Mage|39.2N, 75.2W|Shopkeeper|Magical Supplies
+Yusnar ibn Lomaq the Grocer|39.5N, 75.5W|Shopkeeper|Food and Cooking Supplies
+Aurten Rhell|39.5N, 75.5W|Quest|Refulgent Bracelet
+Aun Papileona|39.8N, 76.4W|Quest|Raeta's Necklace Quest
+Aun Teriona|41.3N, 75.3W|Quest|Carenzi Plague
+Aun Arenura the Crafter|39.2N, 75.0W|Crafter|Siraluun Dresses
+Aun Ihmenaura|39.7N, 75.3W|Crafter|Artisan in Feather and Claw
+Aun Kahuiura|39.7N, 75.3W|Crafter|Artisan in Arcane Ointment
+Aun Pitamaura|39.7N, 75.3W|Crafter|Artisan in Spike and Blade
+Aun Nireeura|39.7N, 75.3W|Crafter|Artisan in Pin and Pitch
+Merlonna Farel the Collector|39.5N, 75.5W|Crafter|
+Otto Selino|39.4N, 75.3W|Miscellaneous|Astronomer
+Salvito di Marden|39.2N, 75.3W|Miscellaneous|Ferran Knight
+Town Crier|39.4N, 75.4W|Miscellaneous|
+Turino Ribini|39.2N, 75.2W|Miscellaneous|Tax Collector
+Vettorio Bilcone|39.4N, 75.3W|Miscellaneous|Ferran Knight
+Brother Samir ibn Lomaq the Monk|42.9N 67.0W|Shopkeeper|Books/Paper, Food, Cooking Items, Container (Green), Potions, Healing Kits
+Greygor Stillwise the Armorer|43.0N 66.9W|Shopkeeper|Weapons, Armor, Fletching Items
+Kasin ibn Sayrak the Barkeep|43.2N 66.6W|Shopkeeper|Food, Drinks, Rumors
+Misha the Jeweler|42.9N 66.8W|Shopkeeper|Gems, Jewelry, Lockpicks
+Yen Loc Anh the Mage|42.9N 66.9W|Shopkeeper|Mana Stones, Spell Components, Alchemical Items
+Balarazo|42.9N, 66.7W|Quest|Canescent Mattekar Robe Quest
+Eliza du Curena|43.0N, 66.7W|Quest|Canescent Mattekar Robe Quest
+Enrico di Bellenesse|43.2N, 67.1W|Quest|Enrico's Betrayal
+Mazur ibn Stounis|43.0N, 66.7W|Quest|Canescent Mattekar Robe Quest
+Rico Cellini|43.2N, 67.1W|Quest|Littoral Siraluun Kill Task
+Tamara du Cinghalle|43.2N, 67.1W|Quest|Eye of T'thuun
+Shalon ibn Mayar the Collector|43.2N 66.6W|Crafter|Carenzi Burrower Pelt, Littoral Siraluun Claw, Drudge Charm, and Sand Golem Heart
+Caprice du Bellanesse|43.1N 66.7W|Miscellaneous|
+Romeo Osemmi|43.2N 67.1W|Miscellaneous|
+Tito Brickicci|43.3N 66.7W|Miscellaneous|
+Valentina du Lurio|43.1N 66.7W|Miscellaneous|
+Aun Maanuawa the Armorer|44.2N 77.9W|Shopkeeper|Armor &amp; Weapons
+Aun Laranawa the Barkeep|44.3N 78.0W|Shopkeeper|Food, Drinks, Rumors
+Aun Paikitea the Bowyer|44.2N 77.9W|Shopkeeper|Fletching Items, Missile Weapons
+Aun Taguauri the Healer|44.1N 77.9W|Shopkeeper|Healing Potions, Services
+Aun Dreganaua the Elder Shaman|44.2N 78.1W|Shopkeeper|Portal Gems, Spell Components, Magic Items
+Aun Ngaiona the Jeweler|43.9N 78.1W|Shopkeeper|Jewelry
+Aun Mireona the Shopkeep|43.9N 78.1W|Shopkeeper|Provisioner, Containers, Keys
+Aun Hareltah|44.2N 78.1W|Quest|Olthoi Queen Quest
+Aun Kimintari|44.2N 78.1W|Quest|Guardian of the Deru Trees of Marae Lassel
+Aun Rukuona|44.2N 78.1W|Quest|Hea Totem Quest
+Aun Turiona|44.2N 78.1W|Quest|Hea Totem Quest
+Aun Kiriona|44.2N 78.1W|Quest|Hea Totem Quest
+Aun Ngationa|44.2N 78.1W|Quest|Hea Totem Quest, Buadren
+Aun Faranua|44.2N 78.3W|Quest|Captain K'rank's Errands
+Aun Ruperea|44.3N 77.9W|Quest|Voracious Eater Kill Task
+Aun Whethura the Crafter|43.9N 78.1W|Crafter|Siraluun Dresses
+Aun Mareura the Collector|43.9N 78.1W|Collector|Uncarved Virindi Singularity Keys
+Aun Firanauri the Gate Keeper|44.N 78.4W|Miscellaneous|Portals you up to Timaru
+Hea Camauri the Barkeep|47.1N, 90.2W|Shopkeeper|Rumors, Food, Drinks
+Hea Kiriona the Shopkeep|47.3N, 90.4W|Shopkeeper|Basic Supplies
+Hea Nyrenauri the Healer|47.2N, 90.4W|Shopkeeper|Healing Supplies
+Hea Nyrinua the Armorer|47.1N, 90.4W|Shopkeeper|Armor
+Hea Palagura the Jeweler|46.9N, 90.1W|Shopkeeper|Gems, Jewelry
+Hea Rangaua the Elder Shaman|46.9N, 90.1W|Shopkeeper|Magic Supplies
+Hea Timitea the Bowyer|47.1N, 90.4W|Shopkeeper|Fletching Supplies
+Hea Arantah|47.1N 90.3W|Quest|Hunting Aun Ralirea
+Hea Kassoka|47.3N 90.1W|Quest|Hea Bone and Hide Shirt Quest
+Hea Mutuona|47.3N 90.1W|Quest|Putiputipuh's Onga
+Tekapuapuh|46.4N, 91.5W|Quest|Putiputipuh's Onga
+Hea Ihipura the Crafter|47.2N, 90.4W|Crafter|Siraluun Weapons
+Hea Riketura the Collector|47.0N, 90.3W|Crafter|Aun Pendant
+Fiun Blacksmith|95.7N, 56.9W|Shopkeeper|Armor, Weapons.
+Fiun Archmage|95.7N, 56.7W|Shopkeeper|Robes, Spell Components, Alchemical Items etc.
+Fiun Healer|95.7N, 56.7W|Shopkeeper|Healing Kits, Services
+Fiun Shopkeeper|95.7N, 56.9W|Shopkeeper|Basic Supplies
+Fiun Bayaas|95.7N, 57.1W|Quest|Augmentation Gems (Coordination)
+Fiun Layeel|95.9N, 56.8W|Quest|Lunnum's Return (Undead Slayer)
+Fiun Luunere|95.7N, 57.1W|Quest|Augmentation Gems (Strength)
+Fiun Noress|95.7N, 57.1W|Quest|Augmentation Gems (Willpower)
+Fiun Rehlyun|95.9N, 57.0W|Quest|Aug Gem: Sir Bellas
+Fiun Riish|95.7N, 57.1W|Quest|Augmentation Gems (Quickness)
+Fiun Ruun|95.7N, 57.1W|Quest|Augmentation Gems (Endurance)
+Fiun Vasherr|95.7N, 57.1W|Quest|Augmentation Gems (Focus)
+Mariabella Varanese|95.6N, 56.3W|Quest|Polar Ursuin Kill Task
+Senior Sage Shibak|95.7N, 56.8W|Quest|Fiun Spellcasting Gloves Quest
+Gianni Vernice|95.8N, 56.7W|Miscellaneous|
+Gillian the Poacher|66.3N, 49.9E|Crafter|Wisp Hearts
+Alison Dulane|66.4N, 49.8E|Quest|Augmentation Gems
+Barkeep Gorth|66.5N, 49.9E|Shopkeeper|Barkeeper
+Gwillim, the Apprentice|66.4N 50.0E|Quest|Feud of Neydisa and Bandit Castle
+Jourgensson|66.3N, 50.0E|Quest|Feud of Neydisa and Bandit Castle
+Journeyman Cook (Bandit Castle)|66.5N, 50.0E|Quest|Crafter Quest
+Karwin, the Lunatic|66.4N, 50.0E|Quest|Undead Mechanic Quest
+Kiriel Shadowborn|66.3N, 50.5E|Quest|Dark Isle Flagging, Raising Grael's Island
+MacDugal|66.4N, 50.0E|Quest|Bandit Hilt Quest
+Melia Thorn the Archmage|66.4N 49.9E|Shopkeeper|Archmage
+Provisioner Murdo|66.3N, 49.8E|Shopkeeper|Provisioner
+Shanrek the Forger|66.5N, 49.9E|Quest|Counterfeit Writ
+Shi Ki-Yong the Armorer|66.5N, 49.8E|Shopkeeper|Armorer
+Agent of the Arcanum|73.8S 92.3E|Collector|Housing
+Gentleman Jake Hawkins|74.5S, 92.3E|Quest|Noir Assassination Investigation
+Jesren the Jolly Barkeep|74.0S, 92.3E|Shopkeeper|Rumors and Directions, Writing Supplies, Food and Drink, Lockpicks
+Journeyman Fletcher (MacNiall's Freehold)|74.2S, 92.2E|Quest|Crafter Quest
+Kaza Nijina the Archmage|74.5S, 92.5E|Shopkeeper|Magical supplies
+Lin Hanza the Bowyer|74.2S, 92.2E|Shopkeeper|Missile weapons, ammo, and fletching supplies
+MacNiall the Unruled|74.0S, 92.2E|Quest|Bandit Hilt Quest
+Mr. P|72.8S, 93.0E|Quest|Pet Penguin Quest
+Onda Nakoza|73.9S, 92.3E|Misc|MacNiall's Lieutenant
+Provisioner Warster the Handy|74.0S, 92.3E|Shopkeeper|General Supplies
+Researcher Tharin|74.0S, 92.3E|Quest|Aerbax's Prodigal Mosswart
+Weaponsmith Bornak the Crookblade|74.2S, 92.2E|Shopkeeper|Weapons
+Greta Danby the Bowyer|23.4N, 28.7W|Shopkeeper|Fletching Items, Missile Weapons
+Weaponsmith Hideo Sasaki|23.5N, 28.8W|Shopkeeper|Armor &amp; Weapons
+Pricilla the Healer|23.5N 28.7W|Shopkeeper|Healing Potions, Healing Kits
+Abia Bint Huda the Archmage|23.3N, 28.7W|Shopkeeper|Robes, Containers, Spell Components, Magic Items, Services, Mana Stones, Alchemist Items
+Barkeep Aliece Landlig|23.3N, 28.7W|Shopkeeper|Food, Mug of Danby's Ale
+Jin Ghao|23.3N, 28.7W|Quest|Fort Tethana Tug of War
+Journeyman Fletcher (Danby's Outpost)|23.4N, 28.8W|Quest|Crafter Quest
+Marcus Danby|23.4N, 28.8W|Quest|Ritual of the Blight &amp; Moarsmen on the Shores
+Aun Paritea|26.6N, 28.6W|Quest|Gift Box Quest
+Agent of the Arcanum|23.4N, 28.7W|Crafter|
+Leather Crafter|23.4N, 28.6W|Crafter|
+Gunther Danby|23.4N, 28.7W|Miscellaneous|
+Town Crier|23.3N, 28.7W|Miscellaneous|
+Aun Gunditealuan the Marksman|87.5S, 66.9W|Shopkeeper|Fletching Supplies
+Aun Oreilauri the Healer|87.5S, 66.9W|Shopkeeper|Healing Supplies
+Gilly|87.2S, 67.5W|Shopkeeper|Magic Supplies
+Grand Master Scrivener of Creature Magic|87.3S, 67.0W|Shopkeeper|Level VI Scrolls
+Grand Master Scrivener of Item Magic|87.3S, 67.0W|Shopkeeper|Level VI Scrolls
+Grand Master Scrivener of Life Magic|87.3S, 67.0W|Shopkeeper|Level VI Scrolls
+Grand Master Scrivener of War Magic|87.3S, 67.0W|Shopkeeper|Level VI Scrolls
+Odvik the Inn Keeper|87.7S, 67.4W|Shopkeeper|Food, Drinks, Rumors
+Rkos the Armorer|87.3S, 67.3W|Shopkeeper|Armor
+Ry'zir al-Nabit|87.3S, 67.3W|Shopkeeper|Weapons
+Tyokai Renjiro the Grocer|87.8S, 67.3W|Shopkeeper|Food and Food Supplies
+Aun Autuorea|87.5S, 66.9W|Quest|Magma Golem Exarch Kill Task
+Dalius Kendma|87.2S, 67.5W|Quest|Search for Gareth Dain
+Finn Skigg|87.8S, 67.3W|Quest|The Temple of Hizk Ri
+Grania the Bold|87.6S, 67.4W|Quest|Mottled Carenzi Kill Task
+Guard Alfric|87.9S, 67.4W|Quest|Shadow-touched Virindi Quidiox Kill Task
+Ryukai Hiro|87.8S, 67.3W|Quest|Aerbax's Prodigal Human
+Talira Dain|87.2S, 67.5W|Quest|Search for Gareth Dain
+Agent Dravos|87.3S, 67.0W|Collector|Agent of the Arcanum
+Aun Xathurea the Leather Crafter|87.8S, 67.2W|Crafter|Leather Crafter
+Pagrok the Stone Collector|87.2S, 67.3W|Crafter|Stone Collector
+Ulna bint-Fasha the Ivory Crafter|87.9S, 66.8W|Crafter|Ivory Crafter
+Yukara Miko the Collector|87.7S, 67.4W|Crafter|Collector
+Gate Guard|87.9S, 66.8W|Miscellaneous|
+Town Crier|87.8S, 67.2W|Miscellaneous|
+Garaena the Emissary|87.7S, 65.6W|Miscellaneous|Casts portal to Aerlinthe for a Trade Note (50,000),> D-Note
+Aun Amanaualuan the Elder Shaman|87.5S, 67.2W|Shopkeeper|Magic Supplies
+Thimrin Woodsetter|87.5S, 67.2W|Shopkeeper|Basic Supplies, Containers
+Tunlok Weapons Master|87.5S, 67.2W|Shopkeeper|Armor and Weapons
+Chef Pleist|68.5S, 25.4E|Quest|Snowman Village
+David|68.6S, 25.4E|Quest|Crystal Core Quest
+Elijah|68.5S, 25.5E|Quest|A Huge Lump of Coal, Pet Penguin Quest, Snowman Village
+Emma|68.6S, 25.4E|Quest|Snowman Village
+Nip|68.6S, 25.3E|Quest|Snowman Village
+Numb|68.6S, 25.3E|Quest|Snowman Village
+Robert|68.6S, 25.5E|Quest|Snowman Village
+Sam|68.6S, 25.4E|Quest|Snowman Village
+The Mayor|68.6S, 25.4E|Quest|Assault on Frost Haven, Snowman Village
+Blacksmith (Oolutanga)|2.4N, 95.4E|Shopkeeper|Armor and Weapons
+Grocer (Oolutanga)|2.4N, 95.2E|Shopkeeper|Food and Cooking Supplies
+Bowyer (Oolutanga)|2.4N, 95.6E|Shopkeeper|Fletching Supplies
+Healer (Oolutanga)|2.0N, 95.6E|Shopkeeper|Healing Kits and Potions
+Jeweler (Oolutanga)|2.2N, 95.2E|Shopkeeper|Gems and jewelry
+Mage|2.2N, 95.6E|Shopkeeper|Magic Supplies
+Aidene|2.0N, 95.6E|Quest|Hunter Quest (Iron Spined Chitticks)
+Brighteyes, the Tailor|2.2N 95.6E|Quest|The Painbringer Quest, Tusker Tusks
+Jilna Fullgood|2.0N, 95.6E|Quest|Aerbax's Prodigal Tusker, Bobo's Medicine
+Lug|2.2N, 95.2E|Quest|Augmentation Gems
+Mayor Ko Ko|2.3N, 95.5E|Miscellaneous|
+Hawker for Ketnan|4.3N, 95.8E|Miscellaneous|
+Town Crier|1.9N, 95.1E|Miscellaneous|
+Merwart Pelagurg|79.5N, 58.9E|Quest|Remoran Fist
+Barkeep Guzglurg|79.9N, 59.0E|Shopkeeper|Barkeeper
+Blacksmith Bulidurg|79.9N, 59.1E|Shopkeeper|Blacksmith
+Shopkeeper Hulmurg|79.9N, 59.1E|Shopkeeper|Shopkeeper
+Archmage Moldurg|79.9N, 59.2E|Shopkeeper|Archmage
+Healer Hargurg|79.9N, 59.2E|Shopkeeper|Healer
+Merwart Urglurg|80.1N, 59.1E|Quest|
+Merwart Gurglurg|80.1N, 59.1E|Quest|
+Agent of the Arcanum|29.7N, 27.8E|Collector|Housing
+Apprentice Cook (Glenden Wood)|29.6N, 27.2E|Quest|Crafter Quest
+Archmage Cortorl|29.8N, 25.9E|Shopkeeper|Magic components, mana stones
+Archmage Geltruma|29.7N, 28.9E|Shopkeeper|Magic components, mana stones, containers
+Arsitha Trell the Grocer|29.8N, 27.4E|Shopkeeper|Armor, weapons, lockpicks, more
+Belbeca the Weaponsmith|29.9N, 25.8E|Shopkeeper|Weapons
+Bowyer Brondig|29.7N, 28.7E|Shopkeeper|Missile weapons and ammo
+Captain Anrayl|29.9N, 27.4E|Quest|Glenden Wood Invasion
+Captain Nyino|29.9N, 27.4E|Quest|Glenden Wood Invasion
+Captain Sovano|29.9N, 27.4E|Quest|Glenden Wood Invasion
+Collector|29.6N, 28.7E|Collector|Collector of various trophies
+Copper Vanurp|29.6N, 27.2E|Quest|Glenden Wood Crafters
+Danifa Gondmad the Healer|29.9N, 27.1E|Shopkeeper|Potions and healing kits
+Eldrista the Adventurer|35.7N, 33.4E|Quest|Lilitha's Lost Bow
+Farmer (Glenden Wood)|31.8N, 26.4E|Shopkeeper|Containers, Food, Cooking Supplies
+Fertroth the Healer|29.6N, 28.7E|Shopkeeper|Potions and healing kits
+Festival Vendor|29.8N, 27.3E|Shopkeeper (Seasonal)|Festival items and food
+Fletcher Peldin Yewbender|29.9N, 26.9E|Shopkeeper|Missile weapons, ammo, and fletching supplies
+Fyrdina Ellic the Weaponsmith|29.9N, 27.1E|Shopkeeper|Armor and weapons
+Healer Fridroth|29.7N, 25.9E|Shopkeeper|Potions and healing kits
+Hunderth the Provisioner|29.6N, 27.5E|Shopkeeper|Food and cooking items
+Idenne Sulmad the Seamstress|29.6N, 27.5E|Shopkeeper|Clothing
+Ivory Crafter|29.6N, 27.4E|Collector|Collector of various ivory trophies
+Jacque the Woodsman|28.8N, 27.5E|Shopkeeper|Housing
+Lilly of Glenden Wood|32.0N, 27.2E|Quest|Lady Aerfalle Quest, Sword of Lost Light Quest
+Londigul Ellic the Armorer|29.9N, 27.1E|Quest|Glenden Wood Invaders
+Mage Syltyn Rillon|27.8N, 24.7E|Quest|Frozen Fury
+Majestic Pumpkin|30.7N, 27.8E|Quest (Seasonal)|The Majestic Pumpkin
+Ortun Trell the Jeweler|29.8N, 27.4E|Shopkeeper|Gems and jewelry
+Peddler (Glenden Wood)|31.2N, 19.8E|Shopkeeper|Basic Supplies
+Pondenn the Armorer|29.9N, 25.8E|Shopkeeper|Armor
+Singud Trell the Archmage|29.8N, 27.4E|Shopkeeper|Mage supplies, mana charges
+Student|29.9N, 27.1E|Quest|Crystal Minds and Shattered Souls
+Tiffany Comfore|29.6N, 27.2E|Quest|Glenden Wood Crafters
+Tomo Genza|29.9N, 27.1E|Quest|Glenden Wood Invaders
+Ungrim the Unpleasant Smelling|29.4N, 27.2E|Quest (Seasonal)|Zombie Butler Quest
+Weaponsmith Omaro Nagate|30.0N 25.8E|Quest|Frozen Fury
+Wils Morrem|29.6N, 27.2E|Quest|Glenden Wood Crafters
+Wing Collector|29.4N, 27.2E|Collector|Collector of Phyntos Wasp Wings
+Ystig Marson the Barkeeper|29.4N, 27.2E|Shopkeeper|Rumors, directions, food and drink
+Ulgrim the Unappreciated|94.8S, 9.7W|Quest|
+Feruza ibn Salaq|76.0N, 49.1W|Crafter|Refines Chorizite, exchanges Pyreal Bars for Ring and Wall spells
+Guard Al'Zira|75.9N, 49.1W|Quest|Moarsmen on the Shores
+Suzuhara Sheshumi|76.0N, 49.1W|Quest|Suzuhara Baijin's Delivery
+Archmage (Beach Fort)|75.9N, 49.1W|Shopkeeper|Magic Supplies
+Healer (Beach Fort)|76.1N, 49.1W|Shopkeeper|Potions, Heal Kits
+Peddler (Beach Fort)|76.0N, 49.0W|Shopkeeper|Basic Supplies, Clothing, Containers (Black)
+Weaponsmith (Beach Fort)|76.0N, 49.0W|Shopkeeper|Weapons
+Solange|97.4S 94.6W||Tenebrous Rift Kill Task, Umbral Rift Kill Task
+Surloshen Realaidain|99.6S 96.7W||Tunnel of Love Quest
+Xireri|94.4S 96.6W||Tunnel of Love Quest
+Kleeoh|2.5S, 86.5E|Quest|Bobo's Medicine, The Legend of the Tusker Paw
+Asheron (NPC){{!}}Asheron|21.1N, 69.2E||
+Asheron's Servant|21.2N, 69.1E|Quest|Asheron's Tower Guardian
+Ayaname Kina|21.1N, 69.2E|Quest|Black Death Catacombs Quiddity Seed Quest
+Chafulumisa|21.2N, 69.3E|Quest|Attribute and Skill Redistribution
+Emissary of Asheron (Asheron's Castle)|21.2N, 69.1E|Quest|Quiddity Seed Quests
+Fianhe|21.1N, 69.2E|Quest|Attribute and Skill Redistribution
+Nalicana|21.1N, 69.3E|Quest|Luminance, Luminance Quest
+Aun Kelauri|53.4N, 79.0W|Quest|Delving into Claude's Mind
+Aun Shimauri|46.7N, 70.7W|Quest|Palenqual's Living Weapons
+Archmage (Mountain Retreat)|59.7N, 4.1W|Shopkeeper|Magical Supplies
+Blind Snowman|46.7N, 48.9E|Quest|Three Eye Snowman Kill Task, Trophy Collector
+Collector|59.7N, 4.1W|Trophy Collector|Non-hide Creature Trophies
+Master Celdiseth the Archmage|86.6N, 21.6E|Shopkeeper|Magical Supplies
+Merchant (Mountain Retreat)|59.7N, 4.1W|Shopkeeper|Basic Supplies
+Roaming Bowyer (Esper Mountain Range)|68.0N, 10.0W|Shopkeeper|Fletching Items, Ammunition
+Roaming Bowyer (Outskirts Bandit Castle)|71.8N, 38.0E|Shopkeeper|Fletching Items, Ammunition
+Wandering Bowyer (Mountain Retreat)|59.7N, 4.1W|Shopkeeper|Fletching Items, Ammunition
+Le-Ai Rea|75.9S, 57.3E|Quest|Focusing Stone Quest
+Master Shoyanen Kenchu the Archmage|63.4S, 85.9E|Shopkeeper|Magical Supplies
+Snowman (NPC){{!}}Snowman|70.4S, 54.5E|Shopkeeper|A Frozen Note, Poofy Snowballs
+Francois di Terli|85.2N, 57.6E|Collector|Relic Armor
+The Deep (Dark Isle)|85.5N, 57.2E|Collector|Relic Armor
+Tyrina of Arwic|84.7N, 58.7E|Collector|Relic Armor - Replaced Kitana Oazaka during the Unfinished Business event.
+Tekapuapuh|46.4N, 91.5W|Quest|Putiputipuh's Onga
+Aun Bernawa|41.1N, 74.4W|Quest|An Aun Hea Romance
+Aun Papileona|39.8N, 76.4W|Quest|Raeta's Necklace Quest
+Aun Teriona|41.3N, 75.3W|Quest|Carenzi Plague
+Peddler (Fort Tethana){{!}}Peddler|9.4S, 71.9W|Shopkeeper|Basic Supplies
+Healer (Fort Tethana){{!}}Healer|9.4S, 71.9W|Shopkeeper|Healing Supplies &amp; Services
+Garaena the Emissary|87.7S, 65.6W|Miscellaneous|Casts portal to Aerlinthe for a D-note
+Fiun Gaya|89.1N, 47.6W|Quest|Lunnum's Pyre, Lunnum's Disappearance
+Arialle du Bellenesse|93.2N, 48.2W|Quest|The Black Spear Ice Totem
+Commander Rylane di Cinghalle|93.2N, 48.2W|Quest|Ruschk Kill Task
+Hermit|94.2N, 43.0W|Quest|Death's Allure
+Kalakh|94.0N, 45.9W|Quest|The Black Spear Ice Totem
+Ruschk Challenger|92.4N, 47.5W|Quest|Ruschk Challenger Quest
+Torgash|94.0N, 45.9W|Quest|Torgash's Tasks
+Old Lascare|87.9N, 55.4W|Quest|Red Bull of Sanamar Quest
+Unfriendly Barkeeper|25.3S, 56.6E|Quest|Sawato Extortion
+Fadsahil al-Tashbi the Master Archmage|40.3S, 11.2E|Shopkeeper|Magical Supplies
+Leikotha|10.1S, 31.3E|Quest|Silifi of Crimson Stars Quest
+Peddler (Uziz){{!}}Peddler|31.0S, 24.7E|Shopkeeper|Basic Supplies
+Mr. P|72.8S, 93.0E|Quest|Pet Penguin Quest
+Guard (Karlun NPC){{!}}Guard|89.0N, 67.6W|Misc|Fort Guard
+Halaetan Node Golem|93.8N, 67.4W|Quest|Tainted Ley Line Nodes
+Iian di Alduressa|89.0N, 67.6W|Quest|Shadow Armor Quest,> Alduressa Shadow Armor
+Sir Ginazio|88.9N 67.8W|Quest|Knights of Karlun Quest
+Caleb Jinor the Healer|64.9N, 13.5E|Shopkeeper|Healing Supplies
+Geldeb Finol the Weaponsmith|64.9N, 13.5E|Shopkeeper|Armor &amp; Weapons
+Weldub Finol the Jeweler|64.9N, 13.5E|Shopkeeper|Gems, Jewelry
+Silencia the Archmage|64.9N, 13.5E|Shopkeeper|Glyphs for Atlan Weapons
+Journeyman Cook (Crater Lake Village)|64.9N, 13.6E|Quest|Crafter Quest
+Silencia's Magma Golem|64.9N, 13.5E|Crafter|Atlan Weapons
+Peddler (Glenden Wood)|31.2N, 19.8E|Shopkeeper|Basic peddler items
+Blind Snowman|46.7N, 48.9E|Quest|Three Eyed Snowman
+Giant Snowman|61.5N, 45.7E|Shopkeeper|A Frozen Note, Snowball (Item),> Snowball
+Le-Ai Rea|75.9S, 57.3E|Quest|Focusing Stone Quest
+Master Shoyanen Kenchu the Archmage|63.4S, 85.9E|Shopkeeper|Magical Supplies
+Snowman (NPC){{!}}Snowman|70.4S, 54.5E|Shopkeeper|A Frozen Note, Poofy Snowballs
+Avarin|56.4S, 96.9E|Quest|Moarsmen Jailbreak
+Gate Warden Kris|56.4S, 96.9E|Quest|Moarsmen Jailbreak
+Prison Guard|56.4S, 96.9E|Quest|Moarsmen Jailbreak
+Emissary of Asheron (Freebooter){{!}}Emissary of Asheron|62.9S, 96.0E|Quest|The Empyrean Portalspace Stabilizer
+Devon the Collector|91.2S, 52.2W|Collector|Blight-encrusted Black Corals
+Fort Commander (Eldrytch Web)|91.4S 53.8W|Quest|Palm Fort, Supply Saboteur
+Chun Hei|91.4S 53.8W|Quest|Forgotten Tunnels of Nyr'leha
+Fort Commander (Radiant Blood)|93.6S 51.8W|Quest|Palm Fort, Supply Saboteur
+Myung Hee|93.6S 51.8W|Quest|Forgotten Tunnels of Nyr'leha
+Fort Commander (Celestial Hand)|92.1S 50.3W|Quest|Palm Fort, Supply Saboteur
+Jin Kyong|92.1S 50.3W|Quest|Forgotten Tunnels of Nyr'leha
+Aun Tikakhe|82.7N, 21.0E|Quest|Buadren Quest, Invoker Quest
+Aun Saritea|82.8N, 21.1E|Quest|Buadren Quest, Invoker Quest, turns in pre-upgrade Invokers into upgraded ones
+Aun Aulakhe|82.7N, 21.0E|Quest|Buadren Quest, Invoker Quest
+Archmage (Mountain Retreat)|59.7N, 4.1W|Shopkeeper|Magical Supplies
+Collector|59.7N, 4.1W|Trophy Collector|Non-hide Creature Trophies
+Master Celdiseth the Archmage|86.6N, 21.6E|Shopkeeper|Magical Supplies
+Merchant (Mountain Retreat)|59.7N, 4.1W|Shopkeeper|Basic Supplies
+Roaming Bowyer (Esper Mountain Range)|68.0N, 10.0W|Shopkeeper|Fletching Items, Ammunition
+Wandering Bowyer (Mountain Retreat)|59.7N, 4.1W|Shopkeeper|Fletching Items, Ammunition
+Kayna bint Iswas|1.7S, 36.6E|Quest|Silifi of Crimson Stars
+Farmer (Heartland){{!}}Farmer|22.6N, 37.2E|Shopkeeper|Cooking supplies
+Varetha|44.3S, 62.5W|Quest|Mukkir Aspect of Grael
+Bound Wisp|15.8S 61.9W|Quest|Crystalline Bound Wisp
+Jyotsana|14.6S, 62.0W|Quest|Crystalline Markers
+Oorjit|14.6S, 62.0W|Quest|Crystalline Killer
+Tokashi Ando|14.6S, 62.0W|Quest|Crystalline Adventurer
+Ssavashka the Devoted|42.7S, 46.6W|Quest|His Master's Voice
+Peddler (Lake Lithanen)|44.6N 28.5W|Shopkeeper|Basic Supplies
+Archmage (Lithaenean)|54.4N, 38.3W|Shopkeeper|Basic Supplies
+Healer (Lithaenean)|54.4N, 38.3W|Shopkeeper|Basic Supplies
+Creed|73.9S, 43.7W|Quest|Assassin's Roost Quest
+Selaina the Subtle|73.9S, 43.7W|Quest|Assassin's Roost Quest
+Garaena the Emissary|87.7S, 65.6W|Miscellaneous|Casts portal to Aerlinthe for a Trade Note (50,000),> D Note
+Archmage (South Direlands Midland)|88.1S, 60.9W|Shopkeeper|Magic Supplies
+Merchant (South Direlands Midland)|88.1S, 60.9W|Shopkeeper|General Supplies
+Verdentine Magnan|75.5N, 20.6W|Quest|Flags
+Zalphoos the Shopkeeper|19.3N, 17.6E|Shopkeeper|Sells Zalphoos Guidebook &amp; Zalphoos' Key
+Sha-dekanma|20.0S, 7.2E|Quest NPC|Trade 100 A'nekshay Tokens to Sha-dekanma for the A'nekshay Slayer Stone.
+Bemeth the Gatherer|22.2S 6.1E|Quest NPC|Gives rewards for the Tablet quests. Ancient Tablet of the Crystal Amulet (Level 180+), Ancient Tablet of the Crystal Staff (Level 180+), Ancient Tablet of the Crystal Idol (Level 180+), Ancient Tablet of the Crystal Sword (Level 180+).
+Dame Tularin|22.1S 6.3E|Contract NPC|Gives the Armoredillo Hunting: Lost City of Neftet (Level 200+) contract.
+Hammah al Rundik|22.2S 6.2E|Contract NPC|Gives Prickly Pear Collecting (Level 200+) contract.
+Nephthys|22.2S 6.2E|Quest NPC|Gives Scrying Rod
+Panhsj|22.2S 6.2E|Shopkeeper|Accepts A'nekshay Tokens only
+Sir Adarl|22.2S 6.3E|Contract NPC|Gives the Mumiyah Hunting: Lost City of Neftet (Level 200+) contract
+Sir Hassim bin Tamarek|22.3S 6.3E|Contract NPC|Gives the Reedshark Hunting: Lost City of Neftet (Level 200+) contract
+Sir Ibreh bin Kassim|22.2S 6.2E|Contract NPC|Gives the Golem Hunting: Lost City of Neftet (Level 200+) contract
+T'ing Setsuko|22.2S 6.2E|Contract NPC|Gives the A'nekshay Bracer Collecting (Level 200+) contract
+Taylarn bint Tulani|22.2S 6.2E|Contract NPC|Gives the Stone Tablet Collecting (Level 200+) contract
+Sir Daeglan|22.2S 6.1E|Quest NPC|Exchanges 500 Luminance for each of the 4 Books from the Strathelar Royal Cloak Quest and 8,000 Luminance after all 4 books are turned in.
+Sir Unell bin Rakke|22.2S, 6.1E|Quest NPC|Flags for the Desert Cactus Kill Task quest.
+Sir Donovan|83.8N, 4.3W|Quest NPC|Starts the Bloodstone Investigation quest. Turn in shards from Frozen Fortress Testing Grounds Quest and Frozen Fortress Laboratory Quest.
+Sir Learth|83.8N, 4.3W|Quest NPC|Starts the Dericost Ritual Investigation quest.
+Lady Daenerah|83.8N, 4.3W|Quest NPC|Starts the Halt Dericost Ritual Quest.
+Gregoria, Gurog Destroyer|83.8N, 4.3W|Quest NPC|Starts the Gurog Kill Task.
+Hunter|83.8N, 4.3W|Quest NPC|Starts the Snow Tusker Kill Task
+Archmage Ichihiri|83.8N, 4.3W|Quest NPC|Snow Tusker Blood Collection.
+Halvor|83.8N, 4.3W|Quest NPC|Starts the Wardley and the Wights quest.
+Leilah|83.8N, 4.3W|Quest NPC|Starts the Frost Golem Kill Task quest.
+George|83.8N, 4.3W|Quest NPC|Starts the Frozen Wight Kill Task quest.
+Kumiko|83.8N, 4.3W|Quest NPC|Starts the Frozen Dread Kill Task quest.
+Boone|83.7N, 4.3W|Quest NPC|Starts the Frozen Crystal Kill Task quest.
+Ilte Krongal|62.5S, 64.9W|Quest NPC|Rynthid Foundry Quest
+Rinne Gorber|61.6S, 63.3W|Quest NPC|Shroud of Emotion
+Geilla|61.6S, 63.3W|Quest NPC|Fear Factory Quest
+Hernd|61.6S, 63.3W|Quest NPC|Kill: Rynthid Rare Boss
+Tillahan|61.6S, 63.3W|Quest NPC|Kill: Empowered Wisps
+The Bringer of Light|61.6S, 63.3W|Quest NPC|Rynthid Artifact Collection
+Lohrn|61.6S, 63.3W|Quest NPC|Destroy Rynthid Crystals
+Marcus|61.6S, 63.3W|Quest NPC|Kill: Rynthid Minions
+Raksaa|61.6S, 63.2W|Quest NPC|Lugian Assault
+Ranulf|61.6S, 63.3W|Quest NPC|Kill: Rynthid Ragers
+Sylvanus|61.6S, 63.3W|Quest NPC|Kill: Rynthid Slayers
+Rhys|61.6S, 63.3W|Quest NPC|Kill: Rynthid Rifts
+Wido|61.6S, 63.3W|Quest NPC|Kill: Rynthid Sorcerers
+Vision of Horror (Emotions Unbound)|61.6S, 63.2W|Quest NPC|Rynthid Foothold
+Virindi Delegate (Seed of Power)|61.6S, 63.2W|Quest NPC|Seed of Power
+Morgethais|61.6S, 63.3W|Quest NPC|Defeating the Curator of Torment
+Aun Ol'tra|61.6S, 63.3W|Quest NPC|End of Days
+Armorer Xao Fen|28.0S, 95.9E|Shopkeeper|Armor.
+Bai-Nu Ru the Weaponsmith|28.0S, 95.9E|Shopkeeper|Weapons.
+Healer Rili Sou|28.1S, 95.8E|Shopkeeper|Healing Supplies
+Jeweler Lo Dai-Ou|28.0S, 95.6E|Shopkeeper|Gems, Jewelry
+Lai Jhong the Archmage|27.5S, 96.5E|Shopkeeper|Magic Supplies
+Mi Chi the Barkeep|28.0S, 95.5E|Shopkeeper|Food, Drinks, Rumors.
+Rou Beh the Bowyer|28.0S, 95.7E|Shopkeeper|Fletching Supplies
+Scrivener of Creature Magic|27.5S, 96.1E|Shopkeeper|Level IV Scrolls
+Scrivener of Item Magic|27.5S, 96.1E|Shopkeeper|Level IV Scrolls
+Scrivener of Life Magic|27.5S, 96.1E|Shopkeeper|Level IV Scrolls
+Scrivener of War Magic|27.5S, 96.1E|Shopkeeper|Level IV Scrolls
+Leather Crafter|28.0S, 95.7E|Crafter|
+Leather Crafter|30.3S, 94.7E|Crafter|
+Shadow Captain (NPC)|27.9S 95.6E|Quest|Shadow Assault Quest
+Shadow Soldier (NPC)|27.9S 95.6E|Quest|Shadow Assault Quest
+Black Ferah (NPC)|29.2S, 95.8E|Quest|Shadow Communication Quest
+Royal Guard - Grievver Shredder Hunter Kill Task|30.3S, 94.8E|Kill Task|Grievver Shredder Hunter Kill Task
+Umbral Guard - Devourer Margul Kill Task|30.3S, 94.8E|Kill Task|Devourer Margul Kill Task
+Umbral Guard - Shadow Flyer Kill Task|30.3S, 94.8E|Kill Task|Shadow Flyer Kill Task
+Royal Guard - Shadow Kill Task|30.2S, 94.8E|Kill Task|Shadow Kill Task
+Royal Guard - Void Lord Kill Task|30.3S, 94.8E|Kill Task|Void Lord Kill Task
+Mayor Trenlach|69.5N 80.6E|Quest|Turn in Olthoi Tokens for reward
+Kaneth al-Evv|69.5N 80.6E|Vendor|Sells Olthoi Tokens
+Olthoi Queen (NPC)|67.4N, 82.2E|Misc|Casts buffs
+Olthoi Grub (NPC)|67.4N, 82.2E|Misc|Multiple around Queen, serves no purpose
+Olthoi Matron (Spitter Vendor)|67.3N, 82.1E|Vendor|Level 586, Sells '''Spitter''' armor, Clothing, Misc.
+Olthoi Matron (Soldier Vendor)|67.6N 82.2E|Vendor|Level 586, Sells '''Soldier''' armor, Clothing, Misc.
+Archmage (Mage Pass){{!}}Archmage|52.1S, 51.0E|Shopkeeper|Magic Supplies
+Archmage (Igloo)|70.5N, 17.3W|Shopkeeper|Magic Supplies
+Archmage (Stonehold)|79.2N, 15.6W|Shopkeeper|Magic Supplies
+Roaming Bowyer (Stonehold)|79.2N, 15.6W|Shopkeeper|Fletching Supplies
+Snowman (NPC)|71.4N, 22.2W|Shopkeeper, Quest|Sculpting a Snowman
+Kai Mallan, Sho Enchanter|69.2N 17.2W|Quest|Gelidite Library Quest
+Watcher of the Dead|51.4S, 67.9W|Quest|Clutch of Kings (Keerik),> Burun King Keerik
+Lu'zura the Shopkeeper|21.3S, 1.3E|Shopkeeper|Basic supplies.
+Atqur the Shopkeeper|18.7S, 1.5W|Shopkeeper|Basic supplies.
+Ahyara|21.3S, 1.2E|Quest|Note of Congratulation
+Nasun ibn Tifar|18.6S, 1.4W|Quest|Note of Congratulation
+Stranger in Town|23.7S, 2.8W|Quest|Elysa's Favor Quest
+Tackle Master|22.0S, 2.2W|Quest|Fishing
+Leather Crafter|30.3S, 94.7E|Crafter|Crafts creature hides
+Royal Guard - Grievver Shredder Hunter Kill Task{{!}}Royal Guard|30.3S, 94.8E|Quest|Grievver Shredder Kill Task
+Umbral Guard - Devourer Margul Kill Task{{!}}Umbral Guard|30.3S, 94.8E|Quest|Devourer Margul Kill Task
+Umbral Guard - Shadow Flyer Kill Task{{!}}Umbral Guard|30.3S, 94.8E|Quest|Shadow Flyer Kill Task
+Royal Guard - Shadow Kill Task{{!}}Royal Guard|30.2S, 94.8E|Quest|Shadow Kill Task
+Royal Guard - Void Lord Kill Task{{!}}Royal Guard|30.3S, 94.8E|Quest|Void Lord Kill Task
+Aun Kirtal|80.7N, 43.0W|Quest NPC|Spectral Minion Kill Task
+Corporal Irashi|80.7N, 43.0W|Quest NPC|Spectral Bushi Kill Task
+Griffon|80.7N, 43.0W|Quest NPC|Spectral Claw Kill Task
+Hanamoto Aki'ko|80.7N, 43.0W|Quest NPC|Spectral Nanjou Shou-jen Kill Task
+Lieutenant Aurin|80.7N, 43.0W|Quest NPC|Golem Samurai Kill Task
+Lieutenant Takamaki|80.7N, 43.0W|Quest NPC|Spectral Samurai Kill Task
+Lord Eorlinde|80.7N, 43.0W|Quest NPC|Spectral Mage Kill Task
+Lord Brem|80.7N, 43.0W|Quest NPC|Hoshino Must Die
+Mareeno Donn|80.7N, 43.0W|Quest NPC|Hoshino Fortress Infiltration
+Sergeant Trebuus|80.7N, 43.0W|Quest NPC|Spectral Archer Kill Task
+Sergeant Freng|80.7N, 43.0W|Quest NPC|Sarcophagus Kill Task
+Lieutenant Roothe|80.7N, 43.0W|Quest NPC|Save Karul
+Darviss|78.1N, 42.2W|Quest NPC|Ninja Academy
+Kousha|78.4N, 40.5W|Quest NPC|Tanada Intercept and Slaughter
+Kinchou|78.4N, 40.5W|Quest NPC|Tanada Intercept and Slaughter
+Shorikan|78.0N, 41.6W|Quest NPC|Nanjou Stockade
+Darviss|78.1N, 42.2W|Quest NPC|Ninja Academy
+Shorikan|78.0N, 41.6W|Quest NPC|Nanjou Stockade
+Koucha|78.4N, 40.5W|Quest NPC|Tanada Intercept and Slaughter
+Kinchou|78.4N, 40.5W|Quest NPC|Tanada Intercept and Slaughter

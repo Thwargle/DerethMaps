@@ -50,7 +50,9 @@ function draw() {
     base_image.src = 'highres.png';
 
     var mobList = document.getElementById("mobList");
+    var npcList = document.getElementById("npcList");
     var selectedMob = mobList.options[mobList.selectedIndex].value;
+    var selectedNPC = npcList.options[npcList.selectedIndex].value;
 
 
     // clear canvas
@@ -72,8 +74,23 @@ function draw() {
     imageOverlay = new Image();
     if (selectedMob != "None") {
         imageOverlay.src = 'http://mobtracker.yewsplugins.com/BigMaps/' + selectedMob + '.gif';
+        context.drawImage(imageOverlay, 0, 0);
     }
-    context.drawImage(imageOverlay, 0, 0);
+
+    if (selectedNPC != "None") {
+        var selectedNPCCoords = selectedNPC.split("|")[1];
+        var splitCoords = selectedNPCCoords.split(/[\s,]+/);
+        var y = decodeMapString(splitCoords[0]);
+        var x = decodeMapString(splitCoords[1]);
+        var width = 50;
+        var Type = "WikiNPC";
+        var Race = "";
+        var Special = "";
+        var isHighlighted = "";
+        var isLandblock = "";
+        
+        drawPoint(context, x, y, width, Type, Race, Special, isHighlighted, isLandblock);
+    }
 
     var dPointsArrayLength = dPoints.length;
 
@@ -135,6 +152,30 @@ function getMobList() {
         }
     };
     xmlhttp.open("GET", "mobList.txt", true);
+    xmlhttp.send();
+}
+
+function getNPCList() {
+    npcList = new Array();
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            npcList = this.responseText.split(/\n/).sort();
+            for (var i = 0; i < npcList.length; i++) {
+                var npcName = npcList[i].split("|")[0];
+                var npcOption = new Option(npcName, npcList[i]);
+
+                $('#npcList').append(npcOption);
+            }
+            $.getScript("dropSearch/chosen.jquery.js", function (data, textStatus, jqxhr) {
+                $.getScript("dropSearch/docsupport/prism.js", function (data, textStatus, jqxhr) {
+                    $.getScript("dropSearch/docsupport/init.js", function (data, textStatus, jqxhr) {
+                    });
+                });
+            });
+        }
+    };
+    xmlhttp.open("GET", "npcs.txt", true);
     xmlhttp.send();
 }
 
@@ -252,7 +293,7 @@ function getWikiPoints() {
                     y = yInt * -1;
                 }
 
-                var point = { Type: "Housing", LocationName: json[i].name, x: x, y: y};
+                var point = { Type: "Housing", LocationName: json[i].name, x: x, y: y };
                 point["HouseCount"] = json[i].houseCount;
                 //point["ImgUrl"] = json["imgUrl-src"];
 
@@ -376,8 +417,19 @@ function drawPoint(context, x, y, width, Type, Race, Special, isHighlighted, isL
         if (document.getElementById("DisplayPlayer").checked) {
             player_image = new Image();
             player_image.src = 'images/playerHead.png';
-            context.drawImage(player_image, canx, cany - 10, 3, 3);
+            context.drawImage(player_image, canx - rectWidth / 2, 1 + cany - rectWidth / 2, rectWidth, rectWidth);
         }
+    }
+    else if (Type == "WikiNPC") {
+        console.log("Found an NPC");
+        context.beginPath();
+        context.arc(canx, cany, circleRadius, 0, 2 * Math.PI);
+        context.fillStyle = '#FF0080';
+        context.fill();
+        context.lineWidth = 1;
+        context.strokeStyle = '#FF0080'
+        context.stroke();
+        context.closePath();
     }
 
     if (isHighlighted) {
@@ -422,14 +474,13 @@ function collides(x, y) {
             if (type == "Landblock") {
                 landblockDynPoint = true;
             }
-            else if(type == "Town" && document.getElementById("DisplayTown").checked) {
+            else if (type == "Town" && document.getElementById("DisplayTown").checked) {
                 getPointDataHTML(poitem);
             }
             else if (type == "Housing" && document.getElementById("DisplayHousing").checked) {
                 getPointDataHTML(poitem);
             }
-            else
-            {
+            else {
 
             }
         }
@@ -609,6 +660,7 @@ window.onload = function () {
     context = canvas.getContext("2d");
     fitToContainer(canvas);
     getMobList();
+    getNPCList();
 
     console.log("a,b=" + scoords(a, b) + ", d,e=" + scoords(d, e));
     console.log("canvas: " + scoords(canvas.clientWidth, canvas.clientHeight));
