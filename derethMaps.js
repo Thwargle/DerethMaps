@@ -421,7 +421,6 @@ function drawPoint(context, x, y, width, Type, Race, Special, isHighlighted, isL
         }
     }
     else if (Type == "WikiNPC") {
-        console.log("Found an NPC");
         context.beginPath();
         context.arc(canx, cany, circleRadius, 0, 2 * Math.PI);
         context.fillStyle = '#FF0080';
