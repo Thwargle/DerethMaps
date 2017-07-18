@@ -249,7 +249,7 @@ function getPoints() {
                     console.log("Duplicate location name: " + point.LocationName);
                 }
             }
-            getWikiPoints();
+            getHousingPoints();
         }
     };
 
@@ -258,7 +258,7 @@ function getPoints() {
     xmlhttp.send();
 }
 
-function getWikiPoints() {
+function getHousingPoints() {
     points = new Array();
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -266,12 +266,12 @@ function getWikiPoints() {
             var json = JSON.parse(this.responseText);
             var totalItems = Object.keys(json).length;
             for (var i = 0; i < totalItems; i++) {
-                var wikiLocation = json[i].location; // format is "9.6N 36.9E" or "22.5N, 4.9E"
-                wikiLocation = wikiLocation.replace(",", "");
-                var sep = wikiLocation.indexOf(" ");
+                var housingLocation = json[i].location; // format is "9.6N 36.9E" or "22.5N, 4.9E"
+                housingLocation = housingLocation.replace(",", "");
+                var sep = housingLocation.indexOf(" ");
                 // Note that y is first and x is second
-                var y = wikiLocation.substring(0, sep);
-                var x = wikiLocation.slice(sep - wikiLocation.length);
+                var y = housingLocation.substring(0, sep);
+                var x = housingLocation.slice(sep - housingLocation.length);
                 var landblock = json[i].locationString;
 
                 if (includesSubstring(x, 'E')) {
