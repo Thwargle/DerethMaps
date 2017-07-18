@@ -84,7 +84,6 @@ function draw() {
 
         for (var i = 0; i < npc.Coordinates.length; ++i) {
             selectedNPCCoords = npc.Coordinates[i];
-            console.log("coord: " + selectedNPCCoords);
             var splitCoords = selectedNPCCoords.split(/[\s,]+/);
             var y = decodeMapString(splitCoords[0]);
             var x = decodeMapString(splitCoords[1]);
@@ -163,7 +162,6 @@ function getMobList() {
 }
 
 function getNPCList() {
-    npcList = new Array();
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -171,14 +169,14 @@ function getNPCList() {
 
             var json = JSON.parse(this.responseText);
             var totalItems = Object.keys(json).length;
-            console.log("Total npc Items: " + totalItems);
             for (var i = 0; i < totalItems; i++) {
                 var npc = json[i];
-                var name = npc.Name;
-                var type = npc.Type;
+                var name = npc.Name + " (" + npc.Type + ")";
+                var npcobj = { "Name": name, "Description": npc.Description, "Type": npc.Type, "Coordinates": npc.Coordinates };
+
                 var npcOption = new Option(name, name);
                 $('#npcList').append(npcOption);
-                npcDict[name] = npc; 
+                npcDict[name] = npcobj;
             }
 
             $.getScript("dropSearch/chosen.jquery.js", function (data, textStatus, jqxhr) {
@@ -493,11 +491,42 @@ function collides(x, y) {
             else if (type == "Housing" && document.getElementById("DisplayHousing").checked) {
                 getPointDataHTML(poitem);
             }
-            else {
+        }
+    }
 
+    var npcList = document.getElementById("npcList");
+    var selectedNPC = npcList.options[npcList.selectedIndex].value;
+    if (selectedNPC != "None") {
+        var npcName = selectedNPC;
+        var npc = npcDict[npcName];
+        var keys = Object.keys(npc);
+
+        var getKeys = function (obj) {
+            var keys = [];
+            for (var key in obj) {
+                keys.push(key);
+            }
+        }
+        for (var i = 0; i < npc.Coordinates.length; ++i) {
+            selectedNPCCoords = npc.Coordinates[i];
+            var splitCoords = selectedNPCCoords.split(/[\s,]+/);
+            var npcy = decodeMapString(splitCoords[0]);
+            var npcx = decodeMapString(splitCoords[1]);
+
+            var left = npcx - (1 / Math.sqrt(scale)), right = npcx + (1 / Math.sqrt(scale));
+            var top = npcy - (1 / Math.sqrt(scale)), bottom = npcy + (1 / Math.sqrt(scale));
+
+            if (right >= x
+                && left <= x
+                && bottom >= y
+                && top <= y) {
+                isCollision = true;
+                var poitem = { 'LocationName': npc.Name, 'Type': npc.Type, 'Description': npc.Description };
+                getPointDataHTML(poitem);
             }
         }
     }
+
 }
 
 function getPointDataHTML(poitem) {
@@ -510,13 +539,14 @@ function getPointDataHTML(poitem) {
     var race = poitem.Race;
     var special = poitem.Special;
     var houseCount = poitem.HouseCount;
+    var description = poitem.Description;
     var html = "Type: " + type;
 
     if (locationName != undefined && locationName != "") {
-        html += "<br />" + "Location Name: " + locationName;
+        html += "<br />" + "Name: " + locationName;
     }
     if (race != undefined && race != "") {
-        html += "<br />" + "Location Race: " + race;
+        html += "<br />" + "Race: " + race;
     }
     if (special != undefined && special != "") {
         html += "<br />" + "Special: " + special;
@@ -524,6 +554,13 @@ function getPointDataHTML(poitem) {
 
     if (houseCount != undefined && houseCount != "") {
         html += "<br />" + "Houses: " + houseCount;
+    }
+    if (description != undefined && description != "") {
+        if (description.length > 20) {
+            description = description.substring(0, 18) + "...";
+        }
+        html += "<br />" + "Description: " + description;
+
     }
 
     collisionElement.innerHTML = html;
