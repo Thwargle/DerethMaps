@@ -37,6 +37,7 @@ var ycenter = 0;
 var locationArray = {};
 
 var poiDict = {};
+var npcDict = {};
 
 function fitToContainer(canvas) {
     canvas.style.width = '100%';
@@ -78,18 +79,24 @@ function draw() {
     }
 
     if (selectedNPC != "None") {
-        var selectedNPCCoords = selectedNPC.split("|")[1];
-        var splitCoords = selectedNPCCoords.split(/[\s,]+/);
-        var y = decodeMapString(splitCoords[0]);
-        var x = decodeMapString(splitCoords[1]);
-        var width = 50;
-        var Type = "WikiNPC";
-        var Race = "";
-        var Special = "";
-        var isHighlighted = "";
-        var isLandblock = "";
-        
-        drawPoint(context, x, y, width, Type, Race, Special, isHighlighted, isLandblock);
+        var npcName = selectedNPC;
+        var npc = npcDict[npcName];
+
+        for (var i = 0; i < npc.Coordinates.length; ++i) {
+            selectedNPCCoords = npc.Coordinates[i];
+            console.log("coord: " + selectedNPCCoords);
+            var splitCoords = selectedNPCCoords.split(/[\s,]+/);
+            var y = decodeMapString(splitCoords[0]);
+            var x = decodeMapString(splitCoords[1]);
+            var width = 50;
+            var Type = "WikiNPC";
+            var Race = "";
+            var Special = "";
+            var isHighlighted = "";
+            var isLandblock = "";
+
+            drawPoint(context, x, y, width, Type, Race, Special, isHighlighted, isLandblock);
+        }
     }
 
     var dPointsArrayLength = dPoints.length;
@@ -160,13 +167,20 @@ function getNPCList() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            npcList = this.responseText.split(/\n/).sort();
-            for (var i = 0; i < npcList.length; i++) {
-                var npcName = npcList[i].split("|")[0];
-                var npcOption = new Option(npcName, npcList[i]);
 
+
+            var json = JSON.parse(this.responseText);
+            var totalItems = Object.keys(json).length;
+            console.log("Total npc Items: " + totalItems);
+            for (var i = 0; i < totalItems; i++) {
+                var npc = json[i];
+                var name = npc.Name;
+                var type = npc.Type;
+                var npcOption = new Option(name, name);
                 $('#npcList').append(npcOption);
+                npcDict[name] = npc; 
             }
+
             $.getScript("dropSearch/chosen.jquery.js", function (data, textStatus, jqxhr) {
                 $.getScript("dropSearch/docsupport/prism.js", function (data, textStatus, jqxhr) {
                     $.getScript("dropSearch/docsupport/init.js", function (data, textStatus, jqxhr) {
