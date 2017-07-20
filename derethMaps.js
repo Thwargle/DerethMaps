@@ -472,9 +472,17 @@ function collides(x, y) {
     //var threeSixtyView = document.getElementById("360");
     for (var poiName in poiDict) {
         var poitem = poiDict[poiName];
+        var type = poitem.Type;
+        // optimize by ignoring points not shown
+        if (type == "Town" && !document.getElementById("DisplayTown").checked) {
+            continue;
+        }
+        if (type == "Housing" && !document.getElementById("DisplayHousing").checked) {
+            continue;
+        }
+
         var left = poitem.x - (1 / Math.sqrt(scale)), right = poitem.x + (1 / Math.sqrt(scale));
         var top = poitem.y - (1 / Math.sqrt(scale)), bottom = poitem.y + (1 / Math.sqrt(scale));
-        var type = poitem.Type;
         if (right >= x
             && left <= x
             && bottom >= y
