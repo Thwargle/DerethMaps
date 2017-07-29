@@ -879,3 +879,19 @@ window.onload = function () {
 ///Yaraq
 /// 21.5s, 1.8w
 /// 7D64000D 31.90 105.93 11.84 0.58 0.00 0.00 -0.82
+
+
+
+
+///FROM PEA:
+/// this is the coordinate math to get an in-game coordinate from a landcell.
+//void PrintCoords(DWORD landcell)
+//{
+//    int landcell_x_offset = (((landcell >> 24) & 0xFF) << 3) | (((landcell - 1) >> 3) & 7);
+//int landcell_y_offset = (((landcell >> 16) & 0xFF) << 3) | (((landcell - 1) >> 0) & 7);
+
+//double coord_x = ((double)(landcell_x_offset - 1024) * 0.1 + 0.5);
+//double coord_y = ((double)(landcell_y_offset - 1024) * 0.1 + 0.5);
+
+//printf("Coords for landcell %08X are %.1f %.1f (west and south are negative, east and north are positive)\n", landcell, coord_x, coord_y);
+//}
