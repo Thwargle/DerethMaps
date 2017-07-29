@@ -153,7 +153,7 @@
   },
   {
     "Type": "Town",
-    "LocationName": "Nanto",
+    "LocationName": "Sawato",
     "Race": "Sho",
     "Special": "",
     "x": "48.4E",
@@ -161,9 +161,9 @@
   },
   {
     "Type": "Town",
-    "LocationName": "Sawato",
+    "LocationName": "Nanto",
     "Race": "Sho",
-    "Special": "",
+    "Special": "Starter",
     "x": "82.1E",
     "y": "52.5S"
   },
