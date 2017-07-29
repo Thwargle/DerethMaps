@@ -37,6 +37,7 @@ var ycenter = 0;
 var locationArray = {};
 
 var poiDict = {};
+var npcDict = {};
 
 function fitToContainer(canvas) {
     canvas.style.width = '100%';
@@ -50,7 +51,9 @@ function draw() {
     base_image.src = 'highres.png';
 
     var mobList = document.getElementById("mobList");
+    var npcList = document.getElementById("npcList");
     var selectedMob = mobList.options[mobList.selectedIndex].value;
+    var selectedNPC = npcList.options[npcList.selectedIndex].value;
 
 
     // clear canvas
@@ -72,8 +75,28 @@ function draw() {
     imageOverlay = new Image();
     if (selectedMob != "None") {
         imageOverlay.src = 'http://mobtracker.yewsplugins.com/BigMaps/' + selectedMob + '.gif';
+        context.drawImage(imageOverlay, 0, 0);
     }
-    context.drawImage(imageOverlay, 0, 0);
+
+    if (selectedNPC != "None") {
+        var npcName = selectedNPC;
+        var npc = npcDict[npcName];
+
+        for (var i = 0; i < npc.Coordinates.length; ++i) {
+            selectedNPCCoords = npc.Coordinates[i];
+            var splitCoords = selectedNPCCoords.split(/[\s,]+/);
+            var y = decodeMapString(splitCoords[0]);
+            var x = decodeMapString(splitCoords[1]);
+            var width = 50;
+            var Type = "WikiNPC";
+            var Race = "";
+            var Special = "";
+            var isHighlighted = "";
+            var isLandblock = "";
+
+            drawPoint(context, x, y, width, Type, Race, Special, isHighlighted, isLandblock);
+        }
+    }
 
     var dPointsArrayLength = dPoints.length;
 
@@ -135,6 +158,36 @@ function getMobList() {
         }
     };
     xmlhttp.open("GET", "mobList.txt", true);
+    xmlhttp.send();
+}
+
+function getNPCList() {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+
+
+            var json = JSON.parse(this.responseText);
+            var totalItems = Object.keys(json).length;
+            for (var i = 0; i < totalItems; i++) {
+                var npc = json[i];
+                var name = npc.Name + " (" + npc.Type + ")";
+                var npcobj = { "Name": name, "Description": npc.Description, "Type": npc.Type, "Coordinates": npc.Coordinates };
+
+                var npcOption = new Option(name, name);
+                $('#npcList').append(npcOption);
+                npcDict[name] = npcobj;
+            }
+
+            $.getScript("dropSearch/chosen.jquery.js", function (data, textStatus, jqxhr) {
+                $.getScript("dropSearch/docsupport/prism.js", function (data, textStatus, jqxhr) {
+                    $.getScript("dropSearch/docsupport/init.js", function (data, textStatus, jqxhr) {
+                    });
+                });
+            });
+        }
+    };
+    xmlhttp.open("GET", "npcs.txt", true);
     xmlhttp.send();
 }
 
@@ -208,7 +261,7 @@ function getPoints() {
                     console.log("Duplicate location name: " + point.LocationName);
                 }
             }
-            getWikiPoints();
+            getHousingPoints();
         }
     };
 
@@ -217,7 +270,7 @@ function getPoints() {
     xmlhttp.send();
 }
 
-function getWikiPoints() {
+function getHousingPoints() {
     points = new Array();
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -225,12 +278,12 @@ function getWikiPoints() {
             var json = JSON.parse(this.responseText);
             var totalItems = Object.keys(json).length;
             for (var i = 0; i < totalItems; i++) {
-                var wikiLocation = json[i].location; // format is "9.6N 36.9E" or "22.5N, 4.9E"
-                wikiLocation = wikiLocation.replace(",", "");
-                var sep = wikiLocation.indexOf(" ");
+                var housingLocation = json[i].location; // format is "9.6N 36.9E" or "22.5N, 4.9E"
+                housingLocation = housingLocation.replace(",", "");
+                var sep = housingLocation.indexOf(" ");
                 // Note that y is first and x is second
-                var y = wikiLocation.substring(0, sep);
-                var x = wikiLocation.slice(sep - wikiLocation.length);
+                var y = housingLocation.substring(0, sep);
+                var x = housingLocation.slice(sep - housingLocation.length);
                 var landblock = json[i].locationString;
 
                 if (includesSubstring(x, 'E')) {
@@ -252,7 +305,7 @@ function getWikiPoints() {
                     y = yInt * -1;
                 }
 
-                var point = { Type: "Housing", LocationName: json[i].name, x: x, y: y};
+                var point = { Type: "Housing", LocationName: json[i].name, x: x, y: y };
                 point["HouseCount"] = json[i].houseCount;
                 //point["ImgUrl"] = json["imgUrl-src"];
 
@@ -376,8 +429,18 @@ function drawPoint(context, x, y, width, Type, Race, Special, isHighlighted, isL
         if (document.getElementById("DisplayPlayer").checked) {
             player_image = new Image();
             player_image.src = 'images/playerHead.png';
-            context.drawImage(player_image, canx, cany - 10, 3, 3);
+            context.drawImage(player_image, canx - rectWidth / 2, 1 + cany - rectWidth / 2, rectWidth, rectWidth);
         }
+    }
+    else if (Type == "WikiNPC") {
+        context.beginPath();
+        context.arc(canx, cany, circleRadius, 0, 2 * Math.PI);
+        context.fillStyle = '#FF0080';
+        context.fill();
+        context.lineWidth = 1;
+        context.strokeStyle = '#FF0080'
+        context.stroke();
+        context.closePath();
     }
 
     if (isHighlighted) {
@@ -409,9 +472,17 @@ function collides(x, y) {
     //var threeSixtyView = document.getElementById("360");
     for (var poiName in poiDict) {
         var poitem = poiDict[poiName];
+        var type = poitem.Type;
+        // optimize by ignoring points not shown
+        if (type == "Town" && !document.getElementById("DisplayTown").checked) {
+            continue;
+        }
+        if (type == "Housing" && !document.getElementById("DisplayHousing").checked) {
+            continue;
+        }
+
         var left = poitem.x - (1 / Math.sqrt(scale)), right = poitem.x + (1 / Math.sqrt(scale));
         var top = poitem.y - (1 / Math.sqrt(scale)), bottom = poitem.y + (1 / Math.sqrt(scale));
-        var type = poitem.Type;
         if (right >= x
             && left <= x
             && bottom >= y
@@ -422,18 +493,48 @@ function collides(x, y) {
             if (type == "Landblock") {
                 landblockDynPoint = true;
             }
-            else if(type == "Town" && document.getElementById("DisplayTown").checked) {
+            else if (type == "Town" && document.getElementById("DisplayTown").checked) {
                 getPointDataHTML(poitem);
             }
             else if (type == "Housing" && document.getElementById("DisplayHousing").checked) {
                 getPointDataHTML(poitem);
             }
-            else
-            {
+        }
+    }
 
+    var npcList = document.getElementById("npcList");
+    var selectedNPC = npcList.options[npcList.selectedIndex].value;
+    if (selectedNPC != "None") {
+        var npcName = selectedNPC;
+        var npc = npcDict[npcName];
+        var keys = Object.keys(npc);
+
+        var getKeys = function (obj) {
+            var keys = [];
+            for (var key in obj) {
+                keys.push(key);
+            }
+        }
+        for (var i = 0; i < npc.Coordinates.length; ++i) {
+            selectedNPCCoords = npc.Coordinates[i];
+            var splitCoords = selectedNPCCoords.split(/[\s,]+/);
+            var npcy = decodeMapString(splitCoords[0]);
+            var npcx = decodeMapString(splitCoords[1]);
+
+            var left = npcx - (1 / Math.sqrt(scale)), right = npcx + (1 / Math.sqrt(scale));
+            var top = npcy - (1 / Math.sqrt(scale)), bottom = npcy + (1 / Math.sqrt(scale));
+
+            if (right >= x
+                && left <= x
+                && bottom >= y
+                && top <= y) {
+                isCollision = true;
+                var poitem = { 'LocationName': npc.Name, 'Type': npc.Type, 'Description': npc.Description };
+                getPointDataHTML(poitem);
             }
         }
     }
+
 }
 
 function getPointDataHTML(poitem) {
@@ -446,13 +547,14 @@ function getPointDataHTML(poitem) {
     var race = poitem.Race;
     var special = poitem.Special;
     var houseCount = poitem.HouseCount;
+    var description = poitem.Description;
     var html = "Type: " + type;
 
     if (locationName != undefined && locationName != "") {
-        html += "<br />" + "Location Name: " + locationName;
+        html += "<br />" + "Name: " + locationName;
     }
     if (race != undefined && race != "") {
-        html += "<br />" + "Location Race: " + race;
+        html += "<br />" + "Race: " + race;
     }
     if (special != undefined && special != "") {
         html += "<br />" + "Special: " + special;
@@ -460,6 +562,13 @@ function getPointDataHTML(poitem) {
 
     if (houseCount != undefined && houseCount != "") {
         html += "<br />" + "Houses: " + houseCount;
+    }
+    if (description != undefined && description != "") {
+        if (description.length > 20) {
+            description = description.substring(0, 18) + "...";
+        }
+        html += "<br />" + "Description: " + description;
+
     }
 
     collisionElement.innerHTML = html;
@@ -609,6 +718,7 @@ window.onload = function () {
     context = canvas.getContext("2d");
     fitToContainer(canvas);
     getMobList();
+    getNPCList();
 
     console.log("a,b=" + scoords(a, b) + ", d,e=" + scoords(d, e));
     console.log("canvas: " + scoords(canvas.clientWidth, canvas.clientHeight));
