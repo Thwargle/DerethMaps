@@ -1619,6 +1619,7 @@ Pillar of Fire
 Pillar of Frost
 Pillar of Lightning
 Pillar of the Eternal Harvester
+Plaguefang
 Plasma Golem
 Plate Armoredillo
 Plated Tusker
