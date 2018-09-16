@@ -338,7 +338,11 @@ function getDynamicPlayers() {
                 var x = decodeMapString(sx);
                 var y = decodeMapString(sy);
 
-                var point = { Type: json[i].Type, Location: json[i].LocationName, Race: json[i].Race, x: x, y: y };
+                //var point = { Type: json[i].Type, Location: json[i].LocationName, Race: json[i].Race, x: x, y: y };
+				var point = json[i];
+                point.Location = json[i].LocationName;
+                point.x = x;
+                point.y = y;
                 dPoints.push(point);
             }
             reloadLocationArray(dPoints);
@@ -461,6 +465,7 @@ function clearSelection() {
     collisionElement.innerHTML = "";
     var landblockElement = document.getElementById("LandblockInfo");
     landblockElement.innerHTML = "";
+    $("#PlayerList").hide();
     document.getElementsByClassName("chosen-single").innerHTML = "None";
 
     //var threeSixtyView = document.getElementById("360");
@@ -535,6 +540,24 @@ function collides(x, y) {
         }
     }
 
+    getPlayerDataHtml(null); //Clear the player list data
+    var player;
+    for (var pc in dPoints) {
+        player = dPoints[pc];
+        var left = player.x - (1 / Math.sqrt(scale)),
+            right = player.x + (1 / Math.sqrt(scale));
+        var top = player.y - (1 / Math.sqrt(scale)),
+            bottom = player.y + (1 / Math.sqrt(scale));
+        if (right >= x &&
+            left <= x &&
+            bottom >= y &&
+            top <= y) {
+            var playerData = player;
+            playerData.Name = player.Location;
+            getPlayerDataHtml(playerData);
+        }
+    }
+
 }
 
 function getPointDataHTML(poitem) {
@@ -583,6 +606,55 @@ function getPointDataHTML(poitem) {
         //threeSixtyView.src = "";
         //document.getElementById("iframeHolder").style.display = "none";
     }
+}
+
+function getPlayerDataHtml(player) {
+    var PlayerList = $("#PlayerList");
+    if (player == null) {
+        // Call function just to clear the data
+        PlayerList.hide();
+        PlayerList.find(".Player").remove();
+        PlayerList.find(".PlayerDetails").remove();
+        return;
+    }
+    PlayerList.show();
+    var pName = player.Name;
+    var ListPlayer = "<option class='Player'>" + pName + "</option>";
+    PlayerList.find('#Players').append(ListPlayer);
+    PlayerList.find('#PlayerDetails').append(PlayerSetServerDetails(player));
+}
+
+function PlayerSearchTreeStats() {
+    var pName = $('#Players').val();
+    var tsSearch = "http://treestats.net/search?server=All+Servers&character=" + pName;
+    window.open(tsSearch, '_blank');
+}
+
+function PlayerSetServerDetails(player) {
+    console.log(player);
+    var div = "";
+    pName = player.Name;
+    div += "<div class=\"PlayerDetails\" Player=\"" + pName + "\">";
+    div += "   <div class=\"PD_Info\">";
+    div += "      <div class=\"PD_Key\">Character</div>";
+    div += "      <div class=\"PD_Val\">" + pName + "</div>";
+    div += "   </div>"
+    div += "   <div class=\"PD_Info\">";
+    div += "      <div class=\"PD_Key\">Level</div>";
+    div += "      <div class=\"PD_Val\">" + player.Level + "</div>";
+    div += "   </div>"
+    div += "   <div class=\"PD_Info\">";
+    div += "      <div class=\"PD_Key\">Race</div>";
+    div += "      <div class=\"PD_Val\">" + player.Race + "</div>";
+    div += "   </div>"
+    div += "</div>"
+    return div;
+}
+
+function PlayerGetServerDetails() {
+    var pName = $('#Players').val();
+    $('#PlayerDetails').find('.PlayerDetails').hide();
+    $('#PlayerDetails').find('.PlayerDetails[Player="' + pName + '"]').show();
 }
 
 function colorLandblocks(context) {

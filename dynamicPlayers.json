@@ -2,25 +2,73 @@
   {
     "Type": "Player",
     "LocationName": "Zorgle",
+    "Race":  "Aluvian",
+    "Level":  "275",
     "x": "16.8957764859759E",
     "y": "22.8692143484341S"
   },
   {
     "Type": "Player",
     "LocationName": "Thwargle",
+    "Race":  "Sho",
+    "Level":  "126",
     "x": "10.0362087097184548E",
     "y": "10.7353584490416S"
   },
   {
     "Type": "Player",
     "LocationName": "Kristoff",
+    "Race":  "Viamontian",
+    "Level":  "85",
     "x": "13.6720040537287E",
     "y": "4.42966078847168N"
   },
   {
     "Type": "Player",
+    "Race": "Aluvian",
+    "Level": "275",
     "LocationName": "ImmortalBob",
     "x": "67.3w",
     "y": "26.2S"
-  }
+  },
+  {
+        "Type": "Player",
+        "LocationName": "Drissical",
+        "Race": "Aluvian",
+        "Level": "276",
+        "x": "55.6720040537287E",
+        "y": "4.42966078847168N"
+    },
+    {
+        "Type": "Player",
+        "LocationName": "Driss War I",
+        "Race": "Sho",
+        "Level": "65",
+        "x": "55.6720040537287E",
+        "y": "4.42966078847168N"
+    },
+    {
+        "Type": "Player",
+        "LocationName": "Driss War II",
+        "Race": "Aluvian",
+        "Level": "201",
+        "x": "55.6720040537287E",
+        "y": "4.42966078847168N"
+    },
+    {
+        "Type": "Player",
+        "LocationName": "Driss War III",
+        "Race": "Gharu'ndim",
+        "Level": "180",
+        "x": "55.6720040537287E",
+        "y": "4.42966078847168N"
+    },
+    {
+        "Type": "Player",
+        "LocationName": "Driss War IV",
+        "Race": "Sho",
+        "Level": "108",
+        "x": "55.6720040537287E",
+        "y": "4.42966078847168N"
+    }
 ]

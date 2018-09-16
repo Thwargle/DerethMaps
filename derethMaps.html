@@ -15,13 +15,14 @@
     <img src="images/derethMapsLogo.png" alt="derethMaps Logo" style="height:35px;" />
     <br />
     <div id="wrapper" style="float:left; height: 85vh;">
-        <div style="position:absolute; color:white;">
+        <div id="DerethMapControls" style="position:absolute; color:white;">
+            <!--<div id="dmc_left">-->
             <button id="derethMenu" onclick="showMenu()">Hide Menu</button>
             <button onclick="clearSelection();">Clear Selection</button>
             <button onclick="copyToClipboard();">Copy Coords</button>
             <br />
             <br />
-            <div id="menuItems" style="float:left; z-index:1; padding-left: 15px;">
+            <div id="menuItems" style="z-index:1; padding-left: 15px;">
                 <div>
                     <input type="checkbox" id="DisplayTown" value="Town" checked="checked" /> Show Towns<br />
                     <input type="checkbox" id="DisplayHousing" value="Housing" />Show Housing<br />
@@ -59,6 +60,23 @@
                 <p id="Coordinates"></p>
                 <p id="CollisionInfo"></p>
             </div>
+            <!--</div>
+            <div id="dmc_right">-->
+            <div id="PlayerList">
+                <div>Player List:</div>
+                <div id="PlayerSelect">
+                    <select id="Players"> </select>
+                </div>
+                <div id="PlayerBtns">
+                    <span class="textBtn"><a href="#" onclick="PlayerGetServerDetails();"><img src="Assess_Person_Icon.png" alt="Player Details" /></a></span>
+                    <span class="textBtn"><a href="#" onclick="PlayerSearchTreeStats();"><img src="Leadership_Icon.png" alt="Search on Treestats"/></a></span>
+                </div>
+                <div id="PlayerDetails">
+
+                </div>
+            </div>
+            <!--</div>-->
+            <!--<br style="clear:both;" />-->
         </div>
         <canvas id="myCanvas" style="background-color:#1F2B3D"></canvas>
         <div id="buttonWrapper" style="background-color: lightgray; text-align:center;">
