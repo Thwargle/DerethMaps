@@ -48,7 +48,7 @@ function fitToContainer(canvas) {
 
 function draw() {
     base_image = new Image();
-    base_image.src = 'highres.png';
+    base_image.src = 'highres_colorCorrect.png';
 
     var mobList = document.getElementById("mobList");
     var npcList = document.getElementById("npcList");
